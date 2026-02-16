@@ -171,7 +171,7 @@ def align_daicwoz_csv_to_dido(csv_filename):
         
         # --- Temporal duration (OWL-Time) ---
         temp_node = BNode()
-        g.add((utterance_uri, SIO.SIO_000008, temp_node)) # sio:has attribute
+        g.add((utterance_uri, RDF.type, TIME.TemporalDuration)) # sio:has attribute
         g.add((temp_node, RDF.type, TIME.TemporalDuration))
         g.add((temp_node, TIME.hasBeginning, Literal(utterance['begin_time'], datatype=XSD.float)))
         g.add((temp_node, TIME.hasEnd, Literal(utterance['end_time'], datatype=XSD.float)))
