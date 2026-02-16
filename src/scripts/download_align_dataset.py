@@ -171,12 +171,15 @@ def align_daicwoz_csv_to_dido(csv_filename):
         
         # --- Temporal duration (OWL-Time) ---
         g.add((utterance_uri, RDF.type, TIME.TemporalEntity))
+        temporal_duration_node = BNode()
+        g.add((utterance_uri, SIO.sio_000008, temporal_duration_node))    # sio:has attribute
+
         beg_node = BNode()
         end_node = BNode()
         g.add((beg_node, RDF.type, TIME.Instant))
         g.add((end_node, RDF.type, TIME.Instant))
-        g.add((utterance_uri, TIME.hasBeginning, beg_node))
-        g.add((utterance_uri, TIME.hasEnd, end_node))
+        g.add((temporal_duration_node, TIME.hasBeginning, beg_node))
+        g.add((temporal_duration_node, TIME.hasEnd, end_node))
 
         # --- Temporal instant descriptions (OWL-TIME) ---
         beg_node_description = BNode()
@@ -185,8 +188,8 @@ def align_daicwoz_csv_to_dido(csv_filename):
         g.add((end_node_description, RDF.type, TIME.DateTimeDescription))
         g.add((beg_node, TIME.inDateTime, beg_node_description))
         g.add((end_node, TIME.inDateTime, end_node_description))
-        g.add((beg_node, TIME.second, Literal(utterance['start_time'], datatype=XSD.float)))
-        g.add((end_node, TIME.second, Literal(utterance['stop_time'], datatype=XSD.float)))
+        g.add((beg_node_description, TIME.second, Literal(utterance['start_time'], datatype=XSD.float)))
+        g.add((end_node_description, TIME.second, Literal(utterance['stop_time'], datatype=XSD.float)))
         g.add((beg_node_description, TIME.unitType, TIME.unitSecond))
         g.add((end_node_description, TIME.unitType, TIME.unitSecond))
 
