@@ -167,11 +167,11 @@ def align_daicwoz_csv_to_dido(csv_filename):
         utterance_text_uri = EX[f"utteranceTexts/{utterance_id}"]
         g.add((utterance_text_uri, RDF.type, DIDO.UtteranceText))
         g.add((utterance_uri, SIO.SIO_000232, utterance_text_uri))  # sio:has output
-        g.add((utterance_text_uri, RDFS.label, Literal(utterance['value'], datatype=XSD.string))) # sio:
+        g.add((utterance_text_uri, SIO.SIO_000300, Literal(utterance['value'], datatype=XSD.string)))   # sio:has value
         
         # --- Temporal duration (OWL-Time) ---
         temp_node = BNode()
-        g.add((utterance_uri, DIDO.hasAttribute, temp_node))
+        g.add((utterance_uri, SIO.SIO_000008, temp_node)) # sio:has attribute
         g.add((temp_node, RDF.type, TIME.TemporalDuration))
         g.add((temp_node, TIME.hasBeginning, Literal(utterance['begin_time'], datatype=XSD.float)))
         g.add((temp_node, TIME.hasEnd, Literal(utterance['end_time'], datatype=XSD.float)))
