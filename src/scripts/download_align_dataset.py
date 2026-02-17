@@ -4,7 +4,7 @@ import json
 import regex
 import uuid
 
-from rdflib import Graph, Literal, RDF, URIRef, Namespace, BNode, XSD
+from rdflib import Graph, Literal, RDF, URIRef, Namespace, BNode, XSD, DCTERMS, DC
 from rdflib.namespace import RDFS
 
 
@@ -14,6 +14,7 @@ SIO = Namespace("http://semanticscience.org/resource/")
 PROV = Namespace("http://www.w3.org/ns/prov#")
 TIME = Namespace("http://www.w3.org/2006/time#")
 EX = Namespace("http://purl.org/twc/dido/individuals#")
+DCAT = Namespace("http://www.w3.org/ns/dcat#")
 
 
 def data_to_rdf(batch, graph, config):
@@ -129,6 +130,7 @@ def align_daicwoz_csv_to_dido(csv_filename):
     g.bind("dido", DIDO)
     g.bind("sio", SIO)
     g.bind("time", TIME)
+    g.bind("dcat", DCAT)
 
     dialogue_num_pattern = regex.compile(r"^(\d{3})_TRANSCRIPT\.csv$")
     dialogue_num = dialogue_num_pattern.match(csv_filename)
@@ -142,6 +144,14 @@ def align_daicwoz_csv_to_dido(csv_filename):
     transcript_uri = EX[f"dialogueTranscript/{dialogue_num}"]
     g.add((transcript_uri, RDF.type, DIDO.DialogueTranscript))
     g.add((transcript_uri, SIO.SIO_000332, dialogue_uri)) # sio:is about
+
+    daic_woz_uri = EX[f"dataset/daic-woz"]
+    g.add((daic_woz_uri, RDF.type, SIO.SIO_000089)) # sio:dataset
+    g.add((daic_woz_uri, RDF.type, DCAT.Dataset)) 
+    g.add((transcript_uri, SIO.SIO_000095, daic_woz_uri)) # sio:is member of\
+    g.add((transcript_uri, DCTERMS.title, Literal("Distress Analysis Corpus - Wizard of Oz", datatype=XSD.string)))
+    g.add((transcript_uri, DCAT.landingPage, URIRef('https://dcapswoz.ict.usc.edu/')))
+    g.add((transcript_uri, DCTERMS.isReferencedBy, URIRef('https://d1wqtxts1xzle7.cloudfront.net/98764174/508_Paper-libre.pdf')))
 
     for utterance_num, utterance in enumerate(reader):
         # --- Dialogue Structure ---
