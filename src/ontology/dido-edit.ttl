@@ -14,7 +14,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix http://www.w3.org/ns/dcat#: <dcat> .
+@prefix dcat: <http://www.w3.org/ns/dcat#/> .
 @base <http://purl.org/twc/dido#> .
 
 <http://purl.org/twc/dido> rdf:type owl:Ontology ;
