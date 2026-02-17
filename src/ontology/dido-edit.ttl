@@ -7,6 +7,7 @@
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -14,12 +15,12 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#/> .
 @base <http://purl.org/twc/dido#> .
 
 <http://purl.org/twc/dido> rdf:type owl:Ontology ;
-                            owl:imports <https://purl.org/dido/releases/2026-02-06/imports/sio_import.owl> ,
-                                        <https://purl.org/dido/releases/2026-02-06/imports/time_import.owl> ;
+                            owl:imports <https://purl.org/dido/releases/2026-02-17/imports/dcat_import.owl> ,
+                                        <https://purl.org/dido/releases/2026-02-17/imports/sio_import.owl> ,
+                                        <https://purl.org/dido/releases/2026-02-17/imports/time_import.owl> ;
                             dc:creator "Kelsey Rook"@en ;
                             dcterms:description "The Dialogue and Discourse Ontology (DIDO) supports the modeling of dialogue and dialogue data." ;
                             dcterms:license "https://opensource.org/license/mit"^^xsd:anyURI ;

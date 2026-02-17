@@ -38,6 +38,7 @@ RELEASE_ARTEFACTS = 	$(ONT) $(ONT)-base $(ONT)-full
 
 SIO_URI := 				http://semanticscience.org/ontology/sio.owl
 TIME_URI :=				http://www.w3.org/2006/time
+DCAT_URI :=				http://www.w3.org/ns/dcat
 
 
 # --------------------------------
@@ -73,7 +74,7 @@ all_main: $(MAIN_FILES)
 ##
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
-IMPORTS = sio time
+IMPORTS = sio time dcat
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
 IMPORT_FILES = $(IMPORT_OWL_FILES)
@@ -195,11 +196,24 @@ imports/%_terms_combined.txt: $(IMPORTSEED) imports/%_terms.txt
 	if [ $(IMP) = true ]; then cat $^ | grep -v ^# | sort | uniq >  $@; fi
 
 
-imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
+imports/sio_import.owl: mirror/sio.owl imports/sio_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T imports/$*_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
+		extract -T imports/sio_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+imports/time_import.owl: mirror/time.owl imports/time_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T imports/time_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method STAR \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+imports/dcat_import.owl: mirror/dcat.owl imports/dcat_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T imports/dcat_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method STAR \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
 
 .PRECIOUS: imports/%_import.owl
 
@@ -240,6 +254,15 @@ mirror/sio.owl: mirror/sio.trigger
 mirror/time.trigger: $(SRC)
 
 mirror/time.owl: mirror/time.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(TIME_URI) -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: dcat
+## Copy of time is re-downloaded whenever source changes
+mirror/dcat.trigger: $(SRC)
+
+mirror/dcat.owl: mirror/dcat.trigger
 	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(TIME_URI) -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
