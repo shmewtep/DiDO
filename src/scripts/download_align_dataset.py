@@ -18,62 +18,6 @@ EX = Namespace("http://purl.org/twc/dido/individuals#")
 DCAT = Namespace("http://www.w3.org/ns/dcat#")
 
 
-def data_to_rdf(batch, graph, config):
-    """Convert a batched dataset slice into RDF triples and add them to `graph`.
-
-    The function expects `batch` in the format produced by the HuggingFace
-    `datasets` library when using `batched=True` (i.e. a mapping from column
-    names to lists). For each row it will create a Dialogue subject URI and
-    apply mappings described in `config`.
-
-    Parameters:
-    - batch (Mapping[str, list]): Batched dataset with columns referenced by
-        `config["subject_col"]` and `config["mappings"]` entries.
-    - graph (rdflib.Graph): RDF graph to which triples will be added.
-    - config (dict): Recipe describing how to map columns to RDF. Expected
-        keys include:
-            * "subject_col": column name for the dialogue identifier.
-            * "mappings": list of mapping dicts with keys:
-                    - "col": source column name
-                    - "pred": rdflib predicate to use
-                    - "type": one of "literal", "object", or "temporal"
-                    - optionally "obj_prefix" for object mappings
-
-    Returns:
-    - batch: the same input `batch` object (keeps compatibility with
-        `datasets.Dataset.map` usage where a mapped function returns the batch).
-    """
-#    for i in range(len(batch[config["subject_col"]])):
-#        # Create the primary Dialogue Subject
-#        dialogue_uri = DIDO[f"dialogue/{batch[config['subject_col']][i]}"]
-#        graph.add((dialogue_uri, RDF.type, DIDO.Dialogue))
-#        graph.add((dialogue_uri, RDF.type, SIO.SIO_000006))  # Process
-#
-#        for m in config["mappings"]:
-#            val = batch[m["col"]][i]
-#            if val is None:
-#                continue
-#
-#            if m["type"] == "literal":
-#                graph.add((dialogue_uri, m["pred"], Literal(val)))
-#
-#            elif m["type"] == "object":
-#                obj_uri = DIDO[f"{m['obj_prefix']}{val}"]
-#                # Link Participant to Dialogue as shown in diagram
-#                graph.add((obj_uri, RDF.type, DIDO.Interlocutor))
-#                graph.add((obj_uri, m["pred"], dialogue_uri))
-#
-#            elif m["type"] == "temporal":
-#                # Create a blank node or URI for the temporal entity
-#                time_node = BNode()
-#                graph.add((dialogue_uri, DIDO.hasAttribute, time_node))
-#                graph.add((time_node, RDF.type, TIME.TemporalDuration))
-#                graph.add((time_node, m["pred"], Literal(val, datatype=XSD.float)))
-#
-#    return batch
-#
-    return None
-
 def align_ami_jsonl_to_dido(jsonl_file):
     '''
     Transform data points from AMI JSONL format to RDF format, aligned with DIDO.
@@ -84,39 +28,76 @@ def align_ami_jsonl_to_dido(jsonl_file):
     g.bind("dido", DIDO)
     g.bind("sio", SIO)
     g.bind("time", TIME)
+    g.bind("dcat", DCAT)
+
+    meeting_id = os.path.basename(jsonl_file).split('.')[0]
+
+    # --- Dialogue Structure ---
+    dialogue_uri = EX[f"dialogue/{meeting_id}"]
+    g.add((dialogue_uri, RDF.type, DIDO.Dialogue))
+
+    # --- Metadata (DialogueTranscript & Dataset) ---
+    transcript_uri = EX[f"dialogueTranscript/{meeting_id}"]
+    g.add((transcript_uri, RDF.type, DIDO.DialogueTranscript))
+    g.add((transcript_uri, SIO.SIO_000332, dialogue_uri)) # sio:is about
+
+    ami_dataset_uri = EX["dataset/ami"]
+    g.add((ami_dataset_uri, RDF.type, SIO.SIO_000089)) # sio:dataset
+    g.add((ami_dataset_uri, RDF.type, DCAT.Dataset))
+    g.add((transcript_uri, SIO.SIO_000095, ami_dataset_uri)) # sio:is member of
+    g.add((transcript_uri, DCTERMS.title, Literal("AMI Meeting Corpus", datatype=XSD.string)))
+    g.add((ami_dataset_uri, DCAT.landingPage, URIRef('https://groups.inf.ed.ac.uk/ami/corpus/')))
+    g.add((ami_dataset_uri, DCTERMS.isReferencedBy, URIRef('https://doi.org/10.1007/11677482_3')))
+
 
     with open(jsonl_file, 'r') as f:
-        for line in f:
+        for utterance_num, line in enumerate(f):
             data = json.loads(line)
             
             # --- Dialogue Structure ---
-            # Using meeting_id as the primary identifier for the Dialogue instance
-            dialogue_uri = EX[f"dialogue/{data['meeting_id']}"]
-            g.add((dialogue_uri, RDF.type, DIDO.Dialogue))
-            g.add((dialogue_uri, RDF.type, SIO.SIO_000006)) # sio:process
-
-            # --- DIDO-core: Participant (SIO Agent) ---
-            participant_uri = EX[f"participant/{data['speaker_id']}"]
-            g.add((participant_uri, RDF.type, DIDO. Participant))
-            g.add((participant_uri, RDF.type, SIO.SIO_000397)) # sio:agent
-            g.add((participant_uri, DIDO.isParticipantIn, dialogue_uri))
-
-            # --- DIDO-data: Utterance & Transcript (SIO Entity) ---
-            # Each row is an Utterance within the Dialogue
-            utterance_id = f"{data['meeting_id']}_{data['begin_time']}"
-            utterance_uri = EX[f"utterance/{utterance_id}"]
+            utterance_id = f"{meeting_id}_{utterance_num}"
+            utterance_uri = EX[f"utterances/utterance_{utterance_id}"]
             g.add((utterance_uri, RDF.type, DIDO.Utterance))
-            g.add((utterance_uri, DIDO.hasText, Literal(data['text'], datatype=XSD.string)))
             
             # Linking Utterance to the Dialogue
-            g.add((utterance_uri, SIO.SIO_000068, dialogue_uri)) # sio:is-part-of
+            g.add((utterance_uri, SIO.SIO_000068, dialogue_uri)) # sio:is part of
+            
+            # --- DIDO-core: Participant (SIO Agent) ---
+            participant_uri = EX[f"interlocutors/{data['speaker_id']}"]
+            g.add((participant_uri, RDF.type, DIDO.Interlocutor))
+            g.add((participant_uri, SIO.SIO_000062, dialogue_uri)) # sio:is participant in
+            g.add((utterance_uri, SIO.SIO_000139, participant_uri))  # sio:has agent
+            g.add((participant_uri, SIO.SIO_000063, utterance_uri))  # sio:is agent in
+
+            # --- DIDO-data: Transcript (SIO Entity) ---
+            utterance_text_uri = EX[f"utteranceTexts/utteranceText_{utterance_id}"]
+            g.add((utterance_text_uri, RDF.type, DIDO.UtteranceText))
+            g.add((utterance_uri, SIO.SIO_000232, utterance_text_uri))  # sio:has output
+            g.add((utterance_text_uri, SIO.SIO_000300, Literal(data['text'], datatype=XSD.string)))   # sio:has value
             
             # --- Temporal duration (OWL-Time) ---
-            temp_node = BNode()
-            g.add((utterance_uri, DIDO.hasAttribute, temp_node))
-            g.add((temp_node, RDF.type, TIME.TemporalDuration))
-            g.add((temp_node, TIME.hasBeginning, Literal(data['begin_time'], datatype=XSD.float)))
-            g.add((temp_node, TIME.hasEnd, Literal(data['end_time'], datatype=XSD.float)))
+            g.add((utterance_uri, RDF.type, TIME.TemporalEntity))
+            temporal_duration_node = BNode()
+            g.add((utterance_uri, SIO.sio_000008, temporal_duration_node))    # sio:has attribute
+
+            beg_node = BNode()
+            end_node = BNode()
+            g.add((beg_node, RDF.type, TIME.Instant))
+            g.add((end_node, RDF.type, TIME.Instant))
+            g.add((temporal_duration_node, TIME.hasBeginning, beg_node))
+            g.add((temporal_duration_node, TIME.hasEnd, end_node))
+
+            # --- Temporal instant descriptions (OWL-TIME) ---
+            beg_node_description = BNode()
+            end_node_description = BNode()
+            g.add((beg_node_description, RDF.type, TIME.DateTimeDescription))
+            g.add((end_node_description, RDF.type, TIME.DateTimeDescription))
+            g.add((beg_node, TIME.inDateTime, beg_node_description))
+            g.add((end_node, TIME.inDateTime, end_node_description))
+            g.add((beg_node_description, TIME.second, Literal(data['begin_time'], datatype=XSD.float)))
+            g.add((end_node_description, TIME.second, Literal(data['end_time'], datatype=XSD.float)))
+            g.add((beg_node_description, TIME.unitType, TIME.unitSecond))
+            g.add((end_node_description, TIME.unitType, TIME.unitSecond))
 
     return g
 
@@ -152,8 +133,8 @@ def align_daicwoz_csv_to_dido(csv_filename):
         g.add((daic_woz_uri, RDF.type, DCAT.Dataset))
         g.add((transcript_uri, SIO.SIO_000095, daic_woz_uri)) # sio:is member of\
         g.add((transcript_uri, DCTERMS.title, Literal("Distress Analysis Corpus - Wizard of Oz", datatype=XSD.string)))
-        g.add((transcript_uri, DCAT.landingPage, URIRef('https://dcapswoz.ict.usc.edu/')))
-        g.add((transcript_uri, DCTERMS.isReferencedBy, URIRef('https://d1wqtxts1xzle7.cloudfront.net/98764174/508_Paper-libre.pdf')))
+        g.add((daic_woz_uri, DCAT.landingPage, URIRef('https://dcapswoz.ict.usc.edu/')))
+        g.add((daic_woz_uri, DCTERMS.isReferencedBy, URIRef('https://d1wqtxts1xzle7.cloudfront.net/98764174/508_Paper-libre.pdf')))
 
         for utterance_num, utterance in enumerate(reader):
             # print(utterance)
@@ -255,14 +236,22 @@ def get_first_n_dialogues(dataset, n):
 
 
 if __name__ == "__main__":
-    # Read input data
-    dialog_num = 300
-    csv_filename = os.path.join('src', 'ontology', 'data', 'dialog_daicwoz', f'{dialog_num}_TRANSCRIPT.csv')
-    rdf_dest_filename = os.path.join('src', 'ontology', 'data', f'daicwoz_dialogue_{dialog_num}.ttl')
+    # DAIC-WOZ Alignment
+    dialogue_num_daicwoz = 300
+    csv_filename_daicwoz = os.path.join('src', 'ontology', 'data', 'dialog_daicwoz', f'{dialogue_num_daicwoz}_TRANSCRIPT.csv')
+    rdf_dest_daicwoz = os.path.join('src', 'ontology', 'data', f'daicwoz_dialogue_{dialogue_num_daicwoz}.ttl')
     
-    # Align input data with DIDO
-    g_daic_woz = align_daicwoz_csv_to_dido(csv_filename)
+    print(f"Aligning DAIC-WOZ dialogue {dialogue_num_daicwoz}...")
+    g_daic_woz = align_daicwoz_csv_to_dido(csv_filename_daicwoz)
+    # print(f"Writing to {rdf_dest_daicwoz}")
+    # g_daic_woz.serialize(destination=rdf_dest_daicwoz, format='turtle')
 
-    # Write 
-    print(f"Writing to {rdf_dest_filename}")
-    g_daic_woz.serialize(destination=rdf_dest_filename, format='turtle')
+    # AMI Alignment
+    meeting_id_ami = 'EN2001a'
+    jsonl_filename_ami = os.path.join('src', 'ontology', 'data', 'dialog_ami', f'{meeting_id_ami}.jsonl')
+    rdf_dest_ami = os.path.join('src', 'ontology', 'data', f'ami_meeting_{meeting_id_ami}.ttl')
+
+    print(f"Aligning AMI meeting {meeting_id_ami}...")
+    g_ami = align_ami_jsonl_to_dido(jsonl_filename_ami)
+    print(f"Writing to {rdf_dest_ami}")
+    g_ami.serialize(destination=rdf_dest_ami, format='turtle')

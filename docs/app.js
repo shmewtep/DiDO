@@ -1,24 +1,9 @@
-const engine = new window.Comunica.QuerySparql();
-const DATA_SOURCE = 'data/daicwoz_dialogue_300.ttl';
+import { getCQRegistry } from "./cqRegistry.js"
 
-const cqRegistry = {
-    CQ1: { file: 'queries/CQ1.sparql', variables: [{ name: 'dialogue', label: 'Dialogue IRI', placeholder: '<http://purl.org/twc/dido/individuals#dialogue/300>', default: '<http://purl.org/twc/dido/individuals#dialogue/300>' }] },
-    CQ2: { file: 'queries/CQ2.sparql', variables: [{ name: 'utterance', label: 'Utterance IRI', placeholder: 'utterances:utterance_300_86', default: 'utterances:utterance_300_86' }] },
-    CQ3: { file: 'queries/CQ3.sparql', variables: [{ name: 'utterance', label: 'Utterance IRI', placeholder: 'utterances:utterance_300_86', default: 'utterances:utterance_300_86' }] }, // Placeholder needs BIND in CQ3
-    CQ4: {
-        file: 'queries/CQ4.sparql', variables: [
-            { name: 'T1', label: 'Start Time (s)', placeholder: '36.5', default: '36.5' },
-            { name: 'T2', label: 'End Time (s)', placeholder: '50.0', default: '50.0' }
-        ]
-    },
-    CQ5: { file: 'queries/CQ5.sparql', variables: [{ name: 'utterance', label: 'Utterance IRI', placeholder: 'utterances:utterance_300_86', default: 'utterances:utterance_300_86' }] },
-    CQ6: {
-        file: 'queries/CQ6.sparql', variables: [
-            { name: 'S1', label: 'Speaker 1 IRI', placeholder: '<http://purl.org/twc/dido/individuals#interlocutors/ellie>', default: '<http://purl.org/twc/dido/individuals#interlocutors/ellie>' },
-            { name: 'S2', label: 'Speaker 2 IRI', placeholder: '<http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300>', default: '<http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300>' }
-        ]
-    }
-};
+const engine = new Comunica.QueryEngine();
+const DATA_SOURCE = './data/daicwoz_dialogue_300.ttl';
+
+const cqRegistry = getCQRegistry();
 
 const elements = {
     cqSelect: document.getElementById('cq-select'),
@@ -31,10 +16,31 @@ const elements = {
     loader: document.getElementById('loader')
 };
 
+// Initialize CQ Registry; populate query dropdown menu
+const initCQSelect = () => {
+    Object.entries(cqRegistry).forEach(([id, cq]) => {
+        const option = document.createElement('option');
+        option.value = id;
+        option.textContent = `${id}: ${cq.text}`;
+        elements.cqSelect.appendChild(option);
+    });
+
+    // If a query is selected (e.g. by default or browser cache), load it
+    if (elements.cqSelect.value) {
+        loadCQ(elements.cqSelect.value);
+    } else {
+        // Otherwise, select and load the first query by default
+        const firstId = Object.keys(cqRegistry)[0];
+        if (firstId) {
+            elements.cqSelect.value = firstId;
+            loadCQ(firstId);
+        }
+    }
+};
+
 let currentQueryTemplate = '';
 
-elements.cqSelect.addEventListener('change', async (e) => {
-    const cqId = e.target.value;
+const loadCQ = async (cqId) => {
     const cq = cqRegistry[cqId];
     if (!cq) return;
 
@@ -61,18 +67,26 @@ elements.cqSelect.addEventListener('change', async (e) => {
     } catch (err) {
         console.error('Error loading query:', err);
     }
-});
+};
+
+initCQSelect();
+
+// Add event listener to query dropdown menu
+elements.cqSelect.addEventListener('change', (e) => loadCQ(e.target.value));
 
 elements.toggleQuery.addEventListener('click', () => {
     elements.queryDisplay.classList.toggle('hidden');
 });
 
+// Add event listener to run button
 elements.runBtn.addEventListener('click', async () => {
     const cqId = elements.cqSelect.value;
     const cq = cqRegistry[cqId];
     if (!cq) return;
+    console.log(cq);
 
     let query = currentQueryTemplate;
+    console.log(query);
 
     // Simple substitution based on CQ patterns
     if (cqId === 'CQ4') {
@@ -100,24 +114,26 @@ elements.runBtn.addEventListener('click', async () => {
     elements.resultsBody.innerHTML = '<tr><td class="placeholder">Running query...</td></tr>';
     elements.resultsHead.innerHTML = '';
 
+    // Try to run the query
     try {
         const result = await engine.queryBindings(query, {
-            sources: [{ type: 'file', value: DATA_SOURCE }],
+            sources: [DATA_SOURCE],
         });
 
         const bindings = await result.toArray();
         elements.resultsBody.innerHTML = '';
 
+        // Handle variables from result stream metadata
+        const vars = result.variables.map(v => v.value);
+        vars.forEach(v => {
+            const th = document.createElement('th');
+            th.textContent = v;
+            elements.resultsHead.appendChild(th);
+        });
+
         if (bindings.length === 0) {
             elements.resultsBody.innerHTML = '<tr><td class="placeholder">No results found</td></tr>';
         } else {
-            const vars = Object.keys(bindings[0].toObject());
-            vars.forEach(v => {
-                const th = document.createElement('th');
-                th.textContent = v;
-                elements.resultsHead.appendChild(th);
-            });
-
             bindings.forEach(binding => {
                 const tr = document.createElement('tr');
                 vars.forEach(v => {
