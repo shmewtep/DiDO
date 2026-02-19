@@ -25,6 +25,7 @@ SPARQLDIR :=			../sparql
 TMPDIR := 				tmp
 RELEASEDIR := 			../..
 MODULE_DIR := 			modules
+REPORTDIR := 			reports
 
 REPORT_FAIL_ON =        None
 REPORT_LABEL =          -l true
@@ -40,6 +41,8 @@ SIO_URI := 				http://semanticscience.org/ontology/sio.owl
 TIME_URI :=				http://www.w3.org/2006/time
 DCAT_URI :=				http://www.w3.org/ns/dcat
 
+EXAMPLE_FILE := 		data/daicwoz_dialogue_300.ttl
+
 
 # --------------------------------
 # Top-level targets
@@ -48,10 +51,10 @@ DCAT_URI :=				http://www.w3.org/ns/dcat
 .PHONY: .FORCE
 
 .PHONY: all
-all: all_imports all_main all_subsets sparql_test all_reports all_assets
+all: all_imports all_main all_subsets sparql_test all_reports all_assets verify_cqs
 
 .PHONY: test
-test: sparql_test all_reports 
+test: sparql_test all_reports verify_cqs
 	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.ttl && rm test.ttl && echo "Success"
 
 $(TMPDIR) $(REPORTDIR) :
@@ -310,6 +313,19 @@ ifneq ($(SPARQL_EXPORTS_ARGS),)
 	$(ROBOT) query -f tsv -i $< $(SPARQL_EXPORTS_ARGS)
 endif
 
+
+# ----------------------------------------
+# Competency Questions
+# ----------------------------------------
+
+CQ_QUERIES = $(wildcard $(SPARQLDIR)/CQ*.sparql)
+CQ_TSV = $(patsubst $(SPARQLDIR)/%.sparql, $(REPORTDIR)/%.tsv, $(CQ_QUERIES))
+
+.PHONY: verify_cqs
+verify_cqs: $(CQ_TSV)
+
+$(REPORTDIR)/CQ%.tsv: $(SPARQLDIR)/CQ%.sparql $(EXAMPLE_FILE) | $(REPORTDIR)
+	$(ROBOT) query -f tsv -i $(EXAMPLE_FILE) --query $< $@
 
 # ----------------------------------------
 # Release artefacts: export formats

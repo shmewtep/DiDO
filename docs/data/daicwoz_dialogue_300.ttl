@@ -1,0 +1,3157 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dido: <http://purl.org/twc/dido#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/twc/dido/individuals#dialogueTranscript/300> a dido:DialogueTranscript ;
+    dcterms:isReferencedBy <https://d1wqtxts1xzle7.cloudfront.net/98764174/508_Paper-libre.pdf> ;
+    dcterms:title "Distress Analysis Corpus - Wizard of Oz"^^xsd:string ;
+    sio:SIO_000095 <http://purl.org/twc/dido/individuals#dataset/daic-woz> ;
+    sio:SIO_000332 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    dcat:landingPage <https://dcapswoz.ict.usc.edu/> .
+
+<http://purl.org/twc/dido/individuals#dataset/daic-woz> a sio:SIO_000089,
+        dcat:Dataset .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_0> a dido:UtteranceText ;
+    sio:SIO_000300 "hi i'm ellie thanks for coming in today"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_1> a dido:UtteranceText ;
+    sio:SIO_000300 "i was created to talk to people in a safe and secure environment"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_10> a dido:UtteranceText ;
+    sio:SIO_000300 "really"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_100> a dido:UtteranceText ;
+    sio:SIO_000300 "what's one of your most memorable experiences"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_101> a dido:UtteranceText ;
+    sio:SIO_000300 "i'm not sure"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_102> a dido:UtteranceText ;
+    sio:SIO_000300 "maybe when i graduated from high school"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_103> a dido:UtteranceText ;
+    sio:SIO_000300 "yeah"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_104> a dido:UtteranceText ;
+    sio:SIO_000300 "i'd love to hear all about it"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_105> a dido:UtteranceText ;
+    sio:SIO_000300 "well uh i um i got my diploma"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_106> a dido:UtteranceText ;
+    sio:SIO_000300 "my my diploma that i finished school and i met all the requirements "^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_107> a dido:UtteranceText ;
+    sio:SIO_000300 "high school"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_108> a dido:UtteranceText ;
+    sio:SIO_000300 "and i was approved to go"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_109> a dido:UtteranceText ;
+    sio:SIO_000300 "do whatever i wanted to do"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_11> a dido:UtteranceText ;
+    sio:SIO_000300 "why'd you move to l_a"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_110> a dido:UtteranceText ;
+    sio:SIO_000300 "that's great"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_111> a dido:UtteranceText ;
+    sio:SIO_000300 "what's it like for you living with them"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_112> a dido:UtteranceText ;
+    sio:SIO_000300 "living with who"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_113> a dido:UtteranceText ;
+    sio:SIO_000300 "how do you like your living situation"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_114> a dido:UtteranceText ;
+    sio:SIO_000300 "um it's alright it could be better"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_115> a dido:UtteranceText ;
+    sio:SIO_000300 "do you have roommates"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_116> a dido:UtteranceText ;
+    sio:SIO_000300 "not"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_117> a dido:UtteranceText ;
+    sio:SIO_000300 "no"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_118> a dido:UtteranceText ;
+    sio:SIO_000300 "that's good"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_119> a dido:UtteranceText ;
+    sio:SIO_000300 "how easy is it for you to get a good night's sleep"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_12> a dido:UtteranceText ;
+    sio:SIO_000300 "um my parents are from here um"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_120> a dido:UtteranceText ;
+    sio:SIO_000300 "uh it's pretty easy"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_121> a dido:UtteranceText ;
+    sio:SIO_000300 "do you feel that way often"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_122> a dido:UtteranceText ;
+    sio:SIO_000300 "uh yes"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_123> a dido:UtteranceText ;
+    sio:SIO_000300 "what are you like when you don't sleep well"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_124> a dido:UtteranceText ;
+    sio:SIO_000300 "repeat that"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_125> a dido:UtteranceText ;
+    sio:SIO_000300 "what are you like when you don't sleep well"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_126> a dido:UtteranceText ;
+    sio:SIO_000300 "irritated um"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_127> a dido:UtteranceText ;
+    sio:SIO_000300 "lazy"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_128> a dido:UtteranceText ;
+    sio:SIO_000300 "do you feel down"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_129> a dido:UtteranceText ;
+    sio:SIO_000300 "no"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_13> a dido:UtteranceText ;
+    sio:SIO_000300 "how do you like l_a"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_130> a dido:UtteranceText ;
+    sio:SIO_000300 "that's good"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_131> a dido:UtteranceText ;
+    sio:SIO_000300 "have you been diagnosed with depression"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_132> a dido:UtteranceText ;
+    sio:SIO_000300 "no"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_133> a dido:UtteranceText ;
+    sio:SIO_000300 "have you ever been diagnosed with p_t_s_d"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_134> a dido:UtteranceText ;
+    sio:SIO_000300 "no"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_135> a dido:UtteranceText ;
+    sio:SIO_000300 "have you ever served in the military"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_136> a dido:UtteranceText ;
+    sio:SIO_000300 "no"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_137> a dido:UtteranceText ;
+    sio:SIO_000300 "okay"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_138> a dido:UtteranceText ;
+    sio:SIO_000300 "when was the last time you felt really happy"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_139> a dido:UtteranceText ;
+    sio:SIO_000300 "um the other day"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_14> a dido:UtteranceText ;
+    sio:SIO_000300 "i love it"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_140> a dido:UtteranceText ;
+    sio:SIO_000300 "tell me more about that"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_141> a dido:UtteranceText ;
+    sio:SIO_000300 "weather was great sun was out"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_142> a dido:UtteranceText ;
+    sio:SIO_000300 "that sounds like a great situation"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_143> a dido:UtteranceText ;
+    sio:SIO_000300 "what do you think of today's kids"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_144> a dido:UtteranceText ;
+    sio:SIO_000300 "different"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_145> a dido:UtteranceText ;
+    sio:SIO_000300 "can you give me an example of that"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_146> a dido:UtteranceText ;
+    sio:SIO_000300 "less"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_147> a dido:UtteranceText ;
+    sio:SIO_000300 "less um"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_148> a dido:UtteranceText ;
+    sio:SIO_000300 "interested"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_149> a dido:UtteranceText ;
+    sio:SIO_000300 "[laughter]"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_15> a dido:UtteranceText ;
+    sio:SIO_000300 "what are some things you really like about l_a"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_150> a dido:UtteranceText ;
+    sio:SIO_000300 "i see what you mean"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_151> a dido:UtteranceText ;
+    sio:SIO_000300 "what do you do when you're annoyed"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_152> a dido:UtteranceText ;
+    sio:SIO_000300 "uh shut down"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_153> a dido:UtteranceText ;
+    sio:SIO_000300 "when was the last time that happened"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_154> a dido:UtteranceText ;
+    sio:SIO_000300 "uh about two weeks ago"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_155> a dido:UtteranceText ;
+    sio:SIO_000300 "mhm"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_156> a dido:UtteranceText ;
+    sio:SIO_000300 "can you tell me about that"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_157> a dido:UtteranceText ;
+    sio:SIO_000300 "uh yeah a friend of mine was annoying me and i just"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_158> a dido:UtteranceText ;
+    sio:SIO_000300 "cut them off"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_159> a dido:UtteranceText ;
+    sio:SIO_000300 "i'm sorry"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_16> a dido:UtteranceText ;
+    sio:SIO_000300 "i like the weather"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_160> a dido:UtteranceText ;
+    sio:SIO_000300 "[laughter] it's alright"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_161> a dido:UtteranceText ;
+    sio:SIO_000300 "how do you know them"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_162> a dido:UtteranceText ;
+    sio:SIO_000300 "friendship"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_163> a dido:UtteranceText ;
+    sio:SIO_000300 "cool"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_164> a dido:UtteranceText ;
+    sio:SIO_000300 "how would your best friend describe you"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_165> a dido:UtteranceText ;
+    sio:SIO_000300 "chocolate"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_166> a dido:UtteranceText ;
+    sio:SIO_000300 "tall"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_167> a dido:UtteranceText ;
+    sio:SIO_000300 "[laughter]"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_168> a dido:UtteranceText ;
+    sio:SIO_000300 "thin"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_169> a dido:UtteranceText ;
+    sio:SIO_000300 "okay"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_17> a dido:UtteranceText ;
+    sio:SIO_000300 "i like the opportunities"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_170> a dido:UtteranceText ;
+    sio:SIO_000300 "okay i think i've asked everything i need to"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_171> a dido:UtteranceText ;
+    sio:SIO_000300 "thank you"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_172> a dido:UtteranceText ;
+    sio:SIO_000300 "goodbye"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_173> a dido:UtteranceText ;
+    sio:SIO_000300 "bye bye"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_18> a dido:UtteranceText ;
+    sio:SIO_000300 "um"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_19> a dido:UtteranceText ;
+    sio:SIO_000300 "yes"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_2> a dido:UtteranceText ;
+    sio:SIO_000300 "think of me as a friend i don't judge i can't i'm a computer"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_20> a dido:UtteranceText ;
+    sio:SIO_000300 "how easy was it for you to get used to living in l_a"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_21> a dido:UtteranceText ;
+    sio:SIO_000300 "um"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_22> a dido:UtteranceText ;
+    sio:SIO_000300 "it took a minute"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_23> a dido:UtteranceText ;
+    sio:SIO_000300 "somewhat easy"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_24> a dido:UtteranceText ;
+    sio:SIO_000300 "what are some things you don't really like about l_a"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_25> a dido:UtteranceText ;
+    sio:SIO_000300 "congestion"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_26> a dido:UtteranceText ;
+    sio:SIO_000300 "mhm"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_27> a dido:UtteranceText ;
+    sio:SIO_000300 "that's it"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_28> a dido:UtteranceText ;
+    sio:SIO_000300 "okay"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_29> a dido:UtteranceText ;
+    sio:SIO_000300 "what'd you study at school"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_3> a dido:UtteranceText ;
+    sio:SIO_000300 "i'm here to learn about people and would love to learn about you"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_30> a dido:UtteranceText ;
+    sio:SIO_000300 "um i took up business and administration"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_31> a dido:UtteranceText ;
+    sio:SIO_000300 "cool"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_32> a dido:UtteranceText ;
+    sio:SIO_000300 "are you still doing that"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_33> a dido:UtteranceText ;
+    sio:SIO_000300 "uh yeah i am"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_34> a dido:UtteranceText ;
+    sio:SIO_000300 "here and there i'm on a break right now but i plan on going back in the uh next semester"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_35> a dido:UtteranceText ;
+    sio:SIO_000300 "what's your dream job"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_36> a dido:UtteranceText ;
+    sio:SIO_000300 "uh probably to open up my own business"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_37> a dido:UtteranceText ;
+    sio:SIO_000300 "awesome"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_38> a dido:UtteranceText ;
+    sio:SIO_000300 "do you travel a lot"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_39> a dido:UtteranceText ;
+    sio:SIO_000300 "no"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_4> a dido:UtteranceText ;
+    sio:SIO_000300 "i'll ask a few questions to get us started and please feel free to tell me anything your answers are totally confidential"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_40> a dido:UtteranceText ;
+    sio:SIO_000300 "why"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_41> a dido:UtteranceText ;
+    sio:SIO_000300 "um no specific reason i just"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_42> a dido:UtteranceText ;
+    sio:SIO_000300 "don't travel a lot"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_43> a dido:UtteranceText ;
+    sio:SIO_000300 "i'm pretty local"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_44> a dido:UtteranceText ;
+    sio:SIO_000300 "okay"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_45> a dido:UtteranceText ;
+    sio:SIO_000300 "how often do you go back to your hometown"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_46> a dido:UtteranceText ;
+    sio:SIO_000300 "once a year"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_47> a dido:UtteranceText ;
+    sio:SIO_000300 "nice"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_48> a dido:UtteranceText ;
+    sio:SIO_000300 "do you consider yourself an introvert"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_49> a dido:UtteranceText ;
+    sio:SIO_000300 "can you be a little bit more specific"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_5> a dido:UtteranceText ;
+    sio:SIO_000300 "how are you doing today"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_50> a dido:UtteranceText ;
+    sio:SIO_000300 "whatever comes to your mind"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_51> a dido:UtteranceText ;
+    sio:SIO_000300 "no answer"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_52> a dido:UtteranceText ;
+    sio:SIO_000300 "okay"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_53> a dido:UtteranceText ;
+    sio:SIO_000300 " what do you do to relax"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_54> a dido:UtteranceText ;
+    sio:SIO_000300 "i like reading books i enjoy i enjoy cooking"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_55> a dido:UtteranceText ;
+    sio:SIO_000300 "um exercising is great"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_56> a dido:UtteranceText ;
+    sio:SIO_000300 "awesome"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_57> a dido:UtteranceText ;
+    sio:SIO_000300 "how are you at controlling your temper"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_58> a dido:UtteranceText ;
+    sio:SIO_000300 "i'm i'm i'm pretty good at it"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_59> a dido:UtteranceText ;
+    sio:SIO_000300 "um"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_6> a dido:UtteranceText ;
+    sio:SIO_000300 "good"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_60> a dido:UtteranceText ;
+    sio:SIO_000300 "really"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_61> a dido:UtteranceText ;
+    sio:SIO_000300 "yeah"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_62> a dido:UtteranceText ;
+    sio:SIO_000300 "when was the last time you argued with someone and what was it about"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_63> a dido:UtteranceText ;
+    sio:SIO_000300 "um probably about"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_64> a dido:UtteranceText ;
+    sio:SIO_000300 "two weeks ago"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_65> a dido:UtteranceText ;
+    sio:SIO_000300 "how did you feel in that moment"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_66> a dido:UtteranceText ;
+    sio:SIO_000300 "uh frustrated"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_67> a dido:UtteranceText ;
+    sio:SIO_000300 "tell me more about that"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_68> a dido:UtteranceText ;
+    sio:SIO_000300 "um"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_69> a dido:UtteranceText ;
+    sio:SIO_000300 "i don't like bias"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_7> a dido:UtteranceText ;
+    sio:SIO_000300 "that's good"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_70> a dido:UtteranceText ;
+    sio:SIO_000300 "um i don't like um when someone says they're gonna do something and they don't"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_71> a dido:UtteranceText ;
+    sio:SIO_000300 "mhm"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_72> a dido:UtteranceText ;
+    sio:SIO_000300 "how close are you to them"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_73> a dido:UtteranceText ;
+    sio:SIO_000300 "uh somewhat"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_74> a dido:UtteranceText ;
+    sio:SIO_000300 "how do you know them"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_75> a dido:UtteranceText ;
+    sio:SIO_000300 "friendship"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_76> a dido:UtteranceText ;
+    sio:SIO_000300 "okay"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_77> a dido:UtteranceText ;
+    sio:SIO_000300 "what are some things you like to do for fun"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_78> a dido:UtteranceText ;
+    sio:SIO_000300 "i like to play sports i enjoy uh going out with friends and family"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_79> a dido:UtteranceText ;
+    sio:SIO_000300 "playing games"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_8> a dido:UtteranceText ;
+    sio:SIO_000300 "where are you from originally"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_80> a dido:UtteranceText ;
+    sio:SIO_000300 "nice"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_81> a dido:UtteranceText ;
+    sio:SIO_000300 "who's someone that's been a positive influence in your life"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_82> a dido:UtteranceText ;
+    sio:SIO_000300 "grandparents"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_83> a dido:UtteranceText ;
+    sio:SIO_000300 "parents"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_84> a dido:UtteranceText ;
+    sio:SIO_000300 "aww"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_85> a dido:UtteranceText ;
+    sio:SIO_000300 "can you tell me about that"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_86> a dido:UtteranceText ;
+    sio:SIO_000300 "um yeah i mean they've always given me great advice"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_87> a dido:UtteranceText ;
+    sio:SIO_000300 "they've always kept it real"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_88> a dido:UtteranceText ;
+    sio:SIO_000300 "how close are you to your family"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_89> a dido:UtteranceText ;
+    sio:SIO_000300 "real close"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_9> a dido:UtteranceText ;
+    sio:SIO_000300 "atlanta georgia"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_90> a dido:UtteranceText ;
+    sio:SIO_000300 "is there anything you regret"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_91> a dido:UtteranceText ;
+    sio:SIO_000300 "i would say going to college right after high school"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_92> a dido:UtteranceText ;
+    sio:SIO_000300 "why"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_93> a dido:UtteranceText ;
+    sio:SIO_000300 "well i would've been done by now you know"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_94> a dido:UtteranceText ;
+    sio:SIO_000300 "i would have been probably out in the field"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_95> a dido:UtteranceText ;
+    sio:SIO_000300 "in the career field"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_96> a dido:UtteranceText ;
+    sio:SIO_000300 "what made you decide to do that"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_97> a dido:UtteranceText ;
+    sio:SIO_000300 "uh taking a job off the street"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_98> a dido:UtteranceText ;
+    sio:SIO_000300 "could you have done anything to avoid it"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_99> a dido:UtteranceText ;
+    sio:SIO_000300 "i'm sure i could've yes"^^xsd:string .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_0> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_0> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "36.588"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "39.668"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_1> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_1> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "39.888"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "43.378"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_10> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_10> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "70.978"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "71.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_100> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_100> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "363.928"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "366.448"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_101> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_101> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "372.098"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "373.218"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_102> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_102> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "373.588"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "375.488"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_103> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_103> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "377.588"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "378.288"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_104> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_104> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "381.848"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "383.678"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_105> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_105> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "386.728"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "390.328"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_106> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_106> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "390.748"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "395.448"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_107> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_107> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "396.628"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "397.708"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_108> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_108> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "398.588"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "399.988"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_109> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_109> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "401.208"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "402.878"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_11> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_11> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "72.788"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "74.198"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_110> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_110> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "403.468"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "404.498"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_111> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_111> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "406.968"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "408.618"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_112> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_112> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "409.408"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "410.428"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_113> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_113> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "411.438"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "413.158"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_114> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_114> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "414.148"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "416.448"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_115> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_115> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "417.418"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "418.688"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_116> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_116> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "417.428"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "417.858"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_117> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_117> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "419.038"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "419.508"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_118> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_118> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "420.608"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "421.748"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_119> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_119> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "426.758"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "429.278"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_12> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_12> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "75.028"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "78.128"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_120> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_120> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "430.858"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "432.458"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_121> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_121> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "433.978"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "435.538"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_122> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_122> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "436.538"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "437.598"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_123> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_123> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "438.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "440.548"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_124> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_124> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "448.468"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "449.568"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_125> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_125> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "450.498"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "452.478"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_126> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_126> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "453.188"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "455.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_127> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_127> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "457.348"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "458.258"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_128> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_128> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "462.288"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "463.488"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_129> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_129> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "463.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "464.468"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_13> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_13> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "82.218"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "83.578"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_130> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_130> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "466.278"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "467.108"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_131> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_131> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "468.348"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "470.378"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_132> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_132> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "470.658"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "471.348"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_133> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_133> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "471.878"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "474.188"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_134> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_134> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "474.638"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "475.248"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_135> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_135> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "475.948"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "477.648"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_136> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_136> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "477.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "478.478"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_137> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_137> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "479.228"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "480.088"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_138> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_138> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "487.698"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "490.348"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_139> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_139> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "492.328"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "494.708"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_14> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_14> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "83.808"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "84.588"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_140> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_140> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "496.448"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "497.608"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_141> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_141> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "499.508"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "502.038"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_142> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_142> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "503.878"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "505.988"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_143> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_143> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "507.578"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "509.258"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_144> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_144> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "511.028"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "511.888"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_145> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_145> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "515.528"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "517.188"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_146> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_146> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "525.478"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "526.528"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_147> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_147> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "527.978"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "529.288"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_148> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_148> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "530.038"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "531.008"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_149> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_149> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "533.118"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "534.128"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_15> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_15> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "85.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "87.898"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_150> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_150> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "535.148"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "536.268"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_151> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_151> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "544.928"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "546.488"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_152> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_152> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "548.568"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "550.018"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_153> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_153> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "553.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "555.528"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_154> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_154> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "559.768"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "562.228"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_155> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_155> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "564.208"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "564.818"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_156> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_156> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "566.098"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "567.478"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_157> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_157> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "568.678"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "571.798"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_158> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_158> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "572.458"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "573.568"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_159> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_159> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "574.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "576.008"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_16> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_16> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "88.458"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "89.968"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_160> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_160> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "576.178"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "577.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_161> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_161> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "579.098"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "580.348"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_162> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_162> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "581.178"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "582.128"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_163> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_163> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "583.928"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "584.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_164> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_164> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "589.148"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "590.918"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_165> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_165> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "598.238"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "599.708"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_166> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_166> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "600.608"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "601.378"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_167> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_167> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "601.718"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "602.688"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_168> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_168> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "602.738"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "603.478"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_169> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_169> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "610.398"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "611.098"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_17> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_17> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "90.278"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "93.568"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_170> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_170> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "614.228"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "616.878"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_171> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_171> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "618.308"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "619.078"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_172> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_172> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "619.488"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "620.348"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_173> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_173> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "620.538"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "621.268"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_18> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_18> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "94.738"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "95.298"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_19> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_19> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "96.588"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "97.278"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_2> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_2> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "43.728"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "48.498"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_20> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_20> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "98.228"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "100.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_21> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_21> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "102.428"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "103.268"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_22> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_22> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "104.278"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "105.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_23> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_23> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "107.738"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "108.798"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_24> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_24> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "110.788"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "113.168"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_25> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_25> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "114.038"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "115.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_26> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_26> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "119.218"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "119.978"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_27> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_27> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "120.268"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "121.158"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_28> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_28> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "122.828"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "123.768"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_29> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_29> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "125.548"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "126.958"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_3> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_3> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "49.188"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "52.388"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_30> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_30> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "128.488"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "132.628"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_31> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_31> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "133.718"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "134.438"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_32> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_32> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "134.818"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "136.178"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_33> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_33> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "136.748"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "139.418"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_34> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_34> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "139.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "144.548"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_35> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_35> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "146.008"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "147.468"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_36> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_36> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "149.258"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "152.168"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_37> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_37> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "155.698"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "156.678"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_38> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_38> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "159.448"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "160.858"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_39> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_39> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "161.248"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "162.068"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_4> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_4> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "52.658"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "58.958"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_40> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_40> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "163.618"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "164.328"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_41> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_41> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "165.608"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "168.968"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_42> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_42> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "169.518"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "170.978"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_43> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_43> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "171.308"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "172.978"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_44> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_44> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "174.148"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "174.968"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_45> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_45> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "175.558"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "177.668"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_46> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_46> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "178.578"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "179.918"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_47> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_47> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "182.508"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "183.268"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_48> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_48> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "184.998"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "186.858"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_49> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_49> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "189.098"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "191.068"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_5> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_5> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "60.028"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "61.378"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_50> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_50> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "193.678"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "195.248"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_51> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_51> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "196.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "197.998"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_52> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_52> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "199.288"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "200.088"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_53> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_53> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "200.818"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "202.398"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_54> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_54> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "203.318"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "206.358"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_55> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_55> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "206.728"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "208.658"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_56> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_56> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "211.648"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "212.618"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_57> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_57> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "213.878"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "216.068"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_58> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_58> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "217.728"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "219.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_59> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_59> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "220.228"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "221.058"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_6> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_6> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "62.328"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "63.178"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_60> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_60> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "221.358"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "222.068"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_61> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_61> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "221.358"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "222.068"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_62> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_62> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "223.708"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "227.208"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_63> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_63> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "227.998"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "230.118"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_64> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_64> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "231.088"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "232.368"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_65> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_65> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "235.458"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "237.378"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_66> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_66> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "238.298"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "240.168"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_67> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_67> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "242.218"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "243.518"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_68> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_68> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "244.748"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "245.808"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_69> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_69> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "246.338"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "247.918"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_7> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_7> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "63.798"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "64.738"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_70> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_70> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "248.488"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "252.298"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_71> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_71> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "252.938"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "253.678"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_72> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_72> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "257.578"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "258.848"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_73> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_73> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "260.238"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "261.168"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_74> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_74> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "262.748"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "263.938"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_75> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_75> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "266.918"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "267.988"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_76> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_76> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "269.898"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "270.658"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_77> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_77> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "274.918"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "276.788"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_78> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_78> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "279.618"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "285.988"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_79> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_79> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "286.918"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "288.078"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_8> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_8> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "65.858"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "67.528"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_80> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_80> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "288.858"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "289.678"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_81> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_81> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "290.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "293.268"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_82> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_82> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "294.678"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "295.778"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_83> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_83> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "296.648"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "297.618"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_84> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_84> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "298.928"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "299.668"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_85> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_85> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "302.228"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "303.498"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_86> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_86> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "305.218"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "309.358"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_87> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_87> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "310.538"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "312.208"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_88> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_88> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "314.148"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "316.388"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_89> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_89> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "316.868"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "318.008"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_9> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_9> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "68.978"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "70.288"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_90> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_90> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "322.918"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "324.388"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_91> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_91> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "325.738"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "333.468"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_92> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_92> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "334.268"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "335.058"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_93> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_93> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "336.988"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "339.728"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_94> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_94> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "340.568"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "344.168"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_95> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_95> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "344.788"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "346.068"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_96> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_96> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "347.178"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "348.808"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_97> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_97> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "349.998"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "351.988"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_98> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/ellie> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_98> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "354.178"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "356.448"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#utterances/utterance_300_99> a dido:Utterance,
+        time:TemporalEntity ;
+    sio:SIO_000068 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000139 <http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> ;
+    sio:SIO_000232 <http://purl.org/twc/dido/individuals#utteranceTexts/utteranceText_300_99> ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "357.818"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "360.198"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+<http://purl.org/twc/dido/individuals#interlocutors/ellie> a dido:Interlocutor ;
+    sio:SIO_000062 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000063 <http://purl.org/twc/dido/individuals#utterances/utterance_300_0>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_1>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_10>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_100>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_103>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_104>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_11>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_110>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_111>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_113>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_115>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_118>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_119>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_121>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_123>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_125>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_128>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_13>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_130>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_131>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_133>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_135>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_137>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_138>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_140>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_142>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_143>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_145>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_149>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_15>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_150>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_151>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_153>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_155>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_156>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_159>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_161>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_163>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_164>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_167>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_169>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_170>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_172>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_2>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_20>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_24>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_26>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_28>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_29>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_3>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_31>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_32>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_35>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_37>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_38>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_4>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_40>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_44>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_45>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_47>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_48>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_5>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_50>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_52>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_53>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_56>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_57>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_60>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_62>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_65>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_67>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_7>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_71>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_72>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_74>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_76>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_77>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_8>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_80>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_81>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_84>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_85>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_88>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_90>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_92>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_96>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_98> .
+
+<http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300> a dido:Interlocutor ;
+    sio:SIO_000062 <http://purl.org/twc/dido/individuals#dialogue/300> ;
+    sio:SIO_000063 <http://purl.org/twc/dido/individuals#utterances/utterance_300_101>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_102>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_105>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_106>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_107>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_108>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_109>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_112>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_114>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_116>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_117>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_12>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_120>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_122>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_124>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_126>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_127>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_129>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_132>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_134>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_136>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_139>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_14>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_141>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_144>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_146>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_147>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_148>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_152>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_154>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_157>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_158>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_16>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_160>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_162>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_165>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_166>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_168>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_17>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_171>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_173>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_18>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_19>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_21>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_22>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_23>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_25>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_27>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_30>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_33>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_34>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_36>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_39>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_41>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_42>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_43>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_46>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_49>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_51>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_54>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_55>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_58>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_59>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_6>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_61>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_63>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_64>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_66>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_68>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_69>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_70>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_73>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_75>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_78>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_79>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_82>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_83>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_86>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_87>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_89>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_9>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_91>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_93>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_94>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_95>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_97>,
+        <http://purl.org/twc/dido/individuals#utterances/utterance_300_99> .
+
+<http://purl.org/twc/dido/individuals#dialogue/300> a dido:Dialogue .
+

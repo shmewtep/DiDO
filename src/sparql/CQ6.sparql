@@ -1,0 +1,30 @@
+PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+# CQ6: How many times do the utterances of speaker S1 overlap with the utterances of speaker S2?
+SELECT ?s1 ?s2 (COUNT(*) AS ?overlapCount)
+WHERE {
+  ?u1 a dido:Utterance ;
+      sio:SIO_000139 ?s1 ;
+      sio:sio_000008 [ 
+        time:hasBeginning [ time:inDateTime [ time:second ?start1 ] ] ;
+        time:hasEnd [ time:inDateTime [ time:second ?end1 ] ]
+      ] .
+  ?u2 a dido:Utterance ;
+      sio:SIO_000139 ?s2 ;
+      sio:sio_000008 [ 
+        time:hasBeginning [ time:inDateTime [ time:second ?start2 ] ] ;
+        time:hasEnd [ time:inDateTime [ time:second ?end2 ] ]
+      ] .
+  
+  FILTER (?s1 != ?s2)
+  
+  # Overlap condition
+  FILTER (?start1 < ?end2 && ?end1 > ?start2)
+  
+  # Example usage:
+  # FILTER (?s1 = <http://purl.org/twc/dido/individuals#interlocutors/ellie>)
+  # FILTER (?s2 = <http://purl.org/twc/dido/individuals#interlocutors/None>)
+}
+GROUP BY ?s1 ?s2

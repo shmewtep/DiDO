@@ -1,0 +1,20 @@
+PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+# CQ3: Which utterance is the immediate successor of utterance U?
+SELECT ?utterance ?successor
+WHERE {
+  ?utterance a dido:Utterance ;
+     sio:sio_000008 [ time:hasEnd [ time:inDateTime [ time:second ?utteranceEnd ] ] ] .
+  ?successor a dido:Utterance ;
+              sio:sio_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?successorStart ] ] ] .
+  FILTER (?successorStart >= ?utteranceEnd)
+  
+  # Ensure it is the immediate successor by checking no other utterance starts between them
+  FILTER NOT EXISTS {
+    ?other a dido:Utterance ;
+           sio:sio_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?otherStart ] ] ] .
+    FILTER (?otherStart > ?utteranceEnd && ?otherStart < ?successorStart)
+  }
+}

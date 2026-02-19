@@ -133,8 +133,8 @@ def align_daicwoz_csv_to_dido(csv_filename):
     g.bind("time", TIME)
     g.bind("dcat", DCAT)
 
-    dialogue_num_pattern = regex.compile(r"^(\d{3})_TRANSCRIPT\.csv$")
-    dialogue_num = dialogue_num_pattern.match(csv_filename)
+    dialogue_num_pattern = regex.compile(r"^.*(\d{3})_TRANSCRIPT\.csv$")
+    dialogue_num = dialogue_num_pattern.match(csv_filename).group(1)
 
     with open(csv_filename) as csv_file:
         reader = csv.DictReader(csv_file, delimiter='\t')
@@ -156,11 +156,11 @@ def align_daicwoz_csv_to_dido(csv_filename):
         g.add((transcript_uri, DCTERMS.isReferencedBy, URIRef('https://d1wqtxts1xzle7.cloudfront.net/98764174/508_Paper-libre.pdf')))
 
         for utterance_num, utterance in enumerate(reader):
-            print(utterance)
+            # print(utterance)
             # --- Dialogue Structure ---
             # Using meeting_id as the primary identifier for the Dialogue instance
             utterance_id = f"{dialogue_num}_{utterance_num}"
-            utterance_uri = EX[f"utterances/{utterance_id}"]
+            utterance_uri = EX[f"utterances/utterance_{utterance_id}"]
             g.add((utterance_uri, RDF.type, DIDO.Utterance))
 
             # Linking Utterance to the Dialogue
@@ -171,13 +171,15 @@ def align_daicwoz_csv_to_dido(csv_filename):
             if utterance['speaker'] == 'Ellie':
                 participant_uri = EX[f"interlocutors/{'ellie'}"]
             else:
-                participant_uri = EX[f"interlocutors/{dialogue_num}"]
+                participant_uri = EX[f"interlocutors/interlocutor_{dialogue_num}"]
 
             g.add((participant_uri, RDF.type, DIDO.Interlocutor))
             g.add((participant_uri, SIO.SIO_000062, dialogue_uri)) # sio:is participant in
+            g.add((utterance_uri, SIO.SIO_000139, participant_uri))  # sio:has agent
+            g.add((participant_uri, SIO.SIO_000063, utterance_uri))  # sio:is agent in
 
             # --- DIDO-data: Transcript (SIO Entity) ---
-            utterance_text_uri = EX[f"utteranceTexts/{utterance_id}"]
+            utterance_text_uri = EX[f"utteranceTexts/utteranceText_{utterance_id}"]
             g.add((utterance_text_uri, RDF.type, DIDO.UtteranceText))
             g.add((utterance_uri, SIO.SIO_000232, utterance_text_uri))  # sio:has output
             g.add((utterance_text_uri, SIO.SIO_000300, Literal(utterance['value'], datatype=XSD.string)))   # sio:has value
@@ -230,7 +232,7 @@ def get_first_n_dialogues(dataset, n):
     meeting_order = []
 
     for item in dataset:
-        print(item)
+        # print(item)
         meeting_id = item['meeting_id']
         
         # Check if we've encountered this meeting ID before
@@ -254,11 +256,13 @@ def get_first_n_dialogues(dataset, n):
 
 if __name__ == "__main__":
     # Read input data
-    csv_filename = os.path.join('src', 'ontology', 'data', 'dialog_daicwoz', '301_TRANSCRIPT.csv')
-    rdf_dest_filename = os.path.join('src', 'ontology', 'data', 'daicwoz_dialogue_301.ttl')
+    dialog_num = 300
+    csv_filename = os.path.join('src', 'ontology', 'data', 'dialog_daicwoz', f'{dialog_num}_TRANSCRIPT.csv')
+    rdf_dest_filename = os.path.join('src', 'ontology', 'data', f'daicwoz_dialogue_{dialog_num}.ttl')
     
     # Align input data with DIDO
     g_daic_woz = align_daicwoz_csv_to_dido(csv_filename)
-    
+
     # Write 
-    g_daic_woz.serialize(destination=rdf_dest_filename)
+    print(f"Writing to {rdf_dest_filename}")
+    g_daic_woz.serialize(destination=rdf_dest_filename, format='turtle')

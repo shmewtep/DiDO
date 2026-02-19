@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIDO Competency Questions Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://rdf.js.org/comunica-browser/versions/latest/engines/query-sparql/comunica-browser.js"></script>
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>DIDO Competency Questions</h1>
+            <p class="subtitle">Interactive SPARQL Playground for Dialogue Ontology</p>
+        </header>
+
+        <main>
+            <section class="controls">
+                <div class="field">
+                    <label for="cq-select">Select Competency Question</label>
+                    <select id="cq-select">
+                        <option value="" disabled selected>Choose a question...</option>
+                        <option value="CQ1">CQ1: Participant count in dialogue</option>
+                        <option value="CQ2">CQ2: Participant of utterance</option>
+                        <option value="CQ3">CQ3: Immediate successor of utterance</option>
+                        <option value="CQ4">CQ4: Utterances between times</option>
+                        <option value="CQ5">CQ5: Overlapping utterances</option>
+                        <option value="CQ6">CQ6: Speaker overlaps</option>
+                    </select>
+                </div>
+
+                <div id="variable-inputs" class="variable-grid">
+                    <!-- Dynamic inputs will appear here -->
+                </div>
+
+                <div class="actions">
+                    <button id="run-btn" disabled>Run Query</button>
+                    <div id="loader" class="loader hidden"></div>
+                </div>
+            </section>
+
+            <section class="query-section">
+                <div class="panel-header">
+                    <span>SPARQL Query</span>
+                    <button id="toggle-query">Show/Hide</button>
+                </div>
+                <pre id="query-display" class="hidden"><code><!-- Query will be loaded here --></code></pre>
+            </section>
+
+            <section class="results-section">
+                <div class="panel-header">Results</div>
+                <div id="results-table-wrapper">
+                    <table id="results-table">
+                        <thead>
+                            <tr id="table-head"></tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <tr><td class="placeholder">Select a question and run to see results</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by <a href="https://comunica.dev/" target="_blank">Comunica</a> & <a href="https://purl.org/twc/dido" target="_blank">DIDO Ontology</a></p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
