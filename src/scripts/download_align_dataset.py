@@ -29,19 +29,20 @@ def align_ami_jsonl_to_dido(jsonl_file):
     g.bind("sio", SIO)
     g.bind("time", TIME)
     g.bind("dcat", DCAT)
+    g.bind("ex", EX)
 
     meeting_id = os.path.basename(jsonl_file).split('.')[0]
 
     # --- Dialogue Structure ---
-    dialogue_uri = EX[f"dialogue/{meeting_id}"]
+    dialogue_uri = EX[f"dialogue_{meeting_id}"]
     g.add((dialogue_uri, RDF.type, DIDO.Dialogue))
 
     # --- Metadata (DialogueTranscript & Dataset) ---
-    transcript_uri = EX[f"dialogueTranscript/{meeting_id}"]
+    transcript_uri = EX[f"dialogueTranscript_{meeting_id}"]
     g.add((transcript_uri, RDF.type, DIDO.DialogueTranscript))
     g.add((transcript_uri, SIO.SIO_000332, dialogue_uri)) # sio:is about
 
-    ami_dataset_uri = EX["dataset/ami"]
+    ami_dataset_uri = EX["dataset_ami"]
     g.add((ami_dataset_uri, RDF.type, SIO.SIO_000089)) # sio:dataset
     g.add((ami_dataset_uri, RDF.type, DCAT.Dataset))
     g.add((transcript_uri, SIO.SIO_000095, ami_dataset_uri)) # sio:is member of
@@ -56,21 +57,21 @@ def align_ami_jsonl_to_dido(jsonl_file):
             
             # --- Dialogue Structure ---
             utterance_id = f"{meeting_id}_{utterance_num}"
-            utterance_uri = EX[f"utterances/utterance_{utterance_id}"]
+            utterance_uri = EX[f"utterance_{utterance_id}"]
             g.add((utterance_uri, RDF.type, DIDO.Utterance))
             
             # Linking Utterance to the Dialogue
             g.add((utterance_uri, SIO.SIO_000068, dialogue_uri)) # sio:is part of
             
             # --- DIDO-core: Participant (SIO Agent) ---
-            participant_uri = EX[f"interlocutors/{data['speaker_id']}"]
+            participant_uri = EX[f"interlocutor_{data['speaker_id']}"]
             g.add((participant_uri, RDF.type, DIDO.Interlocutor))
             g.add((participant_uri, SIO.SIO_000062, dialogue_uri)) # sio:is participant in
             g.add((utterance_uri, SIO.SIO_000139, participant_uri))  # sio:has agent
             g.add((participant_uri, SIO.SIO_000063, utterance_uri))  # sio:is agent in
 
             # --- DIDO-data: Transcript (SIO Entity) ---
-            utterance_text_uri = EX[f"utteranceTexts/utteranceText_{utterance_id}"]
+            utterance_text_uri = EX[f"utteranceText_{utterance_id}"]
             g.add((utterance_text_uri, RDF.type, DIDO.UtteranceText))
             g.add((utterance_uri, SIO.SIO_000232, utterance_text_uri))  # sio:has output
             g.add((utterance_text_uri, SIO.SIO_000300, Literal(data['text'], datatype=XSD.string)))   # sio:has value
@@ -120,15 +121,15 @@ def align_daicwoz_csv_to_dido(csv_filename):
     with open(csv_filename) as csv_file:
         reader = csv.DictReader(csv_file, delimiter='\t')
 
-        dialogue_uri = EX[f"dialogue/{dialogue_num}"]
+        dialogue_uri = EX[f"dialogue_{dialogue_num}"]
         g.add((dialogue_uri, RDF.type, DIDO.Dialogue))
 
         # Transcript/Dataset metadata
-        transcript_uri = EX[f"dialogueTranscript/{dialogue_num}"]
+        transcript_uri = EX[f"dialogueTranscript_{dialogue_num}"]
         g.add((transcript_uri, RDF.type, DIDO.DialogueTranscript))
         g.add((transcript_uri, SIO.SIO_000332, dialogue_uri)) # sio:is about
 
-        daic_woz_uri = EX[f"dataset/daic-woz"]
+        daic_woz_uri = EX[f"dataset_daic-woz"]
         g.add((daic_woz_uri, RDF.type, SIO.SIO_000089)) # sio:dataset
         g.add((daic_woz_uri, RDF.type, DCAT.Dataset))
         g.add((transcript_uri, SIO.SIO_000095, daic_woz_uri)) # sio:is member of\
@@ -141,7 +142,7 @@ def align_daicwoz_csv_to_dido(csv_filename):
             # --- Dialogue Structure ---
             # Using meeting_id as the primary identifier for the Dialogue instance
             utterance_id = f"{dialogue_num}_{utterance_num}"
-            utterance_uri = EX[f"utterances/utterance_{utterance_id}"]
+            utterance_uri = EX[f"utterance_{utterance_id}"]
             g.add((utterance_uri, RDF.type, DIDO.Utterance))
 
             # Linking Utterance to the Dialogue
@@ -150,9 +151,9 @@ def align_daicwoz_csv_to_dido(csv_filename):
             # --- DIDO-core: Participant (SIO Agent) ---
             participant_uri = ''
             if utterance['speaker'] == 'Ellie':
-                participant_uri = EX[f"interlocutors/{'ellie'}"]
+                participant_uri = EX[f"interlocutor_ellie"]
             else:
-                participant_uri = EX[f"interlocutors/interlocutor_{dialogue_num}"]
+                participant_uri = EX[f"interlocutor_{dialogue_num}"]
 
             g.add((participant_uri, RDF.type, DIDO.Interlocutor))
             g.add((participant_uri, SIO.SIO_000062, dialogue_uri)) # sio:is participant in
@@ -160,7 +161,7 @@ def align_daicwoz_csv_to_dido(csv_filename):
             g.add((participant_uri, SIO.SIO_000063, utterance_uri))  # sio:is agent in
 
             # --- DIDO-data: Transcript (SIO Entity) ---
-            utterance_text_uri = EX[f"utteranceTexts/utteranceText_{utterance_id}"]
+            utterance_text_uri = EX[f"utteranceText_{utterance_id}"]
             g.add((utterance_text_uri, RDF.type, DIDO.UtteranceText))
             g.add((utterance_uri, SIO.SIO_000232, utterance_text_uri))  # sio:has output
             g.add((utterance_text_uri, SIO.SIO_000300, Literal(utterance['value'], datatype=XSD.string)))   # sio:has value
@@ -237,7 +238,7 @@ def get_first_n_dialogues(dataset, n):
 
 if __name__ == "__main__":
     # DAIC-WOZ Alignment
-    dialogue_num_daicwoz = 300
+    dialogue_num_daicwoz = 301
     csv_filename_daicwoz = os.path.join('src', 'ontology', 'data', 'dialog_daicwoz', f'{dialogue_num_daicwoz}_TRANSCRIPT.csv')
     rdf_dest_daicwoz = os.path.join('src', 'ontology', 'data', f'daicwoz_dialogue_{dialogue_num_daicwoz}.ttl')
     
