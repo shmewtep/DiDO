@@ -69,6 +69,7 @@ const loadCQ = async (cqId) => {
     }
 };
 
+
 initCQSelect();
 
 // Add event listener to query dropdown menu
@@ -78,36 +79,28 @@ elements.toggleQuery.addEventListener('click', () => {
     elements.queryDisplay.classList.toggle('hidden');
 });
 
+
+// According to the query registry, load the query template and variables and BIND to specific values
+const bindVariables = (rawQuery, config) => {
+    let bindings = "";
+    config.variables.forEach(v => {
+        bindings += `BIND(${v.default} AS ?${v.name}).\n`;
+    });
+    // Inject BINDs into WHERE clause
+    return rawQuery.replace('WHERE {', `WHERE {\n  ${bindings}`);
+}
+
 // Add event listener to run button
+
 elements.runBtn.addEventListener('click', async () => {
     const cqId = elements.cqSelect.value;
     const cq = cqRegistry[cqId];
     if (!cq) return;
     console.log(cq);
 
-    let query = currentQueryTemplate;
-    console.log(query);
+    let rawQuery = currentQueryTemplate;
 
-    // Simple substitution based on CQ patterns
-    if (cqId === 'CQ4') {
-        const t1 = document.querySelector('[data-var="T1"]').value;
-        const t2 = document.querySelector('[data-var="T2"]').value;
-        query = query.replace('36.5', t1).replace('50.0', t2);
-    } else if (cqId === 'CQ2') {
-        const utt = document.querySelector('[data-var="utterance"]').value;
-        query = query.replace('utterances:utterance_300_86', utt);
-    } else if (cqId === 'CQ3' || cqId === 'CQ5') {
-        const utt = document.querySelector('[data-var="utterance"]').value;
-        // If query doesn't have a BIND for ?u yet, we might need a more generic way.
-        // For CQ3/CQ5 in the repo, they are generic. We'll ADD a BIND if needed or replace placeholders.
-        if (query.includes('?u')) {
-            query = query.replace('WHERE {', `WHERE {\n  BIND(${utt} AS ?u)`);
-        }
-    } else if (cqId === 'CQ6') {
-        const s1 = document.querySelector('[data-var="S1"]').value;
-        const s2 = document.querySelector('[data-var="S2"]').value;
-        query = query + `\n  # Injected filter for demo\n  FILTER (?s1 = ${s1} && ?s2 = ${s2})`;
-    }
+    let query = bindVariables(rawQuery, cq);
 
     elements.runBtn.disabled = true;
     elements.loader.classList.remove('hidden');
@@ -116,14 +109,21 @@ elements.runBtn.addEventListener('click', async () => {
 
     // Try to run the query
     try {
-
+        console.log(query);
         new Comunica.QueryEngine().queryBindings(query, {
             sources: [DATA_SOURCE],
         }).then(function (bindingsStream) {
+            console.log(cq.variables);
             bindingsStream.on('data', function (data) {
-                // Each variable binding is an RDFJS term
-                console.log(data.get('dialogue').value + ' ' + data.get('participantCount').value);
+                console.log('data');
+                console.log(data);
+                const resultRow = cq.variables.map(v => {
+                    const binding = data.get(v.name);
+                    return binding ? binding.value : '';
+                })
+                console.log(resultRow.join(' | '));
             });
+
         });
 
         const result = await engine.queryBindings(query, {
@@ -132,8 +132,6 @@ elements.runBtn.addEventListener('click', async () => {
 
         const bindings = await result.toArray();
         elements.resultsBody.innerHTML = '';
-
-        console.log(bindings[0]);
 
         // Handle variables from result stream metadata
         const vars = result.variables.map(v => v.value);

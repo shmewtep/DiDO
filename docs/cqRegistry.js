@@ -15,7 +15,6 @@ const cqRegistry = {
         variables: [{
             name: 'utterance',
             label: 'Utterance IRI',
-            placeholder: 'utterances:utterance_300_86',
             default: 'utterances:utterance_300_86'
         }]
     },
@@ -25,7 +24,6 @@ const cqRegistry = {
         variables: [{
             name: 'utterance',
             label: 'Utterance IRI',
-            placeholder: 'utterances:utterance_300_86',
             default: 'utterances:utterance_300_86'
         }]
     }, // Placeholder needs BIND in CQ3
@@ -33,8 +31,8 @@ const cqRegistry = {
         file: 'queries/CQ4.sparql',
         text: 'Which utterances occur between these two times?',
         variables: [
-            { name: 'T1', label: 'Start Time (s)', placeholder: '36.5', default: '36.5' },
-            { name: 'T2', label: 'End Time (s)', placeholder: '50.0', default: '50.0' }
+            { name: 'T1', label: 'Start Time (s)', default: '36.5' },
+            { name: 'T2', label: 'End Time (s)', default: '50.0' }
         ]
     },
     CQ5: {
@@ -43,7 +41,6 @@ const cqRegistry = {
         variables: [{
             name: 'utterance',
             label: 'Utterance IRI',
-            placeholder: 'utterances:utterance_300_86',
             default: 'utterances:utterance_300_86'
         }]
     },
@@ -51,8 +48,8 @@ const cqRegistry = {
         file: 'queries/CQ6.sparql',
         text: 'How many times do the utterances of speaker S1 overlap with the utterances of speaker S2?',
         variables: [
-            { name: 'S1', label: 'Speaker 1 IRI', placeholder: '<http://purl.org/twc/dido/individuals#interlocutors/ellie>', default: '<http://purl.org/twc/dido/individuals#interlocutors/ellie>' },
-            { name: 'S2', label: 'Speaker 2 IRI', placeholder: '<http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300>', default: '<http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300>' }
+            { name: 'S1', label: 'Speaker 1 IRI', default: '<http://purl.org/twc/dido/individuals#interlocutors/ellie>' },
+            { name: 'S2', label: 'Speaker 2 IRI', default: '<http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300>' }
         ]
     }
 };

@@ -11,6 +11,6 @@ WHERE {
                time:hasEnd [ time:inDateTime [ time:second ?endTime ] ]
              ] .
   
-  FILTER (?startTime >= 36.5 && ?endTime <= 50.0)
+  FILTER (?startTime >= ?T1 && ?endTime <= ?T2)
 }
 ORDER BY ?startTime

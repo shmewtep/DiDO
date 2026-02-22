@@ -1,4 +1,5 @@
 PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX ex: <http://purl.org/twc/dido/individuals#>
 PREFIX sio: <http://semanticscience.org/resource/>
 
 # CQ1: How many participants are involved in dialogue D?
