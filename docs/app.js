@@ -1,7 +1,7 @@
 import { getCQRegistry } from "./cqRegistry.js"
 
 const engine = new Comunica.QueryEngine();
-const DATA_SOURCE = './data/daicwoz_dialogue_300.ttl';
+const DATA_SOURCE = 'https://raw.githubusercontent.com/shmewtep/dialogueOnt/refs/heads/edit/src/ontology/data/ami_meeting_EN2001a.ttl';
 
 const cqRegistry = getCQRegistry();
 
@@ -116,12 +116,24 @@ elements.runBtn.addEventListener('click', async () => {
 
     // Try to run the query
     try {
+
+        new Comunica.QueryEngine().queryBindings(query, {
+            sources: [DATA_SOURCE],
+        }).then(function (bindingsStream) {
+            bindingsStream.on('data', function (data) {
+                // Each variable binding is an RDFJS term
+                console.log(data.get('dialogue').value + ' ' + data.get('participantCount').value);
+            });
+        });
+
         const result = await engine.queryBindings(query, {
             sources: [DATA_SOURCE],
         });
 
         const bindings = await result.toArray();
         elements.resultsBody.innerHTML = '';
+
+        console.log(bindings[0]);
 
         // Handle variables from result stream metadata
         const vars = result.variables.map(v => v.value);
