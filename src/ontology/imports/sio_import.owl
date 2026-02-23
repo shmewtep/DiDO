@@ -178,6 +178,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#example -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
@@ -478,6 +484,34 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000215 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000215">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000216"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000070"/>
+        <dc:identifier>SIO_000215</dc:identifier>
+        <terms:description xml:lang="en">is measurement value of is a relation between a value and the entity that it is a measurement of.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is measurement value of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000216 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000216">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000070"/>
+        <dc:identifier>SIO_000216</dc:identifier>
+        <terms:description xml:lang="en">has measurement value is a relation between a quality/realizable and a measurement value.</terms:description>
+        <resource:subset>core</resource:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has measurement value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000217 -->
 
     <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000217">
@@ -502,6 +536,36 @@
         <terms:description xml:lang="en">is quality of is a relation between a quality and the entity that it is a property of.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">is quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000221 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000221">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000222"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000075"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000074"/>
+        <dc:identifier>SIO_000221</dc:identifier>
+        <terms:description xml:lang="en">has unit is a relation between a quantity and the unit it is a multiple of.</terms:description>
+        <resource:subset>core</resource:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000222 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000222">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000074"/>
+        <dc:identifier>SIO_000222</dc:identifier>
+        <terms:description xml:lang="en">is unit of is a relation between a unit and a quantity that it is a multiple of.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is unit of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -856,6 +920,38 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000004 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000004">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000279"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000053"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000004"/>
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000370"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000004</dc:identifier>
+        <terms:description xml:lang="en">A material entity is a physical entity that is spatially extended, exists as a whole at any point in time and has mass.</terms:description>
+        <resource:subset>core</resource:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">material entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000005 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000005">
@@ -929,6 +1025,63 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000037 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000037">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000258"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000216"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000052"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000037</dc:identifier>
+        <terms:alternative xml:lang="en">physical dimensional quantity</terms:alternative>
+        <terms:description xml:lang="en">A spatial quantity is a quantity obtained from measuring the spatial extent of an entity </terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">spatial quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000052 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000052">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000257"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000258"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000070"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000215"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000052</dc:identifier>
+        <terms:description xml:lang="en">A quantity is an informational entity that gives the magnitude of a property.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">quantity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000069 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000069">
@@ -953,6 +1106,56 @@
         <terms:description xml:lang="en">A data item consists of information that has been collected/generated towards some purpose.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">data item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000070 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000070">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000366"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000070</dc:identifier>
+        <terms:description xml:lang="en">A measurement value is a quantitative description that reflects the magnitude of some attribute.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">measurement value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000074 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000074">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000052"/>
+        <dc:identifier>SIO_000074</dc:identifier>
+        <terms:description xml:lang="en">A unit of measurement is a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">unit of measurement</rdfs:label>
     </owl:Class>
     
 
@@ -1016,6 +1219,18 @@
         <resource:equivalentTo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/ns/dcat#Dataset</resource:equivalentTo>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000097 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000097">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000602"/>
+        <dc:identifier>SIO_000097</dc:identifier>
+        <terms:description xml:lang="en">A software entity is a computational entity that can be interpreted by or directly executed by a processing unit.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">software entity</rdfs:label>
     </owl:Class>
     
 
@@ -1128,6 +1343,47 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000257 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000257">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000052"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000221"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000074"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_000258"/>
+        <dc:identifier>SIO_000257</dc:identifier>
+        <terms:description xml:lang="en">A dimensionless quantity is a quantity that has no associated unit.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">dimensionless quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000258 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000258">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000052"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000221"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000074"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000258</dc:identifier>
+        <terms:description xml:lang="en">A dimensional quantity is a quantity that has an associated unit.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">dimensional quantity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000268 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000268">
@@ -1205,6 +1461,24 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000279 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000279">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000037"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000279</dc:identifier>
+        <terms:description xml:lang="en">mass is the quality of the amount of substance.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">mass</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000289 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000289">
@@ -1260,6 +1534,39 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000366 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000366">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001431"/>
+        <dc:identifier>SIO_000366</dc:identifier>
+        <terms:alternative xml:lang="en">rank 0 tensor</terms:alternative>
+        <terms:description xml:lang="en">A number is a tensor of rank 0.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000370 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000370">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000028"/>
+                <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000370"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000370</dc:identifier>
+        <terms:alternative>region</terms:alternative>
+        <terms:description xml:lang="en">A spatial region is an object contained in some region of space.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">spatial region</rdfs:label>
+        <skos:example xml:lang="en">The airspace above Ottawa airport; the band around the northern hemisphere between 50 degrees N and 60 degrees N; the spatial region occupied by a bottle.</skos:example>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000396 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000396">
@@ -1306,6 +1613,18 @@
         <terms:description xml:lang="en">A phrase is a group of words functioning as a single unit in the syntax of a sentence.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">phrase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000485 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000485">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010375"/>
+        <dc:identifier>SIO_000485</dc:identifier>
+        <terms:description xml:lang="en">A human is a primates of the family Hominidae and are characterized by having a large brain relative to body size, with a well developed neocortex, prefrontal cortex and temporal lobes, making them capable of abstract reasoning, language, introspection, problem solving and culture through social learning.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">human</rdfs:label>
     </owl:Class>
     
 
@@ -1402,6 +1721,34 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_001262 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001262">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000004"/>
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000370"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000310"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001353"/>
+        <dc:identifier>SIO_001262</dc:identifier>
+        <terms:description xml:lang="en">an anatomical entity is an object that is a structural part (material or immaterial) of a biological entity.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_001353 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001353">
@@ -1420,6 +1767,243 @@
         <dc:identifier>SIO_001353</dc:identifier>
         <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <rdfs:label xml:lang="en">specialized object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001429 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001429">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000075"/>
+        <dc:identifier>SIO_001429</dc:identifier>
+        <terms:description xml:lang="en">a tensor is a n-dimensional array.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">tensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001431 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001431">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001429"/>
+        <dc:identifier>SIO_001431</dc:identifier>
+        <terms:alternative xml:lang="en">rank 0 tensor</terms:alternative>
+        <terms:description xml:lang="en">a scalar is a rank 0 tensor and is an element of a field that is used to define a vector space.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">scalar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010000 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010377"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010378"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+        <dc:identifier>SIO_010000</dc:identifier>
+        <terms:description xml:lang="en">A biological organisn is a biological entity that consists of one or more cells and is capable of genomic replication (independently or not).</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010001 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010001">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+        <dc:identifier>SIO_010001</dc:identifier>
+        <terms:description xml:lang="en">A cell is a biological entity that is contained by a plasma membrane.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010004 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010004">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000004"/>
+        <dc:identifier>SIO_010004</dc:identifier>
+        <terms:description xml:lang="en">A chemical entity is a material entity that pertains to chemistry.</terms:description>
+        <resource:equivalentTo>CHEBI:23367</resource:equivalentTo>
+        <resource:subset>chemical+</resource:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">chemical entity</rdfs:label>
+        <skos:example xml:lang="en">atom, ion, molecule, chemical substance,</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010046 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010046">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010462"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000068"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_010000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_010046</dc:identifier>
+        <terms:description xml:lang="en">A biological entity is a heterogeneous substance that contains genomic material or is the product of a biological process.</terms:description>
+        <resource:subset>chemical-</resource:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">biological entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010375 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010375">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010377"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000053"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://semanticscience.org/resource/SIO_010001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_010376"/>
+        <dc:identifier>SIO_010375</dc:identifier>
+        <terms:description xml:lang="en">A multi-cellular organism is an organism that consists of more than one cell.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">multicellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010376 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010376">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010001"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010377"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000093"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_010376</dc:identifier>
+        <terms:description xml:lang="en">A unicellular organism is a organism that is composed of a single cell.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">unicellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010377 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010377">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010375"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010376"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010000"/>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_010378"/>
+        <dc:identifier>SIO_010377</dc:identifier>
+        <terms:description xml:lang="en">A cellular organism is an organism that contains one or more cells.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">cellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010378 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010378">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010000"/>
+        <dc:identifier>SIO_010378</dc:identifier>
+        <terms:description xml:lang="en">A non-cellular organism is an organism that does not contain a cell.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">non-cellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010410 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010410">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000644"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000340"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001353"/>
+        <dc:identifier>SIO_010410</dc:identifier>
+        <terms:description xml:lang="en">A specialized material entity is a material entity that is defined by having some quality, role or capability.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">specialized material entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010462 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010462">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_011126"/>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_010463"/>
+        <dc:identifier>SIO_010462</dc:identifier>
+        <terms:description xml:lang="en">A heterogeneous substance is a chemical substance that is composed of more than one different kind of component.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">heterogeneous substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010463 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010463">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_011126"/>
+        <dc:identifier>SIO_010463</dc:identifier>
+        <terms:description>A homogeneous substance is a substance that is composed of a uniform type of entity.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">homogeneous substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_011126 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_011126">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010462"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010463"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010004"/>
+        <dc:identifier>SIO_011126</dc:identifier>
+        <terms:alternative xml:lang="en">mixture</terms:alternative>
+        <terms:description xml:lang="en">A chemical substance is a chemical entity composed of two or more weakly (non-covalently) interacting chemical entities.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">chemical substance</rdfs:label>
+        <skos:exactMatch>CHEMINF:440533</skos:exactMatch>
     </owl:Class>
     
 

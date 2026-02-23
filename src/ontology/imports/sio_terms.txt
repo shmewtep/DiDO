@@ -20,3 +20,4 @@ http://semanticscience.org/resource/SIO_000089
 http://semanticscience.org/resource/SIO_000227
 http://semanticscience.org/resource/SIO_000228
 http://semanticscience.org/resource/SIO_000485
+http://semanticscience.org/resource/SIO_000097
