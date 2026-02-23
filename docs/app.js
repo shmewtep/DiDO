@@ -82,10 +82,10 @@ elements.toggleQuery.addEventListener('click', () => {
 
 
 // According to the query registry, load the query template and variables and BIND to specific values
-const bindVariables = (rawQuery, config) => {
+const bindVariables = (rawQuery, inputValues) => {
     let bindings = "";
-    config.variables.forEach(v => {
-        bindings += `BIND(${v.default} AS ?${v.name}) .\n`;
+    Object.keys(inputValues).forEach(name => {
+        bindings += `BIND(${inputValues[name]} AS ?${name}) .\n`;
     });
     // Inject BINDs into WHERE clause
     return rawQuery.replace('WHERE {', `WHERE {\n  ${bindings}`);
@@ -101,7 +101,15 @@ elements.runBtn.addEventListener('click', async () => {
 
     let rawQuery = currentQueryTemplate;
 
-    let query = bindVariables(rawQuery, cq);
+    const inputValues = {};
+    if (cq.variables) {
+        cq.variables.forEach(v => {
+            const input = elements.varInputs.querySelector(`input[data-var="${v.name}"]`);
+            inputValues[v.name] = input && input.value.trim() !== '' ? input.value.trim() : v.default;
+        });
+    }
+
+    let query = bindVariables(rawQuery, inputValues);
 
     elements.runBtn.disabled = true;
     elements.loader.classList.remove('hidden');

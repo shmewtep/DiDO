@@ -41,7 +41,7 @@ SIO_URI := 				http://semanticscience.org/ontology/sio.owl
 TIME_URI :=				http://www.w3.org/2006/time
 DCAT_URI :=				http://www.w3.org/ns/dcat
 
-EXAMPLE_FILE := 		data/daicwoz_dialogue_300.ttl
+EXAMPLE_FILE := 		data/ami_meeting_EN2001a.ttl
 
 
 # --------------------------------
@@ -324,7 +324,7 @@ CQ_TSV = $(patsubst $(SPARQLDIR)/%.sparql, $(REPORTDIR)/%.tsv, $(CQ_QUERIES))
 .PHONY: verify_cqs
 verify_cqs: $(CQ_TSV)
 
-$(REPORTDIR)/CQ%.tsv: $(SPARQLDIR)/CQ%.sparql $(EXAMPLE_FILE) | $(REPORTDIR)
+$(REPORTDIR)/CQ%.tsv: $(SPARQLDIR)/CQ%.sparql $(EXAMPLE_FILE) Makefile | $(REPORTDIR)
 	$(ROBOT) query -f tsv -i $(EXAMPLE_FILE) --query $< $@
 
 # ----------------------------------------
