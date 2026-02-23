@@ -125,6 +125,15 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
                             owl:onClass :Utterance
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty sio:SIO_000132 ;
+                            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                            owl:onClass [ rdf:type owl:Class ;
+                                          owl:unionOf ( sio:SIO_000097
+                                                        sio:SIO_000485
+                                                      )
+                                        ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty sio:SIO_000008 ;
                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onClass time:ProperInterval
@@ -158,6 +167,15 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
 :Interlocutor rdf:type owl:Class ;
               rdfs:subClassOf sio:SIO_000016 ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty sio:SIO_000227 ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass [ rdf:type owl:Class ;
+                                              owl:unionOf ( sio:SIO_000097
+                                                            sio:SIO_000485
+                                                          )
+                                            ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty sio:SIO_000356 ;
                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass :Dialogue
@@ -181,7 +199,11 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
                            [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000139 ;
                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onClass :Interlocutor
+                             owl:onClass [ rdf:type owl:Class ;
+                                           owl:unionOf ( sio:SIO_000097
+                                                         sio:SIO_000485
+                                                       )
+                                         ]
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000008 ;
