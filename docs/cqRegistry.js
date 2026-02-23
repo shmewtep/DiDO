@@ -5,7 +5,6 @@ const cqRegistry = {
         variables: [{
             name: 'dialogue',
             label: 'Dialogue IRI',
-            placeholder: '<http://purl.org/twc/dido/individuals#dialogue/300>',
             default: '<http://purl.org/twc/dido/individuals#dialogue/300>'
         }]
     },
