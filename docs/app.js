@@ -122,30 +122,68 @@ elements.runBtn.addEventListener('click', async () => {
         new Comunica.QueryEngine().queryBindings(query, {
             sources: [DATA_SOURCE],
         }).then(function (bindingsStream) {
-            console.log(cq.variables);
-            bindingsStream.on('data', function (data) {
-                console.log('data');
-                console.log(data);
-                const resultRow = cq.output_variables.map(v => {
-                    const binding = data.get(v.name);
-                    console.log(`Variable ${v.name}:`, binding);
-                    // Create html element
-                    elements.resultsBody.innerHTML = '';
-                    const th = document.createElement('th');
+            let hasResults = false;
+            let headersCreated = false;
+            elements.resultsBody.innerHTML = '';
 
-                    th.textContent = (binding.value).replace(prefix, 'ex:');
-                    elements.resultsHead.appendChild(th);
-                    return binding ? binding.value : '';
-                })
-                console.log(resultRow.join(' | '));
+            bindingsStream.on('data', function (data) {
+                // Tracking if we have received at least one row
+                hasResults = true;
+
+                // Construct the table header row if it hasn't been generated yet
+                if (!headersCreated) {
+                    cq.output_variables.forEach(v => {
+                        const th = document.createElement('th');
+                        th.textContent = v.label || v.name;
+                        elements.resultsHead.appendChild(th);
+                    });
+                    headersCreated = true;
+                }
+
+                // Create a row corresponding to this specific binding matching the output
+                const tr = document.createElement('tr');
+                cq.output_variables.forEach(v => {
+                    const td = document.createElement('td');
+                    const binding = data.get(v.name);
+                    // Extract value and clean up prefixes to be ex: if applicable
+                    td.textContent = binding ? binding.value.replace(prefix, 'ex:') : '';
+                    tr.appendChild(td);
+                });
+                elements.resultsBody.appendChild(tr);
             });
 
-        });
+            // Fired when the query succeeds, but there are no more records to return 
+            bindingsStream.on('end', function () {
+                // If the query returned zero records, notify the user with an empty-state
+                if (!hasResults) {
+                    elements.resultsBody.innerHTML = `<tr><td colspan="${cq.output_variables.length}" class="placeholder">No results found</td></tr>`;
+                    // Generate the header matching our output definition even if empty
+                    cq.output_variables.forEach(v => {
+                        const th = document.createElement('th');
+                        th.textContent = v.label || v.name;
+                        elements.resultsHead.appendChild(th);
+                    });
+                }
+                // Hide the loader and re-enable the run button when execution completes
+                elements.loader.classList.add('hidden');
+                elements.runBtn.disabled = false;
+            });
 
+            // Fired for upstream errors with the stream endpoint during stream ingestion
+            bindingsStream.on('error', function (err) {
+                elements.resultsBody.innerHTML = `<tr><td colspan="${cq.output_variables.length}" class="placeholder" style="color: #f85149">Error: ${err.message}</td></tr>`;
+                elements.loader.classList.add('hidden');
+                elements.runBtn.disabled = false;
+            });
+
+        }).catch(function (err) {
+            elements.resultsBody.innerHTML = `<tr><td colspan="${cq.output_variables.length}" class="placeholder" style="color: #f85149">Error: ${err.message}</td></tr>`;
+            elements.loader.classList.add('hidden');
+            elements.runBtn.disabled = false;
+        });
 
     } catch (err) {
         elements.resultsBody.innerHTML = `<tr><td class="placeholder" style="color: #f85149">Error: ${err.message}</td></tr>`;
-    } finally {
         elements.loader.classList.add('hidden');
         elements.runBtn.disabled = false;
     }
