@@ -1,6 +1,7 @@
 PREFIX dido: <http://purl.org/twc/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ex: <http://purl.org/twc/dido/individuals#>
 
 # CQ3: Which utterance is the immediate successor of utterance U?
 SELECT ?utterance ?successor

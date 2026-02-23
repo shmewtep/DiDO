@@ -1,7 +1,6 @@
 PREFIX dido: <http://purl.org/twc/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX ex: <http://purl.org/twc/dido/individuals#>
-PREFIX utterances: <http://purl.org/twc/dido/individuals#utterances/>
 
 # CQ2: Which participant is associated with utterance U?
 SELECT ?utterance ?participant

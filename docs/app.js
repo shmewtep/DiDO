@@ -2,6 +2,7 @@ import { getCQRegistry } from "./cqRegistry.js"
 
 const engine = new Comunica.QueryEngine();
 const DATA_SOURCE = 'https://raw.githubusercontent.com/shmewtep/dialogueOnt/refs/heads/edit/src/ontology/data/ami_meeting_EN2001a.ttl';
+const prefix = "http://purl.org/twc/dido/individuals#";
 
 const cqRegistry = getCQRegistry();
 
@@ -84,7 +85,7 @@ elements.toggleQuery.addEventListener('click', () => {
 const bindVariables = (rawQuery, config) => {
     let bindings = "";
     config.variables.forEach(v => {
-        bindings += `BIND(${v.default} AS ?${v.name}).\n`;
+        bindings += `BIND(${v.default} AS ?${v.name}) .\n`;
     });
     // Inject BINDs into WHERE clause
     return rawQuery.replace('WHERE {', `WHERE {\n  ${bindings}`);
@@ -117,8 +118,15 @@ elements.runBtn.addEventListener('click', async () => {
             bindingsStream.on('data', function (data) {
                 console.log('data');
                 console.log(data);
-                const resultRow = cq.variables.map(v => {
+                const resultRow = cq.output_variables.map(v => {
                     const binding = data.get(v.name);
+                    console.log(`Variable ${v.name}:`, binding);
+                    // Create html element
+                    elements.resultsBody.innerHTML = '';
+                    const th = document.createElement('th');
+
+                    th.textContent = (binding.value).replace(prefix, 'ex:');
+                    elements.resultsHead.appendChild(th);
                     return binding ? binding.value : '';
                 })
                 console.log(resultRow.join(' | '));
@@ -126,35 +134,7 @@ elements.runBtn.addEventListener('click', async () => {
 
         });
 
-        const result = await engine.queryBindings(query, {
-            sources: [DATA_SOURCE],
-        });
 
-        const bindings = await result.toArray();
-        elements.resultsBody.innerHTML = '';
-
-        // Handle variables from result stream metadata
-        const vars = result.variables.map(v => v.value);
-        vars.forEach(v => {
-            const th = document.createElement('th');
-            th.textContent = v;
-            elements.resultsHead.appendChild(th);
-        });
-
-        if (bindings.length === 0) {
-            elements.resultsBody.innerHTML = '<tr><td class="placeholder">No results found</td></tr>';
-        } else {
-            bindings.forEach(binding => {
-                const tr = document.createElement('tr');
-                vars.forEach(v => {
-                    const td = document.createElement('td');
-                    const value = binding.get(v);
-                    td.textContent = value ? value.value : '';
-                    tr.appendChild(td);
-                });
-                elements.resultsBody.appendChild(tr);
-            });
-        }
     } catch (err) {
         elements.resultsBody.innerHTML = `<tr><td class="placeholder" style="color: #f85149">Error: ${err.message}</td></tr>`;
     } finally {

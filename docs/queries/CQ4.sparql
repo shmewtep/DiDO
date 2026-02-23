@@ -1,6 +1,7 @@
 PREFIX dido: <http://purl.org/twc/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ex: <http://purl.org/twc/dido/individuals#>
 
 # CQ4: Which utterances occured between times T1 and T2?
 SELECT ?utterance ?startTime ?endTime

@@ -5,7 +5,15 @@ const cqRegistry = {
         variables: [{
             name: 'dialogue',
             label: 'Dialogue IRI',
-            default: '<http://purl.org/twc/dido/individuals#dialogue/300>'
+            default: '<http://purl.org/twc/dido/individuals#dialogueEN2001a>'
+        }],
+        output_variables: [{
+            name: 'dialogue',
+            label: 'Dialogue IRI',
+        },
+        {
+            name: 'participantCount',
+            label: 'Number of Participants',
         }]
     },
     CQ2: {
@@ -14,7 +22,16 @@ const cqRegistry = {
         variables: [{
             name: 'utterance',
             label: 'Utterance IRI',
-            default: 'utterances:utterance_300_86'
+            default: 'ex:utteranceEN2001a0'
+        }],
+        output_variables: [
+        {
+            name: 'utterance',
+            label: 'Utterance IRI'
+        },
+            {
+            name: 'participant',
+            label: 'Participant IRI',
         }]
     },
     CQ3: {
@@ -23,33 +40,57 @@ const cqRegistry = {
         variables: [{
             name: 'utterance',
             label: 'Utterance IRI',
-            default: 'utterances:utterance_300_86'
+            default: 'ex:utteranceEN2001a0'
+        }],
+        output_variables: [{
+            name: 'utterance',
+            label: 'Utterance IRI'
+        },
+        {
+            name: 'successor',
+            label: 'Next Utterance IRI'
         }]
-    }, // Placeholder needs BIND in CQ3
+    },
     CQ4: {
         file: 'queries/CQ4.sparql',
         text: 'Which utterances occur between these two times?',
         variables: [
             { name: 'T1', label: 'Start Time (s)', default: '36.5' },
             { name: 'T2', label: 'End Time (s)', default: '50.0' }
-        ]
+        ],
+        output_variables: [{
+            name: 'utterance',
+            label: 'Utterance IRI'
+        }]
     },
     CQ5: {
         file: 'queries/CQ5.sparql',
         text: 'Which utterances overlap with this utterance?',
         variables: [{
-            name: 'utterance',
+            name: 'utterance1',
             label: 'Utterance IRI',
-            default: 'utterances:utterance_300_86'
+            default: 'ex:utteranceEN2001a0'
+        }],
+        output_variables: [{
+            name: 'utterance1',
+            label: 'Utterance IRI'
+        },
+        {
+            name: 'utterance2',
+            label: 'Overlapping Utterance IRI'
         }]
     },
     CQ6: {
         file: 'queries/CQ6.sparql',
         text: 'How many times do the utterances of speaker S1 overlap with the utterances of speaker S2?',
         variables: [
-            { name: 'S1', label: 'Speaker 1 IRI', default: '<http://purl.org/twc/dido/individuals#interlocutors/ellie>' },
-            { name: 'S2', label: 'Speaker 2 IRI', default: '<http://purl.org/twc/dido/individuals#interlocutors/interlocutor_300>' }
-        ]
+            { name: 'S1', label: 'Speaker 1 IRI', default: 'ex:interlocutorFEO065' },
+            { name: 'S2', label: 'Speaker 2 IRI', default: 'ex:interlocutorFEO066' }
+        ],
+        output_variables: [{
+            name: 'overlapCount',
+            label: 'Number of Overlapping Utterances'
+        }]
     }
 };
 
