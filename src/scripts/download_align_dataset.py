@@ -64,11 +64,22 @@ def align_ami_jsonl_to_dido(jsonl_file):
             g.add((utterance_uri, SIO.SIO_000068, dialogue_uri)) # sio:is part of
             
             # --- DIDO-core: Participant (SIO Agent) ---
-            participant_uri = EX[f"interlocutor{data['speaker_id']}"]
-            g.add((participant_uri, RDF.type, DIDO.Interlocutor))
-            g.add((participant_uri, SIO.SIO_000062, dialogue_uri)) # sio:is participant in
-            g.add((utterance_uri, SIO.SIO_000139, participant_uri))  # sio:has agent
-            g.add((participant_uri, SIO.SIO_000063, utterance_uri))  # sio:is agent in
+            interlocutor_uri = EX[f"human{data['speaker_id']}"]
+            interlocutor_role_uri = EX[f"interlocutor{data['speaker_id']}"]
+            
+            g.add((interlocutor_uri, RDF.type, SIO.SIO_000485)) # sio:human
+            g.add((interlocutor_uri, SIO.SIO_000062, dialogue_uri)) # sio:is participant in
+            g.add((interlocutor_uri, SIO.SIO_000063, utterance_uri))  # sio:is agent in
+            g.add((interlocutor_uri, SIO.SIO_000228, interlocutor_role_uri)) # sio:has role
+            
+            g.add((utterance_uri, SIO.SIO_000139, interlocutor_uri))  # sio:has agent
+            
+            g.add((interlocutor_role_uri, RDF.type, DIDO.Interlocutor))
+            g.add((interlocutor_role_uri, SIO.SIO_000227, interlocutor_uri)) # sio:is role of
+            g.add((interlocutor_role_uri, SIO.SIO_000356, dialogue_uri)) # sio:is realized in
+
+            g.add((dialogue_uri, SIO.SIO_000132, interlocutor_uri)) # sio:has participant
+            g.add((dialogue_uri, SIO.SIO_000355, interlocutor_role_uri)) # sio:realizes
 
             # --- DIDO-data: Transcript (SIO Entity) ---
             utterance_text_uri = EX[f"utteranceText{utterance_id}"]
@@ -149,16 +160,28 @@ def align_daicwoz_csv_to_dido(csv_filename):
             g.add((utterance_uri, SIO.SIO_000068, dialogue_uri)) # sio:is part of
 
             # --- DIDO-core: Participant (SIO Agent) ---
-            participant_uri = ''
+            interlocutor_uri = ''
+            interlocutor_role_uri = ''
             if utterance['speaker'] == 'Ellie':
-                participant_uri = EX[f"interlocutor_ellie"]
+                interlocutor_uri = EX[f"human_ellie"]
+                interlocutor_role_uri = EX[f"interlocutor_ellie"]
             else:
-                participant_uri = EX[f"interlocutor_{dialogue_num}"]
+                interlocutor_uri = EX[f"human_{dialogue_num}"]
+                interlocutor_role_uri = EX[f"interlocutor_{dialogue_num}"]
 
-            g.add((participant_uri, RDF.type, DIDO.Interlocutor))
-            g.add((participant_uri, SIO.SIO_000062, dialogue_uri)) # sio:is participant in
-            g.add((utterance_uri, SIO.SIO_000139, participant_uri))  # sio:has agent
-            g.add((participant_uri, SIO.SIO_000063, utterance_uri))  # sio:is agent in
+            g.add((interlocutor_uri, RDF.type, SIO.SIO_000485)) # sio:human
+            g.add((interlocutor_uri, SIO.SIO_000062, dialogue_uri)) # sio:is participant in
+            g.add((interlocutor_uri, SIO.SIO_000063, utterance_uri))  # sio:is agent in
+            g.add((interlocutor_uri, SIO.SIO_000228, interlocutor_role_uri)) # sio:has role
+            
+            g.add((utterance_uri, SIO.SIO_000139, interlocutor_uri))  # sio:has agent
+            
+            g.add((interlocutor_role_uri, RDF.type, DIDO.Interlocutor))
+            g.add((interlocutor_role_uri, SIO.SIO_000227, interlocutor_uri)) # sio:is role of
+            g.add((interlocutor_role_uri, SIO.SIO_000356, dialogue_uri)) # sio:is realized in
+
+            g.add((dialogue_uri, SIO.SIO_000132, interlocutor_uri)) # sio:has participant
+            g.add((dialogue_uri, SIO.SIO_000355, interlocutor_role_uri)) # sio:realizes
 
             # --- DIDO-data: Transcript (SIO Entity) ---
             utterance_text_uri = EX[f"utteranceText_{utterance_id}"]
