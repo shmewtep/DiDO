@@ -6,5 +6,6 @@ PREFIX ex: <http://purl.org/twc/dido/individuals#>
 SELECT ?utterance ?participant
 WHERE {
   ?utterance sio:SIO_000139 ?participant .
-  ?participant a dido:Interlocutor .
+  ?participant sio:SIO_000228 ?interlocutorRole .
+  ?interlocutorRole a dido:Interlocutor .
 }

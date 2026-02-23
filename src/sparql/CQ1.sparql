@@ -5,7 +5,8 @@ PREFIX sio: <http://semanticscience.org/resource/>
 # CQ1: How many participants are involved in dialogue D?
 SELECT ?dialogue (COUNT(?participant) AS ?participantCount)
 WHERE {
-  ?participant a dido:Interlocutor ;
+  ?participant sio:SIO_000228 ?interlocutorRole;
+  ?interlocutorRole a dido:Interlocutor ;
                sio:SIO_000062 ?dialogue .
 }
 GROUP BY ?dialogue

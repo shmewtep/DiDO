@@ -25,14 +25,14 @@ const cqRegistry = {
             default: 'ex:utteranceEN2001a0'
         }],
         output_variables: [
-        {
-            name: 'utterance',
-            label: 'Utterance IRI'
-        },
             {
-            name: 'participant',
-            label: 'Participant IRI',
-        }]
+                name: 'utterance',
+                label: 'Utterance IRI'
+            },
+            {
+                name: 'participant',
+                label: 'Participant IRI',
+            }]
     },
     CQ3: {
         file: 'queries/CQ3.sparql',
@@ -84,8 +84,8 @@ const cqRegistry = {
         file: 'queries/CQ6.sparql',
         text: 'How many times do the utterances of speaker S1 overlap with the utterances of speaker S2?',
         variables: [
-            { name: 'S1', label: 'Speaker 1 IRI', default: 'ex:interlocutorFEO065' },
-            { name: 'S2', label: 'Speaker 2 IRI', default: 'ex:interlocutorFEO066' }
+            { name: 'S1', label: 'Speaker 1 IRI', default: 'ex:humanFEE065' },
+            { name: 'S2', label: 'Speaker 2 IRI', default: 'ex:humanFEO065' }
         ],
         output_variables: [{
             name: 'overlapCount',
