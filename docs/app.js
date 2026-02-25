@@ -1,7 +1,7 @@
 import { getCQRegistry } from "./cqRegistry.js"
 
 const engine = new Comunica.QueryEngine();
-const DATA_SOURCE = 'https://raw.githubusercontent.com/shmewtep/dialogueOnt/refs/heads/edit/src/ontology/data/ami_meeting_EN2001a.ttl';
+const DATA_SOURCE = 'https://raw.githubusercontent.com/shmewtep/dialogueOnt/refs/heads/edit/src/ontology/data/dialog_ami/ami_meeting_EN2001a.ttl';
 const prefix = "http://purl.org/twc/dido/individuals#";
 
 const cqRegistry = getCQRegistry();

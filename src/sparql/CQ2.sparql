@@ -5,7 +5,7 @@ PREFIX ex: <http://purl.org/twc/dido/individuals#>
 # CQ2: Which participant is associated with utterance U?
 SELECT ?utterance ?participant
 WHERE {
-  ?utterance sio:SIO_000139 ?participant .
-  ?participant sio:SIO_000228 ?interlocutorRole .
-  ?interlocutorRole a dido:Interlocutor .
+  ?utterance sio:SIO_000139 ?participant .  # hasAgent
+  ?participant sio:SIO_000228 ?role .  # hasRole
+  ?role a dido:Interlocutor .
 }
