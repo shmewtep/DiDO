@@ -4,10 +4,14 @@ import json
 import regex
 import uuid
 import os
+import argparse
+
+from datasets import load_dataset
 
 from rdflib import Graph, Literal, RDF, URIRef, Namespace, BNode, XSD, DCTERMS, DC
 from rdflib.namespace import RDFS
 
+DATA_DIRECTORY = os.path.join('src', 'ontology', 'data')
 
 # 1. Define Namespaces based on DIDO.ttl
 DIDO = Namespace("http://purl.org/twc/dido#")
@@ -216,19 +220,19 @@ def align_daicwoz_csv_to_dido(csv_filename):
     return g
 
 
-def get_first_n_dialogues(dataset, n):
+def get_first_n_dialogues(dataset, n=None):
     """Collect the first `n` distinct dialogues (meetings) from `dataset`.
 
     Iterates over `dataset` (an iterable of example dicts or a streaming
     dataset) and groups examples by the `meeting_id` field. Stops once `n`
-    distinct meeting IDs have been collected. Returns a list of
-    `pandas.DataFrame` objects, one per collected meeting, preserving the
-    encounter order.
+    distinct meeting IDs have been collected. If `n` is None, collects all.
+    Returns a list of `pandas.DataFrame` objects, one per collected meeting, 
+    preserving the encounter order.
 
     Parameters:
     - dataset: iterable of mapping-like examples (each must contain
         a `meeting_id` key).
-    - n (int): number of distinct meetings to collect.
+    - n (int, optional): number of distinct meetings to collect.
 
     Returns:
     - List[pandas.DataFrame]: list of DataFrames, one per meeting collected.
@@ -243,7 +247,7 @@ def get_first_n_dialogues(dataset, n):
         # Check if we've encountered this meeting ID before
         if meeting_id not in meeting_groups:
             # If we already have n meetings, stop collecting new ones
-            if len(meeting_order) >= n:
+            if n is not None and len(meeting_order) >= n:
                 # If data is contiguous, we can 'break' here to save time.
                 break
             
@@ -258,24 +262,153 @@ def get_first_n_dialogues(dataset, n):
     return [pd.DataFrame(meeting_groups[m_id]) for m_id in meeting_order]
 
 
+def get_target_dialogues(dataset, target_ids):
+    """Collect specific distinct dialogues (meetings) from `dataset`.
+
+    Iterates over `dataset` and groups examples by the `meeting_id` field.
+    Stops once all requested meeting IDs have been collected.
+
+    Parameters:
+    - dataset: iterable of mapping-like examples.
+    - target_ids (list of str): specific meeting IDs to collect.
+
+    Returns:
+    - List[pandas.DataFrame]: list of DataFrames, one per meeting collected.
+    """
+    meeting_groups = {}
+    meeting_order = []
+    target_ids_set = set(target_ids)
+
+    for item in dataset:
+        meeting_id = item['meeting_id']
+        
+        if meeting_id in target_ids_set:
+            if meeting_id not in meeting_groups:
+                meeting_order.append(meeting_id)
+                meeting_groups[meeting_id] = []
+            
+            meeting_groups[meeting_id].append(item)
+        elif len(meeting_order) == len(target_ids_set):
+            # If data is contiguous and we've collected all requested IDs, we can break.
+            break
+
+    return [pd.DataFrame(meeting_groups[m_id]) for m_id in meeting_order]
+
+
+def save_individual_dialogues_as_json(dialogues, output_dir=DATA_DIRECTORY):
+    """Save each dialogue DataFrame as an individual JSON file."""
+    os.makedirs(output_dir, exist_ok=True)
+    
+    for dialogue in dialogues:
+        output_path = os.path.join(output_dir, 'dialog_ami', f"{dialogue.iloc[0]['meeting_id']}.jsonl")
+        print(f"Saving dialogue {dialogue.iloc[0]['meeting_id']} to {output_path}...")
+        dialogue.to_json(output_path, orient="records", lines=True)
+
+
+
+
+def download_dataset(num_conversations=None, dialogue_id=None):
+
+    """Download and prepare a small slice of a configured corpus.
+
+    Currently configured to download the AMI Meeting Corpus via
+    `datasets.load_dataset` with streaming enabled. The function removes
+    unwanted audio columns and returns a list of DataFrames containing 
+    either the requested dialogue IDs, the first `num_conversations` meetings,
+    or all meetings if neither is provided.
+
+    Parameters:
+    - num_conversations (int, optional): number of meetings to download and return (if dialogue_id is not set).
+    - dialogue_id (str or List[str], optional): specific dialogue ID(s) to download.
+
+    Returns:
+    - List[pandas.DataFrame]: list of dialogues as DataFrames.
+    """
+
+    # Define specific settings for each corpus
+    corpus_configs = {
+        "AMI Meeting Corpus": {
+            "path": "edinburghcstr/ami",
+            "name": "ihm",          # AMI requires a subset name (e.g., 'ihm' or 'sdm')
+            "streaming": True,
+            "split": "train"
+        },
+    }
+    
+    # Download corpus from HuggingFace
+    corpus_name = "AMI Meeting Corpus"
+    corpus_config = corpus_configs[corpus_name]
+
+    print(f"Downloading {corpus_name} with settings: {corpus_config}")
+    dataset = load_dataset(**corpus_config)
+    
+    # Cast audio to string to prevent datasets from attempting to decode it with librosa/soundfile
+    from datasets import Value
+    dataset = dataset.cast_column('audio', Value('string'))
+    dataset = dataset.remove_columns(['audio_id', 'audio']) 
+
+    if dialogue_id is not None:
+        if isinstance(dialogue_id, str):
+            dialogue_id = [dialogue_id]
+        dialogues = get_target_dialogues(dataset, dialogue_id)
+    else:
+        dialogues = get_first_n_dialogues(dataset, num_conversations)
+
+    return dialogues
+
 
 if __name__ == "__main__":
-    # DAIC-WOZ Alignment
-    '''dialogue_num_daicwoz = 301
-    csv_filename_daicwoz = os.path.join('src', 'ontology', 'data', 'dialog_daicwoz', f'{dialogue_num_daicwoz}_TRANSCRIPT.csv')
-    rdf_dest_daicwoz = os.path.join('src', 'ontology', 'data', f'daicwoz_dialogue_{dialogue_num_daicwoz}.ttl')
+    parser = argparse.ArgumentParser(description="Align dialogue dataset to DIDO ontology.")
+    parser.add_argument("--dataset", type=str, required=True, choices=["ami", "daicwoz"], help="Dataset name (ami or daicwoz)")
+    parser.add_argument("--dialogue_id", type=str, nargs="+", help="Dialogue ID(s) (e.g., EN2001a or 301). Can provide multiple.")
+    parser.add_argument("--n", type=int, help="Number of dialogues to download/align (starting from the first).")
+    parser.add_argument("--dialogue_location", type=str, help="Location of the dialogue transcript file (JSONL or CSV). Required if not using --download.")
+    parser.add_argument("--output_dir", type=str, default=os.path.join('src', 'ontology', 'data'), help="Output directory for the RDF file")
+    parser.add_argument("--download", action="store_true", help="Download the dialogue from HuggingFace first (currently only supports AMI)")
     
-    print(f"Aligning DAIC-WOZ dialogue {dialogue_num_daicwoz}...")
-    g_daic_woz = align_daicwoz_csv_to_dido(csv_filename_daicwoz)
-    # print(f"Writing to {rdf_dest_daicwoz}")
-    # g_daic_woz.serialize(destination=rdf_dest_daicwoz, format='turtle')'''
+    args = parser.parse_args()
 
-    # AMI Alignment
-    meeting_id_ami = 'EN2001a'
-    jsonl_filename_ami = os.path.join('src', 'ontology', 'data', 'dialog_ami', f'{meeting_id_ami}.jsonl')
-    rdf_dest_ami = os.path.join('src', 'ontology', 'data', f'ami_meeting_{meeting_id_ami}.ttl')
+    os.makedirs(args.output_dir, exist_ok=True)
 
-    print(f"Aligning AMI meeting {meeting_id_ami}...")
-    g_ami = align_ami_jsonl_to_dido(jsonl_filename_ami)
-    print(f"Writing to {rdf_dest_ami}")
-    g_ami.serialize(destination=rdf_dest_ami, format='turtle')
+    if args.download:
+        if args.dataset != "ami":
+            raise ValueError("Downloading is currently only supported for the AMI dataset.")
+        print("Downloading dataset...")
+        dialogues = download_dataset(num_conversations=args.n, dialogue_id=args.dialogue_id)
+        save_individual_dialogues_as_json(dialogues, output_dir=args.output_dir)
+        
+        for dialogue in dialogues:
+            d_id = dialogue.iloc[0]['meeting_id']
+            loc = os.path.join(args.output_dir, 'dialog_ami', f"{d_id}.jsonl")
+            rdf_dest = os.path.join(args.output_dir, f'ami_meeting_{d_id}.ttl')
+            print(f"Aligning AMI meeting {d_id} from {loc}...")
+            g_ami = align_ami_jsonl_to_dido(loc)
+            print(f"Writing to {rdf_dest}")
+            g_ami.serialize(destination=rdf_dest, format='turtle')
+
+    else:
+        if not args.dialogue_location:
+            parser.error("--dialogue_location is required when --download is not set")
+            
+        d_ids = args.dialogue_id
+        if not d_ids:
+            # Infer from filename
+            base = os.path.basename(args.dialogue_location)
+            base_no_ext = os.path.splitext(base)[0]
+            inferred_id = base_no_ext.replace('_TRANSCRIPT', '')
+            d_ids = [inferred_id]
+            
+        for d_id in d_ids:
+            if args.dataset == "daicwoz":
+                rdf_dest = os.path.join(args.output_dir, f'daicwoz_dialogue_{d_id}.ttl')
+                print(f"Aligning DAIC-WOZ dialogue {d_id} from {args.dialogue_location}...")
+                g_daic_woz = align_daicwoz_csv_to_dido(args.dialogue_location)
+                print(f"Writing to {rdf_dest}")
+                g_daic_woz.serialize(destination=rdf_dest, format='turtle')
+
+            elif args.dataset == "ami":
+                rdf_dest = os.path.join(args.output_dir, f'ami_meeting_{d_id}.ttl')
+                print(f"Aligning AMI meeting {d_id} from {args.dialogue_location}...")
+                g_ami = align_ami_jsonl_to_dido(args.dialogue_location)
+                print(f"Writing to {rdf_dest}")
+                g_ami.serialize(destination=rdf_dest, format='turtle')
