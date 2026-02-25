@@ -21,6 +21,8 @@ The `src/scripts/download_align_dataset.py` script can be used to convert dialog
 
 You can download the dataset directly from HuggingFace and align it by using the `--download` flag. The transcript file will be automatically saved to `src/ontology/data/dialog_ami/`.
 
+While the script streams the dataset from HuggingFace without keeping any of the audio files, the ```librosa``` and ```soundfile``` libraries may still be required to be installed for the dataset download to work.
+
 To download a specific dialogue:
 ```bash
 python src/scripts/download_align_dataset.py --dataset ami --dialogue_id EN2001a --download

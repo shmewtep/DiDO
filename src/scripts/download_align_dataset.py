@@ -299,7 +299,7 @@ def get_target_dialogues(dataset, target_ids):
 
 def save_individual_dialogues_as_json(dialogues, output_dir=DATA_DIRECTORY):
     """Save each dialogue DataFrame as an individual JSON file."""
-    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(os.path.join(output_dir, 'dialog_ami'), exist_ok=True)
     
     for dialogue in dialogues:
         output_path = os.path.join(output_dir, 'dialog_ami', f"{dialogue.iloc[0]['meeting_id']}.jsonl")
@@ -344,9 +344,7 @@ def download_dataset(num_conversations=None, dialogue_id=None):
     print(f"Downloading {corpus_name} with settings: {corpus_config}")
     dataset = load_dataset(**corpus_config)
     
-    # Cast audio to string to prevent datasets from attempting to decode it with librosa/soundfile
-    from datasets import Value
-    dataset = dataset.cast_column('audio', Value('string'))
+    # Remove audio columns to prevent datasets from attempting to decode it
     dataset = dataset.remove_columns(['audio_id', 'audio']) 
 
     if dialogue_id is not None:
@@ -365,7 +363,7 @@ if __name__ == "__main__":
     parser.add_argument("--dialogue_id", type=str, nargs="+", help="Dialogue ID(s) (e.g., EN2001a or 301). Can provide multiple.")
     parser.add_argument("--n", type=int, help="Number of dialogues to download/align (starting from the first).")
     parser.add_argument("--dialogue_location", type=str, help="Location of the dialogue transcript file (JSONL or CSV). Required if not using --download.")
-    parser.add_argument("--output_dir", type=str, default=os.path.join('src', 'ontology', 'data'), help="Output directory for the RDF file")
+    parser.add_argument("--output_dir", type=str, default=os.path.join('..', '..', 'src', 'ontology', 'data'), help="Output directory for the RDF file")
     parser.add_argument("--download", action="store_true", help="Download the dialogue from HuggingFace first (currently only supports AMI)")
     
     args = parser.parse_args()
@@ -382,11 +380,12 @@ if __name__ == "__main__":
         for dialogue in dialogues:
             d_id = dialogue.iloc[0]['meeting_id']
             loc = os.path.join(args.output_dir, 'dialog_ami', f"{d_id}.jsonl")
-            rdf_dest = os.path.join(args.output_dir, f'ami_meeting_{d_id}.ttl')
+            rdf_dest = os.path.join(args.output_dir, f'dialog_{args.dataset}', f'ami_meeting_{d_id}.ttl')
             print(f"Aligning AMI meeting {d_id} from {loc}...")
             g_ami = align_ami_jsonl_to_dido(loc)
             print(f"Writing to {rdf_dest}")
             g_ami.serialize(destination=rdf_dest, format='turtle')
+            print(f"\nDone!")
 
     else:
         if not args.dialogue_location:
@@ -407,6 +406,7 @@ if __name__ == "__main__":
                 g_daic_woz = align_daicwoz_csv_to_dido(args.dialogue_location)
                 print(f"Writing to {rdf_dest}")
                 g_daic_woz.serialize(destination=rdf_dest, format='turtle')
+                print(f"\nDone!")
 
             elif args.dataset == "ami":
                 rdf_dest = os.path.join(args.output_dir, f'ami_meeting_{d_id}.ttl')
@@ -414,3 +414,4 @@ if __name__ == "__main__":
                 g_ami = align_ami_jsonl_to_dido(args.dialogue_location)
                 print(f"Writing to {rdf_dest}")
                 g_ami.serialize(destination=rdf_dest, format='turtle')
+                print(f"\nDone!")
