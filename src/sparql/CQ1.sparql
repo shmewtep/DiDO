@@ -1,0 +1,12 @@
+PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX ex: <http://purl.org/twc/dido/individuals#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+# CQ1: How many participants are involved in dialogue D?
+SELECT ?dialogue (COUNT(?participant) AS ?participantCount)
+WHERE {
+  ?participant sio:SIO_000228 ?role .
+  ?role a dido:Interlocutor .
+  ?participant sio:SIO_000062 ?dialogue .
+}
+GROUP BY ?dialogue

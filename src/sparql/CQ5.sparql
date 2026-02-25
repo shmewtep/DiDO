@@ -1,0 +1,26 @@
+PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX ex: <http://purl.org/twc/dido/individuals#>
+
+# CQ5: Which utterances overlap with utterance U?
+SELECT ?utterance1 ?utterance2
+WHERE {
+  ?utterance1 a dido:Utterance ;
+     sio:sio_000008 [ 
+       time:hasBeginning [ time:inDateTime [ time:second ?startU ] ] ;
+       time:hasEnd [ time:inDateTime [ time:second ?endU ] ]
+     ] .
+  ?utterance2 a dido:Utterance ;
+                  sio:sio_000008 [ 
+                    time:hasBeginning [ time:inDateTime [ time:second ?startOther ] ] ;
+                    time:hasEnd [ time:inDateTime [ time:second ?endOther ] ]
+                  ] .
+  
+  FILTER (?utterance1 != ?utterance2)
+  
+  # Overlap condition: start1 < end2 AND end1 > start2
+  FILTER (?startOther < ?endU && ?endOther > ?startU)
+  
+  # Example: BIND(<http://purl.org/twc/dido/individuals#utterances/None_0> AS ?utterance1)
+}
