@@ -9,13 +9,13 @@
 
 #### Term list
 
-| Label | IRI | Definition | Source | Definition Source | Parent | Module / Layer | Version / Status |
-|:---|:---|:---|:---|:---|:---|:---|:---|
-| **dialogue** | `:Dialogue` | an interactive communication between two or more entities |  | https://www.oed.com/dictionary/dialogue_n, | [SIO (Process)](http://semanticscience.org/resource/SIO_000006) | Process | Draft |
-| **utterance** | `:Utterance` | a single unit of speech in spoken language that serves some pragmatic function | | | [SIO (Process)](http://semanticscience.org/resource/SIO_000006) | Process | Draft |
-| **interlocutor** | `:Interlocutor` | One who takes part in a dialogue or conversation |  |  | [SIO (Role)](http://semanticscience.org/resource/SIO_000016) | Agent | Draft |
-| **dialogue transcript** | `:DialogueTranscript` | A digital or physical information content entity that provides a structured textual record of a conversation |  |  | [SIO (Information Content Entity)](http://semanticscience.org/resource/SIO_000015) | Data | Draft |
-| **utterance text** | `:UtteranceText` | A textual entity representing the output of an utterance |  |  | [SIO (Data Item)](http://semanticscience.org/resource/SIO_000069), [SIO (Language Entity)](http://semanticscience.org/resource/SIO_000069) | Data | Draft |
+| Label | IRI | Definition | Source | Definition Source | Parent | Layer |
+|:---|:---|:---|:---|:---|:---|:---|
+| **dialogue** | `:Dialogue` | an interactive communication between two or more entities |  | https://www.oed.com/dictionary/dialogue_n | [SIO (Process)](http://semanticscience.org/resource/SIO_000006) | Dialogue Structure |
+| **utterance** | `:Utterance` | a single unit of speech in spoken language that serves some pragmatic function | | | [SIO (Process)](http://semanticscience.org/resource/SIO_000006) | Dialogue Structure |
+| **interlocutor** | `:Interlocutor` | One who takes part in a dialogue or conversation |  |  | [SIO (Role)](http://semanticscience.org/resource/SIO_000016) | Dialogue Structure |
+| **dialogue transcript** | `:DialogueTranscript` | A digital or physical information content entity that provides a structured textual record of a conversation |  |  | [SIO (Information Content Entity)](http://semanticscience.org/resource/SIO_000015) | Data |
+| **utterance text** | `:UtteranceText` | A textual entity representing the output of an utterance |  |  | [SIO (Data Item)](http://semanticscience.org/resource/SIO_000069), [SIO (Language Entity)](http://semanticscience.org/resource/SIO_000069) | Data |
 
 
 
@@ -26,5 +26,4 @@
 * **IRI**: Unique identifier (Reused full IRI or local prefix).
 * **Definition**: Formal natural language description (`skos:definition`).
 * **Source**: The existing ontology or knowledge source the term is mapped from.
-* **Module / Layer**: If the term is part of a distinct layer of DIDO, or corresponds with an existing ontology dedsign pattern
-* **Version / Status**: Development state (e.g., Draft, Verified, Deprecated).
+* **Layer**: If the term is part of a distinct layer of DIDO, or corresponds with an existing ontology design pattern

@@ -1,10 +1,14 @@
 #### Ontology methodologies utilized or referenced
 
+* [Ontology Development 101](https://corais.org/sites/default/files/ontology_development_101_aguide_to_creating_your_first_ontology.pdf)
 * [eXtreme](https://ceur-ws.org/Vol-516/pap21.pdf)
 * [MoMO](https://journals.sagepub.com/doi/pdf/10.3233/SW-222886)
 
 #### Tools used
 
+* [Protégé](https://protege.stanford.edu/)
+* [Ontology Development Toolkit (ODK)](https://incatools.github.io/ontology-development-kit/)
+* [ROBOT is an OBO Tool](https://robot.obolibrary.org/)
 * [WIDOCO](https://dgarijo.github.io/Widoco/)
 
 #### Datasets used for validation/examples

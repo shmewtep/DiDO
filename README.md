@@ -7,11 +7,19 @@
 - [Requirements.md](Requirements.md): Ontology requirements including goals, scope, and target audience.
 - [CompetencyQuestions.md](CompetencyQuestions.md): Functional requirements expressed as competency questions.
 - [Terms.md](Terms.md): List of terms, prefixes, and definitions used in the ontology.
-- [DevelopmentDescription.md](DevelopmentDescription.md): Overview of the ontology development process and methodology.
+- [DevelopmentDescription.md](DevelopmentDescription.md): Overview of the ontology development process and methodology, as well as resources used in development.
 - `src/`: Contains core ontology files (`ontology/`), scripts (`scripts/`), and SPARQL queries (`sparql/`).
 - `docs/`: Contains the web application logic, UI elements, and related queries/data for https://shmewtep.github.io/dialogueOnt/.
 
 ## Usage
+
+The most recent release of the ontology is available in the root directory of the repository, while the edit version is available in the `src/ontology` directory.
+
+Multiple versions of the ontology are available including `dido-base`, `dido-full`, and `dido`.
+
+* `dido-base`: The core ontology containing classes introduced by DIDO.
+* `dido-full`: The full ontology containing all classes and axioms including those from imports.
+* `dido`: Currently the same as `dido-full`.
 
 ### Aligning Dialogue Datasets
 
