@@ -117,7 +117,7 @@ const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
         PREFIX dido: <http://purl.org/twc/dido#>
         PREFIX sio: <http://semanticscience.org/resource/>
         PREFIX time: <http://www.w3.org/2006/time#>
-        SELECT ?text ?speaker ?beginTime ?endTime WHERE {
+        SELECT ?utterance ?text ?speaker ?beginTime ?endTime WHERE {
             # Find the target utterance's begin time and dialogue
             ${expandedUtteranceIri} sio:SIO_000068 ?dialogue ;
                                     sio:sio_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?targetBegin ] ] ] .
@@ -146,7 +146,7 @@ const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
         PREFIX dido: <http://purl.org/twc/dido#>
         PREFIX sio: <http://semanticscience.org/resource/>
         PREFIX time: <http://www.w3.org/2006/time#>
-        SELECT ?text ?speaker ?beginTime ?endTime WHERE {
+        SELECT ?utterance ?text ?speaker ?beginTime ?endTime WHERE {
             ?utterance sio:SIO_000068 ${expandedIri} ;
                        sio:SIO_000232 ?textUri ;
                        sio:SIO_000139 ?speaker ;
@@ -167,6 +167,7 @@ const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
         const utterances = [];
         bindingsStream.on('data', (binding) => {
             utterances.push({
+                id: binding.get('utterance').value.replace(prefix, '').replace('utterance', ''),
                 text: binding.get('text').value,
                 speaker: binding.get('speaker').value.replace(prefix, 'ex:').replace('ex:human', ''),
                 beginTime: binding.get('beginTime').value,
@@ -213,7 +214,10 @@ const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
                         <span class="message-speaker">${u.speaker}</span>
                         <span class="message-time">${timeString}</span>
                     </div>
-                    <div class="message-bubble" ${highlightStyle}>${u.text}</div>
+                    <div class="message-bubble" ${highlightStyle}>
+                        ${u.text}
+                        <div style="font-size: 0.65rem; color: rgba(255,255,255,0.4); text-align: right; margin-top: 4px;">#${u.id}</div>
+                    </div>
                 `;
                 elements.conversationContainer.appendChild(el);
             });
@@ -247,9 +251,11 @@ elements.runBtn.addEventListener('click', async () => {
 
     let query = bindVariables(rawQuery, inputValues);
 
-    // Load the conversation snippet based on 'utterance' or 'dialogue'
-    if (inputValues['utterance'] && inputValues['utterance'].trim() !== '') {
-        loadConversationSnippet(null, inputValues['utterance']);
+    // Load the conversation snippet based on 'utterance', 'utterance1', or 'dialogue'
+    const targetUtterance = inputValues['utterance'] || inputValues['utterance1'];
+
+    if (targetUtterance && targetUtterance.trim() !== '') {
+        loadConversationSnippet(null, targetUtterance);
     } else if (inputValues['dialogue'] && inputValues['dialogue'].trim() !== '') {
         loadConversationSnippet(inputValues['dialogue'], null);
     } else {

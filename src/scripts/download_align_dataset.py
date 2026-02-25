@@ -24,7 +24,7 @@ EX = Namespace("http://purl.org/twc/dido/individuals#")
 DCAT = Namespace("http://www.w3.org/ns/dcat#")
 
 
-def align_ami_jsonl_to_dido(jsonl_file):
+def align_ami_jsonl_to_dido(jsonl_file, n_utterances=None):
     '''
     Transform data points from AMI JSONL format to RDF format, aligned with DIDO.
     '''
@@ -59,6 +59,9 @@ def align_ami_jsonl_to_dido(jsonl_file):
 
     with open(jsonl_file, 'r') as f:
         for utterance_num, line in enumerate(f):
+            if n_utterances is not None and utterance_num >= n_utterances:
+                break
+
             data = json.loads(line)
             
             # --- Dialogue Structure ---
@@ -411,7 +414,7 @@ if __name__ == "__main__":
             elif args.dataset == "ami":
                 rdf_dest = os.path.join(args.output_dir, f'ami_meeting_{d_id}.ttl')
                 print(f"Aligning AMI meeting {d_id} from {args.dialogue_location}...")
-                g_ami = align_ami_jsonl_to_dido(args.dialogue_location)
+                g_ami = align_ami_jsonl_to_dido(args.dialogue_location, n_utterances=50)
                 print(f"Writing to {rdf_dest}")
                 g_ami.serialize(destination=rdf_dest, format='turtle')
                 print(f"\nDone!")
