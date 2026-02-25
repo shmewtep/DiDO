@@ -1,0 +1,3245 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://purl.org/dido/dido.owl#"
+     xml:base="https://purl.org/dido/dido.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ex="http://example.org/instance/"
+     xmlns:ont="http://example.org/ontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sio="http://semanticscience.org/resource/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="http://www.w3.org/ns/adms#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:schema="https://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:schema1="http://schema.org/">
+    <owl:Ontology rdf:about="https://purl.org/dido/dido.owl">
+        <owl:versionIRI rdf:resource="https://purl.org/dido/releases/2026-02-25/dido.owl"/>
+        <dc:creator xml:lang="en">Kelsey Rook</dc:creator>
+        <dcterms:description>The Dialogue and Discourse Ontology (DIDO) supports the modeling of dialogue and dialogue data.</dcterms:description>
+        <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://opensource.org/license/mit</dcterms:license>
+        <dcterms:modified>2026-2-4</dcterms:modified>
+        <dcterms:title>Dialogue and Discourse Ontology (DiDO)</dcterms:title>
+        <vann:preferredNamespacePrefix>dido</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://purl.org/twc/dido#</vann:preferredNamespaceUri>
+        <schema1:codeRepository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/shmewtep/dialogueOnt</schema1:codeRepository>
+        <rdfs:label>DIDO</rdfs:label>
+        <owl:versionInfo>2026-02-25</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://protege.stanford.edu/plugins/owl/protege#defaultLanguage -->
+
+    <owl:AnnotationProperty rdf:about="http://protege.stanford.edu/plugins/owl/protege#defaultLanguage"/>
+    
+
+
+    <!-- http://purl.org/dc/dcam/rangeIncludes -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcam/rangeIncludes"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <dc:identifier>contributor</dc:identifier>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <dc:identifier>creator</dc:identifier>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/alternative -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/alternative"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isVersionOf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isVersionOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/editor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/editor"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/translator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/translator"/>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsAuthority -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/spar/cito/citesAsAuthority"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+        <dc:identifier>preferredNamespacePrefix</dc:identifier>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+        <dc:identifier>preferredNamespaceUri</dc:identifier>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#subset -->
+
+    <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#subset"/>
+    
+
+
+    <!-- http://schema.org/codeRepository -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/codeRepository"/>
+    
+
+
+    <!-- http://schema.org/comment -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/comment"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/equivalentTo -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticscience.org/resource/equivalentTo"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/subset -->
+
+    <owl:AnnotationProperty rdf:about="http://semanticscience.org/resource/subset"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#versionNotes -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/adms#versionNotes"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#category -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#category"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#component -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#component">
+        <rdfs:comment xml:lang="en">Classify prov-o terms into six components according to prov-dm, including &apos;agents-responsibility&apos;, &apos;alternate&apos;, &apos;annotations&apos;, &apos;collections&apos;, &apos;derivations&apos;, and &apos;entities-activities&apos;. This classification is used so that readers of prov-o specification can find its correspondence with the prov-dm specification.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#definition">
+        <rdfs:comment xml:lang="en">A definition quoted from PROV-DM or PROV-CONSTRAINTS that describes the concept expressed with this OWL term.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#inverse -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#inverse">
+        <rdfs:comment xml:lang="en">PROV-O does not define all property inverses. The directionalities defined in PROV-O should be given preference over those not defined. However, if users wish to name the inverse of a PROV-O property, the local name given by prov:inverse should be used.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-o/#names-of-inverse-properties"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#qualifiedForm -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#qualifiedForm">
+        <rdfs:comment xml:lang="en">This annotation property links a subproperty of prov:wasInfluencedBy with the subclass of prov:Influence and the qualifying property that are used to qualify it. 
+
+Example annotation:
+
+    prov:wasGeneratedBy prov:qualifiedForm prov:qualifiedGeneration, prov:Generation .
+
+Then this unqualified assertion:
+
+    :entity1 prov:wasGeneratedBy :activity1 .
+
+can be qualified by adding:
+
+   :entity1 prov:qualifiedGeneration :entity1Gen .
+   :entity1Gen 
+       a prov:Generation, prov:Influence;
+       prov:activity :activity1;
+       :customValue 1337 .
+
+Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1) is mirrored as the value of the prov:activity (or prov:entity, or prov:agent) property on the influence class.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depiction -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depiction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000001 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000001">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <dc:identifier>SIO_000001</dc:identifier>
+        <dcterms:description xml:lang="en">A is related to B iff there is some relation between A and B.</dcterms:description>
+        <schema1:comment>&apos;is related to&apos; is the top level relation in SIO</schema1:comment>
+        <sio:subset>core</sio:subset>
+        <sio:subset>relations+</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000008 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000008">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <dc:identifier>SIO_000008</dc:identifier>
+        <dcterms:description xml:lang="en">has attribute is a relation that associates a entity with an attribute where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000011 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000011">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <dc:identifier>SIO_000011</dc:identifier>
+        <dcterms:description xml:lang="en">is attribute of is a relation that associates an attribute with an entity where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is attribute of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000028 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000028">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000145"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000068"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <dc:identifier>SIO_000028</dc:identifier>
+        <dcterms:description xml:lang="en">has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+        <skos:example xml:lang="en">a collection of cars has as a car as a part;a car has an engine as a part; a car has a piston as a part;</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000053 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000053">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000028"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000093"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <dc:identifier>SIO_000053</dc:identifier>
+        <dcterms:description xml:lang="en">has proper part is an antisymmetric, irreflexive (normally transitive) relation between a whole and a distinct part.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has proper part</rdfs:label>
+        <skos:example xml:lang="en">a car has an engine as a proper part; a car has a piston as a proper part;</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000059 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000059">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000095"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000616"/>
+        <dc:identifier>SIO_000059</dc:identifier>
+        <dcterms:description xml:lang="en">has member is a mereological relation between a collection and an item.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+        <skos:example xml:lang="en">a collection of cars has as a car as a member</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000061 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000061">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000322"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000145"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <dc:identifier>SIO_000061</dc:identifier>
+        <dcterms:description xml:lang="en">A is located in B iff the spatialtemporial region occupied by A is part of the spatialtemporal region occupied by B. [T][R]</dcterms:description>
+        <sio:equivalentTo>OBO_REL:located_in</sio:equivalentTo>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is located in</rdfs:label>
+        <skos:example xml:lang="en">A parasite in the interior of a person&apos;s intestine is located in their intestinal lumen.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000062 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000062">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000322"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000132"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+        <dc:identifier>SIO_000062</dc:identifier>
+        <dcterms:description xml:lang="en">is participant in is a relation that describes the participation of the subject in the (processual) object.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is participant in</rdfs:label>
+        <skos:example xml:lang="en">a car is a participant in a car race; glucose is a participant in glycolysis</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000063 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000063">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000062"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000139"/>
+        <dc:identifier>SIO_000063</dc:identifier>
+        <dcterms:description xml:lang="en">is agent in is a relation between an entity and a process, where the entity is present throughout the process, no permanent material change occurs, and is a causal participant in the process.</dcterms:description>
+        <sio:subset xml:lang="en">sadi</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is agent in</rdfs:label>
+        <skos:example xml:lang="en">hexokinase is an agent in the conversion of glucose to glucose-6-phosphate</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000068 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000068">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000061"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <dc:identifier>SIO_000068</dc:identifier>
+        <dcterms:description xml:lang="en">is part of is a transitive, reflexive and anti-symmetric mereological relation between a whole and itself or a part and its whole.</dcterms:description>
+        <sio:equivalentTo>OBO_REL:part_of</sio:equivalentTo>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000093 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000093">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000068"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <dc:identifier>SIO_000093</dc:identifier>
+        <dcterms:description xml:lang="en">is proper part of is an asymmetric, irreflexive (normally transitive) relation between a part and its distinct whole.</dcterms:description>
+        <sio:equivalentTo>OBO_REL:proper_part_of</sio:equivalentTo>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is proper part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000095 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000095">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+        <dc:identifier>SIO_000095</dc:identifier>
+        <dcterms:description xml:lang="en">is member of is a mereological relation between a item and a collection.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000132 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000132">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000322"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+        <dc:identifier>SIO_000132</dc:identifier>
+        <dcterms:description xml:lang="en">has participant is a relation that describes the participation of the object in the (processual) subject.</dcterms:description>
+        <sio:equivalentTo>OBO_REL:has_participant</sio:equivalentTo>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000139 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000139">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000132"/>
+        <dc:identifier>SIO_000139</dc:identifier>
+        <dcterms:description xml:lang="en">has agent is a relation between a process and an entity, where the entity is present throughout the process and is a causal participant in the process.</dcterms:description>
+        <sio:equivalentTo>OBO_REL:has_agent</sio:equivalentTo>
+        <sio:subset>core</sio:subset>
+        <sio:subset xml:lang="en">sadi</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has agent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000145 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000145">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000322"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <dc:identifier>SIO_000145</dc:identifier>
+        <dcterms:description xml:lang="en">A is location of B iff the spatialtemporal region occupied by A has the spatialtemporal region occupied by B as a part. [T][R]</dcterms:description>
+        <sio:subset>nlp+</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is location of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000212 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000212">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000628"/>
+        <dc:identifier>SIO_000212</dc:identifier>
+        <dcterms:description xml:lang="en">A is referred to by B iff B is an informational entity that makes reference to A.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is referred to by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000213 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000213">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000425"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000214"/>
+        <dc:identifier>SIO_000213</dc:identifier>
+        <dcterms:description xml:lang="en">A has concretization B iff A is an informational entity and B is the a quality of some material entity.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has concretization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000214 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000214">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000425"/>
+        <dc:identifier>SIO_000214</dc:identifier>
+        <dcterms:description xml:lang="en">A is concretization of B iff A is a quality of a material entity and B is an informational entity.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is concretization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000215 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000215">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000216"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000070"/>
+        <dc:identifier>SIO_000215</dc:identifier>
+        <dcterms:description xml:lang="en">is measurement value of is a relation between a value and the entity that it is a measurement of.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is measurement value of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000216 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000216">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000070"/>
+        <dc:identifier>SIO_000216</dc:identifier>
+        <dcterms:description xml:lang="en">has measurement value is a relation between a quality/realizable and a measurement value.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has measurement value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000217 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000217">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000223"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000218"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000005"/>
+        <dc:identifier>SIO_000217</dc:identifier>
+        <dcterms:description xml:lang="en">has quality is a relation between an entity and the quality that it bears.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000218 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000218">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000224"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000005"/>
+        <dc:identifier>SIO_000218</dc:identifier>
+        <dcterms:description xml:lang="en">is quality of is a relation between a quality and the entity that it is a property of.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000221 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000221">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000222"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000075"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000074"/>
+        <dc:identifier>SIO_000221</dc:identifier>
+        <dcterms:description xml:lang="en">has unit is a relation between a quantity and the unit it is a multiple of.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000222 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000222">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000074"/>
+        <dc:identifier>SIO_000222</dc:identifier>
+        <dcterms:description xml:lang="en">is unit of is a relation between a unit and a quantity that it is a multiple of.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is unit of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000223 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000223">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000224"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <dc:identifier>SIO_000223</dc:identifier>
+        <dcterms:description xml:lang="en">has property is a relation between an entity and the quality, capability or role that it and it alone bears.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+        <skos:example xml:lang="en">michel&apos;s hair has the quality of being brown in colour.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000224 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000224">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <dc:identifier>SIO_000224</dc:identifier>
+        <dcterms:description xml:lang="en">is property of is a relation betweena  quality, capability or role and the entity that it and it alone bears.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000227 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000227">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000643"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000228"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000016"/>
+        <dc:identifier>SIO_000227</dc:identifier>
+        <dcterms:description xml:lang="en">is role of is a relation between a role and the entity that it is a property of.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000228 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000228">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000644"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000016"/>
+        <dc:identifier>SIO_000228</dc:identifier>
+        <dcterms:description xml:lang="en">has role is a relation between an entity and a role that it bears.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000229 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000229">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000132"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000232"/>
+        <dc:identifier>SIO_000229</dc:identifier>
+        <dcterms:description xml:lang="en">has output is a relation between an process and an entity, where the entity is present at the end of the process.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <sio:subset xml:lang="en">sadi</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000232 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000232">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000062"/>
+        <dc:identifier>SIO_000232</dc:identifier>
+        <dcterms:description xml:lang="en">is output of is a relation between an entity and a process, where the entity is present at the end of the process.</dcterms:description>
+        <sio:subset xml:lang="en">sadi</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is output of</rdfs:label>
+        <skos:example xml:lang="en">glucose-6-phosphate and ADP are outputs in the hexokinase-mediated conversion of glucose to glucose-6-phosphate.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000273 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000273">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000053"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000310"/>
+        <dc:identifier>SIO_000273</dc:identifier>
+        <dcterms:description xml:lang="en">has direct part is a relation to specify a part at a particular level of granularity</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has direct part</rdfs:label>
+        <skos:example xml:lang="en">a car has an engine as a direct part</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000310 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000310">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000093"/>
+        <dc:identifier>SIO_000310</dc:identifier>
+        <dcterms:description xml:lang="en">is direct part of is a relation between a specific part (at some level of granularity) and its whole.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is direct part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000322 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000322">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <dc:identifier>SIO_000322</dc:identifier>
+        <dcterms:description xml:lang="en">A is spatiotemporally related to B iff A is in the spatial or temporal vicinity of B</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is spatiotemporally related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000325 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000325">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000322"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000325"/>
+            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000068"/>
+        </owl:propertyChainAxiom>
+        <dc:identifier>SIO_000325</dc:identifier>
+        <dcterms:description xml:lang="en">A overlaps with B iff there is some C that is part of both A and B. [S][R]</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">overlaps with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000332 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000332">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000563"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000629"/>
+        <dc:identifier>SIO_000332</dc:identifier>
+        <dcterms:description xml:lang="en">is about is a relation between an information content entity and the entity that its primary subject.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000355 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000355">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000229"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000356"/>
+        <dc:identifier>SIO_000355</dc:identifier>
+        <dcterms:description xml:lang="en">realizes is a relation between a process and a realizable entity (role, function, disposition).</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000356 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000356">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000062"/>
+        <dc:identifier>SIO_000356</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is realized in</rdfs:label>
+        <skos:example xml:lang="en">the role of a patient is realized in medical examination</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000425 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000425">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <dc:identifier>SIO_000425</dc:identifier>
+        <dcterms:description xml:lang="en">A is generically related with B iff A is an abstract entity or an information content entity and B is a information content entity or a physical entity, respectively.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is generically related with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000557 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000557">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000212"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000563"/>
+        <dc:identifier>SIO_000557</dc:identifier>
+        <dcterms:description xml:lang="en">is described by is a relation between one entity and another entity that provides a description (detailed account) of it.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is described by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000563 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000563">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000628"/>
+        <dc:identifier>SIO_000563</dc:identifier>
+        <dcterms:description xml:lang="en">describes is a relation between one entity and another entity that it provides a description (detailed account of).</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">describes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000628 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000628">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <dc:identifier>SIO_000628</dc:identifier>
+        <dcterms:description xml:lang="en">refers to is a relation between one entity and the entity that it makes reference to.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <sio:subset>nlp+</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">refers to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000629 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000629">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000557"/>
+        <dc:identifier>SIO_000629</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is subject of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000643 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000643">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000224"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000644"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <dc:identifier>SIO_000643</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is realizable property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000644 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000644">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000223"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <dc:identifier>SIO_000644</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has realizable property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000671 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000671">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <owl:inverseOf rdf:resource="http://semanticscience.org/resource/SIO_000672"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000115"/>
+        <dc:identifier>SIO_000671</dc:identifier>
+        <dcterms:description>a relation between an entity and an identifier.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000672 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000672">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000115"/>
+        <dc:identifier>SIO_000672</dc:identifier>
+        <dcterms:alternative>identifies</dcterms:alternative>
+        <dcterms:description>a relation between an identifier and an entity.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">is identifier for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasBeginning">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:comment xml:lang="en">Beginning of a temporal entity</rdfs:comment>
+        <rdfs:comment xml:lang="es">Comienzo de una entidad temporal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has beginning</rdfs:label>
+        <rdfs:label xml:lang="es">tiene principio</rdfs:label>
+        <skos:definition xml:lang="en">Beginning of a temporal entity.</skos:definition>
+        <skos:definition xml:lang="es">Comienzo de una entidad temporal.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasEnd -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasEnd">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:comment xml:lang="en">End of a temporal entity.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Final de una entidad temporal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has end</rdfs:label>
+        <rdfs:label xml:lang="es">tiene fin</rdfs:label>
+        <skos:definition xml:lang="en">End of a temporal entity.</skos:definition>
+        <skos:definition xml:lang="es">Final de una entidad temporal.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasTRS -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTRS">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalPosition"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="es">El sistema de referencia temporal utilizado por una posición temporal o descripción de extensión.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The temporal reference system used by a temporal position or extent description. </rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal reference system used</rdfs:label>
+        <rdfs:label xml:lang="es">sistema de referencia temporal utilizado</rdfs:label>
+        <skos:definition xml:lang="es">El sistema de referencia temporal utilizado por una posición temporal o descripción de extensión.</skos:definition>
+        <skos:definition xml:lang="en">The temporal reference system used by a temporal position or extent description. </skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment xml:lang="es">Proporciona soporte a la asociación de una entidad temporal (instante o intervalo) a cualquier cosa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Supports the association of a temporal entity (instant or interval) to any thing</rdfs:comment>
+        <rdfs:label xml:lang="en">has time</rdfs:label>
+        <rdfs:label xml:lang="es">tiene tiempo</rdfs:label>
+        <skos:definition xml:lang="es">Proporciona soporte a la asociación de una entidad temporal (instante o intervalo) a cualquier cosa.</skos:definition>
+        <skos:definition xml:lang="en">Supports the association of a temporal entity (instant or interval) to any thing</skos:definition>
+        <skos:editorialNote xml:lang="es">Característica arriesgada -añadida en la revisión del 2017 que no ha sido todavía utilizada de forma amplia.</skos:editorialNote>
+        <skos:editorialNote xml:lang="en">Feature at risk - added in 2017 revision, and not yet widely used. </skos:editorialNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inDateTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#inTemporalPosition"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#GeneralDateTimeDescription"/>
+        <rdfs:comment xml:lang="es">Posición de un instante, expresada utilizando una descripción estructurada.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Position of an instant, expressed using a structured description</rdfs:comment>
+        <rdfs:label xml:lang="es">en descripción de fecha-hora</rdfs:label>
+        <rdfs:label xml:lang="en">in date-time description</rdfs:label>
+        <skos:definition xml:lang="es">Posición de un instante, expresada utilizando una descripción estructurada.</skos:definition>
+        <skos:definition xml:lang="en">Position of an instant, expressed using a structured description</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inTemporalPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inTemporalPosition">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalPosition"/>
+        <rdfs:comment xml:lang="es">Posición de un instante de tiempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Position of a time instant</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal position</rdfs:label>
+        <rdfs:label xml:lang="es">posición temporal</rdfs:label>
+        <skos:definition xml:lang="es">Posición de un instante de tiempo.</skos:definition>
+        <skos:definition xml:lang="en">Position of a time instant</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#unitType">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Duration"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#GeneralDateTimeDescription"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="es">La unidad de tiempo que proporciona la precisión de un valor fecha-hora o la escala de una extensión temporal.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The temporal unit which provides the precision of a date-time value or scale of a temporal extent</rdfs:comment>
+        <rdfs:label xml:lang="en">temporal unit type</rdfs:label>
+        <rdfs:label xml:lang="es">tipo de unidad temporal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#landingPage -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#landingPage">
+        <rdfs:comment xml:lang="en">A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</rdfs:comment>
+        <rdfs:comment xml:lang="da">En webside som der kan navigeres til i en webbrowser for at få adgang til kataloget, et datasæt, dets distributioner og/eller yderligere information.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Una pagina web che può essere navigata per ottenere l&apos;accesso al catalogo, ad un dataset, alle distribuzioni del dataset e/o ad informazioni addizionali.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una página web que puede ser visitada en un explorador Web para tener acceso el catálogo, un conjunto de datos, sus distribuciones y/o información adicional.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une page Web accessible par un navigateur Web donnant accès au catalogue, un jeu de données, ses distributions et/ou des informations additionnelles.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Webová stránka, na kterou lze pro získání přístupu ke katalogu, datové sadě, jejím distribucím a/nebo dalším informacím přistoupit webovým prohlížečem.</rdfs:comment>
+        <rdfs:comment xml:lang="el">Μία ιστοσελίδα πλοηγίσιμη μέσω ενός φυλλομετρητή (Web browser) που δίνει πρόσβαση στο σύνολο δεδομένων, τις διανομές αυτού ή/και επιπρόσθετες πληροφορίες.</rdfs:comment>
+        <rdfs:comment xml:lang="ar">صفحة وب يمكن من خلالها الوصول الى قائمة البيانات أو إلى معلومات إضافية متعلقة بها </rdfs:comment>
+        <rdfs:comment xml:lang="ja">データセット、その配信および（または）追加情報にアクセスするためにウエブ・ブラウザでナビゲートできるウェブページ。</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+        <rdfs:label xml:lang="da">destinationsside</rdfs:label>
+        <rdfs:label xml:lang="en">landing page</rdfs:label>
+        <rdfs:label xml:lang="fr">page d&apos;atterrissage</rdfs:label>
+        <rdfs:label xml:lang="it">pagina di destinazione</rdfs:label>
+        <rdfs:label xml:lang="es">página de destino</rdfs:label>
+        <rdfs:label xml:lang="cs">vstupní stránka</rdfs:label>
+        <rdfs:label xml:lang="el">ιστοσελίδα αρχικής πρόσβασης</rdfs:label>
+        <rdfs:label xml:lang="ar">صفحة وصول</rdfs:label>
+        <rdfs:label xml:lang="ja">ランディング・ページ</rdfs:label>
+        <skos:definition xml:lang="en">A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</skos:definition>
+        <skos:definition xml:lang="da">En webside som en webbrowser kan navigeres til for at få adgang til kataloget, et datasæt, dets distritbutioner og/eller yderligere information.</skos:definition>
+        <skos:definition xml:lang="it">Una pagina web che può essere navigata per ottenere l&apos;accesso al catalogo, ad un dataset, alle distribuzioni del dataset e/o ad informazioni addizionali.</skos:definition>
+        <skos:definition xml:lang="es">Una página web que puede ser visitada en un explorador Web para tener acceso el catálogo, un conjunto de datos, sus distribuciones y/o información adicional.</skos:definition>
+        <skos:definition xml:lang="fr">Une page Web accessible par un navigateur Web donnant accès au catalogue, un jeu de données, ses distributions et/ou des informations additionnelles.</skos:definition>
+        <skos:definition xml:lang="cs">Webová stránka, na kterou lze pro získání přístupu ke katalogu, datové sadě, jejím distribucím a/nebo dalším informacím přistoupit webovým prohlížečem.</skos:definition>
+        <skos:definition xml:lang="el">Μία ιστοσελίδα πλοηγίσιμη μέσω ενός φυλλομετρητή (Web browser) που δίνει πρόσβαση στο σύνολο δεδομένων, τις διανομές αυτού ή/και επιπρόσθετες πληροφορίες.</skos:definition>
+        <skos:definition xml:lang="ar">صفحة وب يمكن من خلالها الوصول الى قائمة البيانات أو إلى معلومات إضافية متعلقة بها </skos:definition>
+        <skos:definition xml:lang="ja">データセット、その配信および（または）追加情報にアクセスするためにウエブ・ブラウザでナビゲートできるウェブページ。</skos:definition>
+        <skos:scopeNote xml:lang="da">Hvis en eller flere distributioner kun er tilgængelige via en destinationsside (dvs. en URL til direkte download er ikke kendt), så bør destinationssidelinket gentages som adgangsadresse for en distribution.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution.</skos:scopeNote>
+        <skos:scopeNote xml:lang="cs">Pokud je distribuce dostupná pouze přes vstupní stránku, t.j. přímý URL odkaz ke stažení není znám, URL přístupové stránky by mělo být duplikováno ve vlastnosti distribuce accessURL.</skos:scopeNote>
+        <skos:scopeNote xml:lang="it">Se la distribuzione è accessibile solo attraverso una pagina di destinazione (cioè, un URL di download diretto non è noto), il link alla pagina di destinazione deve essere duplicato come accessURL sulla distribuzione.</skos:scopeNote>
+        <skos:scopeNote xml:lang="es">Si la distribución es accesible solamente través de una página de aterrizaje (i.e., no se conoce una URL de descarga directa), entonces el enlance a la página de aterrizaje debe ser duplicado como accessURL sobre la distribución.</skos:scopeNote>
+        <skos:scopeNote xml:lang="fr">Si la distribution est seulement accessible à travers une page d&apos;atterrissage (exple. pas de connaissance d&apos;URLS de téléchargement direct ), alors le lien de la page d&apos;atterrissage doit être dupliqué comme accessURL sur la distribution.</skos:scopeNote>
+        <skos:scopeNote xml:lang="el">Αν η/οι διανομή/ές είναι προσβάσιμη/ες μόνο μέσω μίας ιστοσελίδας αρχικής πρόσβασης (δηλαδή αν δεν υπάρχουν γνωστές διευθύνσεις άμεσης μεταφόρτωσης), τότε ο σύνδεσμος της ιστοσελίδας αρχικής πρόσβασης πρέπει να αναπαραχθεί ως accessURL σε μία διανομή.</skos:scopeNote>
+        <skos:scopeNote xml:lang="ja">ランディング・ページを通じてしか配信にアクセスできない場合（つまり、直接的なダウンロードURLが不明）には、配信におけるaccessURLとしてランディング・ページのリンクをコピーすべきです（SHOULD）。</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo">
+        <rdfs:comment xml:lang="en">Attribution is the ascribing of an entity to an agent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:label>wasAttributedTo</rdfs:label>
+        <prov:category>starting-point</prov:category>
+        <prov:component>agents-responsibility</prov:component>
+        <prov:definition xml:lang="en">Attribution is the ascribing of an entity to an agent.</prov:definition>
+        <prov:inverse>contributed</prov:inverse>
+        <prov:qualifiedForm rdf:resource="http://www.w3.org/ns/prov#Attribution"/>
+        <prov:qualifiedForm rdf:resource="http://www.w3.org/ns/prov#qualifiedAttribution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000300 -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticscience.org/resource/SIO_000300">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <dc:identifier>SIO_000300</dc:identifier>
+        <dcterms:description xml:lang="en">A relation between a informational entity and its actual value (numeric, date, text, etc).</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <sio:subset>nlp</sio:subset>
+        <sio:subset>relations</sio:subset>
+        <sio:subset xml:lang="en">sadi</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#days -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#days">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en días.</rdfs:comment>
+        <rdfs:comment xml:lang="en">length of, or element of the length of, a temporal extent expressed in days</rdfs:comment>
+        <rdfs:label xml:lang="en">days duration</rdfs:label>
+        <rdfs:label xml:lang="es">duración en días</rdfs:label>
+        <skos:definition xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en días.</skos:definition>
+        <skos:definition xml:lang="en">length of, or element of the length of, a temporal extent expressed in days</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hours -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#hours">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en horas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">length of, or element of the length of, a temporal extent expressed in hours</rdfs:comment>
+        <rdfs:label xml:lang="es">duración en horas</rdfs:label>
+        <rdfs:label xml:lang="en">hours duration</rdfs:label>
+        <skos:definition xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en horas.</skos:definition>
+        <skos:definition xml:lang="en">length of, or element of the length of, a temporal extent expressed in hours</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minutes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#minutes">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en minutos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">length, or element of, a temporal extent expressed in minutes</rdfs:comment>
+        <rdfs:label xml:lang="en">minutes</rdfs:label>
+        <rdfs:label xml:lang="es">minutos</rdfs:label>
+        <skos:definition xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en minutos.</skos:definition>
+        <skos:definition xml:lang="en">length, or element of, a temporal extent expressed in minutes</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#months -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#months">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en meses.</rdfs:comment>
+        <rdfs:comment xml:lang="en">length of, or element of the length of, a temporal extent expressed in months</rdfs:comment>
+        <rdfs:label xml:lang="es">duración en meses</rdfs:label>
+        <rdfs:label xml:lang="en">months duration</rdfs:label>
+        <skos:definition xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en meses.</skos:definition>
+        <skos:definition xml:lang="en">length of, or element of the length of, a temporal extent expressed in months</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#numericDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#numericDuration">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Valor de una extensión temporal expresada como un número decimal escalado por una unidad de tiempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Value of a temporal extent expressed as a decimal number scaled by a temporal unit</rdfs:comment>
+        <rdfs:label xml:lang="en">Numeric value of temporal duration</rdfs:label>
+        <rdfs:label xml:lang="es">valor numérico de duración temporal</rdfs:label>
+        <skos:definition xml:lang="es">Valor de una extensión temporal expresada como un número decimal escalado por una unidad de tiempo.</skos:definition>
+        <skos:definition xml:lang="en">Value of a temporal extent expressed as a decimal number scaled by a temporal unit</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#second -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#second">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDateTimeDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Posición de segundo en un sistema calendario-reloj.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Second position in a calendar-clock system.</rdfs:comment>
+        <rdfs:label xml:lang="en">second</rdfs:label>
+        <rdfs:label xml:lang="es">segundo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#seconds -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#seconds">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en segundos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">length of, or element of the length of, a temporal extent expressed in seconds</rdfs:comment>
+        <rdfs:label xml:lang="es">duración en segundos</rdfs:label>
+        <rdfs:label xml:lang="en">seconds duration</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.bipm.org/en/publications/si-brochure/second.html"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#weeks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#weeks">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en semanas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">length of, or element of the length of, a temporal extent expressed in weeks</rdfs:comment>
+        <rdfs:label xml:lang="es">duración en semanas</rdfs:label>
+        <rdfs:label xml:lang="en">weeks duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#years -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#years">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="es">Longitud de, o elemento de la longitud de, una extensión temporal expresada en años.</rdfs:comment>
+        <rdfs:comment xml:lang="en">length of, or element of the length of, a temporal extent expressed in years</rdfs:comment>
+        <rdfs:label xml:lang="es">duración en años</rdfs:label>
+        <rdfs:label xml:lang="en">years duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/twc/dido#Dialogue -->
+
+    <owl:Class rdf:about="http://purl.org/twc/dido#Dialogue">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000028"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/twc/dido#Utterance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000132"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000097"/>
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000485"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>dialogue</rdfs:label>
+        <skos:definition>an interactive communication between two or more entities</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/twc/dido#DialogueTranscript -->
+
+    <owl:Class rdf:about="http://purl.org/twc/dido#DialogueTranscript">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000069"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000095"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000089"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000059"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/twc/dido#UtteranceText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000332"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/twc/dido#Dialogue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">dialogue transcript</rdfs:label>
+        <skos:definition>A digital or physical information content entity that provides a structured textual record of a conversation</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/twc/dido#Interlocutor -->
+
+    <owl:Class rdf:about="http://purl.org/twc/dido#Interlocutor">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000016"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000227"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000097"/>
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000485"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000356"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/twc/dido#Dialogue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>interlocutor</rdfs:label>
+        <skos:definition>One who takes part in a conversation or dialogue</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/twc/dido#Utterance -->
+
+    <owl:Class rdf:about="http://purl.org/twc/dido#Utterance">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000229"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#UtteranceText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000068"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/twc/dido#Dialogue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000139"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000097"/>
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000485"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Interval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>utterance</rdfs:label>
+        <skos:definition>a single unit of speech in spoken language that serves some pragmatic function</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/twc/dido#UtteranceText -->
+
+    <owl:Class rdf:about="http://purl.org/twc/dido#UtteranceText">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000078"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>utterance text</rdfs:label>
+        <skos:definition>a textual entity representing the output of an utterance</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000000 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000000">
+        <dc:identifier>SIO_000000</dc:identifier>
+        <dcterms:description xml:lang="en">Every thing is an entity.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000004 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000004">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000279"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000053"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000004"/>
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000370"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000004</dc:identifier>
+        <dcterms:description xml:lang="en">A material entity is a physical entity that is spatially extended, exists as a whole at any point in time and has mass.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">material entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000005 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000005">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000614"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000218"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_000340"/>
+        <dc:identifier>SIO_000005</dc:identifier>
+        <dcterms:description xml:lang="en">A quality is an attribute that is intrinsically associated with its bearer (or its parts), but whose presence/absence and observed/measured value may vary.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000006 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000006">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000053"/>
+                <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000006</dc:identifier>
+        <dcterms:description xml:lang="en">A process is an entity that is identifiable only through the unfolding of time, has temporal parts, and unless otherwise specified/predicted, cannot be identified from any instant of time in which it exists.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <sio:subset>process+</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000015 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000015">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000053"/>
+                <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000015</dc:identifier>
+        <dcterms:description xml:lang="en">information content entity is an object that requires some background knowledge or procedure to correctly interpret.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <sio:subset>ice+</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">information content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000016 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000016">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000340"/>
+        <dc:identifier>SIO_000016</dc:identifier>
+        <dcterms:description xml:lang="en">A role is a realizable entity that describes behaviours, rights and obligations of an entity in some particular circumstance.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000037 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000037">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000258"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000216"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000052"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000037</dc:identifier>
+        <dcterms:alternative xml:lang="en">physical dimensional quantity</dcterms:alternative>
+        <dcterms:description xml:lang="en">A spatial quantity is a quantity obtained from measuring the spatial extent of an entity </dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">spatial quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000052 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000052">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000257"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000258"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000070"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000215"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000052</dc:identifier>
+        <dcterms:description xml:lang="en">A quantity is an informational entity that gives the magnitude of a property.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000069 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000069">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000602"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000062"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000006"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000355"/>
+                                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000337"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000069</dc:identifier>
+        <dcterms:description xml:lang="en">A data item consists of information that has been collected/generated towards some purpose.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">data item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000070 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000070">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000366"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000070</dc:identifier>
+        <dcterms:description xml:lang="en">A measurement value is a quantitative description that reflects the magnitude of some attribute.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">measurement value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000074 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000074">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000052"/>
+        <dc:identifier>SIO_000074</dc:identifier>
+        <dcterms:description xml:lang="en">A unit of measurement is a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">unit of measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000075 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000075">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+        <dc:identifier>SIO_000075</dc:identifier>
+        <dcterms:description xml:lang="en">A mathematical entity is an information content entity that are components of a mathematical system or can be defined in mathematical terms.</dcterms:description>
+        <sio:subset>math+</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">mathematical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000078 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000078">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000078</dc:identifier>
+        <dcterms:description xml:lang="en">A language entity implements some language specification for the visual interpretation and is part of some document.</dcterms:description>
+        <sio:subset>nlp+</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">language entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000089 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000089">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000069"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000059"/>
+                        <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000069"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000069"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000213"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000396"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000089</dc:identifier>
+        <dcterms:alternative xml:lang="en">data set</dcterms:alternative>
+        <dcterms:description xml:lang="en">A dataset is a data item that is a collection of data items.</dcterms:description>
+        <sio:equivalentTo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/ns/dcat#Dataset</sio:equivalentTo>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000097 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000097">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000602"/>
+        <dc:identifier>SIO_000097</dc:identifier>
+        <dcterms:description xml:lang="en">A software entity is a computational entity that can be interpreted by or directly executed by a processing unit.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">software entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000108 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000108">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000078"/>
+        <dc:identifier>SIO_000108</dc:identifier>
+        <dcterms:description xml:lang="en">A character is a language symbol used to construct words.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000114 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000114">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000078"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000028"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_001040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000273"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000108"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000114</dc:identifier>
+        <dcterms:description xml:lang="en">A word is the smallest free form (an item that may be expressed in isolation with semantic or pragmatic content) in a language.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">word</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000115 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000115">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000179"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000672"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000115</dc:identifier>
+        <dcterms:description xml:lang="en">An identifier is a label that specifically refers to (identifies) an entity (instance/type).</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000136 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000136">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000078"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000563"/>
+                <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000136</dc:identifier>
+        <dcterms:description xml:lang="en">A description is language entity in which elements of a language (formal or natural) are used to characterize an entity.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000179 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000179">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000275"/>
+        <dc:identifier>SIO_000179</dc:identifier>
+        <dcterms:description xml:lang="en">a label is a term that is associated with some entity</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000256 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000256">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000136"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000217"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000268"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000332"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000256</dc:identifier>
+        <dcterms:description xml:lang="en">A proposition is a sentence expressing something true or false.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">proposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000257 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000257">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000052"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000221"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000074"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_000258"/>
+        <dc:identifier>SIO_000257</dc:identifier>
+        <dcterms:description xml:lang="en">A dimensionless quantity is a quantity that has no associated unit.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">dimensionless quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000258 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000258">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000052"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000221"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000074"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000258</dc:identifier>
+        <dcterms:description xml:lang="en">A dimensional quantity is a quantity that has an associated unit.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">dimensional quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000268 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000268">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000269"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000270"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000436"/>
+        <dc:identifier>SIO_000268</dc:identifier>
+        <dcterms:description xml:lang="en">truth value is a quality of information that is claimed/verified to be true or false.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">truth value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000269 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000269">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000268"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_000270"/>
+        <dc:identifier>SIO_000269</dc:identifier>
+        <dcterms:description xml:lang="en">true is a truth value that indicates that it holds under all possible worlds.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">true</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000270 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000270">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000268"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000300"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000270</dc:identifier>
+        <dcterms:description xml:lang="en">false is a truth value in that indicates that it is not true.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">false</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000275 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000275">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000078"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000114"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000483"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000275</dc:identifier>
+        <dcterms:description xml:lang="en">A term is a word or phrase used to denote one or more entities.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">term</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000279 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000279">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000037"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000279</dc:identifier>
+        <dcterms:description xml:lang="en">mass is the quality of the amount of substance.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">mass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000289 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000289">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000075"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000059"/>
+                <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000289</dc:identifier>
+        <dcterms:description xml:lang="en">A set is a collection of entities, for which there may be zero members.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000337 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000337">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000256"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000356"/>
+                <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000337</dc:identifier>
+        <dcterms:description xml:lang="en">An objective is a proposition that indicates a planned or anticipated outcome.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000340 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000340">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000614"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000643"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000340</dc:identifier>
+        <dcterms:description xml:lang="en">A realizable entity is an attribute that is exhibited under some condition and is realized in some process.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">realizable entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000366 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000366">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001431"/>
+        <dc:identifier>SIO_000366</dc:identifier>
+        <dcterms:alternative xml:lang="en">rank 0 tensor</dcterms:alternative>
+        <dcterms:description xml:lang="en">A number is a tensor of rank 0.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000370 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000370">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000028"/>
+                <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000370"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000370</dc:identifier>
+        <dcterms:alternative>region</dcterms:alternative>
+        <dcterms:description xml:lang="en">A spatial region is an object contained in some region of space.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">spatial region</rdfs:label>
+        <skos:example xml:lang="en">The airspace above Ottawa airport; the band around the northern hemisphere between 50 degrees N and 60 degrees N; the spatial region occupied by a bottle.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000396 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000396">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001194"/>
+        <dc:identifier>SIO_000396</dc:identifier>
+        <dcterms:description xml:lang="en">A file is an information-bearing object that contains a physical embodiment of some information using a particular character encoding.</dcterms:description>
+        <sio:equivalentTo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/ns/dcat#Distribution</sio:equivalentTo>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">file</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000436 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000436">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000218"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000436</dc:identifier>
+        <dcterms:description xml:lang="en">An informational quality is a quality that pertains to information.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">informational quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000483 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000483">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000078"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000273"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://semanticscience.org/resource/SIO_000114"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000483</dc:identifier>
+        <dcterms:description xml:lang="en">A phrase is a group of words functioning as a single unit in the syntax of a sentence.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">phrase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000485 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000485">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010375"/>
+        <dc:identifier>SIO_000485</dc:identifier>
+        <dcterms:description xml:lang="en">A human is a primates of the family Hominidae and are characterized by having a large brain relative to body size, with a well developed neocortex, prefrontal cortex and temporal lobes, making them capable of abstract reasoning, language, introspection, problem solving and culture through social learning.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">human</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000602 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000602">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+        <dc:identifier>SIO_000602</dc:identifier>
+        <dcterms:description xml:lang="en">A computational entity is an information content entity operated on using some computational system.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">computational entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000614 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000614">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000614</dc:identifier>
+        <dcterms:description xml:lang="en">An attribute is a characteristic of some entity.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">attribute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000616 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000616">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000289"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000059"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000616</dc:identifier>
+        <dcterms:description xml:lang="en">A collection is a set for which there exists at least one member, although any member need not to exist at any point in the collection&apos;s existence.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000776 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000776">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000053"/>
+                <owl:allValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_000776</dc:identifier>
+        <dcterms:description xml:lang="en">An object is an entity that is wholly identifiable at any instant of time during which it exists.</dcterms:description>
+        <sio:subset>core</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001040 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001040">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000078"/>
+        <dc:identifier>SIO_001040</dc:identifier>
+        <dcterms:description xml:lang="en">A morpheme is the smallest semantically meaningful unit in a language.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">morpheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001194 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001194">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000015"/>
+        <dc:identifier>SIO_001194</dc:identifier>
+        <dcterms:description xml:lang="en">media are audo/visual/audiovisual modes of communicating information for mass consumption.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">media</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001262 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001262">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000004"/>
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000370"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000310"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001353"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000310"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_001262</dc:identifier>
+        <dcterms:description xml:lang="en">an anatomical entity is an object that is a structural part (material or immaterial) of a biological entity.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">anatomical entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001353 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001353">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000776"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000644"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000340"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000776"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000644"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000340"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_001353</dc:identifier>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">specialized object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001429 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001429">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000075"/>
+        <dc:identifier>SIO_001429</dc:identifier>
+        <dcterms:description xml:lang="en">a tensor is a n-dimensional array.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">tensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_001431 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_001431">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001429"/>
+        <dc:identifier>SIO_001431</dc:identifier>
+        <dcterms:alternative xml:lang="en">rank 0 tensor</dcterms:alternative>
+        <dcterms:description xml:lang="en">a scalar is a rank 0 tensor and is an element of a field that is used to define a vector space.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">scalar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010000 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010377"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010378"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+        <dc:identifier>SIO_010000</dc:identifier>
+        <dcterms:description xml:lang="en">A biological organisn is a biological entity that consists of one or more cells and is capable of genomic replication (independently or not).</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010001 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010001">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+        <dc:identifier>SIO_010001</dc:identifier>
+        <dcterms:description xml:lang="en">A cell is a biological entity that is contained by a plasma membrane.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010004 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010004">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000004"/>
+        <dc:identifier>SIO_010004</dc:identifier>
+        <dcterms:description xml:lang="en">A chemical entity is a material entity that pertains to chemistry.</dcterms:description>
+        <sio:equivalentTo>CHEBI:23367</sio:equivalentTo>
+        <sio:subset>chemical+</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">chemical entity</rdfs:label>
+        <skos:example xml:lang="en">atom, ion, molecule, chemical substance,</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010046 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010046">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010462"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000068"/>
+                <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_010000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_010046</dc:identifier>
+        <dcterms:description xml:lang="en">A biological entity is a heterogeneous substance that contains genomic material or is the product of a biological process.</dcterms:description>
+        <sio:subset>chemical-</sio:subset>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">biological entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010375 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010375">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010377"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000053"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://semanticscience.org/resource/SIO_010001"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_010376"/>
+        <dc:identifier>SIO_010375</dc:identifier>
+        <dcterms:description xml:lang="en">A multi-cellular organism is an organism that consists of more than one cell.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">multicellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010376 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010376">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010001"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010377"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000093"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <dc:identifier>SIO_010376</dc:identifier>
+        <dcterms:description xml:lang="en">A unicellular organism is a organism that is composed of a single cell.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">unicellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010377 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010377">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010375"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010376"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010000"/>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_010378"/>
+        <dc:identifier>SIO_010377</dc:identifier>
+        <dcterms:description xml:lang="en">A cellular organism is an organism that contains one or more cells.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">cellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010378 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010378">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010000"/>
+        <dc:identifier>SIO_010378</dc:identifier>
+        <dcterms:description xml:lang="en">A non-cellular organism is an organism that does not contain a cell.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">non-cellular organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010410 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010410">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000644"/>
+                        <owl:someValuesFrom rdf:resource="http://semanticscience.org/resource/SIO_000340"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000004"/>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001353"/>
+        <dc:identifier>SIO_010410</dc:identifier>
+        <dcterms:description xml:lang="en">A specialized material entity is a material entity that is defined by having some quality, role or capability.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">specialized material entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010462 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010462">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_011126"/>
+        <owl:disjointWith rdf:resource="http://semanticscience.org/resource/SIO_010463"/>
+        <dc:identifier>SIO_010462</dc:identifier>
+        <dcterms:description xml:lang="en">A heterogeneous substance is a chemical substance that is composed of more than one different kind of component.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">heterogeneous substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010463 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_010463">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_011126"/>
+        <dc:identifier>SIO_010463</dc:identifier>
+        <dcterms:description>A homogeneous substance is a substance that is composed of a uniform type of entity.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">homogeneous substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_011126 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_011126">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010462"/>
+                    <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_010463"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_010004"/>
+        <dc:identifier>SIO_011126</dc:identifier>
+        <dcterms:alternative xml:lang="en">mixture</dcterms:alternative>
+        <dcterms:description xml:lang="en">A chemical substance is a chemical entity composed of two or more weakly (non-covalently) interacting chemical entities.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <rdfs:label xml:lang="en">chemical substance</rdfs:label>
+        <skos:exactMatch>CHEMINF:440533</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Duration">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#unitType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#numericDuration"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Duración de una extensión temporal expresada como un número escalado por una unidad temporal.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Duration of a temporal extent expressed as a number scaled by a temporal unit</rdfs:comment>
+        <rdfs:label xml:lang="en">Time duration</rdfs:label>
+        <rdfs:label>duración de tiempo</rdfs:label>
+        <skos:definition xml:lang="es">Duración de una extensión temporal expresada como un número escalado por una unidad temporal.</skos:definition>
+        <skos:definition xml:lang="en">Duration of a temporal extent expressed as a number scaled by a temporal unit</skos:definition>
+        <skos:note xml:lang="es">Alternativa a &apos;descripción de tiempo&apos; para proporcionar descripción soporte a una duración temporal diferente a utilizar un sistema de calendario/reloj.</skos:note>
+        <skos:note xml:lang="en">Alternative to time:DurationDescription to support description of a temporal duration other than using a calendar/clock system.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#GeneralDateTimeDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#GeneralDateTimeDescription">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalPosition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#unitType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#second"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Descripción de fecha y hora estructurada con valores separados para los distintos elementos de un sistema calendario-reloj.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of date and time structured with separate values for the various elements of a calendar-clock system</rdfs:comment>
+        <rdfs:label xml:lang="en">Generalized date-time description</rdfs:label>
+        <rdfs:label xml:lang="es">descripción de fecha-hora generalizada</rdfs:label>
+        <skos:definition>Descripción de fecha y hora estructurada con valores separados para los distintos elementos de un sistema calendario-reloj.</skos:definition>
+        <skos:definition xml:lang="en">Description of date and time structured with separate values for the various elements of a calendar-clock system</skos:definition>
+        <skos:note xml:lang="es">Algunas combinaciones de propiedades son redundantes - por ejemplo, dentro de un &apos;año&apos; especificado si se proporciona &apos;día del año&apos; entonces &apos;día&apos; y &apos;mes&apos; se pueden computar, y viceversa. Los valores individuales deberían ser consistentes entre ellos y con el calendario, indicado a través del valor de la propiedad &apos;tiene TRS&apos;.</skos:note>
+        <skos:note>Some combinations of properties are redundant - for example, within a specified :year if :dayOfYear is provided then :day and :month can be computed, and vice versa. Individual values should be consistent with each other and the calendar, indicated through the value of the :hasTRS property.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#GeneralDurationDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#GeneralDurationDescription">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hasTRS"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#days"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hours"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#minutes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#months"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#seconds"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#weeks"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#years"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Descripción de extensión temporal estructurada con valores separados para los distintos elementos de un sistema de horario-calendario.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Description of temporal extent structured with separate values for the various elements of a calendar-clock system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Generalized duration description</rdfs:label>
+        <rdfs:label xml:lang="es">descripción de duración generalizada</rdfs:label>
+        <skos:definition xml:lang="es">Descripción de extensión temporal estructurada con valores separados para los distintos elementos de un sistema de horario-calendario.</skos:definition>
+        <skos:definition xml:lang="en">Description of temporal extent structured with separate values for the various elements of a calendar-clock system.</skos:definition>
+        <skos:note xml:lang="es">La extensión de una duración de tiempo expresada como una &apos;descripción de duración general&apos; depende del Sistema de Referencia Temporal. En algunos calendarios la longitud de la semana o del mes no es constante a lo largo del año. Por tanto, un valor como &quot;25 meses&quot; puede no ser necesariamente ser comparado con un duración similar expresada en términos de semanas o días. Cuando se consideran calendarios que no están basados en el movimiento de la Tierra, se deben tomar incluso más precauciones en la comparación de duraciones.</skos:note>
+        <skos:note xml:lang="en">The extent of a time duration expressed as a GeneralDurationDescription depends on the Temporal Reference System. In some calendars the length of the week or month is not constant within the year. Therefore, a value like &quot;2.5 months&quot; may not necessarily be exactly compared with a similar duration expressed in terms of weeks or days. When non-earth-based calendars are considered even more care must be taken in comparing durations.</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+        <rdfs:comment xml:lang="en">A temporal entity with zero extent or duration</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una entidad temporal con una extensión o duración cero.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time instant</rdfs:label>
+        <rdfs:label xml:lang="es">instante de tiempo.</rdfs:label>
+        <skos:definition xml:lang="en">A temporal entity with zero extent or duration</skos:definition>
+        <skos:definition xml:lang="es">Una entidad temporal con una extensión o duración cero.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment xml:lang="en">A temporal entity with an extent or duration</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una entidad temporal con una extensión o duración.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time interval</rdfs:label>
+        <rdfs:label xml:lang="es">intervalo de tiempo</rdfs:label>
+        <skos:definition xml:lang="en">A temporal entity with an extent or duration</skos:definition>
+        <skos:definition xml:lang="es">Una entidad temporal con una extensión o duración.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ProperInterval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#ProperInterval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:comment xml:lang="en">A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una entidad temporal con extensión o duración distinta de cero, es decir, para la cual los valores de principio y fin del intervalo son diferentes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Proper interval</rdfs:label>
+        <rdfs:label xml:lang="es">intervalo propio</rdfs:label>
+        <skos:definition xml:lang="en">A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different</skos:definition>
+        <skos:definition xml:lang="es">Una entidad temporal con extensión o duración distinta de cero, es decir, para la cual los valores de principio y fin del intervalo son diferentes.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Interval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:comment xml:lang="en">A temporal interval or instant.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un intervalo temporal o un instante.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
+        <rdfs:label xml:lang="es">entidad temporal</rdfs:label>
+        <skos:definition xml:lang="en">A temporal interval or instant.</skos:definition>
+        <skos:definition xml:lang="es">Un intervalo temporal o un instante.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalPosition -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalPosition">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hasTRS"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A position on a time-line</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una posición sobre una línea de tiempo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal position</rdfs:label>
+        <rdfs:label xml:lang="es">posición temporal</rdfs:label>
+        <skos:definition xml:lang="en">A position on a time-line</skos:definition>
+        <skos:definition xml:lang="es">Una posición sobre una línea de tiempo.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000000"/>
+        <rdfs:comment xml:lang="ja">1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。</rdfs:comment>
+        <rdfs:comment xml:lang="en">A collection of data, published or curated by a single source, and available for access or download in one or more representations.</rdfs:comment>
+        <rdfs:comment xml:lang="da">En samling af data, udgivet eller udvalgt og arrangeret af en enkelt kilde og som er til råde for adgang til eller download af i en eller flere repræsentationer.</rdfs:comment>
+        <rdfs:comment xml:lang="cs">Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Raccolta di dati, pubblicati o curati da un&apos;unica fonte, disponibili per l&apos;accesso o il download in uno o più formati.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats.</rdfs:comment>
+        <rdfs:comment xml:lang="el">Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές.</rdfs:comment>
+        <rdfs:comment xml:lang="ar">قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+        <rdfs:label xml:lang="es">Conjunto de datos</rdfs:label>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+        <rdfs:label xml:lang="it">Dataset</rdfs:label>
+        <rdfs:label xml:lang="da">Datasæt</rdfs:label>
+        <rdfs:label xml:lang="cs">Datová sada</rdfs:label>
+        <rdfs:label xml:lang="fr">Jeu de données</rdfs:label>
+        <rdfs:label xml:lang="el">Σύνολο Δεδομένων</rdfs:label>
+        <rdfs:label xml:lang="ar">قائمة بيانات</rdfs:label>
+        <rdfs:label xml:lang="ja">データセット</rdfs:label>
+        <skos:altLabel xml:lang="da">Datasamling</skos:altLabel>
+        <skos:changeNote xml:lang="cs">2018-02 - odstraněno tvrzení o podtřídě dctype:Dataset, jelikož rozsah dcat:Dataset zahrnuje několik dalších typů ze slovníku dctype.</skos:changeNote>
+        <skos:changeNote xml:lang="es">2018-02 - se eliminó el axioma de subclase con dctype:Dataset porque el alcance de dcat:Dataset incluye muchos otros tipos del vocabulario dctype.</skos:changeNote>
+        <skos:changeNote xml:lang="it">2018-02 - sottoclasse di dctype:Dataset rimosso perché l&apos;ambito di dcat:Dataset include diversi altri tipi dal vocabolario dctype.</skos:changeNote>
+        <skos:changeNote xml:lang="en">2018-02 - subclass of dctype:Dataset removed because scope of dcat:Dataset includes several other types from the dctype vocabulary.</skos:changeNote>
+        <skos:changeNote xml:lang="da">2018-02 - subklasse af dctype:Dataset fjernet da scope af dcat:Dataset omfatter flere forskellige typer fra dctype-vokabularet.</skos:changeNote>
+        <skos:definition xml:lang="ja">1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。</skos:definition>
+        <skos:definition xml:lang="en">A collection of data, published or curated by a single source, and available for access or download in one or more representations.</skos:definition>
+        <skos:definition xml:lang="da">En samling a data, udgivet eller udvalgt og arrangeret af en enkelt kilde og som der er adgang til i en eller flere repræsentationer.</skos:definition>
+        <skos:definition xml:lang="cs">Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech.</skos:definition>
+        <skos:definition xml:lang="it">Raccolta di dati, pubblicati o curati da un&apos;unica fonte, disponibili per l&apos;accesso o il download in uno o più formati.</skos:definition>
+        <skos:definition xml:lang="es">Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos.</skos:definition>
+        <skos:definition xml:lang="fr">Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats.</skos:definition>
+        <skos:definition xml:lang="el">Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές.</skos:definition>
+        <skos:definition xml:lang="ar">قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها</skos:definition>
+        <skos:editorialNote xml:lang="en">2020-03-16 A new scopenote added and need to be translated</skos:editorialNote>
+        <skos:scopeNote xml:lang="fr">Cette classe représente le jeu de données publié par le fournisseur de données. Dans les cas où une distinction est nécessaire entre le jeu de donénes et son entrée dans le catalogue, la classe registre de données peut être utilisée pour ce dernier.</skos:scopeNote>
+        <skos:scopeNote xml:lang="da">Denne klasse beskriver det konceptuelle datasæt. En eller flere repræsentationer kan være tilgængelige med forskellige skematiske opsætninger, formater eller serialiseringer.</skos:scopeNote>
+        <skos:scopeNote xml:lang="da">Denne klasse repræsenterer det konkrete datasæt som det udgives af datasætleverandøren. I de tilfælde hvor det er nødvendigt at skelne mellem det konkrete datasæt og dets registrering i kataloget (fordi metadata såsom ændringsdato og vedligeholder er forskellige), så kan klassen katalogpost anvendes. </skos:scopeNote>
+        <skos:scopeNote xml:lang="es">Esta clase representa el conjunto de datos publicados. En los casos donde es necesario distinguir entre el conjunto de datos y su entrada en el catálogo de datos, se debe utilizar la clase &apos;registro del catálogo&apos;.</skos:scopeNote>
+        <skos:scopeNote xml:lang="it">Questa classe descrive il dataset dal punto di vista concettuale. Possono essere disponibili una o più rappresentazioni, con diversi layout e formati schematici o serializzazioni.</skos:scopeNote>
+        <skos:scopeNote xml:lang="it">Questa classe rappresenta il dataset come pubblicato dall’editore. Nel caso in cui sia necessario operare  una distinzione fra i metadati originali del dataset e il record dei metadati ad esso associato nel catalogo (ad esempio, per distinguere la data di modifica del dataset da quella del dataset nel catalogo) si può impiegare la classe catalog record.</skos:scopeNote>
+        <skos:scopeNote xml:lang="cs">Tato třída reprezentuje datovou sadu tak, jak je publikována poskytovatelem dat. V případě potřeby rozlišení datové sady a jejího katalogizačního záznamu (jelikož metadata jako datum modifikace se mohou lišit) pro něj může být použita třída &quot;katalogizační záznam&quot;.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">The notion of dataset in DCAT is broad and inclusive, with the intention of accommodating resource types arising from all communities. Data comes in many forms including numbers, text, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">This class represents the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date and maintainer might differ), the catalog record class can be used for the latter.</skos:scopeNote>
+        <skos:scopeNote xml:lang="el">Η κλάση αυτή αναπαριστά το σύνολο δεδομένων αυτό καθ&apos;εαυτό, όπως έχει δημοσιευθεί από τον εκδότη. Σε περιπτώσεις όπου είναι απαραίτητος ο διαχωρισμός μεταξύ του συνόλου δεδομένων και της καταγραφής αυτού στον κατάλογο (γιατί μεταδεδομένα όπως η ημερομηνία αλλαγής και ο συντηρητής μπορεί να διαφέρουν) η κλάση της καταγραφής καταλόγου μπορεί να χρησιμοποιηθεί για το τελευταίο.</skos:scopeNote>
+        <skos:scopeNote xml:lang="ja">このクラスは、データセットの公開者が公開する実際のデータセットを表わします。カタログ内の実際のデータセットとそのエントリーとの区別が必要な場合（修正日と維持者などのメタデータが異なるかもしれないので）は、後者にcatalog recordというクラスを使用できます。</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitDay -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitDay">
+        <time:days rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</time:days>
+        <time:hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:hours>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:minutes>
+        <time:months rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:months>
+        <time:seconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:seconds>
+        <time:weeks rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:weeks>
+        <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:years>
+        <rdfs:label xml:lang="en">Day (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Tag</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">dag</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">day</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">dia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">doba</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">día</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">giorno</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">jour</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">يوماً ما</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">ある日</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一天</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">언젠가</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitHour -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitHour">
+        <time:days rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:days>
+        <time:hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</time:hours>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:minutes>
+        <time:months rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:months>
+        <time:seconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:seconds>
+        <time:weeks rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:weeks>
+        <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:years>
+        <rdfs:label xml:lang="en">Hour (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Stunde</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">godzina</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">heure</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">hora</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">hora</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">hour</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">ora</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">uur</skos:prefLabel>
+        <skos:prefLabel>один час&quot;@ru</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">ساعة واحدة</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一小時</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一時間</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">한 시간</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitMinute -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitMinute">
+        <time:days rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:days>
+        <time:hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:hours>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</time:minutes>
+        <time:months rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:months>
+        <time:seconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:seconds>
+        <time:weeks rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:weeks>
+        <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:years>
+        <rdfs:label xml:lang="en">Minute (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Minute</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">minuta</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">minute</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">minute</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">minuto</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">minuto</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">minuto</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">minuut</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">одна минута</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">دقيقة واحدة</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一分</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">等一下</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">분</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitMonth -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitMonth">
+        <time:days rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:days>
+        <time:hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:hours>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:minutes>
+        <time:months rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</time:months>
+        <time:seconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:seconds>
+        <time:weeks rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:weeks>
+        <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:years>
+        <rdfs:label xml:lang="en">Month (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Monat</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">maand</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">mes</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">mese</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">miesiąc</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">mois</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">month</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">один месяц</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">شهر واحد</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一か月</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一個月</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">한달</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitSecond -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitSecond">
+        <time:days rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:days>
+        <time:hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:hours>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:minutes>
+        <time:months rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:months>
+        <time:seconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</time:seconds>
+        <time:weeks rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:weeks>
+        <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:years>
+        <rdfs:label xml:lang="en">Second (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Sekunde</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">Sekundę</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">second</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">seconde</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">seconde</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">secondo</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">segundo</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">segundo</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">ثانية واحدة</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一秒</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一秒</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">일초</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitWeek -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitWeek">
+        <time:days rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:days>
+        <time:hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:hours>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:minutes>
+        <time:months rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:months>
+        <time:seconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:seconds>
+        <time:weeks rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</time:weeks>
+        <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:years>
+        <rdfs:label xml:lang="en">Week (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="de">Woche</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">semaine</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">semana</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">semana</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">settimana</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">tydzień</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">week</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">week</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">одна неделя</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">سبوع واحد</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一周</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">一週間</skos:prefLabel>
+        <skos:prefLabel xml:lang="kr">일주일</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitYear -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#unitYear">
+        <time:days rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:days>
+        <time:hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:hours>
+        <time:minutes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:minutes>
+        <time:months rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:months>
+        <time:seconds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:seconds>
+        <time:weeks rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</time:weeks>
+        <time:years rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</time:years>
+        <rdfs:label xml:lang="en">Year (unit of temporal duration)</rdfs:label>
+        <skos:prefLabel xml:lang="kr">1 년</skos:prefLabel>
+        <skos:prefLabel xml:lang="jp">1年</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Jahr</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">an</skos:prefLabel>
+        <skos:prefLabel xml:lang="it">anno</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">ano</skos:prefLabel>
+        <skos:prefLabel xml:lang="nl">jaar</skos:prefLabel>
+        <skos:prefLabel xml:lang="pl">rok</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">un año</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">year</skos:prefLabel>
+        <skos:prefLabel xml:lang="ru">один год</skos:prefLabel>
+        <skos:prefLabel xml:lang="ar">سنة واحدة</skos:prefLabel>
+        <skos:prefLabel xml:lang="zh">一年</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <dc:identifier>contributor</dc:identifier>
+        <dcterms:description xml:lang="en">The guidelines for using names of persons or organizations as creators apply to contributors.</dcterms:description>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dcterms:issued>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+        <dc:identifier>description</dc:identifier>
+        <dcterms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</dcterms:description>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dcterms:issued>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+        <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <dc:identifier>license</dc:identifier>
+        <dcterms:description xml:lang="en">Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.</dcterms:description>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</dcterms:issued>
+        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+        <dc:identifier>modified</dc:identifier>
+        <dcterms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</dcterms:description>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dcterms:issued>
+        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Date Modified</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+        <dc:identifier>title</dc:identifier>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dcterms:issued>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000006"/>
+            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000614"/>
+            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000776"/>
+        </owl:members>
+        <dc:identifier>:arc9cacb982</dc:identifier>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

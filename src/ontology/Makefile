@@ -41,7 +41,7 @@ SIO_URI := 				http://semanticscience.org/ontology/sio.owl
 TIME_URI :=				http://www.w3.org/2006/time
 DCAT_URI :=				http://www.w3.org/ns/dcat
 
-EXAMPLE_FILE := 		data/ami_meeting_EN2001a.ttl
+EXAMPLE_FILE := 		data/dialog_ami/ami_meeting_EN2001a.ttl
 
 
 # --------------------------------
@@ -262,11 +262,11 @@ mirror/time.owl: mirror/time.trigger
 
 
 ## ONTOLOGY: dcat
-## Copy of time is re-downloaded whenever source changes
+## Copy of dcat is re-downloaded whenever source changes
 mirror/dcat.trigger: $(SRC)
 
 mirror/dcat.owl: mirror/dcat.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(TIME_URI) -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(DCAT_URI) -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
 
@@ -275,8 +275,8 @@ mirror/dcat.owl: mirror/dcat.trigger
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
 .PHONY: release
-release: $(ONT).owl $(ONT).ttl
-	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
+release: $(ONT).owl $(ONT).ttl $(ONT)-full.owl $(ONT)-full.ttl $(ONT)-base.owl $(ONT)-base.ttl
+	cp $^ $(RELEASEDIR) && cp imports/*_import.owl $(RELEASEDIR)/imports
 
 
 # ----------------------------------------
@@ -322,7 +322,7 @@ CQ_QUERIES = $(wildcard $(SPARQLDIR)/CQ*.sparql)
 CQ_TSV = $(patsubst $(SPARQLDIR)/%.sparql, $(REPORTDIR)/%.tsv, $(CQ_QUERIES))
 
 .PHONY: verify_cqs
-verify_cqs: $(CQ_TSV)
+verify_cqs: $(CQ_TSV) $(CQ_QUERIES)
 
 $(REPORTDIR)/CQ%.tsv: $(SPARQLDIR)/CQ%.sparql $(EXAMPLE_FILE) Makefile | $(REPORTDIR)
 	$(ROBOT) query -f tsv -i $(EXAMPLE_FILE) --query $< $@
