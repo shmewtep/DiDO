@@ -23,47 +23,60 @@
         </header>
 
         <main>
-            <section class="controls">
-                <div class="field">
-                    <label for="cq-select">Select Query</label>
-                    <select id="cq-select">
-                        <option value="" disabled selected>Choose a question...</option>
-                    </select>
-                </div>
+            <!-- Left Column: Controls & Query -->
+            <div class="column">
+                <section class="controls">
+                    <div class="field">
+                        <label for="cq-select">Select Query</label>
+                        <select id="cq-select">
+                            <option value="" disabled selected>Choose a question...</option>
+                        </select>
+                    </div>
 
-                <div id="variable-inputs" class="variable-grid">
-                    <!-- Dynamic inputs will appear here -->
-                </div>
+                    <div id="variable-inputs" class="variable-grid">
+                        <!-- Dynamic inputs will appear here -->
+                    </div>
 
-                <div class="actions">
-                    <button id="run-btn" disabled>Run Query</button>
-                    <div id="loader" class="loader hidden"></div>
-                </div>
-            </section>
+                    <div class="actions">
+                        <button id="run-btn" disabled>Run Query</button>
+                        <div id="loader" class="loader hidden"></div>
+                    </div>
+                </section>
 
-            <section class="query-section">
-                <div class="panel-header">
-                    <span>SPARQL Query</span>
-                    <button id="toggle-query">Show/Hide</button>
-                </div>
-                <pre id="query-display" class="hidden"><code><!-- Query will be loaded here --></code></pre>
-            </section>
+                <section class="query-section">
+                    <div class="panel-header">
+                        <span>SPARQL Query</span>
+                        <button id="toggle-query">Show/Hide</button>
+                    </div>
+                    <pre id="query-display" class="hidden"><code><!-- Query will be loaded here --></code></pre>
+                </section>
 
-            <section class="results-section">
-                <div class="panel-header">Results</div>
-                <div id="results-table-wrapper">
-                    <table id="results-table">
-                        <thead>
-                            <tr id="table-head"></tr>
-                        </thead>
-                        <tbody id="table-body">
-                            <tr>
-                                <td class="placeholder">Select a question and run to see results</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+                <section class="results-section">
+                    <div class="panel-header">Results</div>
+                    <div id="results-table-wrapper">
+                        <table id="results-table">
+                            <thead>
+                                <tr id="table-head"></tr>
+                            </thead>
+                            <tbody id="table-body">
+                                <tr>
+                                    <td class="placeholder">Select a question and run to see results</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Conversation Viewer -->
+            <div class="column">
+                <section class="conversation-section" id="conversation-section">
+                    <div class="panel-header">Conversation Snippet</div>
+                    <div id="conversation-container" class="chat-wrapper">
+                        <div class="placeholder">Select a question and run to load dialogue examples</div>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <footer>

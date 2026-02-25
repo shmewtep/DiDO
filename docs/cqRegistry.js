@@ -55,8 +55,8 @@ const cqRegistry = {
         file: 'queries/CQ4.sparql',
         text: 'Which utterances occur between these two times?',
         variables: [
-            { name: 'T1', label: 'Start Time (s)', default: '36.5' },
-            { name: 'T2', label: 'End Time (s)', default: '50.0' }
+            { name: 'T1', label: 'Start Time (s)', default: '0.0' },
+            { name: 'T2', label: 'End Time (s)', default: '15.0' }
         ],
         output_variables: [{
             name: 'utterance',
@@ -69,7 +69,7 @@ const cqRegistry = {
         variables: [{
             name: 'utterance1',
             label: 'Utterance IRI',
-            default: 'ex:utteranceEN2001a0'
+            default: 'ex:utteranceEN2001a793'
         }],
         output_variables: [{
             name: 'utterance1',

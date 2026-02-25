@@ -14,7 +14,8 @@ const elements = {
     toggleQuery: document.getElementById('toggle-query'),
     resultsHead: document.getElementById('table-head'),
     resultsBody: document.getElementById('table-body'),
-    loader: document.getElementById('loader')
+    loader: document.getElementById('loader'),
+    conversationContainer: document.getElementById('conversation-container')
 };
 
 // Initialize CQ Registry; populate query dropdown menu
@@ -85,11 +86,146 @@ elements.toggleQuery.addEventListener('click', () => {
 const bindVariables = (rawQuery, inputValues) => {
     let bindings = "";
     Object.keys(inputValues).forEach(name => {
-        bindings += `BIND(${inputValues[name]} AS ?${name}) .\n`;
+        const val = inputValues[name];
+        // If it starts with 'ex:', expand to full IRI for binding, else wrap correctly
+        if (val.startsWith('ex:')) {
+            bindings += `BIND(<${prefix}${val.replace('ex:', '')}> AS ?${name}) .\n`;
+        } else if (val.startsWith('<') && val.endsWith('>')) {
+            bindings += `BIND(${val} AS ?${name}) .\n`;
+        } else {
+            bindings += `BIND("${val}" AS ?${name}) .\n`;
+        }
     });
     // Inject BINDs into WHERE clause
     return rawQuery.replace('WHERE {', `WHERE {\n  ${bindings}`);
 }
+
+// Conversation snippet loader
+const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
+    elements.conversationContainer.innerHTML = '<div class="loader"></div>';
+
+    let snippetQuery = "";
+
+    if (utteranceIri) {
+        // If we have an utterance, we need to find its dialogue and then query utterances
+        // We'll get utterances that happen during or after the target utterance's start time
+        const expandedUtteranceIri = utteranceIri.startsWith('ex:')
+            ? `<${prefix}${utteranceIri.replace('ex:', '')}>`
+            : (utteranceIri.startsWith('<') ? utteranceIri : `<${utteranceIri}>`);
+
+        snippetQuery = `
+        PREFIX dido: <http://purl.org/twc/dido#>
+        PREFIX sio: <http://semanticscience.org/resource/>
+        PREFIX time: <http://www.w3.org/2006/time#>
+        SELECT ?text ?speaker ?beginTime ?endTime WHERE {
+            # Find the target utterance's begin time and dialogue
+            ${expandedUtteranceIri} sio:SIO_000068 ?dialogue ;
+                                    sio:sio_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?targetBegin ] ] ] .
+            
+            # Now find utterances in the same dialogue
+            ?utterance sio:SIO_000068 ?dialogue ;
+                       sio:SIO_000232 ?textUri ;
+                       sio:SIO_000139 ?speaker ;
+                       sio:sio_000008 [ 
+                           time:hasBeginning [ time:inDateTime [ time:second ?beginTime ] ] ;
+                           time:hasEnd [ time:inDateTime [ time:second ?endTime ] ]
+                       ] .
+            ?textUri sio:SIO_000300 ?text .
+            
+            # Only include utterances starting during or after the target utterance
+            FILTER(?beginTime >= ?targetBegin)
+        } ORDER BY ?beginTime LIMIT 15
+        `;
+    } else {
+        // Fallback to querying just by dialogue IRI
+        const expandedIri = dialogueIri.startsWith('ex:')
+            ? `<${prefix}${dialogueIri.replace('ex:', '')}>`
+            : (dialogueIri.startsWith('<') ? dialogueIri : `<${dialogueIri}>`);
+
+        snippetQuery = `
+        PREFIX dido: <http://purl.org/twc/dido#>
+        PREFIX sio: <http://semanticscience.org/resource/>
+        PREFIX time: <http://www.w3.org/2006/time#>
+        SELECT ?text ?speaker ?beginTime ?endTime WHERE {
+            ?utterance sio:SIO_000068 ${expandedIri} ;
+                       sio:SIO_000232 ?textUri ;
+                       sio:SIO_000139 ?speaker ;
+                       sio:sio_000008 [ 
+                           time:hasBeginning [ time:inDateTime [ time:second ?beginTime ] ] ;
+                           time:hasEnd [ time:inDateTime [ time:second ?endTime ] ]
+                       ] .
+            ?textUri sio:SIO_000300 ?text .
+        } ORDER BY ?beginTime LIMIT 15
+        `;
+    }
+
+    try {
+        const bindingsStream = await new Comunica.QueryEngine().queryBindings(snippetQuery, {
+            sources: [DATA_SOURCE],
+        });
+
+        const utterances = [];
+        bindingsStream.on('data', (binding) => {
+            utterances.push({
+                text: binding.get('text').value,
+                speaker: binding.get('speaker').value.replace(prefix, 'ex:').replace('ex:human', ''),
+                beginTime: binding.get('beginTime').value,
+                endTime: binding.get('endTime').value
+            });
+        });
+
+        bindingsStream.on('end', () => {
+            if (utterances.length === 0) {
+                elements.conversationContainer.innerHTML = '<div class="placeholder">No dialogue snippet found</div>';
+                return;
+            }
+
+            elements.conversationContainer.innerHTML = '';
+
+            // Assign right side to first speaker, left to others
+            const speakers = [...new Set(utterances.map(u => u.speaker))];
+            const mySpeaker = speakers[0];
+
+            utterances.forEach((u, index) => {
+                const isMine = u.speaker === mySpeaker;
+                const alignment = isMine ? 'right' : 'left';
+
+                // Format time assuming seconds
+                const startSecs = Math.floor(parseFloat(u.beginTime));
+                const endSecs = Math.floor(parseFloat(u.endTime));
+
+                const startMins = String(Math.floor(startSecs / 60)).padStart(2, '0');
+                const startRemainder = String(startSecs % 60).padStart(2, '0');
+
+                const endMins = String(Math.floor(endSecs / 60)).padStart(2, '0');
+                const endRemainder = String(endSecs % 60).padStart(2, '0');
+
+                const timeString = `${startMins}:${startRemainder} - ${endMins}:${endRemainder}`;
+
+                const el = document.createElement('div');
+                el.className = `message-box ${alignment}`;
+
+                // Highlight the first utterance if we queried based on a specific utterance
+                const highlightStyle = (utteranceIri && index === 0) ? `style="border: 2px solid var(--accent-primary); box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);"` : '';
+
+                el.innerHTML = `
+                    <div class="message-meta">
+                        <span class="message-speaker">${u.speaker}</span>
+                        <span class="message-time">${timeString}</span>
+                    </div>
+                    <div class="message-bubble" ${highlightStyle}>${u.text}</div>
+                `;
+                elements.conversationContainer.appendChild(el);
+            });
+        });
+
+        bindingsStream.on('error', (err) => {
+            elements.conversationContainer.innerHTML = `<div class="placeholder" style="color: #f85149">Error loading snippet: ${err.message}</div>`;
+        });
+    } catch (err) {
+        elements.conversationContainer.innerHTML = `<div class="placeholder" style="color: #f85149">Error loading snippet: ${err.message}</div>`;
+    }
+};
 
 // Add event listener to run button
 
@@ -110,6 +246,15 @@ elements.runBtn.addEventListener('click', async () => {
     }
 
     let query = bindVariables(rawQuery, inputValues);
+
+    // Load the conversation snippet based on 'utterance' or 'dialogue'
+    if (inputValues['utterance'] && inputValues['utterance'].trim() !== '') {
+        loadConversationSnippet(null, inputValues['utterance']);
+    } else if (inputValues['dialogue'] && inputValues['dialogue'].trim() !== '') {
+        loadConversationSnippet(inputValues['dialogue'], null);
+    } else {
+        elements.conversationContainer.innerHTML = '<div class="placeholder">Select a question with an utterance or dialogue input and run to load examples</div>';
+    }
 
     elements.runBtn.disabled = true;
     elements.loader.classList.remove('hidden');
