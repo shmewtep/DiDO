@@ -39,3 +39,8 @@ src/patterns/all_pattern_terms.txt
 src/ontology/data/dialog_daicwoz
 src/ontology/data/dialog_daicwoz/*
 src/ontology/data/daicwoz*
+
+DIDO/OOPS*
+DIDO/OOPS*/*
+DIDO/webvowl
+DIDO/webvowl/*

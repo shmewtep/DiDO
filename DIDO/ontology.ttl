@@ -1,0 +1,319 @@
+@prefix : <https://purl.org/dido/dido-base.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://purl.org/dido/dido-base.ttl#> .
+
+<https://purl.org/dido/dido-base.ttl> rdf:type owl:Ontology ;
+                                       owl:versionIRI <https://purl.org/dido/releases/2026-02-25/dido-base.ttl> ;
+                                       <http://purl.org/dc/elements/1.1/creator> "Kelsey Rook"@en ;
+                                       <http://purl.org/dc/elements/1.1/type> <http://purl.obolibrary.org/obo/IAO_8000001> ;
+                                       <http://purl.org/dc/terms/description> "The Dialogue and Discourse Ontology (DIDO) supports the modeling of dialogue and dialogue data." ;
+                                       <http://purl.org/dc/terms/license> "https://opensource.org/license/mit"^^xsd:anyURI ;
+                                       <http://purl.org/dc/terms/modified> "2026-2-4" ;
+                                       <http://purl.org/dc/terms/title> "Dialogue and Discourse Ontology (DiDO)" ;
+                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "dido" ;
+                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/twc/dido#" ;
+                                       <http://schema.org/codeRepository> "https://github.com/shmewtep/dialogueOnt"^^xsd:anyURI ;
+                                       rdfs:label "DIDO" ;
+                                       owl:versionInfo "2026-02-25" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/type
+<http://purl.org/dc/elements/1.1/type> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/codeRepository
+<http://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#component
+<http://www.w3.org/ns/prov#component> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#definition
+<http://www.w3.org/ns/prov#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#inverse
+<http://www.w3.org/ns/prov#inverse> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#qualifiedForm
+<http://www.w3.org/ns/prov#qualifiedForm> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://semanticscience.org/resource/SIO_000008
+<http://semanticscience.org/resource/SIO_000008> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000028
+<http://semanticscience.org/resource/SIO_000028> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000059
+<http://semanticscience.org/resource/SIO_000059> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000068
+<http://semanticscience.org/resource/SIO_000068> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000095
+<http://semanticscience.org/resource/SIO_000095> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000132
+<http://semanticscience.org/resource/SIO_000132> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000139
+<http://semanticscience.org/resource/SIO_000139> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000227
+<http://semanticscience.org/resource/SIO_000227> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000229
+<http://semanticscience.org/resource/SIO_000229> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000332
+<http://semanticscience.org/resource/SIO_000332> rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000356
+<http://semanticscience.org/resource/SIO_000356> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> rdf:type owl:ObjectProperty ;
+                                            rdfs:comment "Attribution is the ascribing of an entity to an agent."@en ;
+                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                            rdfs:label "wasAttributedTo" ;
+                                            <http://www.w3.org/ns/prov#definition> "Attribution is the ascribing of an entity to an agent."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://semanticscience.org/resource/SIO_000300
+<http://semanticscience.org/resource/SIO_000300> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/twc/dido#Dialogue
+<http://purl.org/twc/dido#Dialogue> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://semanticscience.org/resource/SIO_000006> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://semanticscience.org/resource/SIO_000028> ;
+                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass <http://purl.org/twc/dido#Utterance>
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://semanticscience.org/resource/SIO_000132> ;
+                                                      owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( <http://semanticscience.org/resource/SIO_000097>
+                                                                                  <http://semanticscience.org/resource/SIO_000485>
+                                                                                )
+                                                                  ]
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass <http://www.w3.org/2006/time#ProperInterval>
+                                                    ] ;
+                                    rdfs:label "dialogue" ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "an interactive communication between two or more entities" .
+
+
+###  http://purl.org/twc/dido#DialogueTranscript
+<http://purl.org/twc/dido#DialogueTranscript> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://semanticscience.org/resource/SIO_000069> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://semanticscience.org/resource/SIO_000095> ;
+                                                                owl:someValuesFrom <http://semanticscience.org/resource/SIO_000089>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://semanticscience.org/resource/SIO_000059> ;
+                                                                owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                owl:onClass <http://purl.org/twc/dido#UtteranceText>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://semanticscience.org/resource/SIO_000332> ;
+                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                owl:onClass <http://purl.org/twc/dido#Dialogue>
+                                                              ] ;
+                                              rdfs:label "dialogue transcript"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "A digital or physical information content entity that provides a structured textual record of a conversation" .
+
+
+###  http://purl.org/twc/dido#Interlocutor
+<http://purl.org/twc/dido#Interlocutor> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://semanticscience.org/resource/SIO_000016> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://semanticscience.org/resource/SIO_000227> ;
+                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass [ rdf:type owl:Class ;
+                                                                        owl:unionOf ( <http://semanticscience.org/resource/SIO_000097>
+                                                                                      <http://semanticscience.org/resource/SIO_000485>
+                                                                                    )
+                                                                      ]
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://semanticscience.org/resource/SIO_000356> ;
+                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass <http://purl.org/twc/dido#Dialogue>
+                                                        ] ;
+                                        rdfs:label "interlocutor" ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "One who takes part in a conversation or dialogue" .
+
+
+###  http://purl.org/twc/dido#Utterance
+<http://purl.org/twc/dido#Utterance> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://semanticscience.org/resource/SIO_000006> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://semanticscience.org/resource/SIO_000229> ;
+                                                       owl:someValuesFrom <http://purl.org/twc/dido#UtteranceText>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://semanticscience.org/resource/SIO_000068> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <http://purl.org/twc/dido#Dialogue>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://semanticscience.org/resource/SIO_000139> ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass [ rdf:type owl:Class ;
+                                                                     owl:unionOf ( <http://semanticscience.org/resource/SIO_000097>
+                                                                                   <http://semanticscience.org/resource/SIO_000485>
+                                                                                 )
+                                                                   ]
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://semanticscience.org/resource/SIO_000008> ;
+                                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass <http://www.w3.org/2006/time#Interval>
+                                                     ] ;
+                                     rdfs:label "utterance" ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "a single unit of speech in spoken language that serves some pragmatic function" .
+
+
+###  http://purl.org/twc/dido#UtteranceText
+<http://purl.org/twc/dido#UtteranceText> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://semanticscience.org/resource/SIO_000078> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://semanticscience.org/resource/SIO_000300> ;
+                                                           owl:someValuesFrom rdfs:Literal
+                                                         ] ;
+                                         rdfs:label "utterance text" ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "a textual entity representing the output of an utterance" .
+
+
+###  http://semanticscience.org/resource/SIO_000000
+<http://semanticscience.org/resource/SIO_000000> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000006
+<http://semanticscience.org/resource/SIO_000006> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000016
+<http://semanticscience.org/resource/SIO_000016> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000069
+<http://semanticscience.org/resource/SIO_000069> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000078
+<http://semanticscience.org/resource/SIO_000078> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000089
+<http://semanticscience.org/resource/SIO_000089> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000097
+<http://semanticscience.org/resource/SIO_000097> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000485
+<http://semanticscience.org/resource/SIO_000485> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#ProperInterval
+<http://www.w3.org/2006/time#ProperInterval> rdf:type owl:Class .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/license> <http://purl.org/dc/elements/1.1/identifier> "license" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
