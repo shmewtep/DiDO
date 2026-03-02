@@ -1,3 +1,10 @@
+---
+title: Development
+layout: single
+sidebar:
+        nav: "docs"
+---
+
 #### Ontology methodologies utilized or referenced
 
 * [Ontology Development 101](https://corais.org/sites/default/files/ontology_development_101_aguide_to_creating_your_first_ontology.pdf)

@@ -44,3 +44,6 @@ DIDO/OOPS*
 DIDO/OOPS*/*
 DIDO/webvowl
 DIDO/webvowl/*
+
+docs/_site
+docs/_site/*

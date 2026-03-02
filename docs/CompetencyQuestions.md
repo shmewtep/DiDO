@@ -1,7 +1,13 @@
+---
+title: Competency Questions
+layout: single
+sidebar:
+        nav: "docs"
+---
+
 ### Overview
 * **Last Updated:** 19 Feb 2026
 
-### Functional Requirements (Competency Questions)
 | ID | Competency Question | SPARQL | Status |
 |----|---------------------|--------|--------|
 |**Core Ontology**|

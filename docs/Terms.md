@@ -1,4 +1,9 @@
-## Terminology
+---
+title: Terminology
+layout: single
+sidebar:
+        nav: "docs"
+---
 
 #### Ontology prefixes
 
