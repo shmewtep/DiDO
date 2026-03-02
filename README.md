@@ -1,6 +1,6 @@
 # dialogueOnt
 
-
+![Dialogue Ontology Diagram](docs/images/dialogueOnt.png)
 
 ## Repository Structure
 
