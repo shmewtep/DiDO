@@ -9,6 +9,7 @@ const cqRegistry = getCQRegistry();
 const store = new N3.Store();
 let n3DataLoaded = false;
 let n3UtterancesData = [];
+let datasetProvenance = { name: '', url: '' };
 
 const loadTTLData = async () => {
     try {
@@ -41,9 +42,25 @@ function processUtterances() {
     const TIME_HAS_END = 'http://www.w3.org/2006/time#hasEnd';
     const TIME_IN_DATETIME = 'http://www.w3.org/2006/time#inDateTime';
     const TIME_SECOND = 'http://www.w3.org/2006/time#second';
+    const DCTERMS_TITLE = 'http://purl.org/dc/terms/title';
+    const DCAT_LANDING_PAGE = 'http://www.w3.org/ns/dcat#landingPage';
+
+    const titleQuad = store.getQuads(null, DCTERMS_TITLE, null)[0];
+    if (titleQuad) {
+        let title = titleQuad.object.value;
+        if (title.startsWith('"') && title.endsWith('"')) {
+            title = title.substring(1, title.length - 1);
+        }
+        datasetProvenance.name = title;
+    }
+
+    const landingPageQuad = store.getQuads(null, DCAT_LANDING_PAGE, null)[0];
+    if (landingPageQuad) {
+        datasetProvenance.url = landingPageQuad.object.value;
+    }
 
     const utterances = store.getQuads(null, SIO_000068, null).map(q => q.subject);
-    
+
     utterances.forEach(u => {
         const id = u.value;
         const dialogue = store.getQuads(u, SIO_000068, null)[0]?.object.value;
@@ -54,11 +71,11 @@ function processUtterances() {
         }
 
         const speaker = store.getQuads(u, SIO_000139, null)[0]?.object.value;
-        
+
         const timeInfo = store.getQuads(u, SIO_000008, null)[0]?.object;
         let beginTime = 0;
         let endTime = 0;
-        
+
         if (timeInfo) {
             const hasBeginning = store.getQuads(timeInfo, TIME_HAS_BEGINNING, null)[0]?.object;
             if (hasBeginning) {
@@ -77,7 +94,7 @@ function processUtterances() {
                 }
             }
         }
-        
+
         n3UtterancesData.push({
             iri: id,
             id: id.replace(prefix, '').replace('utterance', ''),
@@ -88,7 +105,7 @@ function processUtterances() {
             endTime: endTime
         });
     });
-}const elements = {
+} const elements = {
     cqSelect: document.getElementById('cq-select'),
     varInputs: document.getElementById('variable-inputs'),
     runBtn: document.getElementById('run-btn'),
@@ -193,17 +210,16 @@ const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
     }
 
     let targetDialogue = null;
-    let targetBegin = 0;
+    let expandedUtteranceIri = null;
 
     if (utteranceIri) {
-        const expandedUtteranceIri = utteranceIri.startsWith('ex:')
+        expandedUtteranceIri = utteranceIri.startsWith('ex:')
             ? `${prefix}${utteranceIri.replace('ex:', '')}`
             : (utteranceIri.startsWith('<') ? utteranceIri.slice(1, -1) : utteranceIri);
-            
+
         const utterance = n3UtterancesData.find(u => u.iri === expandedUtteranceIri);
         if (utterance) {
             targetDialogue = utterance.dialogue;
-            targetBegin = utterance.beginTime;
         } else {
             targetDialogue = null;
         }
@@ -218,14 +234,37 @@ const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
         return;
     }
 
-    const filtered = n3UtterancesData.filter(u => u.dialogue === targetDialogue && u.beginTime >= targetBegin);
-    filtered.sort((a, b) => a.beginTime - b.beginTime);
-    
-    const utterances = filtered.slice(0, 15);
+    const allDialogueUtterances = n3UtterancesData.filter(u => u.dialogue === targetDialogue);
+    allDialogueUtterances.sort((a, b) => a.beginTime - b.beginTime);
+
+    let targetIndex = 0;
+    if (expandedUtteranceIri) {
+        targetIndex = allDialogueUtterances.findIndex(u => u.iri === expandedUtteranceIri);
+        if (targetIndex === -1) targetIndex = 0;
+    }
+
+    // Try to take 7 before and 7 after, keeping it to 15 max
+    let start = Math.max(0, targetIndex - 7);
+    let end = Math.min(allDialogueUtterances.length, start + 15);
+    if (end - start < 15) {
+        start = Math.max(0, end - 15);
+    }
+
+    const utterances = allDialogueUtterances.slice(start, end);
 
     if (utterances.length === 0) {
         elements.conversationContainer.innerHTML = '<div class="placeholder">No dialogue snippet found</div>';
         return;
+    }
+
+    const provenanceEl = document.getElementById('dataset-provenance');
+    if (datasetProvenance.name && provenanceEl) {
+        let content = `Dataset: ${datasetProvenance.name}`;
+        if (datasetProvenance.url) {
+            content += ` (<a href="${datasetProvenance.url}" target="_blank" style="color: var(--accent-primary); text-decoration: none;">Homepage</a>)`;
+        }
+        provenanceEl.innerHTML = content;
+        provenanceEl.style.display = 'block';
     }
 
     elements.conversationContainer.innerHTML = '';
@@ -253,8 +292,9 @@ const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
         const el = document.createElement('div');
         el.className = `message-box ${alignment}`;
 
-        // Highlight the first utterance if we queried based on a specific utterance
-        const highlightStyle = (utteranceIri && index === 0) ? `style="border: 2px solid var(--accent-primary); box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);"` : '';
+        // Highlight the specific target utterance if queried
+        const isTarget = expandedUtteranceIri && (u.iri === expandedUtteranceIri);
+        const highlightStyle = isTarget ? `style="border: 2px solid var(--accent-primary); box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);"` : '';
 
         el.innerHTML = `
             <div class="message-meta">
