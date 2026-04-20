@@ -6,7 +6,106 @@ const prefix = "http://purl.org/twc/dido/individuals#";
 
 const cqRegistry = getCQRegistry();
 
-const elements = {
+const store = new N3.Store();
+let n3DataLoaded = false;
+let n3UtterancesData = [];
+let datasetProvenance = { name: '', url: '' };
+
+const loadTTLData = async () => {
+    try {
+        const response = await fetch(DATA_SOURCE);
+        const text = await response.text();
+        const parser = new N3.Parser({ format: 'text/turtle' });
+        parser.parse(text, (error, quad, prefixes) => {
+            if (quad) {
+                store.addQuad(quad);
+            } else if (!error) {
+                n3DataLoaded = true;
+                processUtterances();
+            } else {
+                console.error("Error parsing TTL:", error);
+            }
+        });
+    } catch (e) {
+        console.error("Failed to load TTL data", e);
+    }
+}
+loadTTLData();
+
+function processUtterances() {
+    const SIO_000068 = 'http://semanticscience.org/resource/SIO_000068';
+    const SIO_000232 = 'http://semanticscience.org/resource/SIO_000232';
+    const SIO_000300 = 'http://semanticscience.org/resource/SIO_000300';
+    const SIO_000139 = 'http://semanticscience.org/resource/SIO_000139';
+    const SIO_000008 = 'http://semanticscience.org/resource/sio_000008';
+    const TIME_HAS_BEGINNING = 'http://www.w3.org/2006/time#hasBeginning';
+    const TIME_HAS_END = 'http://www.w3.org/2006/time#hasEnd';
+    const TIME_IN_DATETIME = 'http://www.w3.org/2006/time#inDateTime';
+    const TIME_SECOND = 'http://www.w3.org/2006/time#second';
+    const DCTERMS_TITLE = 'http://purl.org/dc/terms/title';
+    const DCAT_LANDING_PAGE = 'http://www.w3.org/ns/dcat#landingPage';
+
+    const titleQuad = store.getQuads(null, DCTERMS_TITLE, null)[0];
+    if (titleQuad) {
+        let title = titleQuad.object.value;
+        if (title.startsWith('"') && title.endsWith('"')) {
+            title = title.substring(1, title.length - 1);
+        }
+        datasetProvenance.name = title;
+    }
+
+    const landingPageQuad = store.getQuads(null, DCAT_LANDING_PAGE, null)[0];
+    if (landingPageQuad) {
+        datasetProvenance.url = landingPageQuad.object.value;
+    }
+
+    const utterances = store.getQuads(null, SIO_000068, null).map(q => q.subject);
+
+    utterances.forEach(u => {
+        const id = u.value;
+        const dialogue = store.getQuads(u, SIO_000068, null)[0]?.object.value;
+        const textUri = store.getQuads(u, SIO_000232, null)[0]?.object;
+        let text = textUri ? store.getQuads(textUri, SIO_000300, null)[0]?.object.value : "";
+        if (text && text.startsWith('"') && text.endsWith('"')) {
+            text = text.substring(1, text.length - 1);
+        }
+
+        const speaker = store.getQuads(u, SIO_000139, null)[0]?.object.value;
+
+        const timeInfo = store.getQuads(u, SIO_000008, null)[0]?.object;
+        let beginTime = 0;
+        let endTime = 0;
+
+        if (timeInfo) {
+            const hasBeginning = store.getQuads(timeInfo, TIME_HAS_BEGINNING, null)[0]?.object;
+            if (hasBeginning) {
+                const inDateTime = store.getQuads(hasBeginning, TIME_IN_DATETIME, null)[0]?.object;
+                if (inDateTime) {
+                    const sec = store.getQuads(inDateTime, TIME_SECOND, null)[0]?.object.value;
+                    beginTime = sec ? parseFloat(sec) : 0;
+                }
+            }
+            const hasEnd = store.getQuads(timeInfo, TIME_HAS_END, null)[0]?.object;
+            if (hasEnd) {
+                const inDateTime = store.getQuads(hasEnd, TIME_IN_DATETIME, null)[0]?.object;
+                if (inDateTime) {
+                    const sec = store.getQuads(inDateTime, TIME_SECOND, null)[0]?.object.value;
+                    endTime = sec ? parseFloat(sec) : 0;
+                }
+            }
+        }
+
+        n3UtterancesData.push({
+            iri: id,
+            id: id.replace(prefix, '').replace('utterance', ''),
+            dialogue: dialogue,
+            text: text,
+            speaker: speaker ? speaker.replace(prefix, 'ex:').replace('ex:human', '') : "",
+            beginTime: beginTime,
+            endTime: endTime
+        });
+    });
+} const elements = {
     cqSelect: document.getElementById('cq-select'),
     varInputs: document.getElementById('variable-inputs'),
     runBtn: document.getElementById('run-btn'),
@@ -104,131 +203,111 @@ const bindVariables = (rawQuery, inputValues) => {
 const loadConversationSnippet = async (dialogueIri, utteranceIri = null) => {
     elements.conversationContainer.innerHTML = '<div class="loader"></div>';
 
-    let snippetQuery = "";
+    if (!n3DataLoaded) {
+        // Retry shortly if the page just loaded and data isn't ready
+        setTimeout(() => loadConversationSnippet(dialogueIri, utteranceIri), 500);
+        return;
+    }
+
+    let targetDialogue = null;
+    let expandedUtteranceIri = null;
 
     if (utteranceIri) {
-        // If we have an utterance, we need to find its dialogue and then query utterances
-        // We'll get utterances that happen during or after the target utterance's start time
-        const expandedUtteranceIri = utteranceIri.startsWith('ex:')
-            ? `<${prefix}${utteranceIri.replace('ex:', '')}>`
-            : (utteranceIri.startsWith('<') ? utteranceIri : `<${utteranceIri}>`);
+        expandedUtteranceIri = utteranceIri.startsWith('ex:')
+            ? `${prefix}${utteranceIri.replace('ex:', '')}`
+            : (utteranceIri.startsWith('<') ? utteranceIri.slice(1, -1) : utteranceIri);
 
-        snippetQuery = `
-        PREFIX dido: <http://purl.org/twc/dido#>
-        PREFIX sio: <http://semanticscience.org/resource/>
-        PREFIX time: <http://www.w3.org/2006/time#>
-        SELECT ?utterance ?text ?speaker ?beginTime ?endTime WHERE {
-            # Find the target utterance's begin time and dialogue
-            ${expandedUtteranceIri} sio:SIO_000068 ?dialogue ;
-                                    sio:sio_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?targetBegin ] ] ] .
-            
-            # Now find utterances in the same dialogue
-            ?utterance sio:SIO_000068 ?dialogue ;
-                       sio:SIO_000232 ?textUri ;
-                       sio:SIO_000139 ?speaker ;
-                       sio:sio_000008 [ 
-                           time:hasBeginning [ time:inDateTime [ time:second ?beginTime ] ] ;
-                           time:hasEnd [ time:inDateTime [ time:second ?endTime ] ]
-                       ] .
-            ?textUri sio:SIO_000300 ?text .
-            
-            # Only include utterances starting during or after the target utterance
-            FILTER(?beginTime >= ?targetBegin)
-        } ORDER BY ?beginTime LIMIT 15
-        `;
-    } else {
-        // Fallback to querying just by dialogue IRI
-        const expandedIri = dialogueIri.startsWith('ex:')
-            ? `<${prefix}${dialogueIri.replace('ex:', '')}>`
-            : (dialogueIri.startsWith('<') ? dialogueIri : `<${dialogueIri}>`);
-
-        snippetQuery = `
-        PREFIX dido: <http://purl.org/twc/dido#>
-        PREFIX sio: <http://semanticscience.org/resource/>
-        PREFIX time: <http://www.w3.org/2006/time#>
-        SELECT ?utterance ?text ?speaker ?beginTime ?endTime WHERE {
-            ?utterance sio:SIO_000068 ${expandedIri} ;
-                       sio:SIO_000232 ?textUri ;
-                       sio:SIO_000139 ?speaker ;
-                       sio:sio_000008 [ 
-                           time:hasBeginning [ time:inDateTime [ time:second ?beginTime ] ] ;
-                           time:hasEnd [ time:inDateTime [ time:second ?endTime ] ]
-                       ] .
-            ?textUri sio:SIO_000300 ?text .
-        } ORDER BY ?beginTime LIMIT 15
-        `;
+        const utterance = n3UtterancesData.find(u => u.iri === expandedUtteranceIri);
+        if (utterance) {
+            targetDialogue = utterance.dialogue;
+        } else {
+            targetDialogue = null;
+        }
+    } else if (dialogueIri) {
+        targetDialogue = dialogueIri.startsWith('ex:')
+            ? `${prefix}${dialogueIri.replace('ex:', '')}`
+            : (dialogueIri.startsWith('<') ? dialogueIri.slice(1, -1) : dialogueIri);
     }
 
-    try {
-        const bindingsStream = await new Comunica.QueryEngine().queryBindings(snippetQuery, {
-            sources: [DATA_SOURCE],
-        });
-
-        const utterances = [];
-        bindingsStream.on('data', (binding) => {
-            utterances.push({
-                id: binding.get('utterance').value.replace(prefix, '').replace('utterance', ''),
-                text: binding.get('text').value,
-                speaker: binding.get('speaker').value.replace(prefix, 'ex:').replace('ex:human', ''),
-                beginTime: binding.get('beginTime').value,
-                endTime: binding.get('endTime').value
-            });
-        });
-
-        bindingsStream.on('end', () => {
-            if (utterances.length === 0) {
-                elements.conversationContainer.innerHTML = '<div class="placeholder">No dialogue snippet found</div>';
-                return;
-            }
-
-            elements.conversationContainer.innerHTML = '';
-
-            // Assign right side to first speaker, left to others
-            const speakers = [...new Set(utterances.map(u => u.speaker))];
-            const mySpeaker = speakers[0];
-
-            utterances.forEach((u, index) => {
-                const isMine = u.speaker === mySpeaker;
-                const alignment = isMine ? 'right' : 'left';
-
-                // Format time assuming seconds
-                const startSecs = Math.floor(parseFloat(u.beginTime));
-                const endSecs = Math.floor(parseFloat(u.endTime));
-
-                const startMins = String(Math.floor(startSecs / 60)).padStart(2, '0');
-                const startRemainder = String(startSecs % 60).padStart(2, '0');
-
-                const endMins = String(Math.floor(endSecs / 60)).padStart(2, '0');
-                const endRemainder = String(endSecs % 60).padStart(2, '0');
-
-                const timeString = `${startMins}:${startRemainder} - ${endMins}:${endRemainder}`;
-
-                const el = document.createElement('div');
-                el.className = `message-box ${alignment}`;
-
-                // Highlight the first utterance if we queried based on a specific utterance
-                const highlightStyle = (utteranceIri && index === 0) ? `style="border: 2px solid var(--accent-primary); box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);"` : '';
-
-                el.innerHTML = `
-                    <div class="message-meta">
-                        <span class="message-speaker">${u.speaker}</span>
-                        <span class="message-time">${timeString}</span>
-                    </div>
-                    <div class="message-bubble" ${highlightStyle}>
-                        ${u.text}
-                        <div style="font-size: 0.65rem; color: rgba(255,255,255,0.4); text-align: right; margin-top: 4px;">#${u.id}</div>
-                    </div>
-                `;
-                elements.conversationContainer.appendChild(el);
-            });
-        });
-
-        bindingsStream.on('error', (err) => {
-            elements.conversationContainer.innerHTML = `<div class="placeholder" style="color: #f85149">Error loading snippet: ${err.message}</div>`;
-        });
-    } catch (err) {
-        elements.conversationContainer.innerHTML = `<div class="placeholder" style="color: #f85149">Error loading snippet: ${err.message}</div>`;
+    if (!targetDialogue) {
+        elements.conversationContainer.innerHTML = '<div class="placeholder">Dialogue not found for snippet</div>';
+        return;
     }
+
+    const allDialogueUtterances = n3UtterancesData.filter(u => u.dialogue === targetDialogue);
+    allDialogueUtterances.sort((a, b) => a.beginTime - b.beginTime);
+
+    let targetIndex = 0;
+    if (expandedUtteranceIri) {
+        targetIndex = allDialogueUtterances.findIndex(u => u.iri === expandedUtteranceIri);
+        if (targetIndex === -1) targetIndex = 0;
+    }
+
+    // Try to take 7 before and 7 after, keeping it to 15 max
+    let start = Math.max(0, targetIndex - 7);
+    let end = Math.min(allDialogueUtterances.length, start + 15);
+    if (end - start < 15) {
+        start = Math.max(0, end - 15);
+    }
+
+    const utterances = allDialogueUtterances.slice(start, end);
+
+    if (utterances.length === 0) {
+        elements.conversationContainer.innerHTML = '<div class="placeholder">No dialogue snippet found</div>';
+        return;
+    }
+
+    const provenanceEl = document.getElementById('dataset-provenance');
+    if (datasetProvenance.name && provenanceEl) {
+        let content = `Dataset: ${datasetProvenance.name}`;
+        if (datasetProvenance.url) {
+            content += ` (<a href="${datasetProvenance.url}" target="_blank" style="color: var(--accent-primary); text-decoration: none;">Homepage</a>)`;
+        }
+        provenanceEl.innerHTML = content;
+        provenanceEl.style.display = 'block';
+    }
+
+    elements.conversationContainer.innerHTML = '';
+
+    // Assign right side to first speaker, left to others
+    const speakers = [...new Set(utterances.map(u => u.speaker))];
+    const mySpeaker = speakers[0];
+
+    utterances.forEach((u, index) => {
+        const isMine = u.speaker === mySpeaker;
+        const alignment = isMine ? 'right' : 'left';
+
+        // Format time assuming seconds
+        const startSecs = Math.floor(parseFloat(u.beginTime));
+        const endSecs = Math.floor(parseFloat(u.endTime));
+
+        const startMins = String(Math.floor(startSecs / 60)).padStart(2, '0');
+        const startRemainder = String(startSecs % 60).padStart(2, '0');
+
+        const endMins = String(Math.floor(endSecs / 60)).padStart(2, '0');
+        const endRemainder = String(endSecs % 60).padStart(2, '0');
+
+        const timeString = `${startMins}:${startRemainder} - ${endMins}:${endRemainder}`;
+
+        const el = document.createElement('div');
+        el.className = `message-box ${alignment}`;
+
+        // Highlight the specific target utterance if queried
+        const isTarget = expandedUtteranceIri && (u.iri === expandedUtteranceIri);
+        const highlightStyle = isTarget ? `style="border: 2px solid var(--accent-primary); box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);"` : '';
+
+        el.innerHTML = `
+            <div class="message-meta">
+                <span class="message-speaker">${u.speaker}</span>
+                <span class="message-time">${timeString}</span>
+            </div>
+            <div class="message-bubble" ${highlightStyle}>
+                ${u.text}
+                <div style="font-size: 0.65rem; color: rgba(255,255,255,0.4); text-align: right; margin-top: 4px;">#${u.id}</div>
+            </div>
+        `;
+        elements.conversationContainer.appendChild(el);
+    });
 };
 
 // Add event listener to run button

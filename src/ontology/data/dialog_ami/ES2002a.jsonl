@@ -1,0 +1,475 @@
+{"meeting_id": "ES2002a", "text": "", "begin_time": 0.0, "end_time": 0.0, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.3"}
+{"meeting_id": "ES2002a", "text": "Okay", "begin_time": 50.42, "end_time": 50.99, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.1"}
+{"meeting_id": "ES2002a", "text": "Right", "begin_time": 53.56, "end_time": 53.96, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.2"}
+{"meeting_id": "ES2002a", "text": "[other] Um well this is the kick-off meeting for our our project .", "begin_time": 55.415, "end_time": 60.35, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.3"}
+{"meeting_id": "ES2002a", "text": "Um [laugh] and um", "begin_time": 60.35, "end_time": 64.16, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.16"}
+{"meeting_id": "ES2002a", "text": "this is just what we're gonna be doing over the next twenty five minutes .", "begin_time": 64.16, "end_time": 67.55, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.17"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 67.21, "end_time": 67.45, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.1"}
+{"meeting_id": "ES2002a", "text": "Um so first of all , just to kind of make sure that we all know each other ,", "begin_time": 67.55, "end_time": 72.79, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.6"}
+{"meeting_id": "ES2002a", "text": "I'm Laura and I'm the project manager .", "begin_time": 72.79, "end_time": 74.42, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.9"}
+{"meeting_id": "ES2002a", "text": "[laugh] Do you want to introduce yourself again ?", "begin_time": 74.42, "end_time": 77.29, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.7"}
+{"meeting_id": "ES2002a", "text": "Great .", "begin_time": 74.89, "end_time": 75.24, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.2"}
+{"meeting_id": "ES2002a", "text": "Hi , I'm David and I'm supposed to be an industrial designer .", "begin_time": 77.44, "end_time": 80.87, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.1"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 80.81, "end_time": 81.26, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.8"}
+{"meeting_id": "ES2002a", "text": "And I'm Andrew and I'm uh our marketing", "begin_time": 82.08, "end_time": 84.46, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.3"}
+{"meeting_id": "ES2002a", "text": "Um I'm Craig and I'm User Interface .", "begin_time": 85.99, "end_time": 88.71, "speaker_id": "C", "da_type": "Inform", "nite_id": "ES2002a.C.dialog-act.dharshi.1"}
+{"meeting_id": "ES2002a", "text": "expert .", "begin_time": 86.07, "end_time": 86.5, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.4"}
+{"meeting_id": "ES2002a", "text": "Great .", "begin_time": 89.3, "end_time": 90.01, "speaker_id": "B", "da_type": "Be-Positive", "nite_id": "ES2002a.B.dialog-act.dharshi.10"}
+{"meeting_id": "ES2002a", "text": "Okay . [laugh] Um", "begin_time": 90.01, "end_time": 92.79, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.11"}
+{"meeting_id": "ES2002a", "text": "so we're designing a new remote control and um ", "begin_time": 92.79, "end_time": 96.34, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.12"}
+{"meeting_id": "ES2002a", "text": "Oh I have to record who's here actually .", "begin_time": 96.34, "end_time": 98.57, "speaker_id": "B", "da_type": "Offer", "nite_id": "ES2002a.B.dialog-act.dharshi.13"}
+{"meeting_id": "ES2002a", "text": "So that's David , Andrew and Craig , isn't it ?", "begin_time": 98.57, "end_time": 101.76, "speaker_id": "B", "da_type": "Other", "nite_id": "ES2002a.B.dialog-act.dharshi.14"}
+{"meeting_id": "ES2002a", "text": "And you all arrived on time .", "begin_time": 104.89, "end_time": 106.58, "speaker_id": "B", "da_type": "Other", "nite_id": "ES2002a.B.dialog-act.dharshi.15"}
+{"meeting_id": "ES2002a", "text": "Um yeah so des uh [other] design a new remote control .", "begin_time": 108.96, "end_time": 111.72, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.18"}
+{"meeting_id": "ES2002a", "text": "Um , as you can see it's supposed to be original , trendy and user friendly .", "begin_time": 111.72, "end_time": 116.66, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.19"}
+{"meeting_id": "ES2002a", "text": "Um so that's kind of our our brief , as it were .", "begin_time": 116.66, "end_time": 120.98, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.21"}
+{"meeting_id": "ES2002a", "text": "Um and so there are three different stages to the design .", "begin_time": 120.98, "end_time": 126.12, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.22"}
+{"meeting_id": "ES2002a", "text": "Um I'm not really sure what what you guys have already received um in your emails .", "begin_time": 126.12, "end_time": 131.36, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.23"}
+{"meeting_id": "ES2002a", "text": "What did you get ?", "begin_time": 131.36, "end_time": 132.03, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.24"}
+{"meeting_id": "ES2002a", "text": "Um , I just got the project announcement about what the project is [other] .", "begin_time": 132.57, "end_time": 136.68, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.2"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 135.08, "end_time": 135.44, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.20"}
+{"meeting_id": "ES2002a", "text": "Designing a remote control .", "begin_time": 136.68, "end_time": 138.2, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.3"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 137.12, "end_time": 137.39, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.5"}
+{"meeting_id": "ES2002a", "text": "That's about it , didn't get anything else .", "begin_time": 138.2, "end_time": 140.77, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.4"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm . Yeah , that's that's it .", "begin_time": 138.96, "end_time": 140.56, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.6"}
+{"meeting_id": "ES2002a", "text": "Is that what everybody got ?", "begin_time": 140.1, "end_time": 141.53, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.25"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 140.47, "end_time": 140.83, "speaker_id": "C", "da_type": "Backchannel", "nite_id": "ES2002a.C.dialog-act.dharshi.2"}
+{"meeting_id": "ES2002a", "text": "Did you get the same thing ?", "begin_time": 140.77, "end_time": 141.98, "speaker_id": "A", "da_type": "Elicit-Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.5"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 141.53, "end_time": 142.66, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.29"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 141.8, "end_time": 141.95, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.7"}
+{"meeting_id": "ES2002a", "text": "Um .", "begin_time": 142.66, "end_time": 144.43, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.26"}
+{"meeting_id": "ES2002a", "text": "So we're gonna have like individual work and then a meeting about it .", "begin_time": 144.43, "end_time": 147.92, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.28"}
+{"meeting_id": "ES2002a", "text": "And repeat that process three times .", "begin_time": 147.92, "end_time": 151.79, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.31"}
+{"meeting_id": "ES2002a", "text": "Um and at this point we get try out the whiteboard over there .", "begin_time": 151.79, "end_time": 158.41, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.32"}
+{"meeting_id": "ES2002a", "text": "Um .", "begin_time": 158.41, "end_time": 159.59, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.27"}
+{"meeting_id": "ES2002a", "text": "[laugh] So uh you get to draw your favourite animal and sum up your favourite characteristics of it .", "begin_time": 159.59, "end_time": 165.91, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.33"}
+{"meeting_id": "ES2002a", "text": "So who would like to go first ?", "begin_time": 165.91, "end_time": 167.31, "speaker_id": "B", "da_type": "Elicit-Offer-Or-Suggestion", "nite_id": "ES2002a.B.dialog-act.dharshi.30"}
+{"meeting_id": "ES2002a", "text": "I will go . That's fine .", "begin_time": 166.67, "end_time": 167.81, "speaker_id": "D", "da_type": "Offer", "nite_id": "ES2002a.D.dialog-act.dharshi.8"}
+{"meeting_id": "ES2002a", "text": "Very good . [laugh]", "begin_time": 167.84, "end_time": 169.072, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.34"}
+{"meeting_id": "ES2002a", "text": "Alright . So ", "begin_time": 174.2, "end_time": 176.816, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.9"}
+{"meeting_id": "ES2002a", "text": "[other] [whistling]", "begin_time": 177.952, "end_time": 180.064, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.10"}
+{"meeting_id": "ES2002a", "text": "This one here , right ?", "begin_time": 181.39, "end_time": 182.34, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.11"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 183.26, "end_time": 184.24, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.35"}
+{"meeting_id": "ES2002a", "text": "Okay . Very nice .", "begin_time": 183.93, "end_time": 186.46, "speaker_id": "D", "da_type": "Other", "nite_id": "ES2002a.D.dialog-act.dharshi.14"}
+{"meeting_id": "ES2002a", "text": "Alright .", "begin_time": 186.46, "end_time": 187.46, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.15"}
+{"meeting_id": "ES2002a", "text": "My favourite animal is like ", "begin_time": 187.46, "end_time": 192.021, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.16"}
+{"meeting_id": "ES2002a", "text": "[whistling]", "begin_time": 192.021, "end_time": 194.611, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.12"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 198.421, "end_time": 199.124, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.13"}
+{"meeting_id": "ES2002a", "text": "A beagle .", "begin_time": 203.45, "end_time": 204.24, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.17"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 205.28, "end_time": 206.672, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.36"}
+{"meeting_id": "ES2002a", "text": "Um", "begin_time": 211.97, "end_time": 213.16, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.18"}
+{"meeting_id": "ES2002a", "text": "charac favourite characteristics of it ? Is that right ?", "begin_time": 213.16, "end_time": 216.46, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.20"}
+{"meeting_id": "ES2002a", "text": "Yeah . Yeah .", "begin_time": 215.95, "end_time": 216.77, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.37"}
+{"meeting_id": "ES2002a", "text": "Uh , right , well basically um high priority for any animal for me is that they be willing to take a lot of physical affection from their family .", "begin_time": 216.46, "end_time": 229.16, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.23"}
+{"meeting_id": "ES2002a", "text": "And , yeah that they have lots of personality", "begin_time": 229.16, "end_time": 232.72, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.24"}
+{"meeting_id": "ES2002a", "text": "and uh be fit and in robust good health .", "begin_time": 232.72, "end_time": 237.96, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.25"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 237.359, "end_time": 239.245, "speaker_id": "A", "da_type": "Fragment", "nite_id": "ES2002a.A.dialog-act.dharshi.6"}
+{"meeting_id": "ES2002a", "text": "So this is blue .", "begin_time": 237.96, "end_time": 239.85, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.26"}
+{"meeting_id": "ES2002a", "text": "Blue beagle .", "begin_time": 239.85, "end_time": 241.42, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.27"}
+{"meeting_id": "ES2002a", "text": "My family's beagle .", "begin_time": 241.42, "end_time": 242.41, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.28"}
+{"meeting_id": "ES2002a", "text": "Right .", "begin_time": 243.4, "end_time": 244.71, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.38"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 244.064, "end_time": 245.212, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.22"}
+{"meeting_id": "ES2002a", "text": "Lovely . [laugh]", "begin_time": 244.71, "end_time": 245.744, "speaker_id": "B", "da_type": "Be-Positive", "nite_id": "ES2002a.B.dialog-act.dharshi.39"}
+{"meeting_id": "ES2002a", "text": "Well , my favourite animal would be a monkey .", "begin_time": 255.07, "end_time": 257.26, "speaker_id": "C", "da_type": "Inform", "nite_id": "ES2002a.C.dialog-act.dharshi.4"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 265.152, "end_time": 267.921, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.40"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 265.659, "end_time": 267.435, "speaker_id": "A", "da_type": "Fragment", "nite_id": "ES2002a.A.dialog-act.dharshi.7"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 265.988, "end_time": 267.717, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.5"}
+{"meeting_id": "ES2002a", "text": "Then they're small cute and furry ,", "begin_time": 268.0, "end_time": 270.01, "speaker_id": "C", "da_type": "Inform", "nite_id": "ES2002a.C.dialog-act.dharshi.7"}
+{"meeting_id": "ES2002a", "text": "and uh when planet of the apes becomes real , [other] I'm gonna be up there with them .", "begin_time": 270.01, "end_time": 273.99, "speaker_id": "C", "da_type": "Inform", "nite_id": "ES2002a.C.dialog-act.dharshi.8"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 273.968, "end_time": 274.992, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.29"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 275.561, "end_time": 278.886, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.6"}
+{"meeting_id": "ES2002a", "text": "Right .", "begin_time": 275.67, "end_time": 276.02, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.41"}
+{"meeting_id": "ES2002a", "text": "Cool .", "begin_time": 275.83, "end_time": 276.15, "speaker_id": "A", "da_type": "Assess", "nite_id": "ES2002a.A.dialog-act.dharshi.8"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 279.963, "end_time": 283.0, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.9"}
+{"meeting_id": "ES2002a", "text": "There's too much gear . [laugh]", "begin_time": 280.75, "end_time": 282.696, "speaker_id": "A", "da_type": "Assess", "nite_id": "ES2002a.A.dialog-act.dharshi.9"}
+{"meeting_id": "ES2002a", "text": "You can take as long over this as you like ,", "begin_time": 285.96, "end_time": 287.73, "speaker_id": "B", "da_type": "Suggest", "nite_id": "ES2002a.B.dialog-act.dharshi.42"}
+{"meeting_id": "ES2002a", "text": "because we haven't got an awful lot to discuss .", "begin_time": 287.73, "end_time": 290.31, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.103"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 290.031, "end_time": 291.4, "speaker_id": "A", "da_type": "Fragment", "nite_id": "ES2002a.A.dialog-act.dharshi.10"}
+{"meeting_id": "ES2002a", "text": "Ok oh", "begin_time": 290.31, "end_time": 290.59, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.43"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 290.429, "end_time": 292.275, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.10"}
+{"meeting_id": "ES2002a", "text": "we do we do", "begin_time": 290.59, "end_time": 291.76, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.104"}
+{"meeting_id": "ES2002a", "text": "Don't feel like you're in a rush , anyway .", "begin_time": 291.76, "end_time": 293.37, "speaker_id": "B", "da_type": "Suggest", "nite_id": "ES2002a.B.dialog-act.dharshi.44"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 293.26, "end_time": 294.25, "speaker_id": "A", "da_type": "Assess", "nite_id": "ES2002a.A.dialog-act.dharshi.11"}
+{"meeting_id": "ES2002a", "text": "I coulda told you a whole lot more about beagles .", "begin_time": 296.02, "end_time": 298.03, "speaker_id": "D", "da_type": "Offer", "nite_id": "ES2002a.D.dialog-act.dharshi.30"}
+{"meeting_id": "ES2002a", "text": "Ach why not ", "begin_time": 297.94, "end_time": 298.97, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.46"}
+{"meeting_id": "ES2002a", "text": "Boy , let me tell you . [laugh]", "begin_time": 298.03, "end_time": 301.248, "speaker_id": "D", "da_type": "Other", "nite_id": "ES2002a.D.dialog-act.dharshi.31"}
+{"meeting_id": "ES2002a", "text": "We might have to get you up again then .", "begin_time": 298.97, "end_time": 300.43, "speaker_id": "B", "da_type": "Suggest", "nite_id": "ES2002a.B.dialog-act.dharshi.47"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 300.234, "end_time": 301.607, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.11"}
+{"meeting_id": "ES2002a", "text": "I don't know what mine is .", "begin_time": 301.14, "end_time": 302.11, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.48"}
+{"meeting_id": "ES2002a", "text": "I'm gonna have to think on the spot now .", "begin_time": 302.11, "end_time": 303.58, "speaker_id": "B", "da_type": "Offer", "nite_id": "ES2002a.B.dialog-act.dharshi.49"}
+{"meeting_id": "ES2002a", "text": "Impressionist .", "begin_time": 307.06, "end_time": 307.9, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.32"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 307.824, "end_time": 309.12, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.45"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 308.532, "end_time": 309.412, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.12"}
+{"meeting_id": "ES2002a", "text": "Can't draw . [laugh]", "begin_time": 309.38, "end_time": 311.028, "speaker_id": "A", "da_type": "Assess", "nite_id": "ES2002a.A.dialog-act.dharshi.12"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 310.325, "end_time": 311.102, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.13"}
+{"meeting_id": "ES2002a", "text": "Is that a whale ? [laugh]", "begin_time": 312.05, "end_time": 315.6, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.50"}
+{"meeting_id": "ES2002a", "text": "Um .", "begin_time": 312.06, "end_time": 312.84, "speaker_id": "A", "da_type": "Stall", "nite_id": "ES2002a.A.dialog-act.dharshi.13"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 313.09, "end_time": 313.52, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.14"}
+{"meeting_id": "ES2002a", "text": "Um , well anyway ,", "begin_time": 318.58, "end_time": 321.53, "speaker_id": "A", "da_type": "Stall", "nite_id": "ES2002a.A.dialog-act.dharshi.15"}
+{"meeting_id": "ES2002a", "text": "I don't know , it's just the first animal I can think off the top of my head .", "begin_time": 321.53, "end_time": 324.11, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.16"}
+{"meeting_id": "ES2002a", "text": "Um . Yes . Big reason is 'cause I'm allergic to most animals .", "begin_time": 324.11, "end_time": 327.86, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.17"}
+{"meeting_id": "ES2002a", "text": "Allergic to animal fur ,", "begin_time": 327.86, "end_time": 328.76, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.18"}
+{"meeting_id": "ES2002a", "text": "Ah .", "begin_time": 327.91, "end_time": 328.53, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.51"}
+{"meeting_id": "ES2002a", "text": "so um fish was a natural choice .", "begin_time": 328.76, "end_time": 331.57, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.19"}
+{"meeting_id": "ES2002a", "text": "Um , yeah ,", "begin_time": 332.03, "end_time": 333.1, "speaker_id": "A", "da_type": "Stall", "nite_id": "ES2002a.A.dialog-act.dharshi.20"}
+{"meeting_id": "ES2002a", "text": "and I kind of like whales .", "begin_time": 333.1, "end_time": 334.32, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.21"}
+{"meeting_id": "ES2002a", "text": "They come in and go [sound imitating devouring something] eat everything in sight . [laugh]", "begin_time": 334.32, "end_time": 338.036, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.22"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 335.593, "end_time": 337.588, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.14"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 335.613, "end_time": 337.987, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.33"}
+{"meeting_id": "ES2002a", "text": "[laugh] Alright .", "begin_time": 337.987, "end_time": 339.05, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.34"}
+{"meeting_id": "ES2002a", "text": "And they're quite harmless and mild and interesting .", "begin_time": 338.22, "end_time": 341.52, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.23"}
+{"meeting_id": "ES2002a", "text": "Mm .", "begin_time": 341.85, "end_time": 342.2, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.35"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 342.42, "end_time": 343.63, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.54"}
+{"meeting_id": "ES2002a", "text": "God , I still don't know what I'm gonna write about .", "begin_time": 343.63, "end_time": 346.39, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.53"}
+{"meeting_id": "ES2002a", "text": "Um .", "begin_time": 346.39, "end_time": 346.85, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.52"}
+{"meeting_id": "ES2002a", "text": "Superb sketch , by the way .", "begin_time": 349.66, "end_time": 350.84, "speaker_id": "D", "da_type": "Be-Positive", "nite_id": "ES2002a.D.dialog-act.dharshi.36"}
+{"meeting_id": "ES2002a", "text": "[laugh] Tail's a bit big , I think . [laugh]", "begin_time": 351.686, "end_time": 355.385, "speaker_id": "A", "da_type": "Assess", "nite_id": "ES2002a.A.dialog-act.dharshi.24"}
+{"meeting_id": "ES2002a", "text": "I was gonna choose a dog as well .", "begin_time": 354.91, "end_time": 357.54, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.55"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 354.929, "end_time": 355.715, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.37"}
+{"meeting_id": "ES2002a", "text": "But I'll just draw a different kind of dog .", "begin_time": 357.54, "end_time": 360.21, "speaker_id": "B", "da_type": "Offer", "nite_id": "ES2002a.B.dialog-act.dharshi.56"}
+{"meeting_id": "ES2002a", "text": "Yep .", "begin_time": 359.62, "end_time": 359.9, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.38"}
+{"meeting_id": "ES2002a", "text": "M my favourite animal is my own dog at home .", "begin_time": 360.21, "end_time": 364.23, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.57"}
+{"meeting_id": "ES2002a", "text": "[laugh] Um ", "begin_time": 364.23, "end_time": 364.96, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.58"}
+{"meeting_id": "ES2002a", "text": "That doesn't really look like him , actually .", "begin_time": 367.01, "end_time": 368.63, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.59"}
+{"meeting_id": "ES2002a", "text": "He looks more like a pig , actually .", "begin_time": 373.3, "end_time": 374.72, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.60"}
+{"meeting_id": "ES2002a", "text": "Ah well .", "begin_time": 375.84, "end_time": 376.27, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.61"}
+{"meeting_id": "ES2002a", "text": "I see a dog in there .", "begin_time": 378.46, "end_time": 379.99, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.40"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 379.357, "end_time": 380.833, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.15"}
+{"meeting_id": "ES2002a", "text": "Do you ?", "begin_time": 379.52, "end_time": 380.06, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.62"}
+{"meeting_id": "ES2002a", "text": "Yep .", "begin_time": 379.99, "end_time": 380.14, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.41"}
+{"meeting_id": "ES2002a", "text": "Oh that's very good of you .", "begin_time": 380.06, "end_time": 380.97, "speaker_id": "B", "da_type": "Be-Positive", "nite_id": "ES2002a.B.dialog-act.dharshi.63"}
+{"meeting_id": "ES2002a", "text": "[other]", "begin_time": 380.621, "end_time": 381.176, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.39"}
+{"meeting_id": "ES2002a", "text": "Now I see a rooster .", "begin_time": 382.82, "end_time": 383.68, "speaker_id": "D", "da_type": "Be-Positive", "nite_id": "ES2002a.D.dialog-act.dharshi.42"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 383.968, "end_time": 384.896, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.16"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 384.112, "end_time": 384.881, "speaker_id": "A", "da_type": "Fragment", "nite_id": "ES2002a.A.dialog-act.dharshi.25"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 384.213, "end_time": 385.76, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.65"}
+{"meeting_id": "ES2002a", "text": "Uh .", "begin_time": 388.27, "end_time": 389.07, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.64"}
+{"meeting_id": "ES2002a", "text": "What kind is it ?", "begin_time": 393.42, "end_time": 394.21, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.43"}
+{"meeting_id": "ES2002a", "text": "Um he's a mixture of uh various things .", "begin_time": 394.87, "end_time": 398.71, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.66"}
+{"meeting_id": "ES2002a", "text": "Um and what do I like about him , um ", "begin_time": 398.71, "end_time": 403.23, "speaker_id": "B", "da_type": "Other", "nite_id": "ES2002a.B.dialog-act.dharshi.67"}
+{"meeting_id": "ES2002a", "text": "That's just to suggest that his tail wags .", "begin_time": 403.23, "end_time": 405.71, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.68"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 404.797, "end_time": 405.584, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.44"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 405.539, "end_time": 406.388, "speaker_id": "A", "da_type": "Fragment", "nite_id": "ES2002a.A.dialog-act.dharshi.26"}
+{"meeting_id": "ES2002a", "text": "Um he's very friendly and cheery and always pleased to see you ,", "begin_time": 405.71, "end_time": 409.2, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.70"}
+{"meeting_id": "ES2002a", "text": "and very kind of affectionate", "begin_time": 409.2, "end_time": 411.11, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.71"}
+{"meeting_id": "ES2002a", "text": "and um [other]", "begin_time": 411.11, "end_time": 413.936, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.69"}
+{"meeting_id": "ES2002a", "text": "uh", "begin_time": 415.0, "end_time": 415.12, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.72"}
+{"meeting_id": "ES2002a", "text": "and he's quite quite wee as well so you know he can  doesn't take up too much space .", "begin_time": 415.12, "end_time": 421.48, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.73"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 420.784, "end_time": 421.745, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.45"}
+{"meeting_id": "ES2002a", "text": "Um", "begin_time": 421.48, "end_time": 422.22, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.74"}
+{"meeting_id": "ES2002a", "text": "and uh  And he does a funny thing where he chases his tail as well ,", "begin_time": 425.56, "end_time": 430.28, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.75"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 429.714, "end_time": 431.338, "speaker_id": "A", "da_type": "Fragment", "nite_id": "ES2002a.A.dialog-act.dharshi.27"}
+{"meeting_id": "ES2002a", "text": "which is quite amusing , so ", "begin_time": 430.28, "end_time": 431.78, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.76"}
+{"meeting_id": "ES2002a", "text": "Is he aware that th it's his own cha tail he's chasing ?", "begin_time": 431.27, "end_time": 433.44, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.46"}
+{"meeting_id": "ES2002a", "text": "It is . I think it is .", "begin_time": 433.83, "end_time": 434.67, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.77"}
+{"meeting_id": "ES2002a", "text": "He only does it after he's had his dinner", "begin_time": 434.67, "end_time": 436.84, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.78"}
+{"meeting_id": "ES2002a", "text": "[cough]", "begin_time": 436.336, "end_time": 437.264, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.47"}
+{"meeting_id": "ES2002a", "text": "and um he'll just all of a sudden just get up and start chasing his tail 'round the living room .", "begin_time": 436.84, "end_time": 441.92, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.79"}
+{"meeting_id": "ES2002a", "text": "Hmm .", "begin_time": 440.33, "end_time": 440.47, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.48"}
+{"meeting_id": "ES2002a", "text": "[laugh] It's an after dinner dog then .", "begin_time": 440.382, "end_time": 443.21, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.28"}
+{"meeting_id": "ES2002a", "text": "Yeah ,", "begin_time": 443.59, "end_time": 444.02, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.80"}
+{"meeting_id": "ES2002a", "text": "so uh ", "begin_time": 444.02, "end_time": 445.502, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.81"}
+{"meeting_id": "ES2002a", "text": "Probably when he was little he got lots of attention for doing it and has forever been conditioned .", "begin_time": 444.05, "end_time": 448.71, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.49"}
+{"meeting_id": "ES2002a", "text": "Yeah ,", "begin_time": 447.15, "end_time": 447.47, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.82"}
+{"meeting_id": "ES2002a", "text": "maybe .", "begin_time": 447.47, "end_time": 448.08, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.105"}
+{"meeting_id": "ES2002a", "text": "Maybe .", "begin_time": 449.0, "end_time": 450.7, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.83"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 450.264, "end_time": 450.929, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.50"}
+{"meeting_id": "ES2002a", "text": "[laugh] Right , um where did you find this ?", "begin_time": 450.7, "end_time": 452.3, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.84"}
+{"meeting_id": "ES2002a", "text": "Just down here ? Yeah .", "begin_time": 452.3, "end_time": 453.61, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.85"}
+{"meeting_id": "ES2002a", "text": "[other]", "begin_time": 453.055, "end_time": 453.425, "speaker_id": "A", "da_type": "Fragment", "nite_id": "ES2002a.A.dialog-act.dharshi.29"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 455.51, "end_time": 456.76, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.86"}
+{"meeting_id": "ES2002a", "text": "[other] Um what are we doing next ? Uh um .", "begin_time": 458.294, "end_time": 462.97, "speaker_id": "B", "da_type": "Other", "nite_id": "ES2002a.B.dialog-act.dharshi.87"}
+{"meeting_id": "ES2002a", "text": "Okay , uh we now need to discuss the project finance .", "begin_time": 465.51, "end_time": 470.01, "speaker_id": "B", "da_type": "Suggest", "nite_id": "ES2002a.B.dialog-act.dharshi.88"}
+{"meeting_id": "ES2002a", "text": "Um so according to the brief um we're gonna be selling this remote control for twenty five Euro ,", "begin_time": 470.01, "end_time": 476.53, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.89"}
+{"meeting_id": "ES2002a", "text": "um and we're aiming to make fifty million Euro .", "begin_time": 476.53, "end_time": 482.77, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.90"}
+{"meeting_id": "ES2002a", "text": "Um so we're gonna be selling this on an international scale .", "begin_time": 482.77, "end_time": 487.21, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.91"}
+{"meeting_id": "ES2002a", "text": "And uh we don't want it to cost any more than uh twelve fifty Euros , so fifty percent of the selling price .", "begin_time": 487.21, "end_time": 495.0, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.92"}
+{"meeting_id": "ES2002a", "text": "'Kay .", "begin_time": 488.56, "end_time": 488.91, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.51"}
+{"meeting_id": "ES2002a", "text": "Um , can we just go over that again ?", "begin_time": 496.02, "end_time": 497.6, "speaker_id": "D", "da_type": "Suggest", "nite_id": "ES2002a.D.dialog-act.dharshi.52"}
+{"meeting_id": "ES2002a", "text": "Sure .", "begin_time": 497.99, "end_time": 498.46, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.93"}
+{"meeting_id": "ES2002a", "text": "Uh , so bas at twel", "begin_time": 499.16, "end_time": 502.11, "speaker_id": "D", "da_type": "Comment-About-Understanding", "nite_id": "ES2002a.D.dialog-act.dharshi.53"}
+{"meeting_id": "ES2002a", "text": "Alright , yeah . Okay .", "begin_time": 502.11, "end_time": 504.1, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.54"}
+{"meeting_id": "ES2002a", "text": "So cost  like production cost is twelve fifty ,", "begin_time": 505.28, "end_time": 509.26, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.55"}
+{"meeting_id": "ES2002a", "text": "All together .", "begin_time": 508.17, "end_time": 508.92, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.94"}
+{"meeting_id": "ES2002a", "text": "but selling price is  is that wholesale or retail ?", "begin_time": 509.26, "end_time": 513.06, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.56"}
+{"meeting_id": "ES2002a", "text": "Like on the shelf .", "begin_time": 513.06, "end_time": 514.0, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.57"}
+{"meeting_id": "ES2002a", "text": "Um I dunno .", "begin_time": 515.16, "end_time": 516.78, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.95"}
+{"meeting_id": "ES2002a", "text": "I imagine ", "begin_time": 516.78, "end_time": 517.97, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.99"}
+{"meeting_id": "ES2002a", "text": "That's a good question .", "begin_time": 517.97, "end_time": 518.91, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.96"}
+{"meeting_id": "ES2002a", "text": "Our sale our sale anyway .", "begin_time": 518.31, "end_time": 520.65, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.59"}
+{"meeting_id": "ES2002a", "text": "I imagine it probably is our sale actually", "begin_time": 519.67, "end_time": 521.58, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.97"}
+{"meeting_id": "ES2002a", "text": "Yeah , okay okay .", "begin_time": 520.65, "end_time": 522.57, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.58"}
+{"meeting_id": "ES2002a", "text": "because it's probably up to the the um the retailer to uh sell it for whatever price they want . Um .", "begin_time": 521.58, "end_time": 530.2, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.98"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 526.79, "end_time": 527.05, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.60"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 528.9, "end_time": 529.14, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.61"}
+{"meeting_id": "ES2002a", "text": "Alright .", "begin_time": 531.58, "end_time": 531.81, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.62"}
+{"meeting_id": "ES2002a", "text": "But I  I don't know ,", "begin_time": 531.83, "end_time": 532.46, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.106"}
+{"meeting_id": "ES2002a", "text": "I mean do you think the fact that it's going to be sold internationally will have a bearing on how we design it at all ?", "begin_time": 532.46, "end_time": 538.19, "speaker_id": "B", "da_type": "Elicit-Assessment", "nite_id": "ES2002a.B.dialog-act.dharshi.100"}
+{"meeting_id": "ES2002a", "text": "Yes . [laugh]", "begin_time": 538.77, "end_time": 539.424, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.63"}
+{"meeting_id": "ES2002a", "text": "Think it will ?", "begin_time": 539.31, "end_time": 541.17, "speaker_id": "B", "da_type": "Comment-About-Understanding", "nite_id": "ES2002a.B.dialog-act.dharshi.107"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 540.69, "end_time": 540.94, "speaker_id": "D", "da_type": "", "nite_id": "ES2002a.D.dialog-act.dharshi.64"}
+{"meeting_id": "ES2002a", "text": "Um .", "begin_time": 541.17, "end_time": 542.15, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.102"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 543.86, "end_time": 544.12, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.65"}
+{"meeting_id": "ES2002a", "text": "[other] Hmm .", "begin_time": 544.544, "end_time": 546.06, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.101"}
+{"meeting_id": "ES2002a", "text": "Well right away I'm wondering if there's um th th uh , like with D_V_D_ players , if there are zones .", "begin_time": 548.28, "end_time": 554.28, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.66"}
+{"meeting_id": "ES2002a", "text": "Oh yeah ,", "begin_time": 553.78, "end_time": 554.46, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.108"}
+{"meeting_id": "ES2002a", "text": "Um f frequencies or something", "begin_time": 554.28, "end_time": 557.41, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.67"}
+{"meeting_id": "ES2002a", "text": "regions and stuff , yeah .", "begin_time": 554.46, "end_time": 556.62, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.109"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 556.62, "end_time": 557.56, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.110"}
+{"meeting_id": "ES2002a", "text": "um as well as uh characters ,", "begin_time": 557.41, "end_time": 561.17, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.68"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 557.56, "end_time": 558.06, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.111"}
+{"meeting_id": "ES2002a", "text": "um different uh keypad styles and s symbols .", "begin_time": 561.17, "end_time": 565.35, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.69"}
+{"meeting_id": "ES2002a", "text": "Hmm .", "begin_time": 565.05, "end_time": 565.32, "speaker_id": "A", "da_type": "Backchannel", "nite_id": "ES2002a.A.dialog-act.dharshi.30"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 565.13, "end_time": 565.93, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.112"}
+{"meeting_id": "ES2002a", "text": "Well for a remote control , do you think that will be ", "begin_time": 565.93, "end_time": 568.3, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.113"}
+{"meeting_id": "ES2002a", "text": "Um .", "begin_time": 566.17, "end_time": 566.7, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.70"}
+{"meeting_id": "ES2002a", "text": "I suppose it's depends on how complicated our remote control is .", "begin_time": 568.3, "end_time": 571.01, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.114"}
+{"meeting_id": "ES2002a", "text": "I don't know .", "begin_time": 568.46, "end_time": 568.83, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.71"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 571.22, "end_time": 571.58, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.72"}
+{"meeting_id": "ES2002a", "text": "It does make sense from maybe the design point of view", "begin_time": 571.74, "end_time": 574.91, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.31"}
+{"meeting_id": "ES2002a", "text": "'cause you have more complicated characters like European languages , then you need more buttons .", "begin_time": 574.91, "end_time": 580.21, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.32"}
+{"meeting_id": "ES2002a", "text": "Yeah , yeah .", "begin_time": 580.42, "end_time": 583.04, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.115"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 580.66, "end_time": 580.94, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.73"}
+{"meeting_id": "ES2002a", "text": "So , possibly .", "begin_time": 581.3, "end_time": 582.52, "speaker_id": "A", "da_type": "Assess", "nite_id": "ES2002a.A.dialog-act.dharshi.33"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 582.33, "end_time": 583.5, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.75"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 583.04, "end_time": 583.9, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.117"}
+{"meeting_id": "ES2002a", "text": "And then a and then al the other thing international is on top of the price .", "begin_time": 583.5, "end_time": 587.78, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.76"}
+{"meeting_id": "ES2002a", "text": "I'm thinking the price might might appeal to a certain market in one region , whereas in another it'll be different , so ", "begin_time": 587.78, "end_time": 596.832, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.77"}
+{"meeting_id": "ES2002a", "text": "What , just like in terms of like the wealth of the country ?", "begin_time": 597.79, "end_time": 600.43, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.118"}
+{"meeting_id": "ES2002a", "text": "Just a chara just a characteristic of the ", "begin_time": 598.26, "end_time": 600.064, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.74"}
+{"meeting_id": "ES2002a", "text": "Like how much money people have to spend on things like ?", "begin_time": 600.43, "end_time": 603.43, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.119"}
+{"meeting_id": "ES2002a", "text": "Just ", "begin_time": 601.09, "end_time": 601.845, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.79"}
+{"meeting_id": "ES2002a", "text": "Or just like , basic product podi positioning ,", "begin_time": 602.87, "end_time": 606.29, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.80"}
+{"meeting_id": "ES2002a", "text": "the twenty five Euro remote control might be a big hit in London ,", "begin_time": 606.29, "end_time": 611.16, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.81"}
+{"meeting_id": "ES2002a", "text": "might not be such a big hit in Greece ,", "begin_time": 611.16, "end_time": 615.2, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.82"}
+{"meeting_id": "ES2002a", "text": "who knows ,", "begin_time": 615.2, "end_time": 615.98, "speaker_id": "D", "da_type": "Other", "nite_id": "ES2002a.D.dialog-act.dharshi.84"}
+{"meeting_id": "ES2002a", "text": "Aye , I see what you mean , yeah .", "begin_time": 615.74, "end_time": 617.28, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.120"}
+{"meeting_id": "ES2002a", "text": "something like that , yeah .", "begin_time": 615.98, "end_time": 616.94, "speaker_id": "D", "da_type": "Other", "nite_id": "ES2002a.D.dialog-act.dharshi.85"}
+{"meeting_id": "ES2002a", "text": "Marketing .", "begin_time": 619.01, "end_time": 620.06, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.121"}
+{"meeting_id": "ES2002a", "text": "[other]", "begin_time": 619.616, "end_time": 620.167, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.83"}
+{"meeting_id": "ES2002a", "text": "Good marketing thoughts .", "begin_time": 620.06, "end_time": 621.09, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.122"}
+{"meeting_id": "ES2002a", "text": "Yep .", "begin_time": 620.48, "end_time": 620.64, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.86"}
+{"meeting_id": "ES2002a", "text": "Oh gosh ,", "begin_time": 621.09, "end_time": 621.49, "speaker_id": "B", "da_type": "Other", "nite_id": "ES2002a.B.dialog-act.dharshi.123"}
+{"meeting_id": "ES2002a", "text": "I should be writing all this down . Um .", "begin_time": 621.49, "end_time": 624.87, "speaker_id": "B", "da_type": "Offer", "nite_id": "ES2002a.B.dialog-act.dharshi.124"}
+{"meeting_id": "ES2002a", "text": "Right away I'm making some kind of assumptions about what what information we're given here ,", "begin_time": 655.45, "end_time": 660.71, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.87"}
+{"meeting_id": "ES2002a", "text": "Mm .", "begin_time": 660.7, "end_time": 661.22, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.125"}
+{"meeting_id": "ES2002a", "text": "thinking , 'kay trendy probably means something other than just basic ,", "begin_time": 660.71, "end_time": 665.64, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.88"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 665.36, "end_time": 665.84, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.126"}
+{"meeting_id": "ES2002a", "text": "something other than just standard . Um", "begin_time": 665.64, "end_time": 669.16, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.89"}
+{"meeting_id": "ES2002a", "text": "so I'm wondering right away ,", "begin_time": 670.31, "end_time": 672.15, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.90"}
+{"meeting_id": "ES2002a", "text": "is selling twenty five Euros , is that sort of the ", "begin_time": 672.15, "end_time": 674.38, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.93"}
+{"meeting_id": "ES2002a", "text": "thi is this gonna to be like the premium product kinda thing or ", "begin_time": 674.38, "end_time": 677.852, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.92"}
+{"meeting_id": "ES2002a", "text": "Yeah , yeah .", "begin_time": 677.15, "end_time": 677.66, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.127"}
+{"meeting_id": "ES2002a", "text": "Like how much does , you know , a remote control cost .", "begin_time": 677.66, "end_time": 680.53, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.128"}
+{"meeting_id": "ES2002a", "text": "Uh-huh .", "begin_time": 680.52, "end_time": 680.81, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.94"}
+{"meeting_id": "ES2002a", "text": "Well twenty five Euro , I mean that's um that's about like eighteen pounds or something ,", "begin_time": 681.66, "end_time": 687.09, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.129"}
+{"meeting_id": "ES2002a", "text": "isn't it ?", "begin_time": 687.09, "end_time": 687.81, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.130"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 687.72, "end_time": 688.11, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.95"}
+{"meeting_id": "ES2002a", "text": "Or no ,", "begin_time": 687.81, "end_time": 688.04, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.131"}
+{"meeting_id": "ES2002a", "text": "is it as much as that ?", "begin_time": 688.04, "end_time": 689.7, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.132"}
+{"meeting_id": "ES2002a", "text": "Sixteen seventeen eighteen pounds .", "begin_time": 689.7, "end_time": 691.58, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.133"}
+{"meeting_id": "ES2002a", "text": "Yep .", "begin_time": 689.77, "end_time": 689.98, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.96"}
+{"meeting_id": "ES2002a", "text": "Yeah ,", "begin_time": 691.16, "end_time": 691.33, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.97"}
+{"meeting_id": "ES2002a", "text": "I'd say so ,", "begin_time": 691.33, "end_time": 691.82, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.98"}
+{"meeting_id": "ES2002a", "text": "yeah .", "begin_time": 691.82, "end_time": 691.97, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.99"}
+{"meeting_id": "ES2002a", "text": "Um , I dunno ,", "begin_time": 692.42, "end_time": 694.16, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.135"}
+{"meeting_id": "ES2002a", "text": "I've never bought a remote control ,", "begin_time": 694.16, "end_time": 695.53, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.136"}
+{"meeting_id": "ES2002a", "text": "so I don't know how how good a remote control that would get you . Um .", "begin_time": 695.53, "end_time": 700.41, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.137"}
+{"meeting_id": "ES2002a", "text": "No .", "begin_time": 696.23, "end_time": 696.58, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.100"}
+{"meeting_id": "ES2002a", "text": "Yeah ,", "begin_time": 697.98, "end_time": 699.19, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.102"}
+{"meeting_id": "ES2002a", "text": "yeah . [cough]", "begin_time": 699.19, "end_time": 702.08, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.103"}
+{"meeting_id": "ES2002a", "text": "But yeah , I suppose it has to look kind of cool and gimmicky .", "begin_time": 702.02, "end_time": 705.01, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.138"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 704.03, "end_time": 704.41, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.104"}
+{"meeting_id": "ES2002a", "text": "Um right , okay .", "begin_time": 707.1, "end_time": 710.07, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.139"}
+{"meeting_id": "ES2002a", "text": "Let me just scoot on ahead here .", "begin_time": 711.43, "end_time": 713.81, "speaker_id": "B", "da_type": "Offer", "nite_id": "ES2002a.B.dialog-act.dharshi.140"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 713.81, "end_time": 714.96, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.141"}
+{"meeting_id": "ES2002a", "text": "Um well d Does anybody have anything to add to uh to the finance issue at all ?", "begin_time": 714.96, "end_time": 721.44, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.142"}
+{"meeting_id": "ES2002a", "text": "Do we have any other background information on like how that compares to other", "begin_time": 722.77, "end_time": 727.01, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.106"}
+{"meeting_id": "ES2002a", "text": "Thin", "begin_time": 722.81, "end_time": 723.0, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.143"}
+{"meeting_id": "ES2002a", "text": "No , actually .", "begin_time": 727.65, "end_time": 728.32, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.145"}
+{"meeting_id": "ES2002a", "text": "That would be useful , though ,", "begin_time": 728.32, "end_time": 729.45, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.146"}
+{"meeting_id": "ES2002a", "text": "other [other] ", "begin_time": 728.35, "end_time": 729.232, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.108"}
+{"meeting_id": "ES2002a", "text": "wouldn't it ,", "begin_time": 729.45, "end_time": 729.81, "speaker_id": "B", "da_type": "Elicit-Assessment", "nite_id": "ES2002a.B.dialog-act.dharshi.147"}
+{"meeting_id": "ES2002a", "text": "if you knew like what your money would get you now .", "begin_time": 729.81, "end_time": 732.87, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.148"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 730.73, "end_time": 731.07, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.109"}
+{"meeting_id": "ES2002a", "text": "Hmm .", "begin_time": 732.32, "end_time": 732.54, "speaker_id": "A", "da_type": "Backchannel", "nite_id": "ES2002a.A.dialog-act.dharshi.34"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 734.73, "end_time": 735.08, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.107"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 735.11, "end_time": 735.7, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.144"}
+{"meeting_id": "ES2002a", "text": "Yeah , interesting thing about discussing um production of a remote control for me is that l", "begin_time": 753.67, "end_time": 759.58, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.111"}
+{"meeting_id": "ES2002a", "text": "as you point out ,", "begin_time": 759.58, "end_time": 760.59, "speaker_id": "D", "da_type": "Be-Positive", "nite_id": "ES2002a.D.dialog-act.dharshi.112"}
+{"meeting_id": "ES2002a", "text": "I just don't think of remote controls as somethin something people consciously assess in their purchasing habits .", "begin_time": 760.59, "end_time": 767.74, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.113"}
+{"meeting_id": "ES2002a", "text": "Yeah , yeah .", "begin_time": 767.69, "end_time": 768.25, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.149"}
+{"meeting_id": "ES2002a", "text": "It's just like getting shoelaces with shoes or something .", "begin_time": 767.74, "end_time": 772.49, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.114"}
+{"meeting_id": "ES2002a", "text": "Oh .", "begin_time": 772.01, "end_time": 772.14, "speaker_id": "B", "da_type": "Other", "nite_id": "ES2002a.B.dialog-act.dharshi.150"}
+{"meeting_id": "ES2002a", "text": "It just comes along .", "begin_time": 772.49, "end_time": 773.41, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.115"}
+{"meeting_id": "ES2002a", "text": "Five minutes to end of meeting .", "begin_time": 772.8, "end_time": 774.17, "speaker_id": "B", "da_type": "Comment-About-Understanding", "nite_id": "ES2002a.B.dialog-act.dharshi.152"}
+{"meeting_id": "ES2002a", "text": "Oh , okay .", "begin_time": 774.17, "end_time": 775.33, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.153"}
+{"meeting_id": "ES2002a", "text": "We're a bit behind .", "begin_time": 775.33, "end_time": 776.97, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.151"}
+{"meeting_id": "ES2002a", "text": "Do you know what I mean ?", "begin_time": 776.12, "end_time": 777.67, "speaker_id": "D", "da_type": "Elicit-Assessment", "nite_id": "ES2002a.D.dialog-act.dharshi.116"}
+{"meeting_id": "ES2002a", "text": "[other] Yeah .", "begin_time": 776.735, "end_time": 777.89, "speaker_id": "C", "da_type": "Backchannel", "nite_id": "ES2002a.C.dialog-act.dharshi.19"}
+{"meeting_id": "ES2002a", "text": "Like so sort of like how do you", "begin_time": 777.67, "end_time": 779.25, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.117"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 777.7, "end_time": 778.02, "speaker_id": "A", "da_type": "Backchannel", "nite_id": "ES2002a.A.dialog-act.dharshi.35"}
+{"meeting_id": "ES2002a", "text": "I I mean one one way of looking at it would be , well the people producing television sets , maybe they have to buy remote controls .", "begin_time": 779.25, "end_time": 786.49, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.118"}
+{"meeting_id": "ES2002a", "text": "Or another way is maybe people who have T_V_ sets are really fed up with their remote control and they really want a better one or something .", "begin_time": 786.49, "end_time": 793.63, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.119"}
+{"meeting_id": "ES2002a", "text": "I know um ", "begin_time": 792.52, "end_time": 793.327, "speaker_id": "C", "da_type": "Fragment", "nite_id": "ES2002a.C.dialog-act.dharshi.20"}
+{"meeting_id": "ES2002a", "text": "My parents went out and bought um remote controls because um they got fed up of having four or five different remote controls for each things the house .", "begin_time": 794.52, "end_time": 801.38, "speaker_id": "C", "da_type": "Inform", "nite_id": "ES2002a.C.dialog-act.dharshi.17"}
+{"meeting_id": "ES2002a", "text": "But ", "begin_time": 794.53, "end_time": 795.162, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.120"}
+{"meeting_id": "ES2002a", "text": "Right . Right .", "begin_time": 799.88, "end_time": 801.75, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.121"}
+{"meeting_id": "ES2002a", "text": "So um for them it was just how many devices control .", "begin_time": 801.38, "end_time": 804.33, "speaker_id": "C", "da_type": "Inform", "nite_id": "ES2002a.C.dialog-act.dharshi.18"}
+{"meeting_id": "ES2002a", "text": "Okay so ", "begin_time": 801.75, "end_time": 802.454, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.123"}
+{"meeting_id": "ES2002a", "text": "Right ,", "begin_time": 804.47, "end_time": 804.72, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.122"}
+{"meeting_id": "ES2002a", "text": "so in function one of the priorities might be to combine as many uses ", "begin_time": 804.72, "end_time": 810.448, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.125"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 806.46, "end_time": 806.98, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.154"}
+{"meeting_id": "ES2002a", "text": "Right , so do you think that should be like a main design aim of our remote control d you know ,", "begin_time": 811.51, "end_time": 815.56, "speaker_id": "B", "da_type": "Elicit-Assessment", "nite_id": "ES2002a.B.dialog-act.dharshi.155"}
+{"meeting_id": "ES2002a", "text": "I think so .", "begin_time": 814.98, "end_time": 815.81, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.124"}
+{"meeting_id": "ES2002a", "text": "do your your satellite and your regular telly and your V_C_R_ and everything ?", "begin_time": 815.56, "end_time": 820.83, "speaker_id": "B", "da_type": "Elicit-Assessment", "nite_id": "ES2002a.B.dialog-act.dharshi.156"}
+{"meeting_id": "ES2002a", "text": "Yeah , yeah .", "begin_time": 815.81, "end_time": 817.04, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.127"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 818.45, "end_time": 818.67, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.126"}
+{"meeting_id": "ES2002a", "text": "Well like um ,", "begin_time": 819.79, "end_time": 821.05, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.128"}
+{"meeting_id": "ES2002a", "text": "maybe what we could use is a sort of like a example of a successful other piece technology is palm palm pilots .", "begin_time": 821.05, "end_time": 828.28, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.129"}
+{"meeting_id": "ES2002a", "text": "They're gone from being just like little sort of scribble boards to cameras , M_P_ three players , telephones ,", "begin_time": 828.28, "end_time": 834.09, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.130"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 832.76, "end_time": 833.2, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.157"}
+{"meeting_id": "ES2002a", "text": "everything , agenda .", "begin_time": 835.22, "end_time": 836.31, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.131"}
+{"meeting_id": "ES2002a", "text": "So , like , I wonder if we might add something new to the to the remote control market ,", "begin_time": 836.31, "end_time": 840.68, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.132"}
+{"meeting_id": "ES2002a", "text": "[other] Yeah .", "begin_time": 839.536, "end_time": 840.69, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.158"}
+{"meeting_id": "ES2002a", "text": "such as the lighting in your house , or um ", "begin_time": 840.68, "end_time": 844.096, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.133"}
+{"meeting_id": "ES2002a", "text": "Or even like , you know , notes about um what you wanna watch .", "begin_time": 843.99, "end_time": 847.62, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.159"}
+{"meeting_id": "ES2002a", "text": "Like you might put in there oh I want to watch such and such and look a", "begin_time": 847.62, "end_time": 850.33, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.160"}
+{"meeting_id": "ES2002a", "text": "Yeah ,", "begin_time": 849.08, "end_time": 849.78, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.134"}
+{"meeting_id": "ES2002a", "text": "yeah .", "begin_time": 849.78, "end_time": 851.06, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.135"}
+{"meeting_id": "ES2002a", "text": "Oh that's a good idea .", "begin_time": 850.33, "end_time": 851.55, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.161"}
+{"meeting_id": "ES2002a", "text": "An", "begin_time": 851.06, "end_time": 851.42, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.136"}
+{"meeting_id": "ES2002a", "text": "So extra functionalities .", "begin_time": 851.55, "end_time": 853.03, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.162"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 852.79, "end_time": 853.54, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.138"}
+{"meeting_id": "ES2002a", "text": "Like , p personally for me , at home I've I've combined the um the audio video of my television set and my D_V_D_ player and my C_D_ player .", "begin_time": 853.54, "end_time": 862.9, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.139"}
+{"meeting_id": "ES2002a", "text": "So they w all work actually function together", "begin_time": 862.9, "end_time": 864.62, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.140"}
+{"meeting_id": "ES2002a", "text": "but I have different remote controls for each of them .", "begin_time": 864.62, "end_time": 866.91, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.141"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 866.59, "end_time": 867.24, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.163"}
+{"meeting_id": "ES2002a", "text": "So it's sort of ironic that that then they're in there", "begin_time": 866.91, "end_time": 870.27, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.142"}
+{"meeting_id": "ES2002a", "text": "um", "begin_time": 872.03, "end_time": 872.56, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.137"}
+{"meeting_id": "ES2002a", "text": "you know , the sound and everything it's just one system .", "begin_time": 874.02, "end_time": 876.45, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.143"}
+{"meeting_id": "ES2002a", "text": "But each one's got its own little", "begin_time": 876.45, "end_time": 877.77, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.144"}
+{"meeting_id": "ES2002a", "text": "Hmm .", "begin_time": 876.88, "end_time": 877.46, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.164"}
+{"meeting_id": "ES2002a", "text": "part .", "begin_time": 878.95, "end_time": 879.22, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.145"}
+{"meeting_id": "ES2002a", "text": "Um okay ,", "begin_time": 883.05, "end_time": 885.66, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.167"}
+{"meeting_id": "ES2002a", "text": "uh I'd wel", "begin_time": 885.66, "end_time": 886.62, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.168"}
+{"meeting_id": "ES2002a", "text": "we're gonna have to wrap up pretty quickly in the next couple of minutes .", "begin_time": 886.62, "end_time": 889.88, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.166"}
+{"meeting_id": "ES2002a", "text": "Um I'll just check we've nothing else", "begin_time": 889.88, "end_time": 891.96, "speaker_id": "B", "da_type": "Offer", "nite_id": "ES2002a.B.dialog-act.dharshi.169"}
+{"meeting_id": "ES2002a", "text": ". Okay .", "begin_time": 891.96, "end_time": 892.58, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.170"}
+{"meeting_id": "ES2002a", "text": "Um so anything else anybody wants to add about what they don't like about remote controls they've used ,", "begin_time": 892.58, "end_time": 898.27, "speaker_id": "B", "da_type": "Elicit-Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.171"}
+{"meeting_id": "ES2002a", "text": "what they would really like to be part of this new one at all ?", "begin_time": 898.27, "end_time": 902.62, "speaker_id": "B", "da_type": "Elicit-Offer-Or-Suggestion", "nite_id": "ES2002a.B.dialog-act.dharshi.172"}
+{"meeting_id": "ES2002a", "text": "And you keep losing them .", "begin_time": 903.08, "end_time": 903.98, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.36"}
+{"meeting_id": "ES2002a", "text": "You keep losing them .", "begin_time": 904.6, "end_time": 905.58, "speaker_id": "B", "da_type": "Other", "nite_id": "ES2002a.B.dialog-act.dharshi.173"}
+{"meeting_id": "ES2002a", "text": "Mm .", "begin_time": 904.75, "end_time": 905.26, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.146"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 905.58, "end_time": 906.08, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.174"}
+{"meeting_id": "ES2002a", "text": "Finding them is really a pain , you know .", "begin_time": 906.45, "end_time": 908.59, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.37"}
+{"meeting_id": "ES2002a", "text": "Mm . Mm .", "begin_time": 907.47, "end_time": 909.26, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.147"}
+{"meeting_id": "ES2002a", "text": "I mean it's usually quite small ,", "begin_time": 908.59, "end_time": 910.62, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.38"}
+{"meeting_id": "ES2002a", "text": "or when you want it right , it slipped behind the couch", "begin_time": 910.62, "end_time": 912.9, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.39"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm . Mm-hmm .", "begin_time": 911.1, "end_time": 912.1, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.148"}
+{"meeting_id": "ES2002a", "text": "or it's kicked under the table .", "begin_time": 912.9, "end_time": 914.44, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.40"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 913.17, "end_time": 914.71, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.175"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 913.22, "end_time": 913.58, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.149"}
+{"meeting_id": "ES2002a", "text": "W You get those ones where you can , if you like , whistle or make a really high pitched noise they beep .", "begin_time": 914.71, "end_time": 920.04, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.178"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 914.77, "end_time": 915.13, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.150"}
+{"meeting_id": "ES2002a", "text": "You know .", "begin_time": 915.45, "end_time": 916.11, "speaker_id": "A", "da_type": "Elicit-Assessment", "nite_id": "ES2002a.A.dialog-act.dharshi.41"}
+{"meeting_id": "ES2002a", "text": "That's just really good id", "begin_time": 916.12, "end_time": 916.97, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.156"}
+{"meeting_id": "ES2002a", "text": "Yep .", "begin_time": 919.28, "end_time": 919.69, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.157"}
+{"meeting_id": "ES2002a", "text": "There ", "begin_time": 920.04, "end_time": 920.5, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.179"}
+{"meeting_id": "ES2002a", "text": "I mean is that something we'd want to include , do you think ?", "begin_time": 920.5, "end_time": 922.53, "speaker_id": "B", "da_type": "Elicit-Assessment", "nite_id": "ES2002a.B.dialog-act.dharshi.180"}
+{"meeting_id": "ES2002a", "text": "Uh , [other]", "begin_time": 924.35, "end_time": 925.74, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.154"}
+{"meeting_id": "ES2002a", "text": "Dunno .", "begin_time": 925.37, "end_time": 926.64, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.181"}
+{"meeting_id": "ES2002a", "text": "sure . [cough]", "begin_time": 925.74, "end_time": 927.64, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.155"}
+{"meeting_id": "ES2002a", "text": "Okay maybe . [other]", "begin_time": 926.64, "end_time": 927.869, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.182"}
+{"meeting_id": "ES2002a", "text": "I remember when the first remote control my my family had was on a cable .", "begin_time": 927.64, "end_time": 932.01, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.151"}
+{"meeting_id": "ES2002a", "text": "Actually had a cable between it and the T_V_", "begin_time": 932.01, "end_time": 933.48, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.152"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 932.64, "end_time": 933.296, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.176"}
+{"meeting_id": "ES2002a", "text": "and big like buttons that sort of like , like on a blender or something .", "begin_time": 933.48, "end_time": 937.36, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.153"}
+{"meeting_id": "ES2002a", "text": "My goodness .", "begin_time": 937.0, "end_time": 937.62, "speaker_id": "B", "da_type": "Other", "nite_id": "ES2002a.B.dialog-act.dharshi.177"}
+{"meeting_id": "ES2002a", "text": "And um , you know ,", "begin_time": 937.36, "end_time": 938.4, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.159"}
+{"meeting_id": "ES2002a", "text": "when I think about what they are now , it's better ,", "begin_time": 938.4, "end_time": 940.72, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.160"}
+{"meeting_id": "ES2002a", "text": "but actually it's still kind of , I dunno , like a massive junky thing on the table .", "begin_time": 940.72, "end_time": 946.4, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.161"}
+{"meeting_id": "ES2002a", "text": "Still feels quite primitive .", "begin_time": 946.26, "end_time": 948.04, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.183"}
+{"meeting_id": "ES2002a", "text": "Maybe we could think about how , could be more , you know , streamlined . S", "begin_time": 946.4, "end_time": 952.63, "speaker_id": "D", "da_type": "Suggest", "nite_id": "ES2002a.D.dialog-act.dharshi.158"}
+{"meeting_id": "ES2002a", "text": "Maybe like a touch screen or something ?", "begin_time": 951.41, "end_time": 952.78, "speaker_id": "B", "da_type": "Suggest", "nite_id": "ES2002a.B.dialog-act.dharshi.184"}
+{"meeting_id": "ES2002a", "text": "Something like that , yeah .", "begin_time": 953.06, "end_time": 954.2, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.162"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 954.09, "end_time": 954.42, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.185"}
+{"meeting_id": "ES2002a", "text": "Or whatever would be technologically reasonable .", "begin_time": 954.2, "end_time": 956.35, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.163"}
+{"meeting_id": "ES2002a", "text": "Uh-huh , okay .", "begin_time": 956.36, "end_time": 957.42, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.186"}
+{"meeting_id": "ES2002a", "text": "Well I guess that's up to our industrial designer .", "begin_time": 957.42, "end_time": 959.3, "speaker_id": "B", "da_type": "Suggest", "nite_id": "ES2002a.B.dialog-act.dharshi.187"}
+{"meeting_id": "ES2002a", "text": "'Cause it could b it could it could be that f", "begin_time": 957.54, "end_time": 959.24, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.166"}
+{"meeting_id": "ES2002a", "text": "it could be that functionally that doesn't make it any better ,", "begin_time": 959.24, "end_time": 961.34, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.167"}
+{"meeting_id": "ES2002a", "text": "but that just the appeal of of not having ", "begin_time": 961.34, "end_time": 963.91, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.168"}
+{"meeting_id": "ES2002a", "text": "It looks better .", "begin_time": 962.22, "end_time": 963.35, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.189"}
+{"meeting_id": "ES2002a", "text": "You know , these days there's a r pe things in people's homes are becoming more and more like chic , you know .", "begin_time": 963.91, "end_time": 969.56, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.169"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 969.0, "end_time": 969.47, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.190"}
+{"meeting_id": "ES2002a", "text": "Um , nicer materials", "begin_time": 969.56, "end_time": 971.36, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.170"}
+{"meeting_id": "ES2002a", "text": "and might be", "begin_time": 971.36, "end_time": 972.96, "speaker_id": "D", "da_type": "Suggest", "nite_id": "ES2002a.D.dialog-act.dharshi.171"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 971.85, "end_time": 972.39, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.191"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 975.24, "end_time": 975.63, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.192"}
+{"meeting_id": "ES2002a", "text": "be worth exploring anyway .", "begin_time": 975.57, "end_time": 976.83, "speaker_id": "D", "da_type": "Suggest", "nite_id": "ES2002a.D.dialog-act.dharshi.172"}
+{"meeting_id": "ES2002a", "text": "Uh .", "begin_time": 976.66, "end_time": 976.73, "speaker_id": "C", "da_type": "Backchannel", "nite_id": "ES2002a.C.dialog-act.dharshi.21"}
+{"meeting_id": "ES2002a", "text": "Right , well um", "begin_time": 977.17, "end_time": 978.62, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.198"}
+{"meeting_id": "ES2002a", "text": "so just to wrap up", "begin_time": 978.62, "end_time": 979.73, "speaker_id": "B", "da_type": "Offer", "nite_id": "ES2002a.B.dialog-act.dharshi.193"}
+{"meeting_id": "ES2002a", "text": "the next meeting's gonna be in thirty minutes .", "begin_time": 979.73, "end_time": 981.67, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.194"}
+{"meeting_id": "ES2002a", "text": "So that's about um about ten to twelve by my watch .", "begin_time": 981.67, "end_time": 985.49, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.195"}
+{"meeting_id": "ES2002a", "text": "Um so inbetween now and then , um as the industrial designer , you're gonna be working on you know the actual working design of it", "begin_time": 985.49, "end_time": 994.81, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.196"}
+{"meeting_id": "ES2002a", "text": "Yep .", "begin_time": 993.88, "end_time": 994.02, "speaker_id": "A", "da_type": "Assess", "nite_id": "ES2002a.A.dialog-act.dharshi.42"}
+{"meeting_id": "ES2002a", "text": "so y you know what you're doing there .", "begin_time": 994.81, "end_time": 996.69, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.197"}
+{"meeting_id": "ES2002a", "text": "Um for user interface , technical functions ,", "begin_time": 996.69, "end_time": 1000.99, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.199"}
+{"meeting_id": "ES2002a", "text": "I guess that's you know like what we've been talking about ,", "begin_time": 1000.99, "end_time": 1003.16, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.200"}
+{"meeting_id": "ES2002a", "text": "what it'll actually do .", "begin_time": 1003.16, "end_time": 1004.08, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.201"}
+{"meeting_id": "ES2002a", "text": "Um and uh marketing executive ,", "begin_time": 1004.08, "end_time": 1008.75, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.202"}
+{"meeting_id": "ES2002a", "text": "you'll be just thinking about what it actually  what , you know , what requirements it has to has to fulfil", "begin_time": 1010.02, "end_time": 1016.48, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.203"}
+{"meeting_id": "ES2002a", "text": "and you'll all get instructions emailed to you , I guess .", "begin_time": 1016.48, "end_time": 1019.31, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.204"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 1019.67, "end_time": 1020.01, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.173"}
+{"meeting_id": "ES2002a", "text": "Um .", "begin_time": 1021.55, "end_time": 1022.56, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.205"}
+{"meeting_id": "ES2002a", "text": "[other]", "begin_time": 1024.032, "end_time": 1025.056, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.164"}
+{"meeting_id": "ES2002a", "text": "Yeah , so it's th the functional design stage is next , I guess .", "begin_time": 1028.05, "end_time": 1031.66, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.206"}
+{"meeting_id": "ES2002a", "text": "[other]", "begin_time": 1032.573, "end_time": 1033.164, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.188"}
+{"meeting_id": "ES2002a", "text": "And uh", "begin_time": 1034.47, "end_time": 1035.27, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.207"}
+{"meeting_id": "ES2002a", "text": "and that's the end of the meeting .", "begin_time": 1036.47, "end_time": 1037.69, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.208"}
+{"meeting_id": "ES2002a", "text": "So I got that little message a lot sooner than I thought I would , so ", "begin_time": 1039.12, "end_time": 1042.624, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.209"}
+{"meeting_id": "ES2002a", "text": "Um . [cough]", "begin_time": 1039.8, "end_time": 1041.248, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.174"}
+{"meeting_id": "ES2002a", "text": "[other]", "begin_time": 1044.944, "end_time": 1045.136, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.165"}
+{"meeting_id": "ES2002a", "text": "Before we wrap up , just to make sure we're all on the same page here ,", "begin_time": 1047.17, "end_time": 1050.09, "speaker_id": "D", "da_type": "Suggest", "nite_id": "ES2002a.D.dialog-act.dharshi.175"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 1049.54, "end_time": 1050.04, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.210"}
+{"meeting_id": "ES2002a", "text": "um , do we ", "begin_time": 1050.09, "end_time": 1052.89, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.176"}
+{"meeting_id": "ES2002a", "text": "We were given sort of an example of a coffee machine or something ,", "begin_time": 1052.89, "end_time": 1056.51, "speaker_id": "D", "da_type": "Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.177"}
+{"meeting_id": "ES2002a", "text": "Uh-huh , yeah .", "begin_time": 1056.3, "end_time": 1057.68, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.211"}
+{"meeting_id": "ES2002a", "text": "right ?", "begin_time": 1056.51, "end_time": 1057.14, "speaker_id": "D", "da_type": "Elicit-Comment-Understanding", "nite_id": "ES2002a.D.dialog-act.dharshi.178"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 1056.93, "end_time": 1057.09, "speaker_id": "A", "da_type": "Backchannel", "nite_id": "ES2002a.A.dialog-act.dharshi.43"}
+{"meeting_id": "ES2002a", "text": "Well ,", "begin_time": 1057.14, "end_time": 1057.41, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.179"}
+{"meeting_id": "ES2002a", "text": "um", "begin_time": 1058.61, "end_time": 1059.15, "speaker_id": "D", "da_type": "Stall", "nite_id": "ES2002a.D.dialog-act.dharshi.180"}
+{"meeting_id": "ES2002a", "text": "are we at ma right now on the assumption that our television remote control may have features which go beyond the television ?", "begin_time": 1060.99, "end_time": 1067.54, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.181"}
+{"meeting_id": "ES2002a", "text": "Or are we keeping sort of like a a design commitment to television features ?", "begin_time": 1067.54, "end_time": 1073.79, "speaker_id": "D", "da_type": "Elicit-Inform", "nite_id": "ES2002a.D.dialog-act.dharshi.182"}
+{"meeting_id": "ES2002a", "text": "Th", "begin_time": 1068.76, "end_time": 1068.8, "speaker_id": "B", "da_type": "Fragment", "nite_id": "ES2002a.B.dialog-act.dharshi.212"}
+{"meeting_id": "ES2002a", "text": "Okay ,", "begin_time": 1073.56, "end_time": 1073.97, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.213"}
+{"meeting_id": "ES2002a", "text": "I I don't know .", "begin_time": 1073.79, "end_time": 1074.44, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.183"}
+{"meeting_id": "ES2002a", "text": "well just very quickly", "begin_time": 1073.97, "end_time": 1075.12, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.214"}
+{"meeting_id": "ES2002a", "text": "'cause this  we're supposed to finish now .", "begin_time": 1075.12, "end_time": 1076.64, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.215"}
+{"meeting_id": "ES2002a", "text": "Yep .", "begin_time": 1076.56, "end_time": 1077.45, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.185"}
+{"meeting_id": "ES2002a", "text": "Um I guess that's up to us ,", "begin_time": 1076.64, "end_time": 1079.1, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.216"}
+{"meeting_id": "ES2002a", "text": "Yeah , sure .", "begin_time": 1077.45, "end_time": 1078.06, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.186"}
+{"meeting_id": "ES2002a", "text": "I mean you probably want some kind of unique selling point of it ,", "begin_time": 1079.1, "end_time": 1082.39, "speaker_id": "B", "da_type": "Suggest", "nite_id": "ES2002a.B.dialog-act.dharshi.217"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 1081.99, "end_time": 1082.38, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.184"}
+{"meeting_id": "ES2002a", "text": "so um , you know ", "begin_time": 1082.39, "end_time": 1084.848, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.218"}
+{"meeting_id": "ES2002a", "text": "I think one factor would be production cost .", "begin_time": 1084.36, "end_time": 1086.91, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.44"}
+{"meeting_id": "ES2002a", "text": "Okay , yeah .", "begin_time": 1086.96, "end_time": 1087.76, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.187"}
+{"meeting_id": "ES2002a", "text": "Because there's a cap there ,", "begin_time": 1087.57, "end_time": 1088.74, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.45"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 1087.59, "end_time": 1088.2, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.219"}
+{"meeting_id": "ES2002a", "text": "so um depends on how much you can cram into that price . Um .", "begin_time": 1088.74, "end_time": 1094.9, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.46"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 1089.89, "end_time": 1090.23, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.188"}
+{"meeting_id": "ES2002a", "text": "Mm-hmm .", "begin_time": 1093.82, "end_time": 1094.41, "speaker_id": "B", "da_type": "Backchannel", "nite_id": "ES2002a.B.dialog-act.dharshi.220"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 1093.83, "end_time": 1094.13, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.189"}
+{"meeting_id": "ES2002a", "text": "Yeah .", "begin_time": 1095.78, "end_time": 1096.16, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.221"}
+{"meeting_id": "ES2002a", "text": "I think that that's the main factor .", "begin_time": 1096.03, "end_time": 1098.43, "speaker_id": "A", "da_type": "Inform", "nite_id": "ES2002a.A.dialog-act.dharshi.47"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 1098.51, "end_time": 1099.43, "speaker_id": "B", "da_type": "Assess", "nite_id": "ES2002a.B.dialog-act.dharshi.222"}
+{"meeting_id": "ES2002a", "text": "Okay .", "begin_time": 1098.52, "end_time": 1098.85, "speaker_id": "D", "da_type": "Assess", "nite_id": "ES2002a.D.dialog-act.dharshi.190"}
+{"meeting_id": "ES2002a", "text": "Right , okay , we'll that's that's the end of the meeting , then . Um", "begin_time": 1099.43, "end_time": 1103.2, "speaker_id": "B", "da_type": "Inform", "nite_id": "ES2002a.B.dialog-act.dharshi.225"}
+{"meeting_id": "ES2002a", "text": "Alright . [other]", "begin_time": 1102.4, "end_time": 1102.998, "speaker_id": "D", "da_type": "Backchannel", "nite_id": "ES2002a.D.dialog-act.dharshi.193"}
+{"meeting_id": "ES2002a", "text": "[cough]", "begin_time": 1104.255, "end_time": 1105.728, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.192"}
+{"meeting_id": "ES2002a", "text": "So , uh", "begin_time": 1104.58, "end_time": 1105.58, "speaker_id": "B", "da_type": "Stall", "nite_id": "ES2002a.B.dialog-act.dharshi.223"}
+{"meeting_id": "ES2002a", "text": "thank you all for coming . [laugh]", "begin_time": 1106.58, "end_time": 1107.09, "speaker_id": "B", "da_type": "Be-Positive", "nite_id": "ES2002a.B.dialog-act.dharshi.224"}
+{"meeting_id": "ES2002a", "text": "[laugh]", "begin_time": 1107.628, "end_time": 1108.117, "speaker_id": "D", "da_type": "Fragment", "nite_id": "ES2002a.D.dialog-act.dharshi.191"}
+{"meeting_id": "ES2002a", "text": "[laugh] Cool .", "begin_time": 1107.822, "end_time": 1109.45, "speaker_id": "A", "da_type": "Be-Positive", "nite_id": "ES2002a.A.dialog-act.dharshi.48"}
