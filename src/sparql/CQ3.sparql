@@ -1,21 +1,9 @@
 PREFIX dido: <http://purl.org/twc/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX time: <http://www.w3.org/2006/time#>
-PREFIX ex: <http://purl.org/twc/dido/individuals#>
 
-# CQ3: Which turn is the immediate successor of turn T?
-SELECT ?turn ?successor
+# CQ3: Which participant produced turn?
+SELECT ?turn ?participant
 WHERE {
-  ?turn a dido:Turn ;
-     sio:sio_000008 [ time:hasEnd [ time:inDateTime [ time:second ?turnEnd ] ] ] .
-  ?successor a dido:Turn ;
-              sio:sio_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?successorStart ] ] ] .
-  FILTER (?successorStart >= ?turnEnd)
-  
-  # Ensure it is the immediate successor by checking no other turn starts between them
-  FILTER NOT EXISTS {
-    ?other a dido:Turn ;
-           sio:sio_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?otherStart ] ] ] .
-    FILTER (?otherStart > ?turnEnd && ?otherStart < ?successorStart)
-  }
+  ?turn a dido:Turn .
+  ?turn sio:SIO_000063 ?participant .
 }

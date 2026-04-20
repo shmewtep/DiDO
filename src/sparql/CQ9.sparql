@@ -1,0 +1,11 @@
+PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#/>
+
+# CQ9: Which dataset is dialogue from?
+SELECT ?dialogue ?dataset
+WHERE {
+  ?dialogue a dido:Dialogue ;
+            sio:SIO_000068 ?dataset .
+  ?dataset a dcat:Dataset .
+}

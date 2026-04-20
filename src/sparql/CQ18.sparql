@@ -1,0 +1,25 @@
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX powla: <http://purl.org/powla/powla.owl#>
+
+# CQ18: Which interlocutor revised their stance on an assertion?
+SELECT ?interlocutor ?assertion
+WHERE {
+  # Initial stance
+  ?u1 dido:supports ?assertion ;
+      sio:SIO_000063 ?interlocutor ;
+      sio:SIO_000008 ?duration1 . # hasAttribute
+  ?duration1 time:hasBeginning ?start1 .
+
+  # Revision stance
+  ?u2 sio:SIO_000063 ?interlocutor ;
+      sio:SIO_000008 ?duration2 .
+  ?duration2 time:hasBeginning ?start2 .
+  
+  # Discourse relation marking revision
+  ?rel powla:hasSource ?u2 ;
+       powla:hasTarget ?u1 ;
+       powla:hasLabel "Revision" .
+
+  FILTER(?start2 > ?start1)
+}

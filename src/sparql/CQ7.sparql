@@ -1,0 +1,21 @@
+PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+# CQ7: Which turns overlap with turn?
+SELECT ?t1 ?t2
+WHERE {
+  ?t1 a dido:Turn ;
+      sio:SIO_000008 [ 
+        time:hasBeginning [ time:inDateTime [ time:second ?start1 ] ] ;
+        time:hasEnd [ time:inDateTime [ time:second ?end1 ] ]
+      ] .
+  ?t2 a dido:Turn ;
+      sio:SIO_000008 [ 
+        time:hasBeginning [ time:inDateTime [ time:second ?start2 ] ] ;
+        time:hasEnd [ time:inDateTime [ time:second ?end2 ] ]
+      ] .
+  
+  FILTER (?t1 != ?t2)
+  FILTER (?start2 < ?end1 && ?end2 > ?start1)
+}

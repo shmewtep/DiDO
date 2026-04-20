@@ -1,0 +1,11 @@
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX dido: <http://example.org/dido/>
+
+# CQ12: What utterances were made as suggestions?
+SELECT ?utterance ?text
+WHERE {
+  ?utterance sio:SIO_000225 ?dialogueAct . # hasFunction
+  ?dialogueAct rdfs:label "Suggestion" .
+  ?utterance sio:SIO_000229 ?utteranceText . # hasOutput
+  ?utteranceText sio:hasText ?text .
+}

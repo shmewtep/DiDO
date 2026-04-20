@@ -1,0 +1,9 @@
+PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+# CQ 19: Which assertions did interlocutor assert?
+SELECT DISTINCT ?interlocutor ?assertion
+WHERE {
+  ?utterance sio:SIO_000063 ?interlocutor . # isAgentIn
+  ?utterance dido:supports ?assertion .
+}

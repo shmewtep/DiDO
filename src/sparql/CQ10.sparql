@@ -1,0 +1,9 @@
+PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# CQ10: What is the ID of dialogue within its dataset?
+SELECT ?dialogue ?id
+WHERE {
+  ?dialogue a dido:Dialogue ;
+            dcterms:identifier ?id .
+}
