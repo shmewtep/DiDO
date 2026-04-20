@@ -17,11 +17,11 @@ sidebar:
 | Label | IRI | Definition | Source | Definition Source | Parent | Layer |
 |:---|:---|:---|:---|:---|:---|:---|
 | **dialogue** | `:Dialogue` | an interactive communication between two or more entities |  | https://www.oed.com/dictionary/dialogue_n | [SIO (Process)](http://semanticscience.org/resource/SIO_000006) | Dialogue Structure |
+| **turn** | `:Turn` | a unit of conversation in which a single interlocutor continuously holds the floor, bounded by periods of that interlocutor's inactivity | | | [SIO (Process)](http://semanticscience.org/resource/SIO_000006) | Dialogue Structure |
 | **utterance** | `:Utterance` | a single unit of speech in spoken language that serves some pragmatic function | | | [SIO (Process)](http://semanticscience.org/resource/SIO_000006) | Dialogue Structure |
 | **interlocutor** | `:Interlocutor` | One who takes part in a dialogue or conversation |  |  | [SIO (Role)](http://semanticscience.org/resource/SIO_000016) | Dialogue Structure |
 | **dialogue transcript** | `:DialogueTranscript` | A digital or physical information content entity that provides a structured textual record of a conversation |  |  | [SIO (Information Content Entity)](http://semanticscience.org/resource/SIO_000015) | Data |
 | **utterance text** | `:UtteranceText` | A textual entity representing the output of an utterance |  |  | [SIO (Data Item)](http://semanticscience.org/resource/SIO_000069), [SIO (Language Entity)](http://semanticscience.org/resource/SIO_000069) | Data |
-
 
 
 ---
