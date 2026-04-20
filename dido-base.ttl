@@ -15,11 +15,12 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:powla="http://purl.org/powla/powla.owl#"
      xmlns:schema="https://schema.org/"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:schema1="http://schema.org/">
     <owl:Ontology rdf:about="https://purl.org/dido/dido-base.ttl">
-        <owl:versionIRI rdf:resource="https://purl.org/dido/releases/2026-02-25/dido-base.ttl"/>
+        <owl:versionIRI rdf:resource="https://purl.org/dido/releases/2026-04-20/dido-base.ttl"/>
         <dc:creator xml:lang="en">Kelsey Rook</dc:creator>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:description>The Dialogue and Discourse Ontology (DIDO) supports the modeling of dialogue and dialogue data.</dcterms:description>
@@ -30,7 +31,7 @@
         <vann:preferredNamespaceUri>http://purl.org/twc/dido#</vann:preferredNamespaceUri>
         <schema1:codeRepository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/shmewtep/dialogueOnt</schema1:codeRepository>
         <rdfs:label>DIDO</rdfs:label>
-        <owl:versionInfo>2026-02-25</owl:versionInfo>
+        <owl:versionInfo>2026-04-20</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -161,9 +162,24 @@
     
 
 
+    <!-- http://purl.org/twc/dido#hasAddressee -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/twc/dido#hasAddressee">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000291"/>
+        <rdfs:label>has addressee</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000008 -->
 
     <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000008"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000011 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000011"/>
     
 
 
@@ -203,6 +219,12 @@
     
 
 
+    <!-- http://semanticscience.org/resource/SIO_000225 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000225"/>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000227 -->
 
     <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000227"/>
@@ -212,6 +234,24 @@
     <!-- http://semanticscience.org/resource/SIO_000229 -->
 
     <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000229"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000253 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000253"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000291 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000291"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000292 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000292"/>
     
 
 
@@ -266,6 +306,31 @@
     
 
 
+    <!-- http://purl.org/powla/powla.owl#Nonterminal -->
+
+    <owl:Class rdf:about="http://purl.org/powla/powla.owl#Nonterminal">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000253"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#Utterance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000291"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#Utterance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/powla/powla.owl#Terminal -->
+
+    <owl:Class rdf:about="http://purl.org/powla/powla.owl#Terminal"/>
+    
+
+
     <!-- http://purl.org/twc/dido#Dialogue -->
 
     <owl:Class rdf:about="http://purl.org/twc/dido#Dialogue">
@@ -273,8 +338,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000028"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/twc/dido#Utterance"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#Turn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000028"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#Utterance"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -300,6 +370,43 @@
         </rdfs:subClassOf>
         <rdfs:label>dialogue</rdfs:label>
         <skos:definition>an interactive communication between two or more entities</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/twc/dido#DialogueAct -->
+
+    <owl:Class rdf:about="http://purl.org/twc/dido#DialogueAct">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000614"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#Utterance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>dialogue act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/twc/dido#DialogueActAnnotation -->
+
+    <owl:Class rdf:about="http://purl.org/twc/dido#DialogueActAnnotation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/powla/powla.owl#Terminal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000332"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#DialogueAct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000291"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/twc/dido#Utterance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>dialogue act annotation</rdfs:label>
     </owl:Class>
     
 
@@ -365,21 +472,14 @@
     
 
 
-    <!-- http://purl.org/twc/dido#Utterance -->
+    <!-- http://purl.org/twc/dido#Turn -->
 
-    <owl:Class rdf:about="http://purl.org/twc/dido#Utterance">
+    <owl:Class rdf:about="http://purl.org/twc/dido#Turn">
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000229"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#UtteranceText"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000068"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/twc/dido#Dialogue"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#Dialogue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -394,6 +494,68 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Interval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>turn</rdfs:label>
+        <skos:definition>a unit of conversation in which a single interlocutor holds the floor, without interruption from another interlocutor or other external circumstance</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/twc/dido#Utterance -->
+
+    <owl:Class rdf:about="http://purl.org/twc/dido#Utterance">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/twc/dido#hasAddressee"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#Interlocutor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#DialogueAct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000068"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#Dialogue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000229"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/twc/dido#UtteranceText"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000139"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000097"/>
+                            <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000485"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000292"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/twc/dido#DialogueActAnnotation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -470,6 +632,12 @@
     <!-- http://semanticscience.org/resource/SIO_000485 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000485"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000614 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000614"/>
     
 
 
