@@ -3,16 +3,16 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX ex: <http://purl.org/twc/dido/individuals#>
 
-# CQ6: How many times do the utterances of speaker S1 overlap with the utterances of speaker S2?
+# CQ6: How many times do the turns of speaker S1 overlap with the turns of speaker S2?
 SELECT ?s1 ?s2 (COUNT(*) AS ?overlapCount)
 WHERE {
-  ?u1 a dido:Utterance ;
+  ?t1 a dido:Turn ;
       sio:SIO_000139 ?s1 ;
       sio:sio_000008 [ 
         time:hasBeginning [ time:inDateTime [ time:second ?start1 ] ] ;
         time:hasEnd [ time:inDateTime [ time:second ?end1 ] ]
       ] .
-  ?u2 a dido:Utterance ;
+  ?t2 a dido:Turn ;
       sio:SIO_000139 ?s2 ;
       sio:sio_000008 [ 
         time:hasBeginning [ time:inDateTime [ time:second ?start2 ] ] ;

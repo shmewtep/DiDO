@@ -3,10 +3,10 @@ PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX ex: <http://purl.org/twc/dido/individuals#>
 
-# CQ4: Which utterances occured between times T1 and T2?
-SELECT ?utterance ?startTime ?endTime
+# CQ4: Which turns occured between times T1 and T2?
+SELECT ?turn ?startTime ?endTime
 WHERE {
-  ?utterance a dido:Utterance ;
+  ?turn a dido:Turn ;
              sio:sio_000008 [ 
                time:hasBeginning [ time:inDateTime [ time:second ?startTime ] ] ;
                time:hasEnd [ time:inDateTime [ time:second ?endTime ] ]
