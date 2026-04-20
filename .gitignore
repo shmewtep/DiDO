@@ -39,3 +39,5 @@ src/patterns/all_pattern_terms.txt
 src/ontology/data/dialog_daicwoz
 src/ontology/data/dialog_daicwoz/*
 src/ontology/data/daicwoz*
+src/ontology/data/dialog_ami
+src/ontology/data/dialog_ami/*
