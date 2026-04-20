@@ -1,0 +1,2 @@
+http://purl.org/powla/powla.owl#Nonterminal
+http://purl.org/powla/powla.owl#Terminal
