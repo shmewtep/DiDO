@@ -42,6 +42,10 @@ src/ontology/data/daicwoz*
 src/ontology/data/dialog_ami
 src/ontology/data/dialog_ami/*
 
+tmp*/
+tmp*/*
+*.log
+
 DIDO/OOPS*
 DIDO/OOPS*/*
 DIDO/webvowl
