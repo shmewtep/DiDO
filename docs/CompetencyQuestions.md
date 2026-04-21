@@ -26,13 +26,13 @@ sidebar:
 | CQ9| Which **dataset** is _dialogue_ from? | [CQ9.sparql](src/sparql/CQ9.sparql) | [x] |
 | CQ10| What is the **ID** of _dialogue_ within its dataset? | [CQ10.sparql](src/sparql/CQ10.sparql) | [x] |
 |**DiDO-Discourse**|
-| CQ11| What **dialogue acts** are associated with the utterances supporting _assertion_? | | [ ] |
-| CQ12| What **utterances** were made as part of a suggestion? | | [ ] |
-| CQ13| Did any interlocutors agree with **utterance**? | | [ ] |
+| CQ11| What **dialogue acts** are associated with the utterances supporting _assertion_? | [CQ11.sparql](src/sparql/CQ11.sparql) | [x] |
+| CQ12| What **utterances** were made as part of a suggestion? | [CQ12.sparql](src/sparql/CQ12.sparql) | [x] |
+| CQ13| Did any interlocutors agree with **utterance**? | [CQ13.sparql](src/sparql/CQ13.sparql) | [x] |
 |**DiDO-Assertion**|
-| CQ14| Which **interlocutor** made _assertion_? | | [ ] |
-| CQ15| What **utterances** support _assertion_? | | [ ] |
-| CQ16| What **utterances** did _interlocutor_ make regarding _entity_? | | [ ] |
-| CQ17| What **assertions** were made regarding _entity_? | | [ ] |
-| CQ18| Did **speaker** revise their initial stance on _assertion_? | | [ ] |
-| CQ19| Which **assertions** did **interlocutor** support? | | [ ] |
+| CQ14| Which **interlocutor** made _assertion_? | [CQ14.sparql](src/sparql/CQ14.sparql) | [x] |
+| CQ15| What **utterances** support _assertion_? | [CQ15.sparql](src/sparql/CQ15.sparql) | [x] |
+| CQ16| What **utterances** did _interlocutor_ make regarding _entity_? | [CQ16.sparql](src/sparql/CQ16.sparql) | [x] |
+| CQ17| What **assertions** were made regarding _entity_? | [CQ17.sparql](src/sparql/CQ17.sparql) | [x] |
+| CQ18| Did **speaker** revise their initial stance on _assertion_? | [CQ18.sparql](src/sparql/CQ18.sparql) | [x] |
+| CQ19| Which **assertions** did **interlocutor** support? | [CQ19.sparql](src/sparql/CQ19.sparql) | [x] |
