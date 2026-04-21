@@ -106,12 +106,6 @@ prov:qualifiedForm rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://purl.org/twc/dido#hasAddressee
-:hasAddressee rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf sio:SIO_000291 ;
-              rdfs:label "has addressee" .
-
-
 ###  http://semanticscience.org/resource/SIO_000008
 sio:SIO_000008 rdf:type owl:ObjectProperty .
 
@@ -323,10 +317,6 @@ powla:Terminal rdf:type owl:Class .
 :Utterance rdf:type owl:Class ;
            rdfs:subClassOf sio:SIO_000006 ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasAddressee ;
-                             owl:someValuesFrom :Interlocutor
-                           ] ,
-                           [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000008 ;
                              owl:someValuesFrom :DialogueAct
                            ] ,
@@ -337,6 +327,10 @@ powla:Terminal rdf:type owl:Class .
                            [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000229 ;
                              owl:someValuesFrom :UtteranceText
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty sio:SIO_000291 ;
+                             owl:someValuesFrom :Interlocutor
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000139 ;
