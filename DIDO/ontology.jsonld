@@ -6,7 +6,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/twc/dido#Utterance"
+    "@id" : "http://purl.org/dido#Utterance"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticscience.org/resource/SIO_000028"
@@ -42,7 +42,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/twc/dido#Dialogue"
+    "@id" : "http://purl.org/dido#Dialogue"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticscience.org/resource/SIO_000356"
@@ -54,13 +54,13 @@
     "@id" : "http://semanticscience.org/resource/SIO_000229"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.org/twc/dido#UtteranceText"
+    "@id" : "http://purl.org/dido#UtteranceText"
   } ]
 }, {
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/twc/dido#Dialogue"
+    "@id" : "http://purl.org/dido#Dialogue"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticscience.org/resource/SIO_000068"
@@ -167,7 +167,7 @@
     "@value" : "2"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/twc/dido#UtteranceText"
+    "@id" : "http://purl.org/dido#UtteranceText"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticscience.org/resource/SIO_000059"
@@ -176,7 +176,7 @@
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/twc/dido#Dialogue"
+    "@id" : "http://purl.org/dido#Dialogue"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://semanticscience.org/resource/SIO_000332"
@@ -216,7 +216,7 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/twc/dido#Dialogue",
+  "@id" : "http://purl.org/dido#Dialogue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "dialogue"
@@ -234,7 +234,7 @@
     "@value" : "an interactive communication between two or more entities"
   } ]
 }, {
-  "@id" : "http://purl.org/twc/dido#DialogueTranscript",
+  "@id" : "http://purl.org/dido#DialogueTranscript",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -253,7 +253,7 @@
     "@value" : "A digital or physical information content entity that provides a structured textual record of a conversation"
   } ]
 }, {
-  "@id" : "http://purl.org/twc/dido#Interlocutor",
+  "@id" : "http://purl.org/dido#Interlocutor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "interlocutor"
@@ -269,7 +269,7 @@
     "@value" : "One who takes part in a conversation or dialogue"
   } ]
 }, {
-  "@id" : "http://purl.org/twc/dido#Utterance",
+  "@id" : "http://purl.org/dido#Utterance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "utterance"
@@ -289,7 +289,7 @@
     "@value" : "a single unit of speech in spoken language that serves some pragmatic function"
   } ]
 }, {
-  "@id" : "http://purl.org/twc/dido#UtteranceText",
+  "@id" : "http://purl.org/dido#UtteranceText",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "utterance text"
@@ -436,7 +436,7 @@
     "@value" : "dido"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "http://purl.org/twc/dido#"
+    "@value" : "http://purl.org/dido#"
   } ],
   "http://schema.org/codeRepository" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",

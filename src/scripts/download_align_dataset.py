@@ -9,6 +9,7 @@ import os
 import argparse
 
 from datasets import load_dataset
+import datasets
 
 from rdflib import Graph, Literal, RDF, URIRef, Namespace, BNode, XSD, DCTERMS, DC
 from rdflib.namespace import RDFS
@@ -16,12 +17,13 @@ from rdflib.namespace import RDFS
 DATA_DIRECTORY = os.path.join('src', 'ontology', 'data')
 
 # 1. Define Namespaces based on DIDO.ttl
-DIDO = Namespace("http://purl.org/twc/dido#")
+DIDO = Namespace("http://purl.org/dido#")
 SIO = Namespace("http://semanticscience.org/resource/")
 PROV = Namespace("http://www.w3.org/ns/prov#")
 TIME = Namespace("http://www.w3.org/2006/time#")
 EX = Namespace("http://purl.org/twc/dido/individuals#")
 DCAT = Namespace("http://www.w3.org/ns/dcat#")
+POWLA = Namespace("http://purl.org/powla/powla.owl#")
 
 
 def align_ami_jsonl_to_dido(jsonl_file, n_utterances=None):
@@ -36,6 +38,7 @@ def align_ami_jsonl_to_dido(jsonl_file, n_utterances=None):
     g.bind("time", TIME)
     g.bind("dcat", DCAT)
     g.bind("ex", EX)
+    g.bind("powla", POWLA)
 
     meeting_id = os.path.basename(jsonl_file).split('.')[0]
 
@@ -96,6 +99,31 @@ def align_ami_jsonl_to_dido(jsonl_file, n_utterances=None):
             g.add((utterance_uri, SIO.SIO_000232, utterance_text_uri))  # sio:has output
             g.add((utterance_text_uri, SIO.SIO_000300, Literal(data['text'], datatype=XSD.string)))   # sio:has value
             
+            # --- Dialogue Act (Discourse Modeling) ---
+            g.add((utterance_uri, RDF.type, POWLA.Nonterminal))
+            if 'da_type' in data and data['da_type']:
+                da_annotation_uri = EX[f"daAnnotation{utterance_id}"]
+                dialogue_act_uri = EX[f"dialogueAct{utterance_id}"]
+                
+                # Utterance relations
+                g.add((utterance_uri, SIO.SIO_000292, da_annotation_uri)) # is target of
+                g.add((utterance_uri, SIO.SIO_000225, dialogue_act_uri))  # has function
+                
+                # DialogueActAnnotation
+                g.add((da_annotation_uri, RDF.type, DIDO.DialogueActAnnotation))
+                g.add((da_annotation_uri, RDF.type, POWLA.Terminal))
+                g.add((da_annotation_uri, SIO.SIO_000332, dialogue_act_uri)) # is about
+                g.add((da_annotation_uri, SIO.SIO_000291, utterance_uri)) # has target
+                g.add((da_annotation_uri, SIO.SIO_000300, Literal(data['da_type'], datatype=XSD.string))) # store label
+                
+                # DialogueAct
+                g.add((dialogue_act_uri, RDF.type, DIDO.DialogueAct))
+                # Add a dynamic class based on the type, normalized
+                da_class_name = data['da_type'].replace(' ', '').replace('-', '')
+                if da_class_name:
+                    g.add((dialogue_act_uri, RDF.type, DIDO[da_class_name]))
+                g.add((dialogue_act_uri, SIO.SIO_000226, utterance_uri))  # is function of
+
             # --- Temporal duration (OWL-Time) ---
             g.add((utterance_uri, RDF.type, TIME.TemporalEntity))
             temporal_duration_node = BNode()
@@ -134,6 +162,7 @@ def align_daicwoz_csv_to_dido(csv_filename):
     g.bind("sio", SIO)
     g.bind("time", TIME)
     g.bind("dcat", DCAT)
+    g.bind("powla", POWLA)
 
     dialogue_num_pattern = regex.compile(r"^.*(\d{3})_TRANSCRIPT\.csv$")
     dialogue_num = dialogue_num_pattern.match(csv_filename).group(1)
@@ -164,6 +193,7 @@ def align_daicwoz_csv_to_dido(csv_filename):
             utterance_id = f"{dialogue_num}_{utterance_num}"
             utterance_uri = EX[f"utterance_{utterance_id}"]
             g.add((utterance_uri, RDF.type, DIDO.Utterance))
+            g.add((utterance_uri, RDF.type, POWLA.Nonterminal))
 
             # Linking Utterance to the Dialogue
             g.add((utterance_uri, SIO.SIO_000068, dialogue_uri)) # sio:is part of

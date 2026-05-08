@@ -1,4 +1,4 @@
-PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX dido: <http://purl.org/dido#>
 PREFIX ex: <http://purl.org/twc/dido/individuals#>
 PREFIX sio: <http://semanticscience.org/resource/>
 

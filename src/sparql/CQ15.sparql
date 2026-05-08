@@ -1,4 +1,4 @@
-PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX dido: <http://purl.org/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
 
 SELECT ?utterance ?text
@@ -6,8 +6,8 @@ WHERE {
   ?utterance dido:supports ?assertion .
   
   # Fetching the literal text for readability
-  ?utterance sio:SIO_000229 ?utteranceText . # hasOutput
-  ?utteranceText sio:hasText ?text .
+  ?utterance sio:SIO_000232 ?utteranceText . # hasOutput
+  ?utteranceText sio:SIO_000300 ?text . # hasValue
   
   # Filter for a specific assertion URI if needed
   # FILTER(?assertion = :some_assertion_id)

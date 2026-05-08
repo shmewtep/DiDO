@@ -7,7 +7,7 @@
 <https://purl.org/dido/dido-base.ttl> <http://purl.org/dc/terms/modified> "2026-2-4" .
 <https://purl.org/dido/dido-base.ttl> <http://purl.org/dc/terms/title> "Dialogue and Discourse Ontology (DiDO)" .
 <https://purl.org/dido/dido-base.ttl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dido" .
-<https://purl.org/dido/dido-base.ttl> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/twc/dido#" .
+<https://purl.org/dido/dido-base.ttl> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/dido#" .
 <https://purl.org/dido/dido-base.ttl> <http://schema.org/codeRepository> "https://github.com/shmewtep/dialogueOnt"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://purl.org/dido/dido-base.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "DIDO" .
 <https://purl.org/dido/dido-base.ttl> <http://www.w3.org/2002/07/owl#versionInfo> "2026-02-25" .
@@ -141,15 +141,15 @@
 # #################################################################
 # 
 # 
-# http://purl.org/twc/dido#Dialogue
-<http://purl.org/twc/dido#Dialogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000006> .
-<http://purl.org/twc/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/twc/dido#Utterance> .
+# http://purl.org/dido#Dialogue
+<http://purl.org/dido#Dialogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000006> .
+<http://purl.org/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/dido#Utterance> .
 _:genid1 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000028> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+<http://purl.org/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
 _:genid2 <http://www.w3.org/2002/07/owl#onClass> _:genid3 .
 _:genid3 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
@@ -162,38 +162,38 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000132> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+<http://purl.org/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
 _:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2006/time#ProperInterval> .
 _:genid6 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000008> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#label> "dialogue" .
-<http://purl.org/twc/dido#Dialogue> <http://www.w3.org/2004/02/skos/core#definition> "an interactive communication between two or more entities" .
+<http://purl.org/dido#Dialogue> <http://www.w3.org/2000/01/rdf-schema#label> "dialogue" .
+<http://purl.org/dido#Dialogue> <http://www.w3.org/2004/02/skos/core#definition> "an interactive communication between two or more entities" .
 # 
-# http://purl.org/twc/dido#DialogueTranscript
-<http://purl.org/twc/dido#DialogueTranscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000069> .
-<http://purl.org/twc/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+# http://purl.org/dido#DialogueTranscript
+<http://purl.org/dido#DialogueTranscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000069> .
+<http://purl.org/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
 _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://semanticscience.org/resource/SIO_000089> .
 _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000095> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/twc/dido#UtteranceText> .
+<http://purl.org/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/dido#UtteranceText> .
 _:genid8 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000059> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/twc/dido#Dialogue> .
+<http://purl.org/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/dido#Dialogue> .
 _:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000332> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#label> "dialogue transcript"@en .
-<http://purl.org/twc/dido#DialogueTranscript> <http://www.w3.org/2004/02/skos/core#definition> "A digital or physical information content entity that provides a structured textual record of a conversation" .
+<http://purl.org/dido#DialogueTranscript> <http://www.w3.org/2000/01/rdf-schema#label> "dialogue transcript"@en .
+<http://purl.org/dido#DialogueTranscript> <http://www.w3.org/2004/02/skos/core#definition> "A digital or physical information content entity that provides a structured textual record of a conversation" .
 # 
-# http://purl.org/twc/dido#Interlocutor
-<http://purl.org/twc/dido#Interlocutor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/dido#Interlocutor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000016> .
-<http://purl.org/twc/dido#Interlocutor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+# http://purl.org/dido#Interlocutor
+<http://purl.org/dido#Interlocutor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dido#Interlocutor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000016> .
+<http://purl.org/dido#Interlocutor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
 _:genid10 <http://www.w3.org/2002/07/owl#onClass> _:genid11 .
 _:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
@@ -206,27 +206,27 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000227> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Interlocutor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/twc/dido#Dialogue> .
+<http://purl.org/dido#Interlocutor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/dido#Dialogue> .
 _:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000356> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Interlocutor> <http://www.w3.org/2000/01/rdf-schema#label> "interlocutor" .
-<http://purl.org/twc/dido#Interlocutor> <http://www.w3.org/2004/02/skos/core#definition> "One who takes part in a conversation or dialogue" .
+<http://purl.org/dido#Interlocutor> <http://www.w3.org/2000/01/rdf-schema#label> "interlocutor" .
+<http://purl.org/dido#Interlocutor> <http://www.w3.org/2004/02/skos/core#definition> "One who takes part in a conversation or dialogue" .
 # 
-# http://purl.org/twc/dido#Utterance
-<http://purl.org/twc/dido#Utterance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000006> .
-<http://purl.org/twc/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/twc/dido#UtteranceText> .
+# http://purl.org/dido#Utterance
+<http://purl.org/dido#Utterance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000006> .
+<http://purl.org/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/dido#UtteranceText> .
 _:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000229> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/twc/dido#Dialogue> .
+<http://purl.org/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/dido#Dialogue> .
 _:genid16 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000068> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+<http://purl.org/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
 _:genid17 <http://www.w3.org/2002/07/owl#onClass> _:genid18 .
 _:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
@@ -239,23 +239,23 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid17 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000139> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+<http://purl.org/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
 _:genid21 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2006/time#Interval> .
 _:genid21 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000008> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#label> "utterance" .
-<http://purl.org/twc/dido#Utterance> <http://www.w3.org/2004/02/skos/core#definition> "a single unit of speech in spoken language that serves some pragmatic function" .
+<http://purl.org/dido#Utterance> <http://www.w3.org/2000/01/rdf-schema#label> "utterance" .
+<http://purl.org/dido#Utterance> <http://www.w3.org/2004/02/skos/core#definition> "a single unit of speech in spoken language that serves some pragmatic function" .
 # 
-# http://purl.org/twc/dido#UtteranceText
-<http://purl.org/twc/dido#UtteranceText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/twc/dido#UtteranceText> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000078> .
-<http://purl.org/twc/dido#UtteranceText> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+# http://purl.org/dido#UtteranceText
+<http://purl.org/dido#UtteranceText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dido#UtteranceText> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000078> .
+<http://purl.org/dido#UtteranceText> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
 _:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 _:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000300> .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/twc/dido#UtteranceText> <http://www.w3.org/2000/01/rdf-schema#label> "utterance text" .
-<http://purl.org/twc/dido#UtteranceText> <http://www.w3.org/2004/02/skos/core#definition> "a textual entity representing the output of an utterance" .
+<http://purl.org/dido#UtteranceText> <http://www.w3.org/2000/01/rdf-schema#label> "utterance text" .
+<http://purl.org/dido#UtteranceText> <http://www.w3.org/2004/02/skos/core#definition> "a textual entity representing the output of an utterance" .
 # 
 # http://semanticscience.org/resource/SIO_000000
 <http://semanticscience.org/resource/SIO_000000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

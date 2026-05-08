@@ -16,9 +16,9 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:resource="http://semanticscience.org/resource/">
     <owl:Ontology rdf:about="https://purl.org/dido/imports/sio_import.owl">
-        <owl:versionIRI rdf:resource="https://purl.org/dido/releases/2026-04-20/imports/sio_import.owl"/>
-        <dc:source rdf:resource="http://semanticscience.org/ontology/sio/v1.59/sio-release.owl"/>
-        <owl:versionInfo>2026-04-20</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://purl.org/dido/releases/2026-05-08/imports/sio_import.owl"/>
+        <dc:source rdf:resource="http://semanticscience.org/ontology/sio/v1.61/sio-release.owl"/>
+        <owl:versionInfo>2026-05-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2298,7 +2298,6 @@
             <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000614"/>
             <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000776"/>
         </owl:members>
-        <dc:identifier>:arc9cacb982</dc:identifier>
     </rdf:Description>
 </rdf:RDF>
 

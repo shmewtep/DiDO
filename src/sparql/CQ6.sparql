@@ -1,6 +1,7 @@
-PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX dido: <http://purl.org/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # CQ6: Which turns occured between time T1 and time T2?
 SELECT ?turn ?startTime ?endTime

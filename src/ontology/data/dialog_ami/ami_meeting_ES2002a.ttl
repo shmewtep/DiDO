@@ -1,6 +1,6 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dido: <http://purl.org/twc/dido#> .
+@prefix dido: <http://purl.org/dido#> .
 @prefix ex: <http://purl.org/twc/dido/individuals#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix time: <http://www.w3.org/2006/time#> .

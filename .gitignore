@@ -53,3 +53,27 @@ DIDO/webvowl/*
 
 docs/_site
 docs/_site/*
+2013-11-13-14-06-35-gl-diana.zip
+2013-11-13-14-06-35-gl-diana/2013-11-13-14-06-35-gl-diana.diaml
+2013-11-13-14-06-35-gl-diana/2013-11-13-14-06-35-gl-diana_DiAML-MultiTab.xlsx
+2013-11-13-14-06-35-gl-diana/2013-11-13-14-06-35-gl-diana_DiAML-TabSW.xlsx
+2013-11-13-14-06-35-gl-diana/2013-11-13-14-06-35-gl-diana_segmentation.txt
+2013-11-13-14-06-35-gl-diana/2013-11-13-14-06-35-gl-diana_tokenization.txt
+2013-11-13-14-06-35-gl-diana/2013-11-13-14-06-35-gl-diana_transcript.txt
+docs/schemas_interoperability.md
+src/temp_scripts_dbox/2013-11-13-14-06-35-gl-diana.diaml
+src/temp_scripts_dbox/2013-11-13-14-06-35-gl-diana_DiAML-MultiTab.xlsx
+src/temp_scripts_dbox/2013-11-13-14-06-35-gl-diana_DiAML-TabSW.xlsx
+src/temp_scripts_dbox/2013-11-13-14-06-35-gl-diana_segmentation.txt
+src/temp_scripts_dbox/2013-11-13-14-06-35-gl-diana_tokenization.txt
+src/temp_scripts_dbox/2013-11-13-14-06-35-gl-diana_transcript.txt
+src/temp_scripts_dbox/align_dbox_conv.py
+src/temp_scripts_dbox/diana_aligned.jsonl
+src/temp_scripts_dbox/diana_aligned.ttl
+src/temp_scripts_dbox/fix.py
+src/temp_scripts_dbox/fix_imports.py
+src/temp_scripts_dbox/fix_top.py
+src/temp_scripts_dbox/patch_dbox.py
+src/temp_scripts_dbox/scratch_test.py
+src/temp_scripts_dbox/scratch_test2.py
+src/temp_scripts_dbox/scratch_test3.py
