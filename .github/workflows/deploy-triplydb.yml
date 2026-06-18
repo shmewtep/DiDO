@@ -1,0 +1,29 @@
+name: Deploy to TriplyDB
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/ontology/data/ami_meeting_ES2002b.ttl'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install TriplyDB CLI
+        run: npm install -g @triply/cli
+
+      - name: Upload Dataset
+        env:
+          TRIPLY_API_TOKEN: ${{ secrets.TRIPLY_API_TOKEN }}
+        run: |
+          triplydb upload KelseyRook/AMI_ES2002b_DiDO src/ontology/data/ami_meeting_ES2002b.ttl --clear
