@@ -9,7 +9,7 @@
 - [Terms.md](docs/Terms.md): List of terms, prefixes, and definitions used in the ontology.
 - [DevelopmentDescription.md](docs/DevelopmentDescription.md): Overview of the ontology development process and methodology, as well as resources used in development.
 - `src/`: Contains core ontology files (`ontology/`), scripts (`scripts/`), and SPARQL queries (`sparql/`). `src/ontology/data/` contains downloaded and processed dataset files.
-- `docs/`: Contains the web application logic, UI elements, and related queries/data for https://shmewtep.github.io/dialogueOnt/.
+- `docs/`: Contains the web application logic, UI elements, and related queries/data for https://shmewtep.github.io/DiDO/.
 - `dido*.(owl|ttl)`: The most recent public releases of the core ontology files.
 
 ## Usage
