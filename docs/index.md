@@ -14,8 +14,9 @@ sidebar:
 - [CompetencyQuestions.md](CompetencyQuestions.md): Functional requirements expressed as competency questions.
 - [Terms.md](Terms.md): List of terms, prefixes, and definitions used in the ontology.
 - [DevelopmentDescription.md](DevelopmentDescription.md): Overview of the ontology development process and methodology, as well as resources used in development.
-- `src/`: Contains core ontology files (`ontology/`), scripts (`scripts/`), and SPARQL queries (`sparql/`).
-- `docs/`: Contains the documentation pages for the DIDO ontology hosted at https://shmewtep.github.io/DiDO/. An interactive query interface is planned for a future release.
+- [AlignmentDemonstration.md](AlignmentDemonstration.md): Demonstration of semantic alignment and querying across disparate dialogue corpora (AMI and DailyDialog).
+- `src/`: Contains core ontology files (`ontology/`), scripts (`scripts/` including alignment and joint query demo scripts), and SPARQL queries (`sparql/`).
+- `docs/`: Contains the documentation pages for the DIDO ontology hosted at https://shmewtep.github.io/DiDO/. An interactive query interface is available via TriplyDB.
 
 ## Usage
 
