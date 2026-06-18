@@ -23,5 +23,5 @@ sidebar:
 * [DAIC-WOZ](https://dcapswoz.ict.usc.edu/)
   * Available by request
 * [AMI Meeting Corpus](https://groups.inf.ed.ac.uk/ami/corpus/)
-  * Publically available
+  * Publicly available
   * An example of a dialogue alignment can be found [here](https://github.com/shmewtep/dialogueOnt/blob/edit/src/ontology/data/dialog_ami/ami_meeting_EN2001a.ttl)
