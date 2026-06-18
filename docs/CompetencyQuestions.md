@@ -36,3 +36,9 @@ sidebar:
 | CQ17| What **assertions** were made regarding _entity_? | [CQ17.sparql](/src/sparql/CQ17.sparql) | [x] |
 | CQ18| Did **speaker** revise their initial stance on _assertion_? | [CQ18.sparql](/src/sparql/CQ18.sparql) | [x] |
 | CQ19| Which **assertions** did **interlocutor** support? | [CQ19.sparql](/src/sparql/CQ19.sparql) | [x] |
+
+---
+
+### Future Plans / Coming Soon
+An interactive SPARQL query interface and dialogue alignment viewer (previously powered by Comunica and `app.js` under `demo.html`) is currently under development. It will allow users to run these competency questions against sample dialogue datasets directly in the browser in a future release.
+

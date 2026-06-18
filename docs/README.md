@@ -7,7 +7,7 @@ sidebar:
 
 # dialogueOnt
 
-![Dialogue Ontology Diagram](docs/images/dialogueOnt.png)
+![Dialogue Ontology Diagram](images/dialogueOnt.png)
 
 ## Repository Structure
 
@@ -16,7 +16,7 @@ sidebar:
 - [Terms.md](Terms.md): List of terms, prefixes, and definitions used in the ontology.
 - [DevelopmentDescription.md](DevelopmentDescription.md): Overview of the ontology development process and methodology, as well as resources used in development.
 - `src/`: Contains core ontology files (`ontology/`), scripts (`scripts/`), and SPARQL queries (`sparql/`).
-- `docs/`: Contains the web application logic, UI elements, and related queries/data for https://shmewtep.github.io/dialogueOnt/.
+- `docs/`: Contains the documentation pages for the DIDO ontology hosted at https://shmewtep.github.io/DiDO/. An interactive query interface is planned for a future release.
 
 ## Usage
 
@@ -74,3 +74,4 @@ You can specify a custom output directory using the `--output_dir` parameter for
 ```bash
 python src/scripts/download_align_dataset.py --dataset ami --dialogue_id EN2001a --download --output_dir custom/path/
 ```
+

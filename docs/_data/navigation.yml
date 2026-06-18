@@ -1,9 +1,9 @@
 docs:
   - title: "Ontology"
-    url: /../../README.md
+    url: /
   - title: "Competency Questions"
-    url: /../../CompetencyQuestions.md
+    url: /CompetencyQuestions/
   - title: "Terminology"
-    url: /../../Terms.md
+    url: /Terms/
   - title: "Development"
-    url: /../../DevelopmentDescription.md
+    url: /Development/
