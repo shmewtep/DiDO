@@ -4,10 +4,10 @@
 
 ## Repository Structure
 
-- [Requirements.md](Requirements.md): Ontology requirements including goals, scope, and target audience.
-- [CompetencyQuestions.md](CompetencyQuestions.md): Functional requirements expressed as competency questions.
-- [Terms.md](Terms.md): List of terms, prefixes, and definitions used in the ontology.
-- [DevelopmentDescription.md](DevelopmentDescription.md): Overview of the ontology development process and methodology, as well as resources used in development.
+- [Requirements.md](docs/Requirements.md): Ontology requirements including goals, scope, and target audience.
+- [CompetencyQuestions.md](docs/CompetencyQuestions.md): Functional requirements expressed as competency questions.
+- [Terms.md](docs/Terms.md): List of terms, prefixes, and definitions used in the ontology.
+- [DevelopmentDescription.md](docs/DevelopmentDescription.md): Overview of the ontology development process and methodology, as well as resources used in development.
 - `src/`: Contains core ontology files (`ontology/`), scripts (`scripts/`), and SPARQL queries (`sparql/`). `src/ontology/data/` contains downloaded and processed dataset files.
 - `docs/`: Contains the web application logic, UI elements, and related queries/data for https://shmewtep.github.io/dialogueOnt/.
 - `dido*.(owl|ttl)`: The most recent public releases of the core ontology files.
