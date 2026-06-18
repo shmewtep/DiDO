@@ -20,7 +20,7 @@ jobs:
           node-version: '20'
 
       - name: Install TriplyDB CLI
-        run: npm install -g @triply/cli
+        run: npm install -g @triply/triplydb
 
       - name: Upload Dataset
         env:
