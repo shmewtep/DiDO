@@ -21,6 +21,12 @@ sidebar:
 
 The most recent release of the ontology is available in the root directory of the repository, while the edit version is available in the `src/ontology` directory.
 
+### SPARQL Endpoint
+
+You can query an instance of the DiDO ontology loaded with an example from the AMI corpus (ES2002b) via TriplyDB:
+* **Interactive UI:** [https://triplydb.com/KelseyRook/AMIES2002bDiDO/sparql](https://triplydb.com/KelseyRook/AMIES2002bDiDO/sparql)
+* **API Endpoint:** `https://api.triplydb.com/datasets/KelseyRook/AMIES2002bDiDO/sparql`
+
 Multiple versions of the ontology are available including `dido-base`, `dido-full`, and `dido`.
 
 * `dido-base`: The core ontology containing classes introduced by DIDO.
