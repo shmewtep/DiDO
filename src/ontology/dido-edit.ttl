@@ -347,9 +347,28 @@ powla:Terminal rdf:type owl:Class .
                         owl:onProperty sio:SIO_000008 ;
                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onClass time:Interval
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty sio:SIO_000229 ;
+                        owl:someValuesFrom :TurnText
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty sio:SIO_000059 ;
+                        owl:someValuesFrom :Utterance
                       ] ;
       rdfs:label "turn" ;
       skos:definition "a unit of conversation in which a single interlocutor holds the floor, without interruption from another interlocutor or other external circumstance" .
+
+
+###  http://purl.org/dido#TurnText
+:TurnText rdf:type owl:Class ;
+          rdfs:subClassOf sio:SIO_000078 ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty sio:SIO_000300 ;
+                            owl:someValuesFrom rdfs:Literal
+                          ] ;
+          rdfs:label "turn text" ;
+          skos:definition "a textual entity representing the output of a turn" .
 
 
 ###  http://purl.org/dido#Utterance
@@ -362,6 +381,10 @@ powla:Terminal rdf:type owl:Class .
                            [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000068 ;
                              owl:someValuesFrom :Dialogue
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty sio:SIO_000068 ;
+                             owl:someValuesFrom :Turn
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000229 ;
