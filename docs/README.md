@@ -7,7 +7,7 @@ sidebar:
 
 # dialogueOnt
 
-![Dialogue Ontology Diagram](images/dialogueOnt.png)
+![Dialogue Ontology Diagram](images/dialogueOnt.pdf)
 
 ## Repository Structure
 
