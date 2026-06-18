@@ -1,31 +1,17 @@
-PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX dido: <http://purl.org/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX time: <http://www.w3.org/2006/time#>
-PREFIX ex: <http://purl.org/twc/dido/individuals#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-# CQ6: How many times do the utterances of speaker S1 overlap with the utterances of speaker S2?
-SELECT ?s1 ?s2 (COUNT(*) AS ?overlapCount)
+# CQ6: Which turns occured between time T1 and time T2?
+SELECT ?turn ?startTime ?endTime
 WHERE {
-  ?u1 a dido:Utterance ;
-      sio:SIO_000139 ?s1 ;
-      sio:sio_000008 [ 
-        time:hasBeginning [ time:inDateTime [ time:second ?start1 ] ] ;
-        time:hasEnd [ time:inDateTime [ time:second ?end1 ] ]
-      ] .
-  ?u2 a dido:Utterance ;
-      sio:SIO_000139 ?s2 ;
-      sio:sio_000008 [ 
-        time:hasBeginning [ time:inDateTime [ time:second ?start2 ] ] ;
-        time:hasEnd [ time:inDateTime [ time:second ?end2 ] ]
-      ] .
+  ?turn a dido:Turn ;
+             sio:SIO_000008 [ 
+               time:hasBeginning [ time:inDateTime [ time:second ?startTime ] ] ;
+               time:hasEnd [ time:inDateTime [ time:second ?endTime ] ]
+             ] .
   
-  FILTER (?s1 != ?s2)
-  
-  # Overlap condition
-  FILTER (?start1 < ?end2 && ?end1 > ?start2)
-  
-  # Example usage:
-  # FILTER (?s1 = <http://purl.org/twc/dido/individuals#interlocutors/ellie>)
-  # FILTER (?s2 = <http://purl.org/twc/dido/individuals#interlocutors/None>)
+  FILTER (?startTime >= "0"^^xsd:decimal && ?endTime <= "15"^^xsd:decimal)
 }
-GROUP BY ?s1 ?s2
+ORDER BY ?startTime

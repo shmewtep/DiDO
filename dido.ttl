@@ -19,6 +19,7 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix void: <http://rdfs.org/ns/void#> .
+@prefix powla: <http://purl.org/powla/powla.owl#> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
@@ -26,17 +27,17 @@
 @base <https://purl.org/dido/dido.owl> .
 
 <https://purl.org/dido/dido.owl> rdf:type owl:Ontology ;
-                                  owl:versionIRI <https://purl.org/dido/releases/2026-02-25/dido.owl> ;
+                                  owl:versionIRI <https://purl.org/dido/releases/2026-05-08/dido.owl> ;
                                   dc:creator "Kelsey Rook"@en ;
                                   dcterms:description "The Dialogue and Discourse Ontology (DIDO) supports the modeling of dialogue and dialogue data." ;
                                   dcterms:license "https://opensource.org/license/mit"^^xsd:anyURI ;
                                   dcterms:modified "2026-2-4" ;
                                   dcterms:title "Dialogue and Discourse Ontology (DiDO)" ;
                                   vann:preferredNamespacePrefix "dido" ;
-                                  vann:preferredNamespaceUri "http://purl.org/twc/dido#" ;
+                                  vann:preferredNamespaceUri "http://purl.org/dido#" ;
                                   schema1:codeRepository "https://github.com/shmewtep/dialogueOnt"^^xsd:anyURI ;
                                   rdfs:label "DIDO" ;
-                                  owl:versionInfo "2026-02-25" .
+                                  owl:versionInfo "2026-05-08" .
 
 #################################################################
 #    Annotation properties
@@ -58,6 +59,10 @@ dc:contributor rdf:type owl:AnnotationProperty ;
 ###  http://purl.org/dc/elements/1.1/creator
 dc:creator rdf:type owl:AnnotationProperty ;
            dc:identifier "creator" .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/identifier
@@ -158,8 +163,22 @@ sio:equivalentTo rdf:type owl:AnnotationProperty .
 sio:subset rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#deprecated
+owl:deprecated rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
-skos:altLabel rdf:type owl:AnnotationProperty .
+skos:altLabel rdf:type owl:AnnotationProperty ;
+              rdfs:comment "The range of skos:altLabel is the class of RDF plain literals."@en ,
+                           "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:label "alternative label"@en ;
+              skos:definition "An alternative lexical label for a resource."@en ;
+              skos:example "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#changeNote
@@ -267,6 +286,187 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.org/dido#hasAddressee
+<http://purl.org/dido#hasAddressee> rdf:type owl:ObjectProperty ;
+                                    rdfs:label "has addressee" ;
+                                    skos:definition "the intended recipient or interlocutor of an utterance or dialogue act" .
+
+
+###  http://purl.org/powla/powla.owl#firstTerminal
+powla:firstTerminal rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf powla:hasTerminal ;
+                    rdfs:domain powla:Nonterminal ;
+                    rdfs:range powla:Terminal .
+
+
+###  http://purl.org/powla/powla.owl#hasChild
+powla:hasChild rdf:type owl:ObjectProperty ;
+               owl:inverseOf powla:hasParent ;
+               rdfs:domain powla:Nonterminal ;
+               rdfs:range powla:Node ;
+               rdfs:comment "OPTIONAL PROPERTY for expressing hierarchical annotations with coverage inheritance, e.g., in a tree annotation. Inverse of powla:hasParent, see there for details."@en .
+
+
+###  http://purl.org/powla/powla.owl#hasDocument
+powla:hasDocument rdf:type owl:ObjectProperty ;
+                  rdfs:domain powla:DocumentLayer ;
+                  rdfs:range powla:Document .
+
+
+###  http://purl.org/powla/powla.owl#hasLayer
+powla:hasLayer rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( powla:Node
+                                           powla:Relation
+                                         )
+                           ] ;
+               rdfs:range powla:DocumentLayer ;
+               rdfs:comment """OPTIONAL object property
+hasLayer assigns a Relation or a Node a an annotation layer. hasLayer is recommended for Root nodes; a root can have at most one layer."""@en .
+
+
+###  http://purl.org/powla/powla.owl#hasNode
+powla:hasNode rdf:type owl:ObjectProperty ;
+              rdfs:domain powla:Root ;
+              rdfs:range powla:Node .
+
+
+###  http://purl.org/powla/powla.owl#hasNonterminal
+powla:hasNonterminal rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf powla:hasNode ;
+                     rdfs:domain powla:Root ;
+                     rdfs:range powla:Nonterminal .
+
+
+###  http://purl.org/powla/powla.owl#hasParent
+powla:hasParent rdf:type owl:ObjectProperty ;
+                rdfs:domain powla:Node ;
+                rdfs:range powla:Nonterminal ;
+                rdfs:comment """RECOMMENDED PROPERTY for expressing hierarchical annotations with coverage inheritance, e.g., in a tree annotation. 
+
+Coverage inheritance means that the string covered by the children must also be covered by the parent node. A typical example is phrase-structure syntax. A typical counter-example is dependency syntax."""@en .
+
+
+###  http://purl.org/powla/powla.owl#hasRoot
+powla:hasRoot rdf:type owl:ObjectProperty ;
+              rdfs:domain powla:Node ;
+              rdfs:range powla:Root ;
+              rdfs:comment """OPTIONAL object property
+powla:hasRoot is useful for efficient querying, as it allows to quickly check whether two nodes are part of the same tree structure (i.e., they have the same root). However, this is a derived property and SHOULD NOT be provided when exchanging POWLA datasets.
+
+This is an optional shorthand for 
+?node powla:hasParent+ ?root MINUS {?root powla:hasParent [] }"""@en .
+
+
+###  http://purl.org/powla/powla.owl#hasSource
+powla:hasSource rdf:type owl:ObjectProperty ;
+                owl:inverseOf powla:isSourceOf ;
+                rdfs:domain powla:Relation ;
+                rdfs:range powla:Node ;
+                rdfs:comment "RECOMMENDED datatype property for expressing annotated relations with powla:Relaton."@en .
+
+
+###  http://purl.org/powla/powla.owl#hasSubDocument
+powla:hasSubDocument rdf:type owl:ObjectProperty ;
+                     owl:inverseOf powla:hasSuperDocument ;
+                     rdfs:domain powla:Document ;
+                     rdfs:range powla:Document .
+
+
+###  http://purl.org/powla/powla.owl#hasSuperDocument
+powla:hasSuperDocument rdf:type owl:ObjectProperty ;
+                       rdfs:domain powla:Document ;
+                       rdfs:range powla:Document .
+
+
+###  http://purl.org/powla/powla.owl#hasTarget
+powla:hasTarget rdf:type owl:ObjectProperty ;
+                owl:inverseOf powla:isTargetOf ;
+                rdfs:domain powla:Relation ;
+                rdfs:range powla:Node ;
+                rdfs:comment "RECOMMENDED datatype property for expressing annotated relations with powla:Relaton."@en .
+
+
+###  http://purl.org/powla/powla.owl#hasTerminal
+powla:hasTerminal rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf powla:hasNode ;
+                  rdfs:domain powla:Root ;
+                  rdfs:range powla:Terminal .
+
+
+###  http://purl.org/powla/powla.owl#isSourceOf
+powla:isSourceOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain powla:Node ;
+                 rdfs:range powla:Relation ;
+                 rdfs:comment "OPTIONAL datatype property for expressing annotated relations with powla:Relaton. Inverse of powla:hasSource."@en .
+
+
+###  http://purl.org/powla/powla.owl#isTargetOf
+powla:isTargetOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain powla:Node ;
+                 rdfs:range powla:Relation ;
+                 rdfs:comment "OPTIONAL  datatype property for expressing annotated relations with powla:Relaton. Inverse of powla:hasTarget"@en .
+
+
+###  http://purl.org/powla/powla.owl#lastTerminal
+powla:lastTerminal rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf powla:hasTerminal ;
+                   rdfs:domain powla:Nonterminal ;
+                   rdfs:range powla:Terminal .
+
+
+###  http://purl.org/powla/powla.owl#next
+powla:next rdf:type owl:ObjectProperty ;
+           owl:inverseOf powla:previous ;
+           rdfs:comment """OBLIGATORY PROPERTY for connecting two powla:Nodes in a sequence. Note that powla:next is not transitive, but should connect adjacent nodes only.
+
+powla:next can be used to connect subsequent strings in *any* annotation, but when applied to an annotation layer with hierarchical annotation (e.g., a syntactic tree), it is recommended to use powla:next to express the order of nodes with the same parent (e.g., elements of a phrase) are to be connected. Note that sibling order may deviate from string order in the case of discontinuous annotations:
+
+[ [What]_PP1 are [ [you]_SBJ talking [about]_PP2 ]_VP ] ?
+
+In the example, the prepositional argument [about what]_PP is split (\"preposition stranding\"). Depending on the type of syntactic representation, it may be desirable to represent this as a single phrase, and POWLA allows to specify the canonical order of phrase elements regardless of their sequential order in the textual representation, i.e., about > what.
+
+Note that powla:next MUST be cycle-free, so antisequential order SHOULD NOT be applied to externally provided URIs, e.g., NIF URIs or RFC 5147 URIs. As an alternative, these SHOULD be assigned blank nodes as powla:hasParent each, which are then connected by powla:next.
+
+All children of the same parent node SHOULD be connected by a sequence of powla:next transitions. Non-siblings CAN be connected by powla:next, but this is not recommended except in the absence of hierarchical annotations.
+
+Also note that a single powla:Node MAY have multiple powla:next properties *relative to different parent nodes*. These can be disambiguated with reference to the parent node."""@en .
+
+
+###  http://purl.org/powla/powla.owl#nextNode
+powla:nextNode rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf powla:next ;
+               owl:inverseOf powla:previousNode ;
+               rdfs:domain powla:Node ;
+               rdfs:range powla:Node ;
+               owl:deprecated "true"^^xsd:boolean ;
+               owl:versionInfo "replaced by powla:next"@en .
+
+
+###  http://purl.org/powla/powla.owl#previous
+powla:previous rdf:type owl:ObjectProperty ;
+               rdfs:comment "OPTIONAL PROPERTY for connecting two powla:Nodes in a sequence. Inverse of powla:next, see there for details."@en .
+
+
+###  http://purl.org/powla/powla.owl#previousNode
+powla:previousNode rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf powla:previous ;
+                   rdfs:domain powla:Node ;
+                   rdfs:range powla:Node ;
+                   owl:deprecated "true"^^xsd:boolean ;
+                   owl:versionInfo "deprecated in favor of powla:previous"@en .
+
+
+###  http://purl.org/powla/powla.owl#rootOfDocument
+powla:rootOfDocument rdf:type owl:ObjectProperty ;
+                     rdfs:domain powla:DocumentLayer ;
+                     rdfs:range powla:Root ;
+                     rdfs:comment """DEPRECATED object property
+connecting a DocumentLayer to the roots in the document."""@en ;
+                     owl:deprecated "true"^^xsd:boolean ;
+                     owl:versionInfo "deprecated in favor of powla:hasLayer (a partial inverse)"@en .
+
 
 ###  http://semanticscience.org/resource/SIO_000001
 sio:SIO_000001 rdf:type owl:ObjectProperty ,
@@ -524,6 +724,16 @@ sio:SIO_000218 rdf:type owl:ObjectProperty ;
                rdfs:label "is quality of"@en .
 
 
+###  http://semanticscience.org/resource/SIO_000219
+sio:SIO_000219 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000011 ;
+               owl:inverseOf sio:SIO_000253 ;
+               dc:identifier "SIO_000219" ;
+               dcterms:description "is source of is a relation between a source of information about some entity."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "is source of"@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000221
 sio:SIO_000221 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf sio:SIO_000008 ;
@@ -570,6 +780,29 @@ sio:SIO_000224 rdf:type owl:ObjectProperty ;
                rdfs:label "is property of"@en .
 
 
+###  http://semanticscience.org/resource/SIO_000225
+sio:SIO_000225 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000235 ;
+               owl:inverseOf sio:SIO_000226 ;
+               rdf:type owl:InverseFunctionalProperty ;
+               rdfs:range sio:SIO_000017 ;
+               dc:identifier "SIO_000225" ;
+               dcterms:description "has function is the relation between an entity and a function that is ascribed to it."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "has function"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000226
+sio:SIO_000226 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000236 ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain sio:SIO_000017 ;
+               dc:identifier "SIO_000226" ;
+               dcterms:description "is function of is a relation between a function and an entity that it is a property of."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "is function of"@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000227
 sio:SIO_000227 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf sio:SIO_000643 ;
@@ -605,6 +838,29 @@ sio:SIO_000229 rdf:type owl:ObjectProperty ;
                rdfs:label "has output"@en .
 
 
+###  http://semanticscience.org/resource/SIO_000230
+sio:SIO_000230 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000132 ;
+               owl:inverseOf sio:SIO_000231 ;
+               dc:identifier "SIO_000230" ;
+               dcterms:description "has input is a relation between a process and an entity, where the entity is present at the beginning of the process."@en ;
+               sio:subset "core" ,
+                          "sadi"@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "has input"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000231
+sio:SIO_000231 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000062 ;
+               dc:identifier "SIO_000231" ;
+               dcterms:description "is input in is a relation between an entity and a process, where the entity is present at the beginning of the process."@en ;
+               sio:subset "sadi"@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "is input in"@en ;
+               skos:example "glucose and ATP are inputs in the hexokinase-mediated conversion of glucose to glucose-6-phosphate."@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000232
 sio:SIO_000232 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf sio:SIO_000062 ;
@@ -616,6 +872,38 @@ sio:SIO_000232 rdf:type owl:ObjectProperty ;
                skos:example "glucose-6-phosphate and ADP are outputs in the hexokinase-mediated conversion of glucose to glucose-6-phosphate."@en .
 
 
+###  http://semanticscience.org/resource/SIO_000235
+sio:SIO_000235 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000586 ;
+               owl:inverseOf sio:SIO_000236 ;
+               rdf:type owl:InverseFunctionalProperty ;
+               rdfs:range sio:SIO_000014 ;
+               dc:identifier "SIO_000235" ;
+               dcterms:description "has disposition is the relation between an entity and a disposition that it bears."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "has disposition"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000236
+sio:SIO_000236 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000646 ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain sio:SIO_000014 ;
+               dc:identifier "SIO_000236" ;
+               dcterms:description "is disposition of is a relation between a disposition and the entity that it is a property of."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "is disposition of"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000253
+sio:SIO_000253 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000008 ;
+               dc:identifier "SIO_000253" ;
+               dcterms:description "has source is a relation between an entity and another entity from which it stems from."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "has source"@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000273
 sio:SIO_000273 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf sio:SIO_000053 ;
@@ -625,6 +913,26 @@ sio:SIO_000273 rdf:type owl:ObjectProperty ;
                rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
                rdfs:label "has direct part"@en ;
                skos:example "a car has an engine as a direct part"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000291
+sio:SIO_000291 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000230 ;
+               owl:inverseOf sio:SIO_000292 ;
+               dc:identifier "SIO_000291" ;
+               dcterms:description "has target is a relation between a process and an entity, where the entity is present at the beginning  of the process and undergoes a change or transformation in the process."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "has target"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000292
+sio:SIO_000292 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000231 ;
+               dc:identifier "SIO_000292" ;
+               dcterms:description "is target in is a relation between an entity and a process, where the entity is present at the beginning  of the process and undergoes a change or transformation in the process."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "is target in"@en ;
+               skos:example "glucose is a target in the hexokinase-mediated conversion of glucose to glucose-6-phosphate."@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000310
@@ -721,6 +1029,19 @@ sio:SIO_000563 rdf:type owl:ObjectProperty ;
                rdfs:label "describes"@en .
 
 
+###  http://semanticscience.org/resource/SIO_000586
+sio:SIO_000586 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000644 ;
+               owl:inverseOf sio:SIO_000646 ;
+               rdf:type owl:InverseFunctionalProperty ;
+               rdfs:range sio:SIO_000112 ;
+               dc:identifier "SIO_000586" ;
+               dcterms:description "has capability is a relation between an entity and the capability that it bears."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "has capability"@en ;
+               skos:example "SIO has the capability to semantically integrate data."@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000628
 sio:SIO_000628 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf sio:SIO_000001 ;
@@ -740,6 +1061,31 @@ sio:SIO_000629 rdf:type owl:ObjectProperty ;
                rdfs:label "is subject of"@en .
 
 
+###  http://semanticscience.org/resource/SIO_000641
+sio:SIO_000641 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000008 ;
+               owl:inverseOf sio:SIO_000642 ;
+               rdfs:domain sio:SIO_000340 ;
+               rdfs:range sio:SIO_000005 ;
+               dc:identifier "SIO_000641" ;
+               dcterms:description "has basis is a relation between a realizable entity and the quality that forms the basis for it."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "has basis"@en ;
+               skos:example "the solubility of salt (the disposition) is based on the molecular structure of NaCl (the quality) that allows the polarized water-molecules (the trigger)  to break the ion bonds (the realization)."@en .
+
+
+###  http://semanticscience.org/resource/SIO_000642
+sio:SIO_000642 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000011 ;
+               rdfs:domain sio:SIO_000005 ;
+               rdfs:range sio:SIO_000340 ;
+               dc:identifier "SIO_000642" ;
+               dcterms:description "is base for is a relation between a quality and the realizable entity that it is the basis for."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "is base for"@en ;
+               skos:example "the solubility of salt (the disposition) is based on the molecular structure of NaCl (the quality) that allows the polarized water-molecules (the trigger)  to break the ion bonds (the realization)."@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000643
 sio:SIO_000643 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf sio:SIO_000224 ;
@@ -757,6 +1103,17 @@ sio:SIO_000644 rdf:type owl:ObjectProperty ;
                dc:identifier "SIO_000644" ;
                rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
                rdfs:label "has realizable property"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000646
+sio:SIO_000646 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sio:SIO_000643 ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain sio:SIO_000112 ;
+               dc:identifier "SIO_000646" ;
+               dcterms:description "is capability of is a relation between a capability and the entity that bears it."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "is capability of"@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000671
@@ -939,6 +1296,100 @@ dcterms:modified rdf:type owl:DatatypeProperty .
 dcterms:title rdf:type owl:DatatypeProperty .
 
 
+###  http://purl.org/powla/powla.owl#documentID
+powla:documentID rdf:type owl:DatatypeProperty ;
+                 rdfs:domain powla:Document ;
+                 rdfs:range xsd:string .
+
+
+###  http://purl.org/powla/powla.owl#end
+powla:end rdf:type owl:DatatypeProperty ;
+          rdfs:domain powla:Node ;
+          rdfs:range xsd:int ;
+          rdfs:comment """OPTIONAL datatype property or powla:Node
+RECOMMENDED datatype property for powla:Terminal
+
+powla:end allows to specify a numerical (integer) index. This may be an offset (as in NIF) or a structure-sensitive index (as in ANNIS). Interpretation is implementation-specific, but end >= start."""@en .
+
+
+###  http://purl.org/powla/powla.owl#endPosition
+powla:endPosition rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf powla:end ;
+                  rdfs:domain powla:Terminal ;
+                  rdfs:range xsd:int ;
+                  owl:deprecated "true"^^xsd:boolean ;
+                  owl:versionInfo "DEPRECATED in favor of powla:end"@en .
+
+
+###  http://purl.org/powla/powla.owl#hasAnnotation
+powla:hasAnnotation rdf:type owl:DatatypeProperty ;
+                    rdfs:domain powla:POWLAElement ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment """ABSTRACT datatype property for linguistic annotations (on Node and Relation) and metadata (on Document and Layer).
+hasAnnotation represents linguistic annotations. The atgtribute name is specified in the hasXY property, the value is the string value."""@en ;
+                    owl:versionInfo """2018-04-01 generalized to metadata annotation
+corresponds to labels attached to nodes and edges in SALT"""@en .
+
+
+###  http://purl.org/powla/powla.owl#hasMetadata
+powla:hasMetadata rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf powla:hasAnnotation ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( powla:Document
+                                              powla:Layer
+                                            )
+                              ] ;
+                  rdfs:comment """like hasAnnotation, but for Document and Layer
+
+corresponds to labels attached to Graphs in SALT""" ;
+                  owl:deprecated "true"^^xsd:boolean ;
+                  owl:versionInfo "deprecatred in favor of (a generalization of) powla:hasAnnotation"@en .
+
+
+###  http://purl.org/powla/powla.owl#hasStringValue
+powla:hasStringValue rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf powla:string ;
+                     rdfs:domain powla:Terminal ;
+                     rdfs:range xsd:string ;
+                     owl:deprecated "true"^^xsd:boolean ;
+                     owl:versionInfo "deprecated in favor of powla:string"@en .
+
+
+###  http://purl.org/powla/powla.owl#layerID
+powla:layerID rdf:type owl:DatatypeProperty ;
+              rdfs:domain powla:Layer ;
+              rdfs:range xsd:string .
+
+
+###  http://purl.org/powla/powla.owl#start
+powla:start rdf:type owl:DatatypeProperty ;
+            rdfs:domain powla:Node ;
+            rdfs:range xsd:int ;
+            rdfs:comment """OPTIONAL datatype property for powla:Node
+RECOMMENDED datatype property for powla:Terminal
+
+powla:start allows to specify a numerical (integer) index. This may be an offset (as in NIF) or a structure-sensitive index (as in ANNIS). Interpretation is implementation-specific, but end >= start."""@en .
+
+
+###  http://purl.org/powla/powla.owl#startPosition
+powla:startPosition rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf powla:start ;
+                    rdfs:domain powla:Terminal ;
+                    rdfs:range xsd:int ;
+                    owl:deprecated "true"^^xsd:boolean ;
+                    owl:versionInfo "DEPRECATED in favor of powla:start"@en .
+
+
+###  http://purl.org/powla/powla.owl#string
+powla:string rdf:type owl:DatatypeProperty ;
+             rdfs:domain powla:Node ;
+             rdfs:range xsd:string ;
+             rdfs:comment """RECOMMENDED datatype property for powla:Terminal
+OPTIONAL datatype property for powla:Node
+powla:string carries the string value of the tokens to which this annotation unit (node) applies. For empty strings, this must be left unspecified.
+Corresponds to nif:anchor."""@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000300
 sio:SIO_000300 rdf:type owl:DatatypeProperty ,
                         owl:FunctionalProperty ;
@@ -1057,17 +1508,124 @@ time:years rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://purl.org/twc/dido#Dialogue
-<http://purl.org/twc/dido#Dialogue> rdf:type owl:Class ;
-                                    rdfs:subClassOf sio:SIO_000006 ,
+###  http://purl.org/dido#Dialogue
+<http://purl.org/dido#Dialogue> rdf:type owl:Class ;
+                                rdfs:subClassOf sio:SIO_000006 ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty sio:SIO_000028 ;
+                                                  owl:someValuesFrom <http://purl.org/dido#Turn>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty sio:SIO_000028 ;
+                                                  owl:someValuesFrom <http://purl.org/dido#Utterance>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty sio:SIO_000132 ;
+                                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass [ rdf:type owl:Class ;
+                                                                owl:unionOf ( sio:SIO_000097
+                                                                              sio:SIO_000485
+                                                                            )
+                                                              ]
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty sio:SIO_000008 ;
+                                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass time:ProperInterval
+                                                ] ;
+                                rdfs:label "dialogue" ;
+                                skos:altLabel "conversation" ;
+                                skos:definition "an interactive communication between two or more entities" .
+
+
+###  http://purl.org/dido#DialogueAct
+<http://purl.org/dido#DialogueAct> rdf:type owl:Class ;
+                                   rdfs:subClassOf sio:SIO_000014 ,
+                                                   sio:SIO_000017 ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://purl.org/dido#hasAddressee> ;
+                                                     owl:someValuesFrom <http://purl.org/dido#Interlocutor>
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty sio:SIO_000226 ;
+                                                     owl:someValuesFrom <http://purl.org/dido#Utterance>
+                                                   ] ;
+                                   rdfs:label "dialogue act" ;
+                                   skos:altLabel "communicative function" ,
+                                                 "functional segment" ,
+                                                 "speech act" ;
+                                   skos:definition "the meaning of an utterance at the level of illocutionary force" .
+
+
+###  http://purl.org/dido#DialogueActAnnotation
+<http://purl.org/dido#DialogueActAnnotation> rdf:type owl:Class ;
+                                             rdfs:subClassOf powla:Terminal ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty sio:SIO_000332 ;
+                                                               owl:someValuesFrom <http://purl.org/dido#DialogueAct>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty sio:SIO_000291 ;
+                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                               owl:onClass <http://purl.org/dido#Utterance>
+                                                             ] ;
+                                             rdfs:label "dialogue act annotation" ;
+                                             skos:definition "a label representing some dialogue act dimension with respect to a particular specification" .
+
+
+###  http://purl.org/dido#DialogueTranscript
+<http://purl.org/dido#DialogueTranscript> rdf:type owl:Class ;
+                                          rdfs:subClassOf sio:SIO_000069 ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty sio:SIO_000095 ;
+                                                            owl:someValuesFrom sio:SIO_000089
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty sio:SIO_000059 ;
+                                                            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <http://purl.org/dido#UtteranceText>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty sio:SIO_000332 ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass <http://purl.org/dido#Dialogue>
+                                                          ] ;
+                                          rdfs:label "dialogue transcript"@en ;
+                                          skos:definition "A digital or physical information content entity that provides a structured textual record of a conversation" .
+
+
+###  http://purl.org/dido#DiscourseRelation
+<http://purl.org/dido#DiscourseRelation> rdf:type owl:Class ;
+                                         rdfs:subClassOf sio:SIO_000006 ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty sio:SIO_000253 ;
+                                                           owl:someValuesFrom <http://purl.org/dido#Utterance>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty sio:SIO_000291 ;
+                                                           owl:someValuesFrom <http://purl.org/dido#Utterance>
+                                                         ] ;
+                                         rdfs:label "discourse relation" ;
+                                         skos:definition "a rhetorical or semantic connection between two or more utterances" .
+
+
+###  http://purl.org/dido#DiscourseRelationAnnotation
+<http://purl.org/dido#DiscourseRelationAnnotation> rdf:type owl:Class ;
+                                                   rdfs:subClassOf powla:Terminal ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty sio:SIO_000332 ;
+                                                                     owl:someValuesFrom <http://purl.org/dido#DiscourseRelation>
+                                                                   ] ;
+                                                   rdfs:label "discourse relation annotation" ;
+                                                   skos:definition "a label or marker representing a specific discourse relation" .
+
+
+###  http://purl.org/dido#Interlocutor
+<http://purl.org/dido#Interlocutor> rdf:type owl:Class ;
+                                    rdfs:subClassOf sio:SIO_000016 ,
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty sio:SIO_000028 ;
+                                                      owl:onProperty sio:SIO_000227 ;
                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                      owl:onClass <http://purl.org/twc/dido#Utterance>
-                                                    ] ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty sio:SIO_000132 ;
-                                                      owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
                                                       owl:onClass [ rdf:type owl:Class ;
                                                                     owl:unionOf ( sio:SIO_000097
                                                                                   sio:SIO_000485
@@ -1075,95 +1633,392 @@ time:years rdf:type owl:DatatypeProperty ;
                                                                   ]
                                                     ] ,
                                                     [ rdf:type owl:Restriction ;
-                                                      owl:onProperty sio:SIO_000008 ;
-                                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                      owl:onClass time:ProperInterval
+                                                      owl:onProperty sio:SIO_000356 ;
+                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass <http://purl.org/dido#Dialogue>
                                                     ] ;
-                                    rdfs:label "dialogue" ;
-                                    skos:definition "an interactive communication between two or more entities" .
+                                    rdfs:label "interlocutor" ;
+                                    skos:altLabel "dialogue participant" ;
+                                    skos:definition "One who takes part in a conversation or dialogue" .
 
 
-###  http://purl.org/twc/dido#DialogueTranscript
-<http://purl.org/twc/dido#DialogueTranscript> rdf:type owl:Class ;
-                                              rdfs:subClassOf sio:SIO_000069 ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty sio:SIO_000095 ;
-                                                                owl:someValuesFrom sio:SIO_000089
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty sio:SIO_000059 ;
-                                                                owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                                owl:onClass <http://purl.org/twc/dido#UtteranceText>
-                                                              ] ,
-                                                              [ rdf:type owl:Restriction ;
-                                                                owl:onProperty sio:SIO_000332 ;
-                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                owl:onClass <http://purl.org/twc/dido#Dialogue>
-                                                              ] ;
-                                              rdfs:label "dialogue transcript"@en ;
-                                              skos:definition "A digital or physical information content entity that provides a structured textual record of a conversation" .
+###  http://purl.org/dido#Turn
+<http://purl.org/dido#Turn> rdf:type owl:Class ;
+                            rdfs:subClassOf sio:SIO_000006 ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty sio:SIO_000068 ;
+                                              owl:someValuesFrom <http://purl.org/dido#Dialogue>
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty sio:SIO_000139 ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass [ rdf:type owl:Class ;
+                                                            owl:unionOf ( sio:SIO_000097
+                                                                          sio:SIO_000485
+                                                                        )
+                                                          ]
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty sio:SIO_000008 ;
+                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass time:Interval
+                                            ] ;
+                            rdfs:label "turn" ;
+                            skos:definition "a unit of conversation in which a single interlocutor holds the floor, without interruption from another interlocutor or other external circumstance" .
 
 
-###  http://purl.org/twc/dido#Interlocutor
-<http://purl.org/twc/dido#Interlocutor> rdf:type owl:Class ;
-                                        rdfs:subClassOf sio:SIO_000016 ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty sio:SIO_000227 ;
-                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onClass [ rdf:type owl:Class ;
-                                                                        owl:unionOf ( sio:SIO_000097
-                                                                                      sio:SIO_000485
-                                                                                    )
-                                                                      ]
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty sio:SIO_000356 ;
-                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onClass <http://purl.org/twc/dido#Dialogue>
-                                                        ] ;
-                                        rdfs:label "interlocutor" ;
-                                        skos:definition "One who takes part in a conversation or dialogue" .
+###  http://purl.org/dido#Utterance
+<http://purl.org/dido#Utterance> rdf:type owl:Class ;
+                                 rdfs:subClassOf powla:Nonterminal ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty sio:SIO_000068 ;
+                                                   owl:someValuesFrom <http://purl.org/dido#Dialogue>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty sio:SIO_000225 ;
+                                                   owl:someValuesFrom <http://purl.org/dido#DialogueAct>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty sio:SIO_000229 ;
+                                                   owl:someValuesFrom <http://purl.org/dido#UtteranceText>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty sio:SIO_000291 ;
+                                                   owl:someValuesFrom <http://purl.org/dido#Interlocutor>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty sio:SIO_000292 ;
+                                                   owl:someValuesFrom <http://purl.org/dido#DialogueActAnnotation>
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty sio:SIO_000139 ;
+                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( sio:SIO_000097
+                                                                               sio:SIO_000485
+                                                                             )
+                                                               ]
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty sio:SIO_000008 ;
+                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass time:Interval
+                                                 ] ;
+                                 rdfs:label "utterance" ;
+                                 skos:definition "a single unit of speech in spoken language that serves some pragmatic function" .
 
 
-###  http://purl.org/twc/dido#Utterance
-<http://purl.org/twc/dido#Utterance> rdf:type owl:Class ;
-                                     rdfs:subClassOf sio:SIO_000006 ,
+###  http://purl.org/dido#UtteranceText
+<http://purl.org/dido#UtteranceText> rdf:type owl:Class ;
+                                     rdfs:subClassOf sio:SIO_000078 ,
                                                      [ rdf:type owl:Restriction ;
-                                                       owl:onProperty sio:SIO_000229 ;
-                                                       owl:someValuesFrom <http://purl.org/twc/dido#UtteranceText>
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty sio:SIO_000068 ;
-                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass <http://purl.org/twc/dido#Dialogue>
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty sio:SIO_000139 ;
-                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass [ rdf:type owl:Class ;
-                                                                     owl:unionOf ( sio:SIO_000097
-                                                                                   sio:SIO_000485
-                                                                                 )
-                                                                   ]
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty sio:SIO_000008 ;
-                                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass time:Interval
+                                                       owl:onProperty sio:SIO_000300 ;
+                                                       owl:someValuesFrom rdfs:Literal
                                                      ] ;
-                                     rdfs:label "utterance" ;
-                                     skos:definition "a single unit of speech in spoken language that serves some pragmatic function" .
+                                     rdfs:label "utterance text" ;
+                                     skos:definition "a textual entity representing the output of an utterance" .
 
 
-###  http://purl.org/twc/dido#UtteranceText
-<http://purl.org/twc/dido#UtteranceText> rdf:type owl:Class ;
-                                         rdfs:subClassOf sio:SIO_000078 ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty sio:SIO_000300 ;
-                                                           owl:someValuesFrom rdfs:Literal
-                                                         ] ;
-                                         rdfs:label "utterance text" ;
-                                         skos:definition "a textual entity representing the output of an utterance" .
+###  http://purl.org/powla/powla.owl#Corpus
+powla:Corpus rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( powla:Document
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty powla:hasSuperDocument ;
+                                                          owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf powla:Document ;
+             rdfs:comment """OPTIONAL type
+A Corpus is a Document without superDocument"""@en .
+
+
+###  http://purl.org/powla/powla.owl#Document
+powla:Document rdf:type owl:Class ;
+               rdfs:subClassOf powla:POWLAElement ,
+                               [ owl:intersectionOf ( powla:POWLAElement
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty powla:documentID ;
+                                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+               owl:disjointWith powla:Layer ,
+                                powla:Node ,
+                                powla:Relation ;
+               rdfs:comment """OPTIONAL type
+A document is a(n annotated piece of) primary data as defined by the respective use case. A document can aggregate other documents (e.g., the Bible consists of several books), we thus extend the notion of document to collections of documents.
+
+powla:Document is roughly corresponding to SALT Graph and PAULA anno sets."""@en .
+
+
+###  http://purl.org/powla/powla.owl#DocumentLayer
+powla:DocumentLayer rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( powla:Layer
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty powla:hasDocument ;
+                                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf powla:Layer ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty powla:hasDocument ;
+                                      owl:someValuesFrom owl:Thing
+                                    ] ;
+                    rdfs:comment """OPTIONAL type
+Layer within a document"""@en .
+
+
+###  http://purl.org/powla/powla.owl#DominanceRelation
+powla:DominanceRelation rdf:type owl:Class ;
+                        rdfs:subClassOf powla:Relation ;
+                        rdfs:comment """DEPRECATED object property
+Dominance relations are labeled (reified) relations with coverage inheritance, i.e., the target node covers all terminals of the source node(s). Dominance relations are typical for phrase structure syntax.
+
+This property, originally motivated from PAULA,  is deprecated in POWLA, as dominance relations are sufficiently described by powla:Relation and powla:hasParent."""@en ;
+                        owl:deprecated "true"^^xsd:boolean ;
+                        owl:versionInfo "dominance relations aren't actually necessary, a Relation is a DominanceRelation if it coincides with a hasChild property"@en .
+
+
+###  http://purl.org/powla/powla.owl#Layer
+powla:Layer rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:unionOf ( powla:MarkableLayer
+                                                powla:StructLayer
+                                                powla:TokenLayer
+                                              )
+                                ] ;
+            rdfs:subClassOf powla:POWLAElement ,
+                            [ owl:intersectionOf ( powla:POWLAElement
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty powla:layerID ;
+                                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            owl:disjointWith powla:Node ,
+                             powla:Relation ;
+            rdfs:comment """OPTIONAL type
+A layer describes a group of annotations, this may be either within a document or independently from a particular document"""@en .
+
+
+###  http://purl.org/powla/powla.owl#MarkableLayer
+powla:MarkableLayer rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( powla:Layer
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:complementOf powla:StructLayer
+                                                               ]
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:complementOf powla:TokenLayer
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf powla:Layer ;
+                    rdfs:comment """OPTIONAL type
+Markable layers are visualized in a special way. with the current modelling, the status of a layer as a markable layer can be inferred and does not need to be asserted."""@en .
+
+
+###  http://purl.org/powla/powla.owl#Node
+powla:Node rdf:type owl:Class ;
+           rdfs:subClassOf powla:POWLAElement ;
+           owl:disjointWith powla:Relation ;
+           rdfs:comment """RECOMMENDED type.
+Nodes represent units of linguistic annotation (`markables'). Typical nodes have a defined extension or a position in the annotated data.
+
+However, nodes may also be empty or not determined in their position if the annotated category can apply to nodes with a defined extension or position. An example for a non-positionable node with zero extension is the annotation of implicit semantic roles.
+
+El Salvador is now the only Latin American country which still has troops in [Iraq]_LOC. Nicaragua, Honduras and the Dominican Republic have withdrawn their troops [0]_LOC.
+
+In terms of frame semantics, withdrawing toops requires a location element, marked by [0]_LOC, but this is not realized in the local sentence. We can, however, infer its existence from a frame inventory (and in this case, also connect it with a string in the preceding text -- this is not always the case). However, it is impossible to define its actual string position in the second sentence.
+
+Yet, the element marked by [0]_LOC is a valid powla:Node because if a phrase like \"from Iraq\" would have occurred in the sentence, it would have been annotated with the same linguistic features as the empty element.
+
+Note that rdf:type powla:Node is recommended, but not obligatory, as this can be RDFS-inferred from (the obligatory) powla:next."""@en .
+
+
+###  http://purl.org/powla/powla.owl#Nonterminal
+powla:Nonterminal rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( powla:Node
+                                                             [ rdf:type owl:Class ;
+                                                               owl:complementOf powla:Terminal
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ,
+                                      [ owl:intersectionOf ( powla:Node
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty powla:hasChild ;
+                                                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf powla:Node ,
+                                  sio:SIO_000006 ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty powla:hasChild ;
+                                    owl:someValuesFrom owl:Thing
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty sio:SIO_000253 ;
+                                    owl:someValuesFrom <http://purl.org/dido#Utterance>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty sio:SIO_000291 ;
+                                    owl:someValuesFrom <http://purl.org/dido#Utterance>
+                                  ] ;
+                  owl:disjointWith powla:Terminal ;
+                  rdfs:comment """OPTIONAL type
+A powla:Node which is not a powla:Terminal (see there), RDFS-inferrable from powla:hasParent."""@en .
+
+
+###  http://purl.org/powla/powla.owl#POWLAElement
+powla:POWLAElement rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:unionOf ( powla:Document
+                                                       powla:Layer
+                                                       powla:Node
+                                                       powla:Relation
+                                                     )
+                                       ] ;
+                   rdfs:subClassOf sio:SIO_000000 ;
+                   rdfs:comment "ABSTRACT type for POWLA data structures, not to be directly applied to data."@en .
+
+
+###  http://purl.org/powla/powla.owl#PointingRelation
+powla:PointingRelation rdf:type owl:Class ;
+                       rdfs:subClassOf powla:Relation ;
+                       rdfs:comment """DEPRECATED object relation
+A pointing relation is a labeled (reified) relation without coverage inheritance, i.e., the (terminals covered by the) target nodes do not typically overlap with the (terminals covered by the) source nodes.
+
+This property, motivated from PAULA, is deprecated in POWLA, as it is sufiiently described by a relation without accompanying powla:hasParent."""@en ;
+                       owl:deprecated "true"^^xsd:boolean ;
+                       owl:versionInfo "pointing relations aren't actually necessary, a relation is a pointing relation if it does not coincide with a hasChild property."@en .
+
+
+###  http://purl.org/powla/powla.owl#Relation
+powla:Relation rdf:type owl:Class ;
+               rdfs:subClassOf powla:POWLAElement ;
+               rdfs:comment """RECOMMENDED type
+A relation represents a labelled edge that holds between two powla nodes. POWLA employs a reified representation, where source and target are linked with the relation via powla:hasSource and powla:hasTarget (resp., powla:isSourceOf and powla:isTargetOf)"""@en ;
+               owl:versionInfo """corresponding to SALT Edge, POM Relation
+
+Note: in SALT no edges between Terminals"""@en .
+
+
+###  http://purl.org/powla/powla.owl#Root
+powla:Root rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( powla:Node
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty powla:hasParent ;
+                                                        owl:cardinality "0"^^xsd:nonNegativeInteger
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf [ owl:intersectionOf ( powla:Node
+                                                  [ rdf:type owl:Class ;
+                                                    owl:unionOf ( powla:Nonterminal
+                                                                  powla:Terminal
+                                                                )
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+           rdfs:comment """OPTIONAL type
+A root node is a powla:Node which is not a subject of a powla:hasParent property.
+A number of properties that organize linguistic annotations into documents and corpora are based on the notion of root nodes as this limits the number of necessary links between data points and data sets. powla:Root can be RDFS-inferred from these or inferred from the absence of powla:hasParent under a closed world assumption."""@en .
+
+
+###  http://purl.org/powla/powla.owl#StructLayer
+powla:StructLayer rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( powla:Layer
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty powla:rootOfDocument ;
+                                                               owl:someValuesFrom [ owl:intersectionOf ( powla:Nonterminal
+                                                                                                         [ rdf:type owl:Restriction ;
+                                                                                                           owl:onProperty powla:hasChild ;
+                                                                                                           owl:someValuesFrom powla:Nonterminal
+                                                                                                         ]
+                                                                                                       ) ;
+                                                                                    rdf:type owl:Class
+                                                                                  ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf powla:DocumentLayer ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty powla:rootOfDocument ;
+                                    owl:someValuesFrom [ owl:intersectionOf ( powla:Nonterminal
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty powla:hasChild ;
+                                                                                owl:someValuesFrom powla:Nonterminal
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ]
+                                  ] ;
+                  owl:disjointWith powla:TokenLayer ;
+                  rdfs:comment """OPTIONAL type
+Struct layers are visualized as directed acyclic graphs (i.e., generalized trees). with the current modelling, the status of a layer as a struct layer can be inferred and does not need to be asserted."""@en .
+
+
+###  http://purl.org/powla/powla.owl#Terminal
+powla:Terminal rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( powla:Node
+                                                          [ rdf:type owl:Class ;
+                                                            owl:complementOf powla:Nonterminal
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ,
+                                   [ owl:intersectionOf ( powla:Node
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty powla:hasChild ;
+                                                            owl:cardinality "0"^^xsd:nonNegativeInteger
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf powla:Node ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty powla:endPosition ;
+                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty powla:startPosition ;
+                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment """OPTIONAL type
+A terminal is a node which does not have a child node (cf. hasParent/hasChild). Can be used as a basis for text anchoring.
+
+Also corresponds to the single `base segmentation' in LAF, and the `(privileged) tokenization layer' in PAULA 1.0, which is used for calculating and querying token distance in corpus information systems.
+Where non-minimal segments are needed as `(privileged) tokenization layer', we recommend to use external vocabularies, e.g., explicit nif:Word and nif:nextWord annotations.
+
+Optional, as it can be inferred from powla:hasParent under a closed world assumption."""@en ;
+               owl:versionInfo "roughly corresponding to SALT Terminal, PAULA 1.0 Token and PAULA 1.1 Terminal"@en .
+
+
+###  http://purl.org/powla/powla.owl#TokenLayer
+powla:TokenLayer rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( powla:Layer
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty powla:rootOfDocument ;
+                                                              owl:allValuesFrom powla:Terminal
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf powla:Layer ;
+                 rdfs:comment """OPTIONAL type
+Token layers consist of annotations of terminal nodes, only. This class is necessary for visualization only, under the closed world assumption, however, it can be inferred and does not need to be asserted."""@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000000
@@ -1227,6 +2082,21 @@ sio:SIO_000006 rdf:type owl:Class ;
                rdfs:label "process"@en .
 
 
+###  http://semanticscience.org/resource/SIO_000014
+sio:SIO_000014 rdf:type owl:Class ;
+               rdfs:subClassOf sio:SIO_000112 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty sio:SIO_000008 ;
+                                 owl:someValuesFrom sio:SIO_000638
+                               ] ;
+               dc:identifier "SIO_000014" ;
+               dcterms:description "A disposition is the tendency of a capability to be exhibited under certain conditions or in response to a certain stimulus (trigger)."@en ;
+               sio:subset "core" ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "disposition"@en ;
+               skos:example "solubility (to dissolve when put in fluid); fragility (disposition to break when dropped)"@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000015
 sio:SIO_000015 rdf:type owl:Class ;
                rdfs:subClassOf sio:SIO_000776 ,
@@ -1250,6 +2120,16 @@ sio:SIO_000016 rdf:type owl:Class ;
                sio:subset "core" ;
                rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
                rdfs:label "role"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000017
+sio:SIO_000017 rdf:type owl:Class ;
+               rdfs:subClassOf sio:SIO_000112 ;
+               dc:identifier "SIO_000017" ;
+               dcterms:description "A function is a capability that satisfies some agentive objective, or (evolutionary) optimization."@en ;
+               sio:subset "core" ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "function"@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000037
@@ -1416,6 +2296,28 @@ sio:SIO_000108 rdf:type owl:Class ;
                dcterms:description "A character is a language symbol used to construct words."@en ;
                rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
                rdfs:label "character"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000112
+sio:SIO_000112 rdf:type owl:Class ;
+               rdfs:subClassOf sio:SIO_000340 ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty sio:SIO_000011 ;
+                                 owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                      owl:onProperty sio:SIO_000063 ;
+                                                      owl:someValuesFrom sio:SIO_000006
+                                                    ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty sio:SIO_000641 ;
+                                 owl:someValuesFrom sio:SIO_000005
+                               ] ;
+               dc:identifier "SIO_000112" ;
+               dcterms:description "A capability is a realizable entity whose basis lies in one or more parts or qualities and reflects possibility of an entity to behave in a specified way under certain conditions or in response to a certain stimulus (trigger)."@en ;
+               sio:subset "capability+" ,
+                          "core" ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "capability"@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000114
@@ -1731,6 +2633,15 @@ sio:SIO_000616 rdf:type owl:Class ;
                rdfs:label "collection"@en .
 
 
+###  http://semanticscience.org/resource/SIO_000638
+sio:SIO_000638 rdf:type owl:Class ;
+               rdfs:subClassOf sio:SIO_000257 ;
+               dc:identifier "SIO_000638" ;
+               dcterms:description "A probability measure is quantity of how likely it is that some event will occur."@en ;
+               rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+               rdfs:label "probability measure"@en .
+
+
 ###  http://semanticscience.org/resource/SIO_000776
 sio:SIO_000776 rdf:type owl:Class ;
                rdfs:subClassOf sio:SIO_000000 ,
@@ -1982,6 +2893,10 @@ sio:SIO_011126 rdf:type owl:Class ;
                rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
                rdfs:label "chemical substance"@en ;
                skos:exactMatch "CHEMINF:440533" .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2006/time#Duration
@@ -2437,8 +3352,7 @@ dcterms:title dc:identifier "title" ;
   owl:members ( sio:SIO_000006
                 sio:SIO_000614
                 sio:SIO_000776
-              ) ;
-  dc:identifier ":arc9cacb982"
+              )
 ] .
 
 

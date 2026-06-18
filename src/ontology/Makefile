@@ -35,7 +35,7 @@ TODAY ?= 				$(shell date +%Y-%m-%d)
 VERSION = 				$(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(URI)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 FORMATS = 				$(sort ttl owl)
-RELEASE_ARTEFACTS = 	$(ONT) $(ONT)-base $(ONT)-full
+RELEASE_ARTEFACTS = 	$(ONT) $(ONT)-base $(ONT)-full #$(ONT)-mireot
 
 SIO_URI := 				http://semanticscience.org/ontology/sio.owl
 TIME_URI :=				http://www.w3.org/2006/time
@@ -81,6 +81,7 @@ IMPORTS = sio time dcat
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
 IMPORT_FILES = $(IMPORT_OWL_FILES)
+# IMPORT_MIREOT_FILES = $(patsubst %, imports/%_import_mireot.owl, $(IMPORTS))
 
 .PHONY: all_imports
 all_imports: $(IMPORT_FILES)
@@ -217,6 +218,24 @@ imports/dcat_import.owl: mirror/dcat.owl imports/dcat_terms_combined.txt
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
+# imports/sio_import_mireot.owl: mirror/sio.owl imports/sio_terms_combined.txt
+# 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+# 		extract -T imports/sio_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method MIREOT \
+# 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+# 		annotate --ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# imports/time_import_mireot.owl: mirror/time.owl imports/time_terms_combined.txt
+# 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+# 		extract -T imports/time_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method MIREOT \
+# 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+# 		annotate --ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# imports/dcat_import_mireot.owl: mirror/dcat.owl imports/dcat_terms_combined.txt
+# 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+# 		extract -T imports/dcat_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method MIREOT \
+# 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+# 		annotate --ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
 
 .PRECIOUS: imports/%_import.owl
 
@@ -335,6 +354,8 @@ $(ONT)-full.owl: $(ONT)-full.ttl
 	$(ROBOT) convert --input $< --check false -f owl -o $@.tmp.owl && mv $@.tmp.owl $@
 $(ONT)-base.owl: $(ONT)-base.ttl
 	$(ROBOT) convert --input $< --check false -f owl -o $@.tmp.owl && mv $@.tmp.owl $@
+# $(ONT)-mireot.owl: $(ONT)-mireot.ttl
+# 	$(ROBOT) convert --input $< --check false -f owl -o $@.tmp.owl && mv $@.tmp.owl $@
 
 
 # We always want a base - even if it is not explicitly configured..
@@ -369,6 +390,14 @@ $(ONT)-base.ttl: $(SRC) $(OTHER_SRC)
 		annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
 		--ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
 		--output $@.tmp.owl && mv $@.tmp.owl $@
+
+# mireot: imports merged using MIREOT principles
+# $(ONT)-mireot.ttl: $(SRC) $(OTHER_SRC) $(IMPORT_MIREOT_FILES)
+# 	$(ROBOT) remove --input $< --select imports --trim false \
+# 		merge $(patsubst %, -i %, $(OTHER_SRC)) $(patsubst %, -i %, $(IMPORT_MIREOT_FILES)) \
+# 		annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
+# 		--ontology-iri $(URI)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+# 		--output $@.tmp.owl && mv $@.tmp.owl $@
 
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.ttl: $(SRC) $(OTHER_SRC)

@@ -1,11 +1,10 @@
-PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX dido: <http://purl.org/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
-PREFIX ex: <http://purl.org/twc/dido/individuals#>
 
-# CQ2: Which participant is associated with utterance U?
-SELECT ?utterance ?participant
+# CQ2: What is the textual content of turn?
+SELECT ?turn ?text
 WHERE {
-  ?utterance sio:SIO_000139 ?participant .
-  ?participant sio:SIO_000228 ?role .
-  ?role a dido:Interlocutor .
+  ?turn a dido:Turn .
+  ?turn sio:SIO_000229 ?turnText .
+  ?turnText sio:SIO_000300 ?text .
 }

@@ -1,26 +1,21 @@
-PREFIX dido: <http://purl.org/twc/dido#>
+PREFIX dido: <http://purl.org/dido#>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX time: <http://www.w3.org/2006/time#>
-PREFIX ex: <http://purl.org/twc/dido/individuals#>
 
-# CQ5: Which utterances overlap with utterance U?
-SELECT ?utterance1 ?utterance2
+# CQ5: Which turn most closely follows turn?
+SELECT ?turn ?follower
 WHERE {
-  ?utterance1 a dido:Utterance ;
-     sio:sio_000008 [ 
-       time:hasBeginning [ time:inDateTime [ time:second ?startU ] ] ;
-       time:hasEnd [ time:inDateTime [ time:second ?endU ] ]
-     ] .
-  ?utterance2 a dido:Utterance ;
-                  sio:sio_000008 [ 
-                    time:hasBeginning [ time:inDateTime [ time:second ?startOther ] ] ;
-                    time:hasEnd [ time:inDateTime [ time:second ?endOther ] ]
-                  ] .
+  ?turn a dido:Turn ;
+      sio:SIO_000008 [ time:hasEnd [ time:inDateTime [ time:second ?uEnd ] ] ] .
+  ?follower a dido:Turn ;
+      sio:SIO_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?fStart ] ] ] .
   
-  FILTER (?utterance1 != ?utterance2)
+  FILTER (?fStart >= ?uEnd)
   
-  # Overlap condition: start1 < end2 AND end1 > start2
-  FILTER (?startOther < ?endU && ?endOther > ?startU)
-  
-  # Example: BIND(<http://purl.org/twc/dido/individuals#utterances/None_0> AS ?utterance1)
+  # Ensure no other turn starts between them
+  FILTER NOT EXISTS {
+    ?other a dido:Turn ;
+           sio:SIO_000008 [ time:hasBeginning [ time:inDateTime [ time:second ?otherStart ] ] ] .
+    FILTER (?otherStart >= ?uEnd && ?otherStart < ?fStart)
+  }
 }

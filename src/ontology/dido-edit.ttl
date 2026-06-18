@@ -1,4 +1,4 @@
-@prefix : <http://purl.org/twc/dido#> .
+@prefix : <http://purl.org/dido#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ex: <http://example.org/instance/> .
 @prefix ont: <http://example.org/ontology/> .
@@ -13,21 +13,23 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix powla: <http://purl.org/powla/powla.owl#> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://purl.org/twc/dido#> .
+@base <http://purl.org/dido#> .
 
 <http://purl.org/twc/dido> rdf:type owl:Ontology ;
-                            owl:imports <https://purl.org/dido/releases/2026-02-23/imports/dcat_import.owl> ,
-                                        <https://purl.org/dido/releases/2026-02-23/imports/sio_import.owl> ,
-                                        <https://purl.org/dido/releases/2026-02-23/imports/time_import.owl> ;
+                            owl:imports powla: ,
+                                        <https://purl.org/dido/releases/2026-02-23/imports/dcat_import.owl> ,
+                                        <https://purl.org/dido/releases/2026-02-23/imports/time_import.owl> ,
+                                        <https://purl.org/dido/releases/2026-04-20/imports/sio_import.owl> ;
                             dc:creator "Kelsey Rook"@en ;
                             dcterms:description "The Dialogue and Discourse Ontology (DIDO) supports the modeling of dialogue and dialogue data." ;
                             dcterms:license "https://opensource.org/license/mit"^^xsd:anyURI ;
                             dcterms:modified "2026-2-4" ;
                             dcterms:title "Dialogue and Discourse Ontology (DiDO)" ;
                             vann:preferredNamespacePrefix "dido" ;
-                            vann:preferredNamespaceUri "http://purl.org/twc/dido#" ;
+                            vann:preferredNamespaceUri "http://purl.org/dido#" ;
                             <http://schema.org/codeRepository> "https://github.com/shmewtep/dialogueOnt"^^xsd:anyURI ;
                             rdfs:label "DIDO" .
 
@@ -104,6 +106,54 @@ prov:qualifiedForm rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://semanticscience.org/resource/SIO_000008
+sio:SIO_000008 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000028
+sio:SIO_000028 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000059
+sio:SIO_000059 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000068
+sio:SIO_000068 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000095
+sio:SIO_000095 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000132
+sio:SIO_000132 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000139
+sio:SIO_000139 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000225
+sio:SIO_000225 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000227
+sio:SIO_000227 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000229
+sio:SIO_000229 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000332
+sio:SIO_000332 rdf:type owl:ObjectProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000356
+sio:SIO_000356 rdf:type owl:ObjectProperty .
+
+
 ###  http://www.w3.org/ns/prov#wasAttributedTo
 prov:wasAttributedTo rdf:type owl:ObjectProperty ;
                      rdfs:comment "Attribution is the ascribing of an entity to an agent."@en ;
@@ -113,16 +163,43 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
 
 
 #################################################################
+#    Data properties
+#################################################################
+
+###  http://semanticscience.org/resource/SIO_000300
+sio:SIO_000300 rdf:type owl:DatatypeProperty .
+
+
+#################################################################
 #    Classes
 #################################################################
 
-###  http://purl.org/twc/dido#Dialogue
+###  http://purl.org/powla/powla.owl#Nonterminal
+powla:Nonterminal rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty sio:SIO_000253 ;
+                                    owl:someValuesFrom :Utterance
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty sio:SIO_000291 ;
+                                    owl:someValuesFrom :Utterance
+                                  ] .
+
+
+###  http://purl.org/powla/powla.owl#Terminal
+powla:Terminal rdf:type owl:Class .
+
+
+###  http://purl.org/dido#Dialogue
 :Dialogue rdf:type owl:Class ;
           rdfs:subClassOf sio:SIO_000006 ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty sio:SIO_000028 ;
-                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                            owl:onClass :Utterance
+                            owl:someValuesFrom :Turn
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty sio:SIO_000028 ;
+                            owl:someValuesFrom :Utterance
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty sio:SIO_000132 ;
@@ -139,10 +216,50 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
                             owl:onClass time:ProperInterval
                           ] ;
           rdfs:label "dialogue" ;
+          skos:altLabel "conversation" ;
           skos:definition "an interactive communication between two or more entities" .
 
 
-###  http://purl.org/twc/dido#DialogueTranscript
+###  http://purl.org/dido#hasAddressee
+:hasAddressee rdf:type owl:ObjectProperty ;
+              rdfs:label "has addressee" ;
+              skos:definition "the intended recipient or interlocutor of an utterance or dialogue act" .
+
+###  http://purl.org/dido#DialogueAct
+:DialogueAct rdf:type owl:Class ;
+             rdfs:subClassOf sio:SIO_000614 ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty sio:SIO_000226 ;
+                               owl:someValuesFrom :Utterance
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAddressee ;
+                               owl:someValuesFrom :Interlocutor
+                             ] ;
+             rdfs:label "dialogue act" ;
+             skos:altLabel "functional segment" ,
+                           "communicative function" ,
+                           "speech act" ;
+             skos:definition "the meaning of an utterance at the level of illocutionary force" .
+
+
+###  http://purl.org/dido#DialogueActAnnotation
+:DialogueActAnnotation rdf:type owl:Class ;
+                       rdfs:subClassOf powla:Terminal ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty sio:SIO_000332 ;
+                                         owl:someValuesFrom :DialogueAct
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty sio:SIO_000291 ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Utterance
+                                       ] ;
+                       rdfs:label "dialogue act annotation" ;
+                       skos:definition "a label representing some dialogue act dimension with respect to a particular specification" .
+
+
+###  http://purl.org/dido#DialogueTranscript
 :DialogueTranscript rdf:type owl:Class ;
                     rdfs:subClassOf sio:SIO_000069 ,
                                     [ rdf:type owl:Restriction ;
@@ -163,7 +280,32 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
                     skos:definition "A digital or physical information content entity that provides a structured textual record of a conversation" .
 
 
-###  http://purl.org/twc/dido#Interlocutor
+
+###  http://purl.org/dido#DiscourseRelation
+:DiscourseRelation rdf:type owl:Class ;
+                   rdfs:subClassOf sio:SIO_000006 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty sio:SIO_000291 ;
+                                     owl:someValuesFrom :Utterance
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty sio:SIO_000253 ;
+                                     owl:someValuesFrom :Utterance
+                                   ] ;
+                   rdfs:label "discourse relation" ;
+                   skos:definition "a rhetorical or semantic connection between two or more utterances" .
+
+###  http://purl.org/dido#DiscourseRelationAnnotation
+:DiscourseRelationAnnotation rdf:type owl:Class ;
+                             rdfs:subClassOf powla:Terminal ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty sio:SIO_000332 ;
+                                               owl:someValuesFrom :DiscourseRelation
+                                             ] ;
+                             rdfs:label "discourse relation annotation" ;
+                             skos:definition "a label or marker representing a specific discourse relation" .
+
+###  http://purl.org/dido#Interlocutor
 :Interlocutor rdf:type owl:Class ;
               rdfs:subClassOf sio:SIO_000016 ,
                               [ rdf:type owl:Restriction ;
@@ -181,20 +323,53 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
                                 owl:onClass :Dialogue
                               ] ;
               rdfs:label "interlocutor" ;
+              skos:altLabel "dialogue participant" ;
               skos:definition "One who takes part in a conversation or dialogue" .
 
 
-###  http://purl.org/twc/dido#Utterance
+###  http://purl.org/dido#Turn
+:Turn rdf:type owl:Class ;
+      rdfs:subClassOf sio:SIO_000006 ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty sio:SIO_000068 ;
+                        owl:someValuesFrom :Dialogue
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty sio:SIO_000139 ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass [ rdf:type owl:Class ;
+                                      owl:unionOf ( sio:SIO_000097
+                                                    sio:SIO_000485
+                                                  )
+                                    ]
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty sio:SIO_000008 ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass time:Interval
+                      ] ;
+      rdfs:label "turn" ;
+      skos:definition "a unit of conversation in which a single interlocutor holds the floor, without interruption from another interlocutor or other external circumstance" .
+
+
+###  http://purl.org/dido#Utterance
 :Utterance rdf:type owl:Class ;
-           rdfs:subClassOf sio:SIO_000006 ,
+           rdfs:subClassOf sio:SIO_000006 , powla:Nonterminal ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty sio:SIO_000225 ;
+                             owl:someValuesFrom :DialogueAct
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty sio:SIO_000068 ;
+                             owl:someValuesFrom :Dialogue
+                           ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000229 ;
                              owl:someValuesFrom :UtteranceText
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty sio:SIO_000068 ;
-                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onClass :Dialogue
+                             owl:onProperty sio:SIO_000291 ;
+                             owl:someValuesFrom :Interlocutor
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000139 ;
@@ -206,6 +381,10 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
                                          ]
                            ] ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty sio:SIO_000292 ;
+                             owl:someValuesFrom :DialogueActAnnotation
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty sio:SIO_000008 ;
                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onClass time:Interval
@@ -214,7 +393,7 @@ prov:wasAttributedTo rdf:type owl:ObjectProperty ;
            skos:definition "a single unit of speech in spoken language that serves some pragmatic function" .
 
 
-###  http://purl.org/twc/dido#UtteranceText
+###  http://purl.org/dido#UtteranceText
 :UtteranceText rdf:type owl:Class ;
                rdfs:subClassOf sio:SIO_000078 ,
                                [ rdf:type owl:Restriction ;
@@ -241,4 +420,28 @@ sio:SIO_000016 rdf:type owl:Class .
 sio:SIO_000069 rdf:type owl:Class .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+###  http://semanticscience.org/resource/SIO_000078
+sio:SIO_000078 rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000089
+sio:SIO_000089 rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000097
+sio:SIO_000097 rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000485
+sio:SIO_000485 rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Interval
+time:Interval rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#ProperInterval
+time:ProperInterval rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

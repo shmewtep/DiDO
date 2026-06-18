@@ -1,0 +1,12 @@
+PREFIX dido: <http://purl.org/dido#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+# CQ8: What is the duration of dialogue?
+SELECT ?dialogue ?duration
+WHERE {
+  ?dialogue a dido:Dialogue ;
+            sio:SIO_000008 ?durationObj .
+  ?durationObj a time:ProperInterval ;
+               time:hasDuration|time:numericDuration ?duration .
+}

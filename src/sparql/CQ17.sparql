@@ -1,0 +1,13 @@
+PREFIX dido: <http://purl.org/dido#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+# CQ17: What assertions were made regarding entity?
+SELECT DISTINCT ?assertion
+WHERE {
+  # Look inside the reification
+  ?assertion rdf:reifies << ?s ?p ?o >> .
+  
+  # Logic: If the entity is the subject or object, the assertion is "regarding" it
+  BIND(:targetEntity AS ?target)
+  FILTER(?s = ?target || ?o = ?target)
+}

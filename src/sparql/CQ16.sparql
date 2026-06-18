@@ -1,0 +1,24 @@
+PREFIX dido: <http://purl.org/dido#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <http://example.org/>
+
+# CQ16: What utterances did inteerlocutor make regarding entity?
+SELECT DISTINCT ?utterance ?text
+WHERE {
+  # Link Interlocutor to Utterance
+  ?utterance sio:SIO_000139 ?interlocutor . # hasAgent
+  
+  # Link Utterance to the Assertion
+  ?utterance dido:supports ?assertion .
+  
+  # Use Reification to find the entity within the triple
+  ?assertion rdf:reifies << ?s ?p ?o >> .
+  
+  # Fetch text for the utterance
+  ?utterance sio:SIO_000232 ?utteranceText . # hasOutput
+  ?utteranceText sio:SIO_000300 ?text . # hasValue
+
+  # Filter: The entity must be the subject or the object of the claim
+  FILTER(?s = :targetEntity || ?o = :targetEntity)
+}

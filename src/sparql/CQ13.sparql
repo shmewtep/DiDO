@@ -1,0 +1,17 @@
+PREFIX powla: <http://purl.org/powla/powla.owl#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX dido: <http://purl.org/dido#>
+
+# CQ13: Which interlocutor agreed with utterance?
+SELECT ?agreeingInterlocutor ?agreementUtterance
+WHERE {
+  ?drAnnotation a dido:DiscourseRelationAnnotation ;
+                sio:SIO_000332 ?rel ;
+                sio:SIO_000300 "Agreement" .
+
+  ?rel a dido:DiscourseRelation ;
+       sio:SIO_000291 ?originalUtterance ;
+       sio:SIO_000253 ?agreementUtterance .
+       
+  ?agreementUtterance sio:SIO_000139 ?agreeingInterlocutor . # hasAgent
+}

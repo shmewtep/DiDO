@@ -1,3 +1,10 @@
+---
+title: Development
+layout: single
+sidebar:
+        nav: "docs"
+---
+
 #### Ontology methodologies utilized or referenced
 
 * [Ontology Development 101](https://corais.org/sites/default/files/ontology_development_101_aguide_to_creating_your_first_ontology.pdf)
@@ -17,4 +24,4 @@
   * Available by request
 * [AMI Meeting Corpus](https://groups.inf.ed.ac.uk/ami/corpus/)
   * Publically available
-  * An example of a dialogue alignment can be found [here](https://github.com/shmewtep/dialogueOnt/blob/edit/src/ontology/data/ami_meeting_EN2001a.ttl)
+  * An example of a dialogue alignment can be found [here](https://github.com/shmewtep/dialogueOnt/blob/edit/src/ontology/data/dialog_ami/ami_meeting_EN2001a.ttl)

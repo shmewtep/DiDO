@@ -1,0 +1,13 @@
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX powla: <http://purl.org/powla/powla.owl#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX dido: <http://purl.org/dido#>
+
+# CQ11: What dialogue acts are associated with the utterances supporting particular assertions?
+SELECT ?dialogueAct ?assertion
+WHERE {
+  ?utterance dido:supports ?assertion .
+  ?annotation sio:SIO_000291 ?utterance ;
+              sio:SIO_000332 ?dialogueAct .
+  ?dialogueAct a dido:DialogueAct .
+}
