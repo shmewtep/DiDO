@@ -39,6 +39,7 @@ sidebar:
 
 ---
 
-### Future Plans / Coming Soon
-An interactive SPARQL query interface and dialogue alignment viewer (previously powered by Comunica and `app.js` under `demo.html`) is currently under development. It will allow users to run these competency questions against sample dialogue datasets directly in the browser in a future release.
+### Interactive Query Interface
+An interactive SPARQL query interface and dialogue alignment viewer is available via TriplyDB. You can run these competency questions against a sample dialogue dataset directly in your browser:
+[https://triplydb.com/KelseyRook/AMIES2002bDiDO/sparql](https://triplydb.com/KelseyRook/AMIES2002bDiDO/sparql)
 
