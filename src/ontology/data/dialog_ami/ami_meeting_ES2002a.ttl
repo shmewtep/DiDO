@@ -2,6 +2,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dido: <http://purl.org/dido#> .
 @prefix ex: <http://purl.org/twc/dido/individuals#> .
+@prefix powla: <http://purl.org/powla/powla.owl#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,710 +12,310 @@ ex:dialogueTranscriptES2002a a dido:DialogueTranscript ;
     sio:SIO_000095 ex:dataset_ami ;
     sio:SIO_000332 ex:dialogueES2002a .
 
+ex:daAnnotationES2002a0 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a0 ;
+    sio:SIO_000300 "Fragment"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a0 .
+
+ex:daAnnotationES2002a1 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a1 ;
+    sio:SIO_000300 "Stall"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a1 .
+
+ex:daAnnotationES2002a10 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a10 ;
+    sio:SIO_000300 "Backchannel"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a10 .
+
+ex:daAnnotationES2002a11 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a11 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a11 .
+
+ex:daAnnotationES2002a12 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a12 ;
+    sio:SIO_000300 "Backchannel"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a12 .
+
+ex:daAnnotationES2002a13 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a13 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a13 .
+
+ex:daAnnotationES2002a14 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a14 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a14 .
+
+ex:daAnnotationES2002a15 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a15 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a15 .
+
+ex:daAnnotationES2002a16 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a16 ;
+    sio:SIO_000300 "Be-Positive"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a16 .
+
+ex:daAnnotationES2002a17 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a17 ;
+    sio:SIO_000300 "Stall"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a17 .
+
+ex:daAnnotationES2002a18 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a18 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a18 .
+
+ex:daAnnotationES2002a19 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a19 ;
+    sio:SIO_000300 "Offer"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a19 .
+
+ex:daAnnotationES2002a2 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a2 ;
+    sio:SIO_000300 "Stall"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a2 .
+
+ex:daAnnotationES2002a20 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a20 ;
+    sio:SIO_000300 "Other"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a20 .
+
+ex:daAnnotationES2002a21 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a21 ;
+    sio:SIO_000300 "Other"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a21 .
+
+ex:daAnnotationES2002a22 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a22 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a22 .
+
+ex:daAnnotationES2002a23 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a23 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a23 .
+
+ex:daAnnotationES2002a24 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a24 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a24 .
+
+ex:daAnnotationES2002a25 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a25 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a25 .
+
+ex:daAnnotationES2002a26 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a26 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a26 .
+
+ex:daAnnotationES2002a27 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a27 ;
+    sio:SIO_000300 "Elicit-Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a27 .
+
+ex:daAnnotationES2002a28 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a28 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a28 .
+
+ex:daAnnotationES2002a29 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a29 ;
+    sio:SIO_000300 "Backchannel"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a29 .
+
+ex:daAnnotationES2002a3 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a3 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a3 .
+
+ex:daAnnotationES2002a30 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a30 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a30 .
+
+ex:daAnnotationES2002a31 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a31 ;
+    sio:SIO_000300 "Backchannel"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a31 .
+
+ex:daAnnotationES2002a32 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a32 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a32 .
+
+ex:daAnnotationES2002a33 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a33 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a33 .
+
+ex:daAnnotationES2002a34 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a34 ;
+    sio:SIO_000300 "Elicit-Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a34 .
+
+ex:daAnnotationES2002a35 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a35 ;
+    sio:SIO_000300 "Backchannel"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a35 .
+
+ex:daAnnotationES2002a36 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a36 ;
+    sio:SIO_000300 "Elicit-Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a36 .
+
+ex:daAnnotationES2002a37 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a37 ;
+    sio:SIO_000300 "Assess"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a37 .
+
+ex:daAnnotationES2002a38 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a38 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a38 .
+
+ex:daAnnotationES2002a39 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a39 ;
+    sio:SIO_000300 "Stall"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a39 .
+
+ex:daAnnotationES2002a4 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a4 ;
+    sio:SIO_000300 "Stall"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a4 .
+
+ex:daAnnotationES2002a40 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a40 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a40 .
+
+ex:daAnnotationES2002a41 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a41 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a41 .
+
+ex:daAnnotationES2002a42 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a42 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a42 .
+
+ex:daAnnotationES2002a43 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a43 ;
+    sio:SIO_000300 "Stall"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a43 .
+
+ex:daAnnotationES2002a44 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a44 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a44 .
+
+ex:daAnnotationES2002a45 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a45 ;
+    sio:SIO_000300 "Elicit-Offer-Or-Suggestion"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a45 .
+
+ex:daAnnotationES2002a46 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a46 ;
+    sio:SIO_000300 "Offer"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a46 .
+
+ex:daAnnotationES2002a47 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a47 ;
+    sio:SIO_000300 "Assess"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a47 .
+
+ex:daAnnotationES2002a48 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a48 ;
+    sio:SIO_000300 "Stall"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a48 .
+
+ex:daAnnotationES2002a49 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a49 ;
+    sio:SIO_000300 "Fragment"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a49 .
+
+ex:daAnnotationES2002a5 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a5 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a5 .
+
+ex:daAnnotationES2002a6 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a6 ;
+    sio:SIO_000300 "Backchannel"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a6 .
+
+ex:daAnnotationES2002a7 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a7 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a7 .
+
+ex:daAnnotationES2002a8 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a8 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a8 .
+
+ex:daAnnotationES2002a9 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utteranceES2002a9 ;
+    sio:SIO_000300 "Elicit-Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueActES2002a9 .
+
 ex:dataset_ami a sio:SIO_000089,
         dcat:Dataset ;
     dcterms:isReferencedBy <https://doi.org/10.1007/11677482_3> ;
     dcat:landingPage <https://groups.inf.ed.ac.uk/ami/corpus/> .
-
-ex:utteranceES2002a0 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanC ;
-    sio:SIO_000232 ex:utteranceTextES2002a0 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "0.0"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "0.0"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a1 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a1 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "50.42"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "50.99"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a10 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a10 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "74.89"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "75.24"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a11 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanA ;
-    sio:SIO_000232 ex:utteranceTextES2002a11 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "77.44"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "80.87"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a12 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a12 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "80.81"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "81.26"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a13 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a13 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "82.08"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "84.46"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a14 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanC ;
-    sio:SIO_000232 ex:utteranceTextES2002a14 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "85.99"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "88.71"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a15 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a15 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "86.07"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "86.5"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a16 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a16 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "89.3"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "90.01"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a17 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a17 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "90.01"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "92.79"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a18 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a18 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "92.79"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "96.34"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a19 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a19 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "96.34"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "98.57"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a2 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a2 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "53.56"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "53.96"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a20 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a20 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "98.57"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "101.76"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a21 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a21 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "104.89"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "106.58"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a22 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a22 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "108.96"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "111.72"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a23 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a23 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "111.72"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "116.66"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a24 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a24 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "116.66"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "120.98"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a25 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a25 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "120.98"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "126.12"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a26 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a26 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "126.12"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "131.36"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a27 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a27 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "131.36"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "132.03"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a28 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanA ;
-    sio:SIO_000232 ex:utteranceTextES2002a28 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "132.57"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "136.68"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a29 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a29 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "135.08"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "135.44"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a3 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a3 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "55.415"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "60.35"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a30 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanA ;
-    sio:SIO_000232 ex:utteranceTextES2002a30 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "136.68"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "138.2"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a31 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a31 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "137.12"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "137.39"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a32 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanA ;
-    sio:SIO_000232 ex:utteranceTextES2002a32 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "138.2"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "140.77"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a33 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a33 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "138.96"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "140.56"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a34 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a34 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "140.1"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "141.53"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a35 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanC ;
-    sio:SIO_000232 ex:utteranceTextES2002a35 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "140.47"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "140.83"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a36 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanA ;
-    sio:SIO_000232 ex:utteranceTextES2002a36 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "140.77"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "141.98"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a37 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a37 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "141.53"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "142.66"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a38 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a38 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "141.8"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "141.95"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a39 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a39 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "142.66"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "144.43"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a4 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a4 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "60.35"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "64.16"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a40 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a40 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "144.43"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "147.92"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a41 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a41 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "147.92"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "151.79"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a42 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a42 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "151.79"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "158.41"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a43 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a43 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "158.41"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "159.59"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a44 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a44 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "159.59"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "165.91"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a45 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a45 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "165.91"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "167.31"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a46 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a46 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "166.67"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "167.81"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a47 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a47 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "167.84"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "169.072"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a48 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a48 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "174.2"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "176.816"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a49 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a49 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "177.952"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "180.064"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a5 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a5 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "64.16"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "67.55"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a6 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanD ;
-    sio:SIO_000232 ex:utteranceTextES2002a6 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "67.21"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "67.45"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a7 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a7 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "67.55"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "72.79"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a8 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a8 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "72.79"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "74.42"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
-
-ex:utteranceES2002a9 a dido:Utterance,
-        time:TemporalEntity ;
-    sio:SIO_000068 ex:dialogueES2002a ;
-    sio:SIO_000139 ex:humanB ;
-    sio:SIO_000232 ex:utteranceTextES2002a9 ;
-    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "74.42"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ;
-            time:hasEnd [ a time:Instant ;
-                    time:inDateTime [ a time:DateTimeDescription ;
-                            time:second "77.29"^^xsd:float ;
-                            time:unitType time:unitSecond ] ] ] .
 
 ex:utteranceTextES2002a0 a dido:UtteranceText ;
     sio:SIO_000300 ""^^xsd:string .
@@ -866,6 +467,206 @@ ex:utteranceTextES2002a8 a dido:UtteranceText ;
 ex:utteranceTextES2002a9 a dido:UtteranceText ;
     sio:SIO_000300 "[laugh] Do you want to introduce yourself again ?"^^xsd:string .
 
+ex:dialogueActES2002a0 a dido:DialogueAct,
+        dido:Fragment ;
+    sio:SIO_000226 ex:utteranceES2002a0 .
+
+ex:dialogueActES2002a1 a dido:DialogueAct,
+        dido:Stall ;
+    sio:SIO_000226 ex:utteranceES2002a1 .
+
+ex:dialogueActES2002a10 a dido:Backchannel,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a10 .
+
+ex:dialogueActES2002a11 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a11 .
+
+ex:dialogueActES2002a12 a dido:Backchannel,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a12 .
+
+ex:dialogueActES2002a13 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a13 .
+
+ex:dialogueActES2002a14 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a14 .
+
+ex:dialogueActES2002a15 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a15 .
+
+ex:dialogueActES2002a16 a dido:BePositive,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a16 .
+
+ex:dialogueActES2002a17 a dido:DialogueAct,
+        dido:Stall ;
+    sio:SIO_000226 ex:utteranceES2002a17 .
+
+ex:dialogueActES2002a18 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a18 .
+
+ex:dialogueActES2002a19 a dido:DialogueAct,
+        dido:Offer ;
+    sio:SIO_000226 ex:utteranceES2002a19 .
+
+ex:dialogueActES2002a2 a dido:DialogueAct,
+        dido:Stall ;
+    sio:SIO_000226 ex:utteranceES2002a2 .
+
+ex:dialogueActES2002a20 a dido:DialogueAct,
+        dido:Other ;
+    sio:SIO_000226 ex:utteranceES2002a20 .
+
+ex:dialogueActES2002a21 a dido:DialogueAct,
+        dido:Other ;
+    sio:SIO_000226 ex:utteranceES2002a21 .
+
+ex:dialogueActES2002a22 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a22 .
+
+ex:dialogueActES2002a23 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a23 .
+
+ex:dialogueActES2002a24 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a24 .
+
+ex:dialogueActES2002a25 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a25 .
+
+ex:dialogueActES2002a26 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a26 .
+
+ex:dialogueActES2002a27 a dido:DialogueAct,
+        dido:ElicitInform ;
+    sio:SIO_000226 ex:utteranceES2002a27 .
+
+ex:dialogueActES2002a28 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a28 .
+
+ex:dialogueActES2002a29 a dido:Backchannel,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a29 .
+
+ex:dialogueActES2002a3 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a3 .
+
+ex:dialogueActES2002a30 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a30 .
+
+ex:dialogueActES2002a31 a dido:Backchannel,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a31 .
+
+ex:dialogueActES2002a32 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a32 .
+
+ex:dialogueActES2002a33 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a33 .
+
+ex:dialogueActES2002a34 a dido:DialogueAct,
+        dido:ElicitInform ;
+    sio:SIO_000226 ex:utteranceES2002a34 .
+
+ex:dialogueActES2002a35 a dido:Backchannel,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a35 .
+
+ex:dialogueActES2002a36 a dido:DialogueAct,
+        dido:ElicitInform ;
+    sio:SIO_000226 ex:utteranceES2002a36 .
+
+ex:dialogueActES2002a37 a dido:Assess,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a37 .
+
+ex:dialogueActES2002a38 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a38 .
+
+ex:dialogueActES2002a39 a dido:DialogueAct,
+        dido:Stall ;
+    sio:SIO_000226 ex:utteranceES2002a39 .
+
+ex:dialogueActES2002a4 a dido:DialogueAct,
+        dido:Stall ;
+    sio:SIO_000226 ex:utteranceES2002a4 .
+
+ex:dialogueActES2002a40 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a40 .
+
+ex:dialogueActES2002a41 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a41 .
+
+ex:dialogueActES2002a42 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a42 .
+
+ex:dialogueActES2002a43 a dido:DialogueAct,
+        dido:Stall ;
+    sio:SIO_000226 ex:utteranceES2002a43 .
+
+ex:dialogueActES2002a44 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a44 .
+
+ex:dialogueActES2002a45 a dido:DialogueAct,
+        dido:ElicitOfferOrSuggestion ;
+    sio:SIO_000226 ex:utteranceES2002a45 .
+
+ex:dialogueActES2002a46 a dido:DialogueAct,
+        dido:Offer ;
+    sio:SIO_000226 ex:utteranceES2002a46 .
+
+ex:dialogueActES2002a47 a dido:Assess,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a47 .
+
+ex:dialogueActES2002a48 a dido:DialogueAct,
+        dido:Stall ;
+    sio:SIO_000226 ex:utteranceES2002a48 .
+
+ex:dialogueActES2002a49 a dido:DialogueAct,
+        dido:Fragment ;
+    sio:SIO_000226 ex:utteranceES2002a49 .
+
+ex:dialogueActES2002a5 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a5 .
+
+ex:dialogueActES2002a6 a dido:Backchannel,
+        dido:DialogueAct ;
+    sio:SIO_000226 ex:utteranceES2002a6 .
+
+ex:dialogueActES2002a7 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a7 .
+
+ex:dialogueActES2002a8 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utteranceES2002a8 .
+
+ex:dialogueActES2002a9 a dido:DialogueAct,
+        dido:ElicitInform ;
+    sio:SIO_000226 ex:utteranceES2002a9 .
+
 ex:interlocutorA a dido:Interlocutor ;
     sio:SIO_000227 ex:humanA ;
     sio:SIO_000356 ex:dialogueES2002a .
@@ -881,6 +682,856 @@ ex:interlocutorC a dido:Interlocutor ;
 ex:interlocutorD a dido:Interlocutor ;
     sio:SIO_000227 ex:humanD ;
     sio:SIO_000356 ex:dialogueES2002a .
+
+ex:utteranceES2002a0 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanC ;
+    sio:SIO_000225 ex:dialogueActES2002a0 ;
+    sio:SIO_000232 ex:utteranceTextES2002a0 ;
+    sio:SIO_000292 ex:daAnnotationES2002a0 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "0.0"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "0.0"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a1 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a1 ;
+    sio:SIO_000232 ex:utteranceTextES2002a1 ;
+    sio:SIO_000292 ex:daAnnotationES2002a1 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "50.42"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "50.99"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a10 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a10 ;
+    sio:SIO_000232 ex:utteranceTextES2002a10 ;
+    sio:SIO_000292 ex:daAnnotationES2002a10 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "74.89"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "75.24"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a11 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanA ;
+    sio:SIO_000225 ex:dialogueActES2002a11 ;
+    sio:SIO_000232 ex:utteranceTextES2002a11 ;
+    sio:SIO_000292 ex:daAnnotationES2002a11 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "77.44"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "80.87"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a12 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a12 ;
+    sio:SIO_000232 ex:utteranceTextES2002a12 ;
+    sio:SIO_000292 ex:daAnnotationES2002a12 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "80.81"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "81.26"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a13 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a13 ;
+    sio:SIO_000232 ex:utteranceTextES2002a13 ;
+    sio:SIO_000292 ex:daAnnotationES2002a13 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "82.08"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "84.46"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a14 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanC ;
+    sio:SIO_000225 ex:dialogueActES2002a14 ;
+    sio:SIO_000232 ex:utteranceTextES2002a14 ;
+    sio:SIO_000292 ex:daAnnotationES2002a14 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "85.99"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "88.71"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a15 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a15 ;
+    sio:SIO_000232 ex:utteranceTextES2002a15 ;
+    sio:SIO_000292 ex:daAnnotationES2002a15 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "86.07"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "86.5"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a16 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a16 ;
+    sio:SIO_000232 ex:utteranceTextES2002a16 ;
+    sio:SIO_000292 ex:daAnnotationES2002a16 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "89.3"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "90.01"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a17 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a17 ;
+    sio:SIO_000232 ex:utteranceTextES2002a17 ;
+    sio:SIO_000292 ex:daAnnotationES2002a17 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "90.01"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "92.79"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a18 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a18 ;
+    sio:SIO_000232 ex:utteranceTextES2002a18 ;
+    sio:SIO_000292 ex:daAnnotationES2002a18 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "92.79"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "96.34"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a19 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a19 ;
+    sio:SIO_000232 ex:utteranceTextES2002a19 ;
+    sio:SIO_000292 ex:daAnnotationES2002a19 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "96.34"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "98.57"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a2 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a2 ;
+    sio:SIO_000232 ex:utteranceTextES2002a2 ;
+    sio:SIO_000292 ex:daAnnotationES2002a2 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "53.56"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "53.96"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a20 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a20 ;
+    sio:SIO_000232 ex:utteranceTextES2002a20 ;
+    sio:SIO_000292 ex:daAnnotationES2002a20 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "98.57"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "101.76"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a21 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a21 ;
+    sio:SIO_000232 ex:utteranceTextES2002a21 ;
+    sio:SIO_000292 ex:daAnnotationES2002a21 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "104.89"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "106.58"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a22 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a22 ;
+    sio:SIO_000232 ex:utteranceTextES2002a22 ;
+    sio:SIO_000292 ex:daAnnotationES2002a22 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "108.96"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "111.72"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a23 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a23 ;
+    sio:SIO_000232 ex:utteranceTextES2002a23 ;
+    sio:SIO_000292 ex:daAnnotationES2002a23 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "111.72"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "116.66"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a24 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a24 ;
+    sio:SIO_000232 ex:utteranceTextES2002a24 ;
+    sio:SIO_000292 ex:daAnnotationES2002a24 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "116.66"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "120.98"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a25 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a25 ;
+    sio:SIO_000232 ex:utteranceTextES2002a25 ;
+    sio:SIO_000292 ex:daAnnotationES2002a25 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "120.98"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "126.12"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a26 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a26 ;
+    sio:SIO_000232 ex:utteranceTextES2002a26 ;
+    sio:SIO_000292 ex:daAnnotationES2002a26 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "126.12"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "131.36"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a27 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a27 ;
+    sio:SIO_000232 ex:utteranceTextES2002a27 ;
+    sio:SIO_000292 ex:daAnnotationES2002a27 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "131.36"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "132.03"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a28 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanA ;
+    sio:SIO_000225 ex:dialogueActES2002a28 ;
+    sio:SIO_000232 ex:utteranceTextES2002a28 ;
+    sio:SIO_000292 ex:daAnnotationES2002a28 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "132.57"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "136.68"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a29 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a29 ;
+    sio:SIO_000232 ex:utteranceTextES2002a29 ;
+    sio:SIO_000292 ex:daAnnotationES2002a29 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "135.08"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "135.44"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a3 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a3 ;
+    sio:SIO_000232 ex:utteranceTextES2002a3 ;
+    sio:SIO_000292 ex:daAnnotationES2002a3 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "55.415"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "60.35"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a30 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanA ;
+    sio:SIO_000225 ex:dialogueActES2002a30 ;
+    sio:SIO_000232 ex:utteranceTextES2002a30 ;
+    sio:SIO_000292 ex:daAnnotationES2002a30 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "136.68"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "138.2"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a31 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a31 ;
+    sio:SIO_000232 ex:utteranceTextES2002a31 ;
+    sio:SIO_000292 ex:daAnnotationES2002a31 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "137.12"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "137.39"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a32 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanA ;
+    sio:SIO_000225 ex:dialogueActES2002a32 ;
+    sio:SIO_000232 ex:utteranceTextES2002a32 ;
+    sio:SIO_000292 ex:daAnnotationES2002a32 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "138.2"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "140.77"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a33 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a33 ;
+    sio:SIO_000232 ex:utteranceTextES2002a33 ;
+    sio:SIO_000292 ex:daAnnotationES2002a33 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "138.96"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "140.56"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a34 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a34 ;
+    sio:SIO_000232 ex:utteranceTextES2002a34 ;
+    sio:SIO_000292 ex:daAnnotationES2002a34 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "140.1"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "141.53"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a35 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanC ;
+    sio:SIO_000225 ex:dialogueActES2002a35 ;
+    sio:SIO_000232 ex:utteranceTextES2002a35 ;
+    sio:SIO_000292 ex:daAnnotationES2002a35 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "140.47"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "140.83"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a36 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanA ;
+    sio:SIO_000225 ex:dialogueActES2002a36 ;
+    sio:SIO_000232 ex:utteranceTextES2002a36 ;
+    sio:SIO_000292 ex:daAnnotationES2002a36 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "140.77"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "141.98"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a37 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a37 ;
+    sio:SIO_000232 ex:utteranceTextES2002a37 ;
+    sio:SIO_000292 ex:daAnnotationES2002a37 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "141.53"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "142.66"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a38 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a38 ;
+    sio:SIO_000232 ex:utteranceTextES2002a38 ;
+    sio:SIO_000292 ex:daAnnotationES2002a38 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "141.8"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "141.95"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a39 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a39 ;
+    sio:SIO_000232 ex:utteranceTextES2002a39 ;
+    sio:SIO_000292 ex:daAnnotationES2002a39 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "142.66"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "144.43"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a4 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a4 ;
+    sio:SIO_000232 ex:utteranceTextES2002a4 ;
+    sio:SIO_000292 ex:daAnnotationES2002a4 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "60.35"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "64.16"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a40 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a40 ;
+    sio:SIO_000232 ex:utteranceTextES2002a40 ;
+    sio:SIO_000292 ex:daAnnotationES2002a40 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "144.43"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "147.92"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a41 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a41 ;
+    sio:SIO_000232 ex:utteranceTextES2002a41 ;
+    sio:SIO_000292 ex:daAnnotationES2002a41 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "147.92"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "151.79"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a42 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a42 ;
+    sio:SIO_000232 ex:utteranceTextES2002a42 ;
+    sio:SIO_000292 ex:daAnnotationES2002a42 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "151.79"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "158.41"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a43 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a43 ;
+    sio:SIO_000232 ex:utteranceTextES2002a43 ;
+    sio:SIO_000292 ex:daAnnotationES2002a43 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "158.41"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "159.59"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a44 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a44 ;
+    sio:SIO_000232 ex:utteranceTextES2002a44 ;
+    sio:SIO_000292 ex:daAnnotationES2002a44 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "159.59"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "165.91"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a45 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a45 ;
+    sio:SIO_000232 ex:utteranceTextES2002a45 ;
+    sio:SIO_000292 ex:daAnnotationES2002a45 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "165.91"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "167.31"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a46 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a46 ;
+    sio:SIO_000232 ex:utteranceTextES2002a46 ;
+    sio:SIO_000292 ex:daAnnotationES2002a46 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "166.67"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "167.81"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a47 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a47 ;
+    sio:SIO_000232 ex:utteranceTextES2002a47 ;
+    sio:SIO_000292 ex:daAnnotationES2002a47 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "167.84"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "169.072"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a48 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a48 ;
+    sio:SIO_000232 ex:utteranceTextES2002a48 ;
+    sio:SIO_000292 ex:daAnnotationES2002a48 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "174.2"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "176.816"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a49 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a49 ;
+    sio:SIO_000232 ex:utteranceTextES2002a49 ;
+    sio:SIO_000292 ex:daAnnotationES2002a49 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "177.952"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "180.064"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a5 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a5 ;
+    sio:SIO_000232 ex:utteranceTextES2002a5 ;
+    sio:SIO_000292 ex:daAnnotationES2002a5 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "64.16"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "67.55"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a6 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanD ;
+    sio:SIO_000225 ex:dialogueActES2002a6 ;
+    sio:SIO_000232 ex:utteranceTextES2002a6 ;
+    sio:SIO_000292 ex:daAnnotationES2002a6 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "67.21"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "67.45"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a7 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a7 ;
+    sio:SIO_000232 ex:utteranceTextES2002a7 ;
+    sio:SIO_000292 ex:daAnnotationES2002a7 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "67.55"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "72.79"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a8 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a8 ;
+    sio:SIO_000232 ex:utteranceTextES2002a8 ;
+    sio:SIO_000292 ex:daAnnotationES2002a8 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "72.79"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "74.42"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
+
+ex:utteranceES2002a9 a dido:Utterance,
+        powla:Nonterminal,
+        time:TemporalEntity ;
+    sio:SIO_000068 ex:dialogueES2002a ;
+    sio:SIO_000139 ex:humanB ;
+    sio:SIO_000225 ex:dialogueActES2002a9 ;
+    sio:SIO_000232 ex:utteranceTextES2002a9 ;
+    sio:SIO_000292 ex:daAnnotationES2002a9 ;
+    sio:sio_000008 [ time:hasBeginning [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "74.42"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ;
+            time:hasEnd [ a time:Instant ;
+                    time:inDateTime [ a time:DateTimeDescription ;
+                            time:second "77.29"^^xsd:float ;
+                            time:unitType time:unitSecond ] ] ] .
 
 ex:humanC a sio:SIO_000485 ;
     sio:SIO_000062 ex:dialogueES2002a ;

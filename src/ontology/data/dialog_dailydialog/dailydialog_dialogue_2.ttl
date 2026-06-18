@@ -1,0 +1,150 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dido: <http://purl.org/dido#> .
+@prefix ex: <http://purl.org/twc/dido/individuals#> .
+@prefix powla: <http://purl.org/powla/powla.owl#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:dialogueTranscript_dd_2 a dido:DialogueTranscript ;
+    dcterms:title "DailyDialog Corpus"^^xsd:string ;
+    sio:SIO_000095 ex:dataset_dailydialog ;
+    sio:SIO_000332 ex:dialogue_dd_2 .
+
+ex:daAnnotation_dd_2_0 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utterance_dd_2_0 ;
+    sio:SIO_000300 "Question"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueAct_dd_2_0 .
+
+ex:daAnnotation_dd_2_1 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utterance_dd_2_1 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueAct_dd_2_1 .
+
+ex:daAnnotation_dd_2_2 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utterance_dd_2_2 ;
+    sio:SIO_000300 "Question"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueAct_dd_2_2 .
+
+ex:daAnnotation_dd_2_3 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utterance_dd_2_3 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueAct_dd_2_3 .
+
+ex:daAnnotation_dd_2_4 a dido:DialogueActAnnotation,
+        powla:Terminal ;
+    sio:SIO_000291 ex:utterance_dd_2_4 ;
+    sio:SIO_000300 "Inform"^^xsd:string ;
+    sio:SIO_000332 ex:dialogueAct_dd_2_4 .
+
+ex:dataset_dailydialog a sio:SIO_000089,
+        dcat:Dataset ;
+    dcterms:isReferencedBy <https://arxiv.org/abs/1710.03957> ;
+    dcat:landingPage <https://huggingface.co/datasets/daily_dialog> .
+
+ex:utteranceText_dd_2_0 a dido:UtteranceText ;
+    sio:SIO_000300 "Can you study with the radio on ?"^^xsd:string .
+
+ex:utteranceText_dd_2_1 a dido:UtteranceText ;
+    sio:SIO_000300 "No , I listen to background music ."^^xsd:string .
+
+ex:utteranceText_dd_2_2 a dido:UtteranceText ;
+    sio:SIO_000300 "What is the difference ?"^^xsd:string .
+
+ex:utteranceText_dd_2_3 a dido:UtteranceText ;
+    sio:SIO_000300 "The radio has too many comerials ."^^xsd:string .
+
+ex:utteranceText_dd_2_4 a dido:UtteranceText ;
+    sio:SIO_000300 "That's true , but then you have to buy a record player ."^^xsd:string .
+
+ex:dialogueAct_dd_2_0 a dido:DialogueAct,
+        dido:Question ;
+    sio:SIO_000226 ex:utterance_dd_2_0 .
+
+ex:dialogueAct_dd_2_1 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utterance_dd_2_1 .
+
+ex:dialogueAct_dd_2_2 a dido:DialogueAct,
+        dido:Question ;
+    sio:SIO_000226 ex:utterance_dd_2_2 .
+
+ex:dialogueAct_dd_2_3 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utterance_dd_2_3 .
+
+ex:dialogueAct_dd_2_4 a dido:DialogueAct,
+        dido:Inform ;
+    sio:SIO_000226 ex:utterance_dd_2_4 .
+
+ex:interlocutor_dd_2_A a dido:Interlocutor ;
+    sio:SIO_000227 ex:human_dd_2_A ;
+    sio:SIO_000356 ex:dialogue_dd_2 .
+
+ex:interlocutor_dd_2_B a dido:Interlocutor ;
+    sio:SIO_000227 ex:human_dd_2_B ;
+    sio:SIO_000356 ex:dialogue_dd_2 .
+
+ex:utterance_dd_2_0 a dido:Utterance,
+        powla:Nonterminal ;
+    sio:SIO_000068 ex:dialogue_dd_2 ;
+    sio:SIO_000139 ex:human_dd_2_A ;
+    sio:SIO_000225 ex:dialogueAct_dd_2_0 ;
+    sio:SIO_000232 ex:utteranceText_dd_2_0 ;
+    sio:SIO_000292 ex:daAnnotation_dd_2_0 .
+
+ex:utterance_dd_2_1 a dido:Utterance,
+        powla:Nonterminal ;
+    sio:SIO_000068 ex:dialogue_dd_2 ;
+    sio:SIO_000139 ex:human_dd_2_B ;
+    sio:SIO_000225 ex:dialogueAct_dd_2_1 ;
+    sio:SIO_000232 ex:utteranceText_dd_2_1 ;
+    sio:SIO_000292 ex:daAnnotation_dd_2_1 .
+
+ex:utterance_dd_2_2 a dido:Utterance,
+        powla:Nonterminal ;
+    sio:SIO_000068 ex:dialogue_dd_2 ;
+    sio:SIO_000139 ex:human_dd_2_A ;
+    sio:SIO_000225 ex:dialogueAct_dd_2_2 ;
+    sio:SIO_000232 ex:utteranceText_dd_2_2 ;
+    sio:SIO_000292 ex:daAnnotation_dd_2_2 .
+
+ex:utterance_dd_2_3 a dido:Utterance,
+        powla:Nonterminal ;
+    sio:SIO_000068 ex:dialogue_dd_2 ;
+    sio:SIO_000139 ex:human_dd_2_B ;
+    sio:SIO_000225 ex:dialogueAct_dd_2_3 ;
+    sio:SIO_000232 ex:utteranceText_dd_2_3 ;
+    sio:SIO_000292 ex:daAnnotation_dd_2_3 .
+
+ex:utterance_dd_2_4 a dido:Utterance,
+        powla:Nonterminal ;
+    sio:SIO_000068 ex:dialogue_dd_2 ;
+    sio:SIO_000139 ex:human_dd_2_A ;
+    sio:SIO_000225 ex:dialogueAct_dd_2_4 ;
+    sio:SIO_000232 ex:utteranceText_dd_2_4 ;
+    sio:SIO_000292 ex:daAnnotation_dd_2_4 .
+
+ex:human_dd_2_B a sio:SIO_000485 ;
+    sio:SIO_000062 ex:dialogue_dd_2 ;
+    sio:SIO_000063 ex:utterance_dd_2_1,
+        ex:utterance_dd_2_3 ;
+    sio:SIO_000228 ex:interlocutor_dd_2_B .
+
+ex:human_dd_2_A a sio:SIO_000485 ;
+    sio:SIO_000062 ex:dialogue_dd_2 ;
+    sio:SIO_000063 ex:utterance_dd_2_0,
+        ex:utterance_dd_2_2,
+        ex:utterance_dd_2_4 ;
+    sio:SIO_000228 ex:interlocutor_dd_2_A .
+
+ex:dialogue_dd_2 a dido:Dialogue ;
+    sio:SIO_000132 ex:human_dd_2_A,
+        ex:human_dd_2_B ;
+    sio:SIO_000355 ex:interlocutor_dd_2_A,
+        ex:interlocutor_dd_2_B .
+
