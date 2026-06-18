@@ -503,14 +503,16 @@ if __name__ == "__main__":
             d_ids = [inferred_id]
         for d_id in d_ids:
             if args.dataset == "daicwoz":
-                rdf_dest = os.path.join(args.output_dir, f'daicwoz_dialogue_{d_id}.ttl')
+                rdf_dest = os.path.join(args.output_dir, f'dialog_{args.dataset}', f'daicwoz_dialogue_{d_id}.ttl')
+                os.makedirs(os.path.dirname(rdf_dest), exist_ok=True)
                 print(f"Aligning DAIC-WOZ dialogue {d_id} from {args.dialogue_location}...")
                 g_daic_woz = align_daicwoz_csv_to_dido(args.dialogue_location)
                 print(f"Writing to {rdf_dest}")
                 g_daic_woz.serialize(destination=rdf_dest, format='turtle')
                 print(f"\nDone!")
             elif args.dataset == "ami":
-                rdf_dest = os.path.join(args.output_dir, f'ami_meeting_{d_id}.ttl')
+                rdf_dest = os.path.join(args.output_dir, f'dialog_{args.dataset}', f'ami_meeting_{d_id}.ttl')
+                os.makedirs(os.path.dirname(rdf_dest), exist_ok=True)
                 print(f"Aligning AMI meeting {d_id} from {args.dialogue_location}...")
                 g_ami = align_ami_jsonl_to_dido(args.dialogue_location, n_utterances=50)
                 print(f"Writing to {rdf_dest}")
