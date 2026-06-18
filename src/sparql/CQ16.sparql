@@ -16,7 +16,7 @@ WHERE {
   ?assertion rdf:reifies << ?s ?p ?o >> .
   
   # Fetch text for the utterance
-  ?utterance sio:SIO_000232 ?utteranceText . # hasOutput
+  ?utterance sio:SIO_000229 ?utteranceText . # hasOutput
   ?utteranceText sio:SIO_000300 ?text . # hasValue
 
   # Filter: The entity must be the subject or the object of the claim

@@ -6,7 +6,7 @@ WHERE {
   ?utterance dido:supports ?assertion .
   
   # Fetching the literal text for readability
-  ?utterance sio:SIO_000232 ?utteranceText . # hasOutput
+  ?utterance sio:SIO_000229 ?utteranceText . # hasOutput
   ?utteranceText sio:SIO_000300 ?text . # hasValue
   
   # Filter for a specific assertion URI if needed

@@ -7,6 +7,6 @@ SELECT ?utterance ?text
 WHERE {
   ?utterance sio:SIO_000225 ?dialogueAct . # hasFunction
   ?dialogueAct rdfs:label "Suggestion" .
-  ?utterance sio:SIO_000232 ?utteranceText . # hasOutput
+  ?utterance sio:SIO_000229 ?utteranceText . # hasOutput
   ?utteranceText sio:SIO_000300 ?text . # hasValue
 }
