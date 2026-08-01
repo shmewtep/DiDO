@@ -25,7 +25,7 @@
                                         <https://purl.org/dido/releases/2026-04-20/imports/sio_import.owl> ;
                             dc:creator "Kelsey Rook"@en ;
                             dcterms:description "The Dialogue and Discourse Ontology (DIDO) supports the modeling of dialogue and dialogue data." ;
-                            dcterms:license "https://opensource.org/license/mit"^^xsd:anyURI ;
+                            dcterms:license rdf:resource="https://opensource.org/license/mit" ;
                             dcterms:modified "2026-08-01"^^xsd:date ;
                             dcterms:title "Dialogue and Discourse Ontology (DiDO)" ;
                             vann:preferredNamespacePrefix "dido" ;
