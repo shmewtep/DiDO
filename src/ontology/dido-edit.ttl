@@ -26,7 +26,7 @@
                             dc:creator "Kelsey Rook"@en ;
                             dcterms:description "The Dialogue and Discourse Ontology (DIDO) supports the modeling of dialogue and dialogue data." ;
                             dcterms:license "https://opensource.org/license/mit"^^xsd:anyURI ;
-                            dcterms:modified "2026-2-4" ;
+                            dcterms:modified "2026-08-01"^^xsd:date ;
                             dcterms:title "Dialogue and Discourse Ontology (DiDO)" ;
                             vann:preferredNamespacePrefix "dido" ;
                             vann:preferredNamespaceUri "http://purl.org/dido#" ;
